@@ -1,5 +1,5 @@
 import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "sonner";
 import { LangProvider } from "@/lib/i18n";
 import Layout from "@/components/Layout";
@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <LangProvider>
-        <BrowserRouter basename={process.env.PUBLIC_URL || "/"}>
+        <HashRouter>
           <Toaster position="top-center" richColors />
           <Routes>
             <Route element={<Layout />}>
@@ -36,7 +36,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
             </Route>
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </LangProvider>
     </div>
   );
