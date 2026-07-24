@@ -1,54 +1,43 @@
-import { useEffect } from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
-import { HOME } from "@/constants/testIds";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
-  return (
-    <div>
-      <header className="App-header">
-        <a
-          data-testid={HOME.emergentLink}
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+import { Toaster } from "sonner";
+import { LangProvider } from "@/lib/i18n";
+import Layout from "@/components/Layout";
+import Home from "@/pages/Home";
+import Solutions from "@/pages/Solutions";
+import CategoryPage from "@/pages/CategoryPage";
+import ProductDetail from "@/pages/ProductDetail";
+import About from "@/pages/About";
+import OurSciences from "@/pages/OurSciences";
+import Facilities from "@/pages/Facilities";
+import Sustainability from "@/pages/Sustainability";
+import Testimonials from "@/pages/Testimonials";
+import Career from "@/pages/Career";
+import Contact from "@/pages/Contact";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <LangProvider>
+        <BrowserRouter>
+          <Toaster position="top-center" richColors />
+          <Routes>
+            <Route element={<Layout />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/solutions" element={<Solutions />} />
+              <Route path="/solutions/:slug" element={<CategoryPage />} />
+              <Route path="/products/:slug" element={<ProductDetail />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/about/oursciences" element={<OurSciences />} />
+              <Route path="/about/facilities" element={<Facilities />} />
+              <Route path="/about/sustainability" element={<Sustainability />} />
+              <Route path="/about/testimonials" element={<Testimonials />} />
+              <Route path="/about/career" element={<Career />} />
+              <Route path="/contact" element={<Contact />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </LangProvider>
     </div>
   );
 }
