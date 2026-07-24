@@ -3,7 +3,7 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { useLang } from "../lib/i18n";
 import { Reveal, StaggerGroup } from "../lib/motion";
-import { PRODUCTS, CATEGORY_PAGES } from "../data/content";
+import { ALL_PRODUCTS, CATEGORY_PAGES } from "../data/content";
 import PageHero from "../components/PageHero";
 import { ProductCard } from "./Solutions";
 
@@ -14,7 +14,7 @@ export default function CategoryPage() {
 
   if (!cat) return <Navigate to="/solutions" replace />;
 
-  const products = PRODUCTS.filter((p) => p.categorySlug === slug);
+  const products = ALL_PRODUCTS.filter((p) => p.categorySlug === slug);
 
   return (
     <div data-testid="category-page">

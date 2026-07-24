@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Search, ArrowUpRight, Download, X } from "lucide-react";
 import { useLang } from "../lib/i18n";
 import { Reveal, StaggerGroup, staggerItem, MicrobeDots } from "../lib/motion";
-import { PRODUCTS, SOLUTION_TYPES, CROPS } from "../data/content";
+import { ALL_PRODUCTS, SOLUTION_TYPES, CROPS } from "../data/content";
 import PageHero from "../components/PageHero";
 
 export function ProductCard({ p, lang, t }) {
@@ -43,7 +43,7 @@ export default function Solutions() {
   const [crop, setCrop] = useState("");
 
   const filtered = useMemo(() => {
-    return PRODUCTS.filter((p) => {
+    return ALL_PRODUCTS.filter((p) => {
       const q = search.toLowerCase();
       const matchSearch =
         !q ||

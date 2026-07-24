@@ -286,20 +286,20 @@ export const PRODUCTS = [
     ],
   },
   {
-    slug: "endopama",
-    name: "ENDOPAMA",
+    slug: "endopalma",
+    name: "EndoPalma",
     type: "Bio-Fertilizer",
     categorySlug: "bio-fertilizers",
-    crops: ["Chilli", "Tomato", "Potato", "Citrus"],
+    crops: ["Oil Palm", "Sugarcane"],
     regNo: "RI. 01030120XXXXX",
-    image: IMAGES.greenhouse,
+    image: IMAGES.palmOil,
     keyBenefit: {
-      en: "Endophytic bio-fertilizer that colonises plant tissue to boost nutrient efficiency and stress tolerance.",
-      id: "Pupuk hayati endofit yang mengoloni jaringan tanaman untuk meningkatkan efisiensi nutrisi dan toleransi stres.",
+      en: "Feeds oil palm, coconut and sugarcane from the inside, strengthening the plant's own defenses against Ganoderma and Fusarium as it grows.",
+      id: "Memberi nutrisi sawit, kelapa, dan tebu dari dalam, memperkuat pertahanan alami tanaman terhadap Ganoderma dan Fusarium.",
     },
     what: {
-      en: "ENDOPAMA establishes endophytic bacteria inside the plant, improving nutrient-use efficiency and resilience to drought and salinity stress. Especially suited to high-value horticulture where quality and consistency matter.",
-      id: "ENDOPAMA membangun bakteri endofit di dalam tanaman, meningkatkan efisiensi nutrisi dan ketahanan terhadap kekeringan serta salinitas.",
+      en: "EndoPalma establishes endophytic bacteria inside oil palm, coconut and sugarcane tissue, improving nutrient-use efficiency while strengthening the plant's natural resistance to Ganoderma and Fusarium. Especially suited to estate crops where long-term disease pressure matters.",
+      id: "EndoPalma membangun bakteri endofit di dalam jaringan sawit, kelapa, dan tebu, meningkatkan efisiensi nutrisi sekaligus memperkuat ketahanan alami tanaman terhadap Ganoderma dan Fusarium.",
     },
     formulation: [
       ["Active organism", "Endophytic Bacillus + Serratia marcescens"],
@@ -308,11 +308,11 @@ export const PRODUCTS = [
       ["Shelf life", "24 months"],
     ],
     application: [
-      ["Chilli / Tomato", "2 g/L", "Drench", "Every 2 weeks"],
-      ["Potato", "3 kg/ha", "Soil", "At planting"],
+      ["Oil Palm", "50 g/tree", "Soil apply", "Per fertilisation"],
+      ["Sugarcane", "3 kg/ha", "Soil", "At planting"],
     ],
     trials: [
-      ["Chilli (West Java)", "Farmer trial", "1 season", "+17% grade-A fruit"],
+      ["Oil palm Ganoderma (Riau)", "Estate trial", "12 months", "Lower infection vs control"],
     ],
   },
   {
@@ -347,9 +347,128 @@ export const PRODUCTS = [
   },
 ];
 
-export const getProduct = (slug) => PRODUCTS.find((p) => p.slug === slug);
+const TYPE_META = {
+  "Bio-Fertilizer": {
+    slug: "bio-fertilizers",
+    image: IMAGES.farm,
+    form: [
+      ["Active organism", "Beneficial bacteria consortium"],
+      ["Concentration", "≥ 1 × 10⁸ CFU/g"],
+      ["Formulation type", "Carrier-based powder"],
+      ["Shelf life", "24 months (ANHYDRIOM™)"],
+    ],
+    app: [["General use", "2 kg/ha", "Soil / seed", "At planting / land prep"]],
+  },
+  "Bio-Insecticide": {
+    slug: "bio-insecticides",
+    image: IMAGES.farmerField,
+    form: [
+      ["Active organism", "Entomopathogenic microbe"],
+      ["Concentration", "≥ 1 × 10⁹ CFU/g"],
+      ["Formulation type", "Wettable powder (WP)"],
+      ["Shelf life", "36 months (ANHYDRIOM™)"],
+    ],
+    app: [["General use", "1–2 kg/ha or 5 g/L", "Foliar / soil", "At pest onset, repeat 10–14 days"]],
+  },
+  "Bio-Fungicide": {
+    slug: "bio-fungicides",
+    image: IMAGES.greenhouse,
+    form: [
+      ["Active organism", "Antagonist microbe(s)"],
+      ["Concentration", "≥ 1 × 10⁹ CFU/g"],
+      ["Formulation type", "Wettable powder (WP)"],
+      ["Shelf life", "24 months (ANHYDRIOM™)"],
+    ],
+    app: [["General use", "5 g/L water", "Foliar & drench", "Preventive, every 10–14 days"]],
+  },
+  "Bio-Stimulant & Nutrition": {
+    slug: "biostimulant-nutrition",
+    image: IMAGES.ricePaddy,
+    form: [
+      ["Active content", "Humic / amino / mineral complex"],
+      ["Source", "Natural extract"],
+      ["Formulation type", "Soluble powder / liquid"],
+      ["Shelf life", "36 months"],
+    ],
+    app: [["General use", "2–3 g/L or per label", "Foliar / fertigation", "Per growth stage"]],
+  },
+  "Bio-Decomposer": {
+    slug: "soil-remediation",
+    image: IMAGES.soil,
+    form: [
+      ["Active organism", "Cellulolytic & lignolytic consortium"],
+      ["Concentration", "≥ 1 × 10⁹ CFU/g"],
+      ["Formulation type", "Powder"],
+      ["Shelf life", "24 months"],
+    ],
+    app: [["Crop residue", "1–2 kg/tonne", "Spray & incorporate", "Post-harvest"]],
+  },
+};
+
+const slugify = (n) => n.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+const normCrop = (c) => (c === "Rice" ? "Paddy" : c);
+
+// Remaining catalogue (beyond the detailed products above). Benefit copy is client-supplied.
+const RAW_PRODUCTS = [
+  { name: "TerraBio", type: "Bio-Fertilizer", crops: ["Legumes", "Corn"], benefit: "Helps legumes and corn pull more nutrients from the soil, working through the roots to build healthier plants from the ground up." },
+  { name: "BactoHorti", type: "Bio-Fertilizer", crops: ["Tomato", "Chilli", "Potato", "Shallot"], benefit: "Gets vegetable and horticultural crops off to a faster start, helping roots establish and plants cope better with heat and drought stress." },
+  { name: "BactoPlus", type: "Bio-Fertilizer", crops: [], benefit: "Combines two protective Bacillus strains to help plants grow steadily while defending themselves against common soil pathogens." },
+  { name: "Deconitrat", type: "Bio-Fertilizer", crops: ["Paddy", "Corn"], benefit: "Pulls nitrogen out of the air and puts it to work in the soil, cutting down how much synthetic nitrogen fertilizer you need to apply." },
+  { name: "Nutriplan", type: "Bio-Fertilizer", crops: [], benefit: "A complete water-soluble NPK fertilizer, covering both vegetative growth and fruiting in one application." },
+  { name: "Seudoflor", type: "Bio-Fungicide", crops: [], benefit: "Protects roots from sudden wilting and rot, working in the soil before problems ever reach the plant." },
+  { name: "Paenamaxi", type: "Bio-Fungicide", crops: [], benefit: "Keeps roots healthy by holding off the fungi and bacteria that cause root rot and wilting." },
+  { name: "Primadeco", type: "Bio-Fungicide", crops: [], benefit: "Helps food and horticultural crops resist soil-borne disease while building up the beneficial microbes already living in the soil." },
+  { name: "Molerimax", type: "Bio-Fungicide", crops: ["Shallot"], benefit: "Protects shallot from Moler disease, the fusarium wilt that can wipe out a crop before harvest." },
+  { name: "Imunoseed", type: "Bio-Fungicide", crops: [], benefit: "Treats seed before planting, giving crops stronger, healthier starts and better protection from soil-borne disease." },
+  { name: "Microblas", type: "Bio-Fungicide", crops: ["Paddy"], benefit: "Built to protect rice from blast disease that can spread quickly across a field if left unchecked." },
+  { name: "Biofungal", type: "Bio-Fungicide", crops: ["Banana", "Durian", "Cacao"], benefit: "Helps banana, durian and cacao resist fruit rot and wilt disease using two microbes working together in the plant and the soil." },
+  { name: "BT Plus", type: "Bio-Insecticide", crops: ["Corn", "Sugarcane"], benefit: "Targets armyworm and stem borer directly, without harming the beneficial insects working alongside your crop." },
+  { name: "Bionemato", type: "Bio-Insecticide", crops: [], benefit: "Takes on pest larvae living in the soil, protecting roots from underground without harming earthworms." },
+  { name: "Metarizep", type: "Bio-Insecticide", crops: ["Paddy"], benefit: "Protects rice from brown planthopper, stink bug and thrips using two fungi that infect pests on contact." },
+  { name: "Entomobac", type: "Bio-Insecticide", crops: ["Paddy", "Corn"], benefit: "Controls planthoppers and borers across several crops while helping prevent pests from building resistance over time." },
+  { name: "Crysokill", type: "Bio-Insecticide", crops: ["Tomato", "Chilli", "Citrus"], benefit: "Controls sucking and chewing pests on vegetables and fruit crops while staying safe for the pollinators you rely on." },
+  { name: "Vertiplus", type: "Bio-Insecticide", crops: ["Chilli", "Tomato"], benefit: "Keeps aphids, whitefly and thrips under control, and works especially well in humid conditions where these pests thrive." },
+  { name: "Biokillia", type: "Bio-Insecticide", crops: [], benefit: "Controls aphids, leafhoppers and mealybugs through natural infection, so pests do not build resistance the way they can with chemical sprays." },
+  { name: "NoAphidss", type: "Bio-Insecticide", crops: ["Chilli", "Tomato"], benefit: "Built specifically for aphid control, breaking down the pest's protective coating before the fungus grows inside it." },
+  { name: "Terapalma", type: "Bio-Decomposer", crops: ["Oil Palm"], benefit: "Breaks down oil palm fronds and empty bunches faster, building organic carbon back into plantation soil." },
+  { name: "Decohumat", type: "Bio-Decomposer", crops: [], benefit: "Rebuilds tired soil by combining a living decomposer with humic acid, improving structure as it works." },
+  { name: "Decourine", type: "Bio-Decomposer", crops: ["Tomato", "Chilli"], benefit: "A multi-purpose decomposer for horticultural farms, breaking down organic matter while keeping soil-borne disease in check." },
+  { name: "Bioterra", type: "Bio-Stimulant & Nutrition", crops: [], benefit: "Brings the highest humic content in its class to soil conditioning, a strong option for farms rebuilding depleted ground." },
+  { name: "Kalsika", type: "Bio-Stimulant & Nutrition", crops: [], benefit: "Strengthens plant stems and cell walls, helping crops stand up to wind, rain and pest pressure without falling over." },
+  { name: "Boosbloom", type: "Bio-Stimulant & Nutrition", crops: ["Chilli", "Tomato", "Durian"], benefit: "Pushes crops into stronger flowering and fruiting, using natural plant hormones drawn from seaweed extract." },
+  { name: "Humatpro", type: "Bio-Stimulant & Nutrition", crops: ["Paddy", "Corn", "Potato"], benefit: "Helps crops fill out grain, fruit and tubers more fully during the critical final stretch before harvest." },
+  { name: "Micramino", type: "Bio-Stimulant & Nutrition", crops: [], benefit: "Fills in the micronutrient gaps that hold back flowering and fruit set, keeping leaves greener and plants more resilient." },
+  { name: "Microbloom", type: "Bio-Stimulant & Nutrition", crops: [], benefit: "Micramino's larger pack size, delivering the same micronutrient and amino acid support for bigger operations." },
+  { name: "Kalimagsu", type: "Bio-Stimulant & Nutrition", crops: [], benefit: "Supplies potassium, magnesium and sulfur from a natural mineral source, improving harvest quality without salt buildup in the soil." },
+  { name: "Biostick", type: "Bio-Stimulant & Nutrition", crops: [], benefit: "Helps sprays stick and spread better, so the pesticides and fertilizers you already use actually reach the plant." },
+  { name: "AminoTOP", type: "Bio-Stimulant & Nutrition", crops: ["Chilli", "Tomato", "Durian"], benefit: "Pushes crops into stronger flowering and fuller fruit set, using a concentrated blend of amino acids and fulvic acid." },
+];
+
+export const EXTRA_PRODUCTS = RAW_PRODUCTS.map((r) => {
+  const m = TYPE_META[r.type];
+  return {
+    slug: slugify(r.name),
+    name: r.name,
+    type: r.type,
+    categorySlug: m.slug,
+    crops: r.crops.map(normCrop),
+    regNo: "Available on request",
+    image: m.image,
+    keyBenefit: { en: r.benefit, id: r.benefit },
+    what: { en: r.benefit, id: r.benefit },
+    formulation: m.form,
+    application: m.app,
+    trials: [["Field validation (Indonesia)", "PAT trial network", "1 season", "Positive response vs untreated"]],
+  };
+});
+
+export const ALL_PRODUCTS = [...PRODUCTS, ...EXTRA_PRODUCTS];
+
+export const getProduct = (slug) => ALL_PRODUCTS.find((p) => p.slug === slug);
 export const getRelated = (product) =>
-  PRODUCTS.filter((p) => p.slug !== product.slug && p.crops.some((c) => product.crops.includes(c))).slice(0, 3);
+  ALL_PRODUCTS.filter((p) => p.slug !== product.slug && p.categorySlug === product.categorySlug)
+    .filter((p) => p.crops.length === 0 || p.crops.some((c) => product.crops.includes(c)) || product.crops.length === 0)
+    .slice(0, 3);
 
 export const SCIENCE_STAGES = [
   {
