@@ -3,7 +3,8 @@ import axios from "axios";
 import { toast } from "sonner";
 import { useLang } from "../lib/i18n";
 
-const API = process.env.REACT_APP_BACKEND_URL + "/api";
+const API = process.env.REACT_APP_BACKEND_URL ? process.env.REACT_APP_BACKEND_URL + "/api" : "";
+const TARGET_EMAIL = "secretary@primaagrotech.com";
 
 export default function ContactForm({ source = "contact", product = null, compact = false }) {
   const { t } = useLang();
@@ -16,7 +17,25 @@ export default function ContactForm({ source = "contact", product = null, compac
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.post(`${API}/contact`, { ...form, source, product });
+      const emailPayload = {
+        _subject: product ? `Product Enquiry: ${product} — ${form.name}` : `New Contact Enquiry from ${form.name}`,
+        _captcha: "false",
+        _template: "table",
+        "Form Source": source,
+        "Product Name": product || "General Enquiry",
+        "Full Name": form.name,
+        "Email Address": form.email,
+        "Company": form.company || "-",
+        "Phone": form.phone || "-",
+        "Message": form.message,
+      };
+
+      await axios.post(`https://formsubmit.co/ajax/${TARGET_EMAIL}`, emailPayload);
+
+      if (API) {
+        axios.post(`${API}/contact`, { ...form, source, product }).catch(() => {});
+      }
+
       toast.success(t("contact.success"));
       setForm({ name: "", email: "", company: "", phone: "", message: "" });
     } catch (err) {

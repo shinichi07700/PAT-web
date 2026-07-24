@@ -8,7 +8,8 @@ import { Reveal, StaggerGroup, staggerItem } from "../lib/motion";
 import { SEED_TESTIMONIALS, IMAGES } from "../data/content";
 import PageHero from "../components/PageHero";
 
-const API = process.env.REACT_APP_BACKEND_URL + "/api";
+const API = process.env.REACT_APP_BACKEND_URL ? process.env.REACT_APP_BACKEND_URL + "/api" : "";
+const TARGET_EMAIL = "secretary@primaagrotech.com";
 
 const VIDEOS = [
   { title: "Cerita Tani — Padi, Jawa Barat", thumb: IMAGES.ricePaddy },
@@ -21,6 +22,7 @@ export default function Testimonials() {
   const [items, setItems] = useState(SEED_TESTIMONIALS);
 
   const refresh = () => {
+    if (!API) return;
     axios.get(`${API}/testimonials?approved_only=true`)
       .then((r) => {
         if (Array.isArray(r.data) && r.data.length) {
@@ -109,7 +111,24 @@ function TestimonialForm({ onDone }) {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.post(`${API}/testimonials`, form);
+      const emailPayload = {
+        _subject: `New Testimonial Submitted by ${form.name}`,
+        _captcha: "false",
+        _template: "table",
+        "Full Name": form.name,
+        "Role": form.role,
+        "Crop": form.crop || "-",
+        "Province": form.province || "-",
+        "Product Used": form.product || "-",
+        "Testimonial Story": form.quote,
+      };
+
+      await axios.post(`https://formsubmit.co/ajax/${TARGET_EMAIL}`, emailPayload);
+
+      if (API) {
+        axios.post(`${API}/testimonials`, form).catch(() => {});
+      }
+
       toast.success(t("testimonials.thanks"));
       setForm({ name: "", role: "farmer", crop: "", province: "", product: "", quote: "" });
       onDone && onDone();
