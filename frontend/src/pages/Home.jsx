@@ -171,12 +171,22 @@ export default function Home() {
             </p>
           </Reveal>
 
-          {/* Horizontal 3-Step Process with Outline Icon Circles & Connector Line */}
+          {/* Horizontal 3-Step Process with Custom Icons & Arrow Connector Line */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 relative">
-            {/* Horizontal Line overlay for md+ */}
-            <div className="hidden md:block absolute top-10 left-[16%] right-[16%] h-[2px] bg-[#0E6E19]/30 z-0" />
+            {/* Arrow Connector Line overlay for md+ */}
+            <div className="hidden md:flex absolute top-10 left-[18%] right-[18%] items-center z-0">
+              <div className="flex-1 h-[2px] bg-[#0E6E19]/40" />
+              <svg className="w-5 h-5 text-[#0E6E19] shrink-0 -mx-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+              <div className="flex-1 h-[2px] bg-[#0E6E19]/40" />
+              <svg className="w-5 h-5 text-[#0E6E19] shrink-0 -mx-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+              <div className="flex-1 h-[2px] bg-[#0E6E19]/40" />
+            </div>
 
-            {/* Step 1 */}
+            {/* Step 1 - Bioprospecting */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -184,8 +194,8 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="relative z-10 flex flex-col items-center text-center px-4"
             >
-              <div className="w-20 h-20 rounded-full border-2 border-[#0E6E19] bg-white flex items-center justify-center text-[#0E6E19] shadow-md mb-5">
-                <Package className="w-9 h-9" />
+              <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm rounded-full mb-5 hover:scale-105 transition-transform">
+                <PetriDishIcon className="w-20 h-20" />
               </div>
               <h4 className="font-extrabold text-lg text-[#111827]">{t("steps.bioprospecting")}</h4>
               <p className="text-[#4B5563] text-xs md:text-sm mt-2 leading-relaxed max-w-xs">
@@ -193,7 +203,7 @@ export default function Home() {
               </p>
             </motion.div>
 
-            {/* Step 2 */}
+            {/* Step 2 - Stabilization */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -201,8 +211,8 @@ export default function Home() {
               transition={{ delay: 0.3 }}
               className="relative z-10 flex flex-col items-center text-center px-4"
             >
-              <div className="w-20 h-20 rounded-full border-2 border-[#0E6E19] bg-white flex items-center justify-center text-[#0E6E19] shadow-md mb-5">
-                <Disc className="w-9 h-9" />
+              <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm rounded-full mb-5 hover:scale-105 transition-transform">
+                <HexagonMicrobeIcon className="w-20 h-20" />
               </div>
               <h4 className="font-extrabold text-lg text-[#111827]">{t("steps.stabilization")}</h4>
               <p className="text-[#4B5563] text-xs md:text-sm mt-2 leading-relaxed max-w-xs">
@@ -210,7 +220,7 @@ export default function Home() {
               </p>
             </motion.div>
 
-            {/* Step 3 */}
+            {/* Step 3 - Deploy */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -218,8 +228,8 @@ export default function Home() {
               transition={{ delay: 0.4 }}
               className="relative z-10 flex flex-col items-center text-center px-4"
             >
-              <div className="w-20 h-20 rounded-full border-2 border-[#0E6E19] bg-white flex items-center justify-center text-[#0E6E19] shadow-md mb-5">
-                <Hexagon className="w-9 h-9" />
+              <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm rounded-full mb-5 hover:scale-105 transition-transform">
+                <DeployIcon className="w-20 h-20" />
               </div>
               <h4 className="font-extrabold text-lg text-[#111827]">{t("steps.deploy")}</h4>
               <p className="text-[#4B5563] text-xs md:text-sm mt-2 leading-relaxed max-w-xs">
@@ -391,3 +401,58 @@ function TestimonialCarousel() {
     </section>
   );
 }
+
+function PetriDishIcon({ className = "w-12 h-12" }) {
+  return (
+    <svg viewBox="0 0 100 100" fill="none" className={className}>
+      <circle cx="50" cy="50" r="46" stroke="#0E6E19" strokeWidth="4.5" fill="white" />
+      <ellipse cx="50" cy="45" rx="28" ry="14" stroke="black" strokeWidth="4" fill="none" />
+      <path d="M 22 45 A 28 14 0 0 0 78 45 v 7 A 28 14 0 0 1 22 52 Z" fill="none" stroke="black" strokeWidth="4" />
+      <path d="M 38 43 C 32 39 30 50 42 50 C 50 50 48 41 38 43 Z" fill="black" />
+      <circle cx="62" cy="46" r="4.5" fill="black" />
+    </svg>
+  );
+}
+
+function HexagonMicrobeIcon({ className = "w-12 h-12" }) {
+  return (
+    <svg viewBox="0 0 100 100" fill="none" className={className}>
+      <circle cx="50" cy="50" r="46" stroke="#0E6E19" strokeWidth="4.5" fill="white" />
+      <path
+        d="M 50 22 L 75 36 L 75 64 L 50 78 L 25 64 L 25 36 Z"
+        stroke="black"
+        strokeWidth="4.5"
+        strokeLinejoin="round"
+        fill="none"
+      />
+      <path
+        d="M 50 22 L 75 36 C 75 46 66 42 58 48 C 50 54 48 60 48 77 L 25 64 L 25 36 Z"
+        fill="black"
+      />
+      <circle cx="62" cy="30" r="2" fill="black" />
+      <circle cx="68" cy="37" r="2.5" fill="black" />
+      <circle cx="67" cy="45" r="2.5" fill="black" />
+      <circle cx="48" cy="50" r="3" fill="black" />
+      <circle cx="56" cy="56" r="3.5" fill="black" />
+      <path d="M 48 50 L 56 56" stroke="black" strokeWidth="2.5" />
+      <circle cx="60" cy="65" r="3" fill="black" />
+      <path d="M 56 56 L 60 65" stroke="black" strokeWidth="2.5" />
+    </svg>
+  );
+}
+
+function DeployIcon({ className = "w-12 h-12" }) {
+  return (
+    <svg viewBox="0 0 100 100" fill="none" className={className}>
+      <circle cx="50" cy="50" r="46" stroke="#0E6E19" strokeWidth="4.5" fill="white" />
+      <path
+        d="M 50 26 L 72 38 L 72 62 L 50 74 L 28 62 L 28 38 Z"
+        stroke="black"
+        strokeWidth="4"
+        strokeLinejoin="round"
+        fill="none"
+      />
+    </svg>
+  );
+}
+
