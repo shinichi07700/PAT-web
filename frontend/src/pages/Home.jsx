@@ -212,7 +212,7 @@ export default function Home() {
               className="relative z-10 flex flex-col items-center text-center px-4"
             >
               <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm rounded-full mb-5 hover:scale-105 transition-transform">
-                <SachetIcon className="w-20 h-20" />
+                <HexagonMicrobeIcon className="w-20 h-20" />
               </div>
               <h4 className="font-extrabold text-lg text-[#111827]">{t("steps.stabilization")}</h4>
               <p className="text-[#4B5563] text-xs md:text-sm mt-2 leading-relaxed max-w-xs">
@@ -229,7 +229,7 @@ export default function Home() {
               className="relative z-10 flex flex-col items-center text-center px-4"
             >
               <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm rounded-full mb-5 hover:scale-105 transition-transform">
-                <HexagonMicrobeIcon className="w-20 h-20" />
+                <SachetIcon className="w-20 h-20" />
               </div>
               <h4 className="font-extrabold text-lg text-[#111827]">{t("steps.deploy")}</h4>
               <p className="text-[#4B5563] text-xs md:text-sm mt-2 leading-relaxed max-w-xs">
