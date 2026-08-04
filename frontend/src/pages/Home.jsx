@@ -418,23 +418,24 @@ function SachetIcon({ className = "w-12 h-12" }) {
   return (
     <svg viewBox="0 0 100 100" fill="none" className={className}>
       <circle cx="50" cy="50" r="46" stroke="#0E6E19" strokeWidth="4.5" fill="white" />
-      <g transform="translate(19, 21)">
+      <g transform="translate(19, 19) scale(0.88)">
         {/* Back sachet */}
-        <g transform="translate(0, 3) rotate(-7 18 27)">
-          <path d="M 4 4 L 32 4 L 30 52 L 2 52 Z" fill="white" stroke="black" strokeWidth="3.5" strokeLinejoin="round" />
-          <path d="M 2 4 L 5 1 L 8 4 L 11 1 L 14 4 L 17 1 L 20 4 L 23 1 L 26 4 L 29 1 L 32 4" stroke="black" strokeWidth="2" />
-          <line x1="6" y1="9" x2="28" y2="9" stroke="black" strokeWidth="2" />
-          <line x1="5" y1="47" x2="27" y2="47" stroke="black" strokeWidth="2" />
+        <g transform="translate(0, 4) rotate(-8 16 26)">
+          <rect x="2" y="4" width="28" height="46" rx="1" fill="white" stroke="black" strokeWidth="3.5" />
+          <path d="M 2 4 L 5 1 L 8 4 L 11 1 L 14 4 L 17 1 L 20 4 L 23 1 L 26 4 L 29 1 L 30 4" stroke="black" strokeWidth="2" fill="none" />
+          <path d="M 2 50 L 5 53 L 8 50 L 11 53 L 14 50 L 17 53 L 20 50 L 23 53 L 26 50 L 29 53 L 30 50" stroke="black" strokeWidth="2" fill="none" />
+          <line x1="6" y1="9" x2="26" y2="9" stroke="black" strokeWidth="2" />
+          <line x1="5" y1="45" x2="25" y2="45" stroke="black" strokeWidth="2" />
         </g>
         {/* Front sachet */}
-        <g transform="translate(14, 0) rotate(5 18 27)">
-          <path d="M 4 4 L 32 4 L 30 52 L 2 52 Z" fill="white" stroke="black" strokeWidth="3.5" strokeLinejoin="round" />
-          <path d="M 2 4 L 5 1 L 8 4 L 11 1 L 14 4 L 17 1 L 20 4 L 23 1 L 26 4 L 29 1 L 32 4" stroke="black" strokeWidth="2" fill="none" />
-          <path d="M 2 52 L 5 55 L 8 52 L 11 55 L 14 52 L 17 55 L 20 52 L 23 55 L 26 52 L 29 55 L 32 52" stroke="black" strokeWidth="2" fill="none" />
-          <line x1="7" y1="10" x2="29" y2="10" stroke="black" strokeWidth="2.5" />
-          <line x1="6" y1="46" x2="28" y2="46" stroke="black" strokeWidth="2.5" />
+        <g transform="translate(14, 0) rotate(6 16 26)">
+          <rect x="2" y="4" width="28" height="46" rx="1" fill="white" stroke="black" strokeWidth="3.5" />
+          <path d="M 2 4 L 5 1 L 8 4 L 11 1 L 14 4 L 17 1 L 20 4 L 23 1 L 26 4 L 29 1 L 30 4" stroke="black" strokeWidth="2" fill="none" />
+          <path d="M 2 50 L 5 53 L 8 50 L 11 53 L 14 50 L 17 53 L 20 50 L 23 53 L 26 50 L 29 53 L 30 50" stroke="black" strokeWidth="2" fill="none" />
+          <line x1="7" y1="10" x2="27" y2="10" stroke="black" strokeWidth="2.5" />
+          <line x1="6" y1="46" x2="26" y2="46" stroke="black" strokeWidth="2.5" />
           <line x1="7" y1="14" x2="6" y2="42" stroke="black" strokeWidth="2" strokeDasharray="4 2" />
-          <line x1="29" y1="14" x2="28" y2="42" stroke="black" strokeWidth="2" strokeDasharray="4 2" />
+          <line x1="27" y1="14" x2="26" y2="42" stroke="black" strokeWidth="2" strokeDasharray="4 2" />
         </g>
       </g>
     </svg>
@@ -445,29 +446,39 @@ function HexagonMicrobeIcon({ className = "w-12 h-12" }) {
   return (
     <svg viewBox="0 0 100 100" fill="none" className={className}>
       <circle cx="50" cy="50" r="46" stroke="#0E6E19" strokeWidth="4.5" fill="white" />
-      {/* 2D Flat Hexagon border */}
+      {/* Black Hexagon Outer Border */}
       <path
-        d="M 50 21 L 76 35 L 76 65 L 50 79 L 24 65 L 24 35 Z"
+        d="M 50 20 L 76 35 L 76 65 L 50 80 L 24 65 L 24 35 Z"
         stroke="black"
         strokeWidth="5"
         strokeLinejoin="round"
         fill="white"
       />
-      {/* Wave / fluid section on left */}
+      {/* Filled Top-Left Pocket */}
       <path
-        d="M 50 21 L 76 35 C 68 45 60 48 50 58 C 42 66 38 72 50 79 L 24 65 L 24 35 Z"
+        d="M 50 20 L 24 35 C 24 45 32 45 42 35 C 46 31 48 24 50 20 Z"
         fill="black"
       />
-      {/* Microbe dots on right side */}
-      <circle cx="62" cy="30" r="2.5" fill="black" />
-      <circle cx="68" cy="38" r="3" fill="black" />
-      <circle cx="66" cy="48" r="3" fill="black" />
-      <circle cx="42" cy="42" r="3" fill="black" />
-      <circle cx="52" cy="52" r="3.5" fill="black" />
-      <circle cx="58" cy="60" r="4" fill="black" />
-      <line x1="52" y1="52" x2="58" y2="60" stroke="black" strokeWidth="2.5" />
-      <circle cx="64" cy="70" r="3.5" fill="black" />
-      <line x1="58" y1="60" x2="64" y2="70" stroke="black" strokeWidth="2.5" />
+      {/* Smooth organic wave line */}
+      <path
+        d="M 24 45 C 38 42 45 52 55 50 C 65 48 70 58 76 60"
+        stroke="black"
+        strokeWidth="3.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+      {/* Microbe dots + connection lines */}
+      <circle cx="48" cy="52" r="3" fill="black" />
+      <circle cx="56" cy="58" r="4" fill="black" />
+      <line x1="48" y1="52" x2="56" y2="58" stroke="black" strokeWidth="2.5" />
+      <circle cx="62" cy="67" r="3.5" fill="black" />
+      <line x1="56" y1="58" x2="62" y2="67" stroke="black" strokeWidth="2.5" />
+
+      <circle cx="64" cy="32" r="2.5" fill="black" />
+      <circle cx="70" cy="40" r="3" fill="black" />
+      <circle cx="68" cy="48" r="3.5" fill="black" />
+      <circle cx="42" cy="62" r="2.5" fill="black" />
+      <circle cx="50" cy="72" r="3" fill="black" />
     </svg>
   );
 }
