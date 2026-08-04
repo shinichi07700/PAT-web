@@ -7,9 +7,8 @@ import { Marquee } from "../lib/motion";
 export default function Footer() {
   const { t } = useLang();
   const year = new Date().getFullYear();
-
   return (
-    <footer className="bg-[#064016] text-white relative overflow-hidden" data-testid="footer">
+    <footer className="bg-[#1C3A1F] text-white relative overflow-hidden" data-testid="footer">
       <Marquee
         text="GROW MORE · HARM LESS · WITH MICROBES ·"
         className="py-6 border-y border-white/10 text-white/10 font-extrabold text-4xl md:text-6xl tracking-tight"
@@ -17,15 +16,14 @@ export default function Footer() {
       />
       <div className="container-pat py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
-          {/* Simplified logo lockup to match nav wordmark without PT. prefix */}
           <div className="flex items-center gap-3 mb-5">
-            <span className="relative flex items-center justify-center w-8 h-8">
-              <span className="absolute w-8 h-8 rounded-full border-2 border-[#0E6E19]" />
-              <span className="w-2.5 h-2.5 rounded-full bg-[#0E6E19]" />
+            <span className="relative flex items-center justify-center w-10 h-10">
+              <span className="absolute w-10 h-10 rounded-full border-2 border-[#43B14B]" />
+              <span className="w-3 h-3 rounded-full bg-[#43B14B]" />
             </span>
-            <span className="font-extrabold text-lg tracking-tight text-white">PRIMA AGRO TECH</span>
+            <span className="font-extrabold text-lg tracking-tight">PT. PRIMA AGRO TECH</span>
           </div>
-          <p className="text-white/70 max-w-md text-sm leading-relaxed">{t("footer.legal")}</p>
+          <p className="text-white/60 max-w-md leading-relaxed">{t("footer.legal")}</p>
           <div className="flex items-center gap-3 mt-6">
             {[
               { Icon: Instagram, href: "https://instagram.com", label: "Instagram" },
@@ -38,43 +36,42 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-white hover:bg-white/10 transition-colors"
+                className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-[#43B14B] hover:text-[#43B14B] transition-colors"
                 data-testid={`footer-social-${label.toLowerCase()}`}
               >
-                <Icon className="w-4 h-4 text-white" />
+                <Icon className="w-4 h-4" />
               </a>
             ))}
           </div>
         </div>
 
         <div>
-          <h4 className="text-[#0E6E19] text-xs font-bold uppercase tracking-wider mb-4">{t("footer.explore")}</h4>
-          <ul className="space-y-2.5 text-white/70 text-sm font-medium">
-            <li><Link to="/solutions" className="hover:text-white transition-colors">{t("nav.solutions")}</Link></li>
-            <li><Link to="/about/oursciences" className="hover:text-white transition-colors">{t("nav.oursciences")}</Link></li>
-            <li><Link to="/about/facilities" className="hover:text-white transition-colors">{t("nav.facilities")}</Link></li>
-            <li><Link to="/about/sustainability" className="hover:text-white transition-colors">{t("nav.sustainability")}</Link></li>
-            <li><Link to="/about/testimonials" className="hover:text-white transition-colors">{t("nav.testimonials")}</Link></li>
+          <h4 className="text-[#43B14B] font-semibold text-sm uppercase tracking-wider mb-4">{t("footer.explore")}</h4>
+          <ul className="space-y-2.5 text-white/70 text-sm">
+            <li><Link to="/solutions" className="hover:text-[#43B14B] transition-colors">{t("nav.solutions")}</Link></li>
+            <li><Link to="/about/oursciences" className="hover:text-[#43B14B] transition-colors">{t("nav.oursciences")}</Link></li>
+            <li><Link to="/about/facilities" className="hover:text-[#43B14B] transition-colors">{t("nav.facilities")}</Link></li>
+            <li><Link to="/about/sustainability" className="hover:text-[#43B14B] transition-colors">{t("nav.sustainability")}</Link></li>
+            <li><Link to="/about/testimonials" className="hover:text-[#43B14B] transition-colors">{t("nav.testimonials")}</Link></li>
           </ul>
         </div>
 
         <div>
-          <h4 className="text-[#0E6E19] text-xs font-bold uppercase tracking-wider mb-4">{t("footer.company")}</h4>
-          <ul className="space-y-3 text-white/70 text-sm font-medium">
-            <li className="flex gap-2"><MapPin className="w-4 h-4 shrink-0 mt-0.5 text-white/60" /> Penjaringan, Jakarta · Karawaci, Tangerang</li>
-            <li className="flex gap-2"><Mail className="w-4 h-4 shrink-0 mt-0.5 text-white/60" /> secretary@primaagrotech.com</li>
-            <li><Link to="/about/career" className="hover:text-white transition-colors">{t("nav.career")}</Link></li>
-            <li><Link to="/contact" className="hover:text-white transition-colors">{t("nav.contact")}</Link></li>
+          <h4 className="text-[#43B14B] font-semibold text-sm uppercase tracking-wider mb-4">{t("footer.company")}</h4>
+          <ul className="space-y-3 text-white/70 text-sm">
+            <li className="flex gap-2"><MapPin className="w-4 h-4 shrink-0 mt-0.5 text-[#43B14B]" /> Penjaringan, Jakarta · Karawaci, Tangerang</li>
+            <li className="flex gap-2"><Mail className="w-4 h-4 shrink-0 mt-0.5 text-[#43B14B]" /> secretary@primaagrotech.com</li>
+            <li><Link to="/about/career" className="hover:text-[#43B14B] transition-colors">{t("nav.career")}</Link></li>
+            <li><Link to="/contact" className="hover:text-[#43B14B] transition-colors">{t("nav.contact")}</Link></li>
           </ul>
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="container-pat py-5 flex flex-col md:flex-row justify-between items-center gap-2 text-white/50 text-xs">
-          <span>© {year} Prima Agro Tech. {t("common.allRightsReserved")}</span>
+        <div className="container-pat py-5 flex flex-col md:flex-row justify-between items-center gap-2 text-white/40 text-xs">
+          <span>© {year} PT. Prima Agro Tech. {t("common.allRightsReserved")}</span>
           <span>{t("footer.tagline")}</span>
         </div>
       </div>
     </footer>
   );
 }
-
