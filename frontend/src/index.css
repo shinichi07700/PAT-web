@@ -5,15 +5,23 @@
 @tailwind utilities;
 
 :root {
-  --forest: #1C3A1F;
-  --leaf: #2D6A35;
-  --microbe: #43B14B;
+  --brand-green: #0E6E19;
+  --deep-forest: #064016;
+  --soft-card: #F3F1EC;
+  --clean-bg: #FFFFFF;
+  --text-dark: #111827;
+  --text-muted: #4B5563;
+  --text-white: #FFFFFF;
+  
+  /* Legacy mapping fallback */
+  --forest: #064016;
+  --leaf: #0E6E19;
+  --microbe: #0E6E19;
   --spore: #F5C842;
-  --amber: #E8A500;
   --paper: #FFFFFF;
-  --offwhite: #F7F6F2;
-  --nearblack: #1A1A1A;
-  --slate: #5C5C5C;
+  --offwhite: #F3F1EC;
+  --nearblack: #111827;
+  --slate: #4B5563;
 }
 
 * {
@@ -28,13 +36,13 @@ html {
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: var(--paper);
-  color: var(--nearblack);
+  background: var(--clean-bg);
+  color: var(--text-dark);
   overflow-x: hidden;
 }
 
 ::selection {
-  background: var(--microbe);
+  background: var(--brand-green);
   color: #fff;
 }
 
@@ -45,42 +53,57 @@ html.lenis, html.lenis body { height: auto; }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: var(--offwhite); }
-::-webkit-scrollbar-thumb { background: var(--leaf); border-radius: 8px; }
-::-webkit-scrollbar-thumb:hover { background: var(--forest); }
+::-webkit-scrollbar-track { background: var(--soft-card); }
+::-webkit-scrollbar-thumb { background: var(--brand-green); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: var(--deep-forest); }
 
 @layer components {
   .container-pat {
     @apply max-w-[1280px] mx-auto px-6 md:px-10;
   }
   .eyebrow {
-    @apply inline-flex items-center gap-2 text-xs md:text-sm font-semibold uppercase tracking-[0.2em] text-[#2D6A35];
+    @apply hidden; /* Site-wide rule: Remove all eyebrow / kicker labels */
   }
-  .eyebrow::before {
-    content: '';
-    @apply w-2 h-2 rounded-full bg-[#43B14B] inline-block;
+  .btn-pill-green {
+    @apply inline-flex items-center justify-center gap-2 bg-[#0E6E19] text-white rounded-full px-7 py-3 font-semibold transition-all duration-300 hover:bg-[#064016] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E6E19] focus-visible:ring-offset-2;
   }
+  .btn-pill-outline-white {
+    @apply inline-flex items-center justify-center gap-2 bg-transparent text-white border-[1.5px] border-white rounded-full px-7 py-3 font-semibold transition-all duration-300 hover:bg-white hover:text-[#064016] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white;
+  }
+  .btn-pill-outline-green {
+    @apply inline-flex items-center justify-center gap-2 bg-transparent text-[#0E6E19] border-[1.5px] border-[#0E6E19] rounded-full px-7 py-3 font-semibold transition-all duration-300 hover:bg-[#0E6E19] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E6E19];
+  }
+  /* Legacy alias buttons */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 bg-[#2D6A35] text-white rounded-full px-7 py-3.5 font-semibold transition-colors duration-300 hover:bg-[#1C3A1F] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#43B14B] focus-visible:ring-offset-2;
+    @apply btn-pill-green;
   }
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 bg-transparent text-[#1C3A1F] border-2 border-[#1C3A1F] rounded-full px-7 py-3 font-semibold transition-colors duration-300 hover:bg-[#1C3A1F] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#43B14B];
+    @apply btn-pill-outline-green;
   }
   .link-underline {
-    @apply text-[#2D6A35] font-semibold underline-offset-4 decoration-[#43B14B] transition-colors hover:text-[#43B14B] hover:underline;
+    @apply text-[#0E6E19] font-semibold underline-offset-4 decoration-[#0E6E19] transition-colors hover:text-[#064016] hover:underline;
   }
   .card-pat {
-    @apply bg-white border border-[#5C5C5C]/15 rounded-2xl transition-all duration-300;
+    @apply bg-[#F3F1EC] rounded-2xl transition-all duration-300;
   }
   .badge-pat {
-    @apply inline-flex items-center gap-1.5 bg-[#F5C842] text-[#1C3A1F] font-bold text-[10px] md:text-xs tracking-wider uppercase px-3 py-1 rounded-full;
+    @apply inline-flex items-center gap-1.5 bg-[#0E6E19] text-white font-bold text-[10px] md:text-xs tracking-wider uppercase px-3 py-1 rounded-full;
   }
   .input-pat {
-    @apply w-full bg-white border border-[#5C5C5C]/30 rounded-lg px-4 py-3 text-[#1A1A1A] placeholder:text-[#5C5C5C]/60 focus:border-[#43B14B] focus:ring-1 focus:ring-[#43B14B] outline-none transition-all duration-200;
+    @apply w-full bg-white border border-[#4B5563]/30 rounded-lg px-4 py-3 text-[#111827] placeholder:text-[#4B5563]/60 focus:border-[#0E6E19] focus:ring-1 focus:ring-[#0E6E19] outline-none transition-all duration-200;
   }
   .label-pat {
-    @apply text-sm font-semibold text-[#1C3A1F] mb-2 block;
+    @apply text-sm font-semibold text-[#111827] mb-2 block;
   }
+}
+
+/* Asymmetric radii utilities per Design System Section 3.2 */
+.rounded-asym-banner {
+  border-radius: 30px 0 30px 0 !important;
+}
+
+.rounded-asym-card {
+  border-radius: 30px 0 0 0 !important;
 }
 
 .text-balance { text-wrap: balance; }
@@ -96,3 +119,4 @@ html.lenis, html.lenis body { height: auto; }
   opacity: 0.05;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' /%3E%3C/svg%3E");
 }
+
