@@ -116,49 +116,62 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SOLUTIONS - Section 4.4 Solid Green Gradient Cards with Asymmetric Top-Left Radius */}
+      {/* SOLUTIONS - Section 4.4 Cream Top + Solid Green Bottom Cards with Asymmetric Top-Left Radius */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container-pat">
-          <div className="max-w-2xl mb-12">
-            <Reveal>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-[#111827] tracking-tight leading-tight">
-                {t("home.solutionsTitle")}
-              </h2>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <p className="mt-3 text-[#4B5563] text-base md:text-lg">{t("home.solutionsSub")}</p>
-            </Reveal>
-          </div>
-          <StaggerGroup className="grid md:grid-cols-3 gap-8">
-            {CATEGORY_CARDS.map((c) => (
-              <motion.div key={c.slug} variants={staggerItem}>
-                <Link
-                  to={`/solutions/${c.slug === "bio-crop-protection" ? "bio-insecticides" : c.slug}`}
-                  className="group block bg-gradient-to-br from-[#0E6E19] to-[#064016] text-white p-8 md:p-10 rounded-asym-card shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 min-h-[320px] flex flex-col justify-between"
-                  data-testid={`solution-card-${c.slug}`}
-                >
-                  <div>
-                    <div className="flex items-start justify-between gap-4">
-                      <h3 className="text-2xl font-extrabold leading-snug">{c.title[lang]}</h3>
-                      <ArrowUpRight className="w-6 h-6 text-white/80 shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+          <div className="grid lg:grid-cols-12 gap-8 items-stretch">
+            {/* Left Column matching mockup */}
+            <div className="lg:col-span-4 flex flex-col justify-between py-2">
+              <div>
+                <Reveal>
+                  <h2 className="text-3xl md:text-4xl font-extrabold text-[#111827] tracking-tight leading-tight">
+                    {t("home.solutionsTitle")}
+                  </h2>
+                </Reveal>
+                <Reveal delay={0.1}>
+                  <p className="mt-4 text-[#4B5563] text-sm md:text-base leading-relaxed">
+                    {t("home.solutionsSub")}
+                  </p>
+                </Reveal>
+              </div>
+              <Reveal delay={0.2}>
+                <div className="mt-8">
+                  <Link to="/solutions" className="btn-pill-green" data-testid="solutions-explore-btn">
+                    {t("common.findSolution")}
+                  </Link>
+                </div>
+              </Reveal>
+            </div>
+
+            {/* Right 3 Cards matching mockup (Cream top + Green bottom) */}
+            <div className="lg:col-span-8 grid sm:grid-cols-3 gap-6">
+              {CATEGORY_CARDS.map((c) => (
+                <motion.div key={c.slug} variants={staggerItem}>
+                  <Link
+                    to={`/solutions/${c.slug === "bio-crop-protection" ? "bio-insecticides" : c.slug}`}
+                    className="group block bg-[#F3F1EC] rounded-asym-card overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 h-full flex flex-col justify-between"
+                    data-testid={`solution-card-${c.slug}`}
+                  >
+                    {/* Top Cream Area */}
+                    <div className="p-6 min-h-[140px] flex items-start justify-between">
+                      <div className="w-3 h-3 rounded-full bg-[#0E6E19]/30 group-hover:bg-[#0E6E19] transition-colors" />
+                      <ArrowUpRight className="w-5 h-5 text-[#0E6E19] opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                     </div>
-                    <p className="mt-4 text-white/80 text-sm leading-relaxed font-normal">
-                      {c.desc[lang]}
-                    </p>
-                  </div>
-                  <div className="mt-8 pt-4 border-t border-white/15 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white/90">
-                    <span>{t("common.learnMore")}</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </StaggerGroup>
+
+                    {/* Bottom Solid Green Block */}
+                    <div className="bg-[#0E6E19] text-white p-6 rounded-t-2xl flex-1 flex flex-col justify-between">
+                      <h3 className="text-lg font-bold leading-snug text-white">{c.title[lang]}</h3>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
       {/* PROCESS SECTION - Section 4.5 Centered Horizontal 3-Step Layout */}
-      <section className="py-16 md:py-24 bg-[#F3F1EC]/60">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container-pat text-center max-w-4xl mx-auto">
           <Reveal>
             <h2 className="text-3xl md:text-5xl font-extrabold text-[#111827] tracking-tight">
