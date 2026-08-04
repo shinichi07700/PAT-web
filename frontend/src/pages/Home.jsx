@@ -80,14 +80,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TRUST / STAT BAR - Section 4.3 Deep Forest Green Container with Asymmetric Radius & Icons */}
+      {/* TRUST / STAT BAR - Section 4.3 Deep Forest Green Gradient Container with Asymmetric Radius & Leaf Icons */}
       <section className="py-8 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-[#064016] text-white rounded-asym-banner p-8 md:p-12 shadow-xl">
+        <div className="bg-gradient-to-r from-[#0E6E19] via-[#064016] to-[#04280d] text-white rounded-asym-banner p-8 md:p-12 shadow-xl">
           <StaggerGroup className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {STATS.map((s, idx) => (
               <motion.div key={s.key} variants={staggerItem} className="flex flex-col items-start" data-testid={`stat-${s.key}`}>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white">
+                  <div className="w-10 h-10 rounded-tl-xl rounded-br-xl bg-white/15 backdrop-blur-sm flex items-center justify-center text-white shrink-0">
                     {idx === 0 && <Calendar className="w-5 h-5" />}
                     {idx === 1 && <FlaskConical className="w-5 h-5" />}
                     {idx === 2 && <MapPin className="w-5 h-5" />}
@@ -97,7 +97,7 @@ export default function Home() {
                     <StatCounter value={s.value} suffix={s.suffix} />
                   </div>
                 </div>
-                <div className="mt-2 text-white/70 text-xs md:text-sm font-medium pl-13">{t(`stats.${s.key}`)}</div>
+                <div className="mt-2 text-white/80 text-xs md:text-sm font-medium pl-13">{t(`stats.${s.key}`)}</div>
               </motion.div>
             ))}
           </StaggerGroup>
@@ -158,8 +158,8 @@ export default function Home() {
                       <ArrowUpRight className="w-5 h-5 text-[#0E6E19] opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                     </div>
 
-                    {/* Bottom Solid Green Block */}
-                    <div className="bg-[#0E6E19] text-white p-6 rounded-t-2xl flex-1 flex flex-col justify-between">
+                    {/* Bottom Solid Green Block with gradient */}
+                    <div className="bg-gradient-to-b from-[#0E6E19] to-[#04280d] text-white p-6 rounded-t-2xl flex-1 flex flex-col justify-between">
                       <h3 className="text-lg font-bold leading-snug text-white">{c.title[lang]}</h3>
                     </div>
                   </Link>
@@ -264,8 +264,8 @@ export default function Home() {
       {/* TESTIMONIALS - Section 4.6 Testimonial Card with Real Photo on Left & Top-Left 30px Radius */}
       <TestimonialCarousel />
 
-      {/* UNIFIED CTA & FOOTER BLOCK - Section 4.7 CTA Banner Merged into Deep Green Block */}
-      <section className="bg-[#064016] text-white pt-20 pb-8 px-4 md:px-8 max-w-7xl mx-auto rounded-t-[40px] mt-12 grain relative overflow-hidden">
+      {/* UNIFIED CTA & FOOTER BLOCK - Section 4.7 CTA Banner Merged into Deep Green Gradient Block */}
+      <section className="bg-gradient-to-b from-[#0E6E19] via-[#064016] to-[#04280d] text-white pt-20 pb-8 px-4 md:px-8 max-w-7xl mx-auto rounded-t-[40px] mt-12 grain relative overflow-hidden">
         <MicrobeDots count={10} />
         <div className="container-pat relative text-center max-w-3xl mx-auto mb-16">
           <Reveal>

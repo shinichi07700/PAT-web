@@ -9,7 +9,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#064016] text-white relative overflow-hidden" data-testid="footer">
+    <footer className="bg-gradient-to-b from-[#064016] to-[#04280d] text-white relative overflow-hidden" data-testid="footer">
       <Marquee
         text="GROW MORE · HARM LESS · WITH MICROBES ·"
         className="py-6 border-y border-white/10 text-white/10 font-extrabold text-4xl md:text-6xl tracking-tight"
