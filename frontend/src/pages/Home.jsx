@@ -418,7 +418,7 @@ function SachetIcon({ className = "w-12 h-12" }) {
   return (
     <svg viewBox="0 0 100 100" fill="none" className={className}>
       <circle cx="50" cy="50" r="46" stroke="#0E6E19" strokeWidth="4.5" fill="white" />
-      <g transform="translate(19, 19) scale(0.88)">
+      <g transform="translate(50, 51) scale(0.72) translate(-23, -27)">
         {/* Back sachet */}
         <g transform="translate(0, 4) rotate(-8 16 26)">
           <rect x="2" y="4" width="28" height="46" rx="1" fill="white" stroke="black" strokeWidth="3.5" />
