@@ -391,5 +391,3 @@ function TestimonialCarousel() {
     </section>
   );
 }
-
-}
