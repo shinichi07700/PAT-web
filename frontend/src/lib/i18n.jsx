@@ -49,10 +49,10 @@ export const translations = {
       ctaSub: "Talk to our team about the right solution for your farm or plantation.",
     },
     stats: {
-      founded: "Year founded",
-      isolates: "Microbial isolates",
-      provinces: "Provinces served",
-      farmers: "Farmer partners",
+      founded: "Year Founded",
+      isolates: "Microbial Isolated",
+      provinces: "Provinces Served",
+      farmers: "Farmer Partners",
     },
     steps: {
       bioprospecting: "Bioprospecting",

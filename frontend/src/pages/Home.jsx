@@ -87,9 +87,19 @@ export default function Home() {
             {STATS.map((s, idx) => (
               <motion.div key={s.key} variants={staggerItem} className="flex flex-col items-start" data-testid={`stat-${s.key}`}>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-tl-xl rounded-br-xl bg-white/15 backdrop-blur-sm flex items-center justify-center text-white shrink-0">
+                  <div
+                    className="w-10 h-10 bg-white/20 backdrop-blur-sm flex items-center justify-center text-white shrink-0"
+                    style={{ borderRadius: "14px 2px 14px 14px" }}
+                  >
                     {idx === 0 && <Calendar className="w-5 h-5" />}
-                    {idx === 1 && <FlaskConical className="w-5 h-5" />}
+                    {idx === 1 && (
+                      <svg viewBox="0 0 100 100" fill="none" className="w-5 h-5">
+                        <ellipse cx="50" cy="45" rx="34" ry="17" stroke="white" strokeWidth="6" fill="none" />
+                        <path d="M 16 45 A 34 17 0 0 0 84 45 v 8 A 34 17 0 0 1 16 53 Z" stroke="white" strokeWidth="6" fill="none" />
+                        <path d="M 35 43 C 30 39 28 49 40 49 C 48 49 45 41 35 43 Z" fill="white" />
+                        <circle cx="64" cy="46" r="4.5" fill="white" />
+                      </svg>
+                    )}
                     {idx === 2 && <MapPin className="w-5 h-5" />}
                     {idx === 3 && <Users className="w-5 h-5" />}
                   </div>
