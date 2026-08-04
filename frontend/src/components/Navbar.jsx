@@ -50,12 +50,9 @@ export default function Navbar() {
         }`}
       >
         <nav className="flex items-center justify-between h-[64px] px-5 md:px-7">
-          {/* Logo - Wordmark only, no second tagline */}
+          {/* Logo - Official emblem + Wordmark */}
           <Link to="/" className="flex items-center gap-2.5 group" data-testid="nav-logo">
-            <span className="relative flex items-center justify-center w-8 h-8">
-              <span className="absolute w-8 h-8 rounded-full border-2 border-[#0E6E19]" />
-              <span className="w-2.5 h-2.5 rounded-full bg-[#0E6E19] group-hover:scale-125 transition-transform" />
-            </span>
+            <img src="/logo.png" alt="Prima Agro Tech" className="w-8 h-8 object-contain group-hover:scale-105 transition-transform" />
             <span className="font-extrabold text-sm md:text-base text-[#111827] tracking-tight">
               PRIMA AGRO TECH
             </span>

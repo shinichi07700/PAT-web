@@ -17,12 +17,9 @@ export default function Footer() {
       />
       <div className="container-pat py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
-          {/* Simplified logo lockup to match nav wordmark without PT. prefix */}
+          {/* Logo lockup with real company emblem */}
           <div className="flex items-center gap-3 mb-5">
-            <span className="relative flex items-center justify-center w-8 h-8">
-              <span className="absolute w-8 h-8 rounded-full border-2 border-[#0E6E19]" />
-              <span className="w-2.5 h-2.5 rounded-full bg-[#0E6E19]" />
-            </span>
+            <img src="/logo.png" alt="Prima Agro Tech" className="w-8 h-8 object-contain bg-white/90 p-1 rounded-full" />
             <span className="font-extrabold text-lg tracking-tight text-white">PRIMA AGRO TECH</span>
           </div>
           <p className="text-white/70 max-w-md text-sm leading-relaxed">{t("footer.legal")}</p>
