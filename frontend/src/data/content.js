@@ -536,8 +536,37 @@ export const TIMELINE = [
 ];
 
 export const SEED_TESTIMONIALS = [
-  { name: "Pak Sutrisno", role: "farmer", crop: "Paddy", province: "West Java", quote: { en: "After switching to ORIZAPLUS I cut my urea by a quarter and still got a better harvest. The field agent came back twice to check on me.", id: "Setelah beralih ke ORIZAPLUS, urea saya turun seperempat dan panen tetap lebih baik. Petugas lapangan datang dua kali untuk memantau." } },
-  { name: "Bu Ratna", role: "dealer", crop: "Horticulture", province: "Central Java", quote: { en: "Dealers trust products that keep. The powder format lasts on my shelf and the farmers keep coming back for BT-MAX.", id: "Dealer percaya produk yang tahan lama. Format bubuk awet di rak saya dan petani terus kembali untuk BT-MAX." } },
-  { name: "Estate Manager, Riau", role: "plantation", crop: "Oil Palm", province: "Riau", quote: { en: "DECOPALMA turned our replanting waste into compost in half the time. For our RSPO reporting, that's a documented win.", id: "DECOPALMA mengubah limbah peremajaan kami menjadi kompos dalam separuh waktu. Untuk pelaporan RSPO kami, itu kemenangan terdokumentasi." } },
-  { name: "Pak Hendra", role: "farmer", crop: "Chilli", province: "West Java", quote: { en: "My grade-A chilli went up noticeably with ENDOPAMA. Less disease, better looking fruit at market.", id: "Cabai grade-A saya naik jelas dengan ENDOPAMA. Penyakit berkurang, buah lebih bagus di pasar." } },
+  {
+    name: "PUTRA DARMAWAN",
+    role: "Manager Lapangan Tembak",
+    crop: "Oil Palm",
+    province: "West Java",
+    image: "/images/putra_darmawan.jpg",
+    quote: {
+      en: "DECOPALMA turned our replanting waste into compost in half the time. For our RSPO reporting, that's a documented win.",
+      id: "DECOPALMA mengubah limbah peremajaan kami menjadi kompos dalam separuh waktu. Untuk pelaporan RSPO kami, itu kemenangan terdokumentasi."
+    }
+  },
+  {
+    name: "Pak Sutrisno",
+    role: "Petani Padi",
+    crop: "Paddy",
+    province: "West Java",
+    image: IMAGES.farmerField,
+    quote: {
+      en: "After switching to ORIZAPLUS I cut my urea by a quarter and still got a better harvest. The field agent came back twice to check on me.",
+      id: "Setelah beralih ke ORIZAPLUS, urea saya turun seperempat dan panen tetap lebih baik. Petugas lapangan datang dua kali untuk memantau."
+    }
+  },
+  {
+    name: "Bu Ratna",
+    role: "Dealer Hortikultura",
+    crop: "Horticulture",
+    province: "Central Java",
+    image: IMAGES.scientist,
+    quote: {
+      en: "Dealers trust products that keep. The powder format lasts on my shelf and the farmers keep coming back for BT-MAX.",
+      id: "Dealer percaya produk yang tahan lama. Format bubuk awet di rak saya dan petani terus kembali untuk BT-MAX."
+    }
+  }
 ];

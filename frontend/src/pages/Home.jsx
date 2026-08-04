@@ -339,11 +339,11 @@ function TestimonialCarousel() {
               {t("home.testimonialsTitle")}
             </h2>
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-2">
             <button
               onClick={prev}
               aria-label="Previous"
-              className="w-11 h-11 rounded-full border border-[#111827]/30 flex items-center justify-center hover:bg-[#0E6E19] hover:border-[#0E6E19] hover:text-white transition-colors text-[#111827]"
+              className="w-9 h-9 rounded-full border-2 border-[#0E6E19] text-[#0E6E19] flex items-center justify-center hover:bg-[#0E6E19] hover:text-white transition-colors"
               data-testid="testimonial-prev"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -351,7 +351,7 @@ function TestimonialCarousel() {
             <button
               onClick={next}
               aria-label="Next"
-              className="w-11 h-11 rounded-full border border-[#111827]/30 flex items-center justify-center hover:bg-[#0E6E19] hover:border-[#0E6E19] hover:text-white transition-colors text-[#111827]"
+              className="w-9 h-9 rounded-full border-2 border-[#0E6E19] text-[#0E6E19] flex items-center justify-center hover:bg-[#0E6E19] hover:text-white transition-colors"
               data-testid="testimonial-next"
             >
               <ChevronRight className="w-5 h-5" />
@@ -368,31 +368,31 @@ function TestimonialCarousel() {
             transition={{ duration: 0.4 }}
             className="bg-[#F3F1EC] rounded-2xl overflow-hidden shadow-sm grid md:grid-cols-12 items-stretch"
           >
-            {/* Left side photo with top-left 30px radius per Section 3.2 Testimonial Card token */}
-            <div className="md:col-span-5 relative min-h-[260px] md:min-h-[360px]">
+            {/* Left side photo with top-left 30px radius */}
+            <div className="md:col-span-4 relative min-h-[280px] md:min-h-[380px]">
               <img
-                src={currentPhoto}
+                src={cur.image || currentPhoto}
                 alt={cur.name}
                 className="w-full h-full object-cover rounded-asym-card"
               />
             </div>
 
-            {/* Right side content */}
-            <div className="md:col-span-7 p-8 md:p-12 flex flex-col justify-between">
+            {/* Right side content matching mockup */}
+            <div className="md:col-span-8 p-8 md:p-12 flex flex-col justify-between">
               <div>
-                <div className="text-[#0E6E19] text-5xl font-serif leading-none mb-3">&ldquo;</div>
-                <p className="text-lg md:text-2xl font-semibold text-[#111827] leading-snug">
+                <div className="text-black text-4xl font-serif leading-none mb-4 font-bold">&ldquo; &rdquo;</div>
+                <p className="text-base md:text-xl font-normal text-[#111827] leading-relaxed max-w-2xl">
                   {cur.quote[lang] || cur.quote.en}
                 </p>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-[#111827]/10 flex items-center justify-between">
-                <div>
-                  <span className="inline-block bg-[#0E6E19] text-white text-xs font-bold px-3 py-1 rounded-full mb-1">
+              <div className="mt-8">
+                <div className="inline-block bg-[#0E6E19] text-white px-6 py-3 rounded-2xl shadow-sm">
+                  <div className="font-extrabold text-sm uppercase tracking-wide text-white">
                     {cur.name}
-                  </span>
-                  <div className="text-xs md:text-sm text-[#4B5563] font-medium capitalize">
-                    {cur.role} · {cur.crop} · {cur.province}
+                  </div>
+                  <div className="text-xs text-white/90 font-medium mt-0.5">
+                    {cur.role}
                   </div>
                 </div>
               </div>
