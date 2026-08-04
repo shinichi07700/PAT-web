@@ -73,6 +73,10 @@ html.lenis, html.lenis body { height: auto; }
   .btn-pill-outline-green {
     @apply inline-flex items-center justify-center gap-2 bg-transparent text-[#0E6E19] border-[1.5px] border-[#0E6E19] rounded-full px-7 py-3 font-semibold transition-all duration-300 hover:bg-[#0E6E19] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E6E19];
   }
+  .btn-leaf {
+    @apply inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#0E6E19] to-[#064016] text-white px-6 py-2.5 font-semibold text-xs md:text-sm transition-all duration-300 hover:opacity-95 shadow-sm;
+    border-radius: 16px 4px 16px 16px !important;
+  }
   /* Legacy alias buttons */
   .btn-primary {
     @apply btn-pill-green;

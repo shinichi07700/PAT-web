@@ -136,8 +136,8 @@ export default function Home() {
               </div>
               <Reveal delay={0.2}>
                 <div className="mt-8">
-                  <Link to="/solutions" className="btn-pill-green" data-testid="solutions-explore-btn">
-                    {t("common.findSolution")}
+                  <Link to="/solutions" className="btn-leaf" data-testid="solutions-explore-btn">
+                    {lang === "id" ? "Jelajahi Solusi" : "Explore Solution"}
                   </Link>
                 </div>
               </Reveal>
