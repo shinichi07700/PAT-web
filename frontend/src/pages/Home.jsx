@@ -212,7 +212,7 @@ export default function Home() {
               className="relative z-10 flex flex-col items-center text-center px-4"
             >
               <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm rounded-full mb-5 hover:scale-105 transition-transform">
-                <HexagonMicrobeIcon className="w-20 h-20" />
+                <SachetIcon className="w-20 h-20" />
               </div>
               <h4 className="font-extrabold text-lg text-[#111827]">{t("steps.stabilization")}</h4>
               <p className="text-[#4B5563] text-xs md:text-sm mt-2 leading-relaxed max-w-xs">
@@ -229,7 +229,7 @@ export default function Home() {
               className="relative z-10 flex flex-col items-center text-center px-4"
             >
               <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm rounded-full mb-5 hover:scale-105 transition-transform">
-                <DeployIcon className="w-20 h-20" />
+                <HexagonMicrobeIcon className="w-20 h-20" />
               </div>
               <h4 className="font-extrabold text-lg text-[#111827]">{t("steps.deploy")}</h4>
               <p className="text-[#4B5563] text-xs md:text-sm mt-2 leading-relaxed max-w-xs">
@@ -414,6 +414,31 @@ function PetriDishIcon({ className = "w-12 h-12" }) {
   );
 }
 
+function SachetIcon({ className = "w-12 h-12" }) {
+  return (
+    <svg viewBox="0 0 100 100" fill="none" className={className}>
+      <circle cx="50" cy="50" r="46" stroke="#0E6E19" strokeWidth="4.5" fill="white" />
+      {/* Back sachet */}
+      <g transform="translate(14, 18) rotate(-7)">
+        <path d="M 5 6 L 35 6 L 33 60 L 3 60 Z" fill="white" stroke="black" strokeWidth="3.5" strokeLinejoin="round" />
+        <path d="M 3 6 L 6 3 L 9 6 L 12 3 L 15 6 L 18 3 L 21 6 L 24 3 L 27 6 L 30 3 L 33 6 L 36 3" stroke="black" strokeWidth="2.5" />
+        <line x1="8" y1="12" x2="30" y2="12" stroke="black" strokeWidth="2" />
+        <line x1="7" y1="54" x2="29" y2="54" stroke="black" strokeWidth="2" />
+      </g>
+      {/* Front sachet */}
+      <g transform="translate(32, 16) rotate(6)">
+        <path d="M 5 6 L 35 6 L 33 60 L 3 60 Z" fill="white" stroke="black" strokeWidth="3.5" strokeLinejoin="round" />
+        <path d="M 3 6 L 6 3 L 9 6 L 12 3 L 15 6 L 18 3 L 21 6 L 24 3 L 27 6 L 30 3 L 33 6 L 36 3" stroke="black" strokeWidth="2.5" />
+        <path d="M 3 60 L 6 63 L 9 60 L 12 63 L 15 60 L 18 63 L 21 60 L 24 63 L 27 60 L 30 63 L 33 60 L 36 63" stroke="black" strokeWidth="2.5" />
+        <line x1="9" y1="13" x2="31" y2="13" stroke="black" strokeWidth="2.5" />
+        <line x1="8" y1="53" x2="30" y2="53" stroke="black" strokeWidth="2.5" />
+        <line x1="9" y1="17" x2="8" y2="49" stroke="black" strokeWidth="2.5" strokeDasharray="5 3" />
+        <line x1="31" y1="17" x2="30" y2="49" stroke="black" strokeWidth="2.5" strokeDasharray="5 3" />
+      </g>
+    </svg>
+  );
+}
+
 function HexagonMicrobeIcon({ className = "w-12 h-12" }) {
   return (
     <svg viewBox="0 0 100 100" fill="none" className={className}>
@@ -440,6 +465,7 @@ function HexagonMicrobeIcon({ className = "w-12 h-12" }) {
     </svg>
   );
 }
+
 
 function DeployIcon({ className = "w-12 h-12" }) {
   return (
