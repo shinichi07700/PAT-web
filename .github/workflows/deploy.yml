@@ -37,7 +37,7 @@ jobs:
       - name: Build Frontend
         run: |
           cd frontend
-          PUBLIC_URL="/PAT-web" npm run build
+          PUBLIC_URL="." npm run build
           cp build/index.html build/404.html
 
       - name: Deploy to gh-pages branch (Fallback)
