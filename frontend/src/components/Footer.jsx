@@ -20,9 +20,9 @@ export default function Footer() {
           {/* Logo lockup with real company emblem */}
           <div className="flex items-center gap-3 mb-5">
             <img src="/logo.png" alt="Prima Agro Tech" className="w-10 h-10 object-contain" />
-            <div className="leading-none">
-              <span className="block font-black text-lg text-white tracking-tight">PRIMA</span>
-              <span className="block font-medium text-[11px] text-white/80 tracking-[0.15em] -mt-0.5">AGRO TECH</span>
+            <div className="leading-[1.05]">
+              <span className="block text-xl text-white tracking-tight" style={{ fontWeight: 900 }}>PRIMA</span>
+              <span className="block text-[12px] text-white/80 tracking-[0.22em]" style={{ fontWeight: 300 }}>AGRO TECH</span>
             </div>
           </div>
           <p className="text-white/70 max-w-md text-sm leading-relaxed">{t("footer.legal")}</p>

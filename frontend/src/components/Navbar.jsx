@@ -51,11 +51,11 @@ export default function Navbar() {
       >
         <nav className="flex items-center justify-between h-[64px] px-5 md:px-7">
           {/* Logo - Official emblem + Wordmark */}
-          <Link to="/" className="flex items-center gap-2.5 group" data-testid="nav-logo">
+          <Link to="/" className="flex items-center gap-3 group" data-testid="nav-logo">
             <img src="/logo.png" alt="Prima Agro Tech" className="w-9 h-9 object-contain group-hover:scale-105 transition-transform" />
-            <div className="leading-none">
-              <span className="block font-black text-[15px] text-[#111827] tracking-tight">PRIMA</span>
-              <span className="block font-medium text-[10px] text-[#111827] tracking-[0.15em] -mt-0.5">AGRO TECH</span>
+            <div className="leading-[1.05]">
+              <span className="block text-[17px] text-[#111827] tracking-tight" style={{ fontWeight: 900 }}>PRIMA</span>
+              <span className="block text-[11px] text-[#111827] tracking-[0.22em]" style={{ fontWeight: 300 }}>AGRO TECH</span>
             </div>
           </Link>
 
