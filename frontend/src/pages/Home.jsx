@@ -89,9 +89,22 @@ export default function Home() {
                 <div className="flex items-center gap-3">
                   <div
                     className="w-10 h-10 bg-white/20 backdrop-blur-sm flex items-center justify-center text-white shrink-0"
-                    style={{ borderRadius: "14px 2px 14px 14px" }}
+                    style={{ borderRadius: "2px 14px 14px 14px" }}
                   >
-                    {idx === 0 && <Calendar className="w-5 h-5" />}
+                    {idx === 0 && (
+                      <svg viewBox="0 0 100 100" fill="none" className="w-5 h-5">
+                        <rect x="14" y="20" width="72" height="66" rx="14" stroke="white" strokeWidth="6" fill="none" />
+                        <path d="M 14 38 L 86 38" stroke="white" strokeWidth="6" />
+                        <rect x="32" y="10" width="7" height="18" rx="3.5" fill="white" />
+                        <rect x="61" y="10" width="7" height="18" rx="3.5" fill="white" />
+                        <circle cx="32" cy="53" r="5" fill="white" />
+                        <circle cx="50" cy="53" r="5" fill="white" />
+                        <circle cx="68" cy="53" r="5" fill="white" />
+                        <circle cx="32" cy="71" r="5" fill="white" />
+                        <circle cx="50" cy="71" r="5" fill="white" />
+                        <circle cx="68" cy="71" r="5" fill="white" />
+                      </svg>
+                    )}
                     {idx === 1 && (
                       <svg viewBox="0 0 100 100" fill="none" className="w-5 h-5">
                         <ellipse cx="50" cy="45" rx="34" ry="17" stroke="white" strokeWidth="6" fill="none" />
@@ -101,7 +114,16 @@ export default function Home() {
                       </svg>
                     )}
                     {idx === 2 && <MapPin className="w-5 h-5" />}
-                    {idx === 3 && <Users className="w-5 h-5" />}
+                    {idx === 3 && (
+                      <svg viewBox="0 0 100 100" fill="none" className="w-5 h-5">
+                        <circle cx="50" cy="22" r="10" stroke="white" strokeWidth="6" fill="none" />
+                        <circle cx="24" cy="34" r="8.5" stroke="white" strokeWidth="6" fill="none" />
+                        <circle cx="76" cy="34" r="8.5" stroke="white" strokeWidth="6" fill="none" />
+                        <path d="M 16 80 A 34 34 0 0 1 84 80" stroke="white" strokeWidth="6.5" fill="none" strokeLinecap="round" />
+                        <path d="M 6 82 A 20 20 0 0 1 36 68" stroke="white" strokeWidth="6" fill="none" strokeLinecap="round" />
+                        <path d="M 94 82 A 20 20 0 0 0 64 68" stroke="white" strokeWidth="6" fill="none" strokeLinecap="round" />
+                      </svg>
+                    )}
                   </div>
                   <div className="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
                     <StatCounter value={s.value} suffix={s.suffix} />
@@ -119,7 +141,7 @@ export default function Home() {
             <ShieldCheck className="w-4 h-4 text-[#0E6E19]" /> {t("home.certsTitle")}
           </span>
           {CERTIFICATIONS.map((c) => (
-            <span key={c} className="px-4 py-1.5 rounded-full bg-[#F3F1EC] text-[#111827] text-xs font-semibold">
+            <span key={c} className="px-4 py-1.5 bg-[#F3F1EC] text-[#111827] text-xs font-semibold" style={{ borderRadius: '2px 10px 10px 10px' }}>
               {c}
             </span>
           ))}
@@ -217,7 +239,7 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="relative z-10 flex flex-col items-center text-center px-4"
             >
-              <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm rounded-full mb-5 hover:scale-105 transition-transform">
+              <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm mb-5 hover:scale-105 transition-transform" style={{ borderRadius: '4px 20px 20px 20px' }}>
                 <PetriDishIcon className="w-20 h-20" />
               </div>
               <h4 className="font-extrabold text-lg text-[#111827]">{t("steps.bioprospecting")}</h4>
@@ -234,7 +256,7 @@ export default function Home() {
               transition={{ delay: 0.3 }}
               className="relative z-10 flex flex-col items-center text-center px-4"
             >
-              <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm rounded-full mb-5 hover:scale-105 transition-transform">
+              <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm mb-5 hover:scale-105 transition-transform" style={{ borderRadius: '4px 20px 20px 20px' }}>
                 <HexagonMicrobeIcon className="w-20 h-20" />
               </div>
               <h4 className="font-extrabold text-lg text-[#111827]">{t("steps.stabilization")}</h4>
@@ -251,7 +273,7 @@ export default function Home() {
               transition={{ delay: 0.4 }}
               className="relative z-10 flex flex-col items-center text-center px-4"
             >
-              <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm rounded-full mb-5 hover:scale-105 transition-transform">
+              <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm mb-5 hover:scale-105 transition-transform" style={{ borderRadius: '4px 20px 20px 20px' }}>
                 <SachetIcon className="w-20 h-20" />
               </div>
               <h4 className="font-extrabold text-lg text-[#111827]">{t("steps.deploy")}</h4>
@@ -263,7 +285,7 @@ export default function Home() {
 
           <Reveal delay={0.5}>
             <div className="mt-14">
-              <Link to="/about/oursciences" className="btn-pill-green" data-testid="process-cta">
+              <Link to="/about/oursciences" className="btn-pill-outline-green" data-testid="process-cta">
                 {t("common.seeFullProcess")}
               </Link>
             </div>
@@ -353,7 +375,8 @@ function TestimonialCarousel() {
             <button
               onClick={prev}
               aria-label="Previous"
-              className="w-9 h-9 rounded-full border-2 border-[#0E6E19] text-[#0E6E19] flex items-center justify-center hover:bg-[#0E6E19] hover:text-white transition-colors"
+              className="w-9 h-9 border-2 border-[#0E6E19] text-[#0E6E19] flex items-center justify-center hover:bg-[#0E6E19] hover:text-white transition-colors"
+              style={{ borderRadius: '2px 12px 12px 12px' }}
               data-testid="testimonial-prev"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -361,7 +384,8 @@ function TestimonialCarousel() {
             <button
               onClick={next}
               aria-label="Next"
-              className="w-9 h-9 rounded-full border-2 border-[#0E6E19] text-[#0E6E19] flex items-center justify-center hover:bg-[#0E6E19] hover:text-white transition-colors"
+              className="w-9 h-9 border-2 border-[#0E6E19] text-[#0E6E19] flex items-center justify-center hover:bg-[#0E6E19] hover:text-white transition-colors"
+              style={{ borderRadius: '2px 12px 12px 12px' }}
               data-testid="testimonial-next"
             >
               <ChevronRight className="w-5 h-5" />
@@ -397,7 +421,7 @@ function TestimonialCarousel() {
               </div>
 
               <div className="mt-8">
-                <div className="inline-block bg-[#0E6E19] text-white px-6 py-3 rounded-2xl shadow-sm">
+                <div className="inline-block bg-[#0E6E19] text-white px-6 py-3 shadow-sm" style={{ borderRadius: '4px 16px 16px 16px' }}>
                   <div className="font-extrabold text-sm uppercase tracking-wide text-white">
                     {cur.name}
                   </div>
