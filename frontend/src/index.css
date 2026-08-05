@@ -66,19 +66,19 @@ html.lenis, html.lenis body { height: auto; }
   }
   .btn-pill-green {
     @apply inline-flex items-center justify-center gap-2 bg-[#0E6E19] text-white px-7 py-3 font-semibold transition-all duration-300 hover:bg-[#064016] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E6E19] focus-visible:ring-offset-2;
-    border-radius: 4px 16px 16px 16px !important;
+    border-radius: 2px 18px 2px 18px !important;
   }
   .btn-pill-outline-white {
     @apply inline-flex items-center justify-center gap-2 bg-transparent text-white border-[1.5px] border-white px-7 py-3 font-semibold transition-all duration-300 hover:bg-white hover:text-[#064016] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white;
-    border-radius: 4px 16px 16px 16px !important;
+    border-radius: 2px 18px 2px 18px !important;
   }
   .btn-pill-outline-green {
     @apply inline-flex items-center justify-center gap-2 bg-transparent text-[#0E6E19] border-[1.5px] border-[#0E6E19] px-7 py-3 font-semibold transition-all duration-300 hover:bg-[#0E6E19] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E6E19];
-    border-radius: 4px 16px 16px 16px !important;
+    border-radius: 2px 18px 2px 18px !important;
   }
   .btn-leaf {
     @apply inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#0E6E19] to-[#064016] text-white px-6 py-2.5 font-semibold text-xs md:text-sm transition-all duration-300 hover:opacity-95 shadow-sm;
-    border-radius: 16px 4px 16px 16px !important;
+    border-radius: 2px 18px 2px 18px !important;
   }
   /* Legacy alias buttons */
   .btn-primary {
@@ -95,7 +95,7 @@ html.lenis, html.lenis body { height: auto; }
   }
   .badge-pat {
     @apply inline-flex items-center gap-1.5 bg-[#0E6E19] text-white font-bold text-[10px] md:text-xs tracking-wider uppercase px-3 py-1;
-    border-radius: 2px 10px 10px 10px !important;
+    border-radius: 2px 10px 2px 10px !important;
   }
   .input-pat {
     @apply w-full bg-white border border-[#4B5563]/30 rounded-lg px-4 py-3 text-[#111827] placeholder:text-[#4B5563]/60 focus:border-[#0E6E19] focus:ring-1 focus:ring-[#0E6E19] outline-none transition-all duration-200;
@@ -105,13 +105,13 @@ html.lenis, html.lenis body { height: auto; }
   }
 }
 
-/* Asymmetric radii utilities per Design System Section 3.2 */
+/* Asymmetric radii utilities per Design System Section 3.2 (Leaf shape: top-left 0, top-right rounded, bottom-right 0, bottom-left rounded) */
 .rounded-asym-banner {
-  border-radius: 30px 0 30px 0 !important;
+  border-radius: 0 36px 0 36px !important;
 }
 
 .rounded-asym-card {
-  border-radius: 30px 0 0 0 !important;
+  border-radius: 0 36px 0 36px !important;
 }
 
 .text-balance { text-wrap: balance; }

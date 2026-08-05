@@ -89,7 +89,7 @@ export default function Home() {
                 <div className="flex items-center gap-3">
                   <div
                     className="w-10 h-10 bg-white/20 backdrop-blur-sm flex items-center justify-center text-white shrink-0"
-                    style={{ borderRadius: "2px 14px 14px 14px" }}
+                    style={{ borderRadius: "2px 14px 2px 14px" }}
                   >
                     {idx === 0 && (
                       <svg viewBox="0 0 100 100" fill="none" className="w-5 h-5">
@@ -141,7 +141,7 @@ export default function Home() {
             <ShieldCheck className="w-4 h-4 text-[#0E6E19]" /> {t("home.certsTitle")}
           </span>
           {CERTIFICATIONS.map((c) => (
-            <span key={c} className="px-4 py-1.5 bg-[#F3F1EC] text-[#111827] text-xs font-semibold" style={{ borderRadius: '2px 10px 10px 10px' }}>
+            <span key={c} className="px-4 py-1.5 bg-[#F3F1EC] text-[#111827] text-xs font-semibold" style={{ borderRadius: '2px 10px 2px 10px' }}>
               {c}
             </span>
           ))}
@@ -239,7 +239,7 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="relative z-10 flex flex-col items-center text-center px-4"
             >
-              <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm mb-5 hover:scale-105 transition-transform" style={{ borderRadius: '4px 20px 20px 20px' }}>
+              <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm mb-5 hover:scale-105 transition-transform" style={{ borderRadius: '2px 20px 2px 20px' }}>
                 <PetriDishIcon className="w-20 h-20" />
               </div>
               <h4 className="font-extrabold text-lg text-[#111827]">{t("steps.bioprospecting")}</h4>
@@ -256,7 +256,7 @@ export default function Home() {
               transition={{ delay: 0.3 }}
               className="relative z-10 flex flex-col items-center text-center px-4"
             >
-              <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm mb-5 hover:scale-105 transition-transform" style={{ borderRadius: '4px 20px 20px 20px' }}>
+              <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm mb-5 hover:scale-105 transition-transform" style={{ borderRadius: '2px 20px 2px 20px' }}>
                 <HexagonMicrobeIcon className="w-20 h-20" />
               </div>
               <h4 className="font-extrabold text-lg text-[#111827]">{t("steps.stabilization")}</h4>
@@ -273,7 +273,7 @@ export default function Home() {
               transition={{ delay: 0.4 }}
               className="relative z-10 flex flex-col items-center text-center px-4"
             >
-              <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm mb-5 hover:scale-105 transition-transform" style={{ borderRadius: '4px 20px 20px 20px' }}>
+              <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm mb-5 hover:scale-105 transition-transform" style={{ borderRadius: '2px 20px 2px 20px' }}>
                 <SachetIcon className="w-20 h-20" />
               </div>
               <h4 className="font-extrabold text-lg text-[#111827]">{t("steps.deploy")}</h4>
@@ -376,7 +376,7 @@ function TestimonialCarousel() {
               onClick={prev}
               aria-label="Previous"
               className="w-9 h-9 border-2 border-[#0E6E19] text-[#0E6E19] flex items-center justify-center hover:bg-[#0E6E19] hover:text-white transition-colors"
-              style={{ borderRadius: '2px 12px 12px 12px' }}
+              style={{ borderRadius: '2px 12px 2px 12px' }}
               data-testid="testimonial-prev"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -385,7 +385,7 @@ function TestimonialCarousel() {
               onClick={next}
               aria-label="Next"
               className="w-9 h-9 border-2 border-[#0E6E19] text-[#0E6E19] flex items-center justify-center hover:bg-[#0E6E19] hover:text-white transition-colors"
-              style={{ borderRadius: '2px 12px 12px 12px' }}
+              style={{ borderRadius: '2px 12px 2px 12px' }}
               data-testid="testimonial-next"
             >
               <ChevronRight className="w-5 h-5" />
@@ -421,7 +421,7 @@ function TestimonialCarousel() {
               </div>
 
               <div className="mt-8">
-                <div className="inline-block bg-[#0E6E19] text-white px-6 py-3 shadow-sm" style={{ borderRadius: '4px 16px 16px 16px' }}>
+                <div className="inline-block bg-[#0E6E19] text-white px-6 py-3 shadow-sm" style={{ borderRadius: '2px 16px 2px 16px' }}>
                   <div className="font-extrabold text-sm uppercase tracking-wide text-white">
                     {cur.name}
                   </div>
