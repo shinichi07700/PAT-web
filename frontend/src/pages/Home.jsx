@@ -185,14 +185,14 @@ export default function Home() {
                     data-testid={`solution-card-${c.slug}`}
                   >
                     {/* Top Cream Area */}
-                    <div className="p-6 min-h-[140px] flex items-start justify-between">
+                    <div className="p-6 min-h-[160px] md:min-h-[180px] flex items-start justify-between">
                       <div className="w-3 h-3 rounded-full bg-[#0E6E19]/30 group-hover:bg-[#0E6E19] transition-colors" />
                       <ArrowUpRight className="w-5 h-5 text-[#0E6E19] opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                     </div>
 
-                    {/* Bottom Solid Green Block with gradient */}
-                    <div className="bg-gradient-to-b from-[#0E6E19] to-[#04280d] text-white p-6 rounded-t-2xl flex-1 flex flex-col justify-between">
-                      <h3 className="text-lg font-bold leading-snug text-white">{c.title[lang]}</h3>
+                    {/* Bottom Solid Green Block matching mockup */}
+                    <div className="bg-[#0E6E19] text-white p-6 min-h-[120px] flex items-center justify-between">
+                      <h3 className="text-lg md:text-xl font-bold leading-tight text-white">{c.title[lang]}</h3>
                     </div>
                   </Link>
                 </motion.div>

@@ -39,7 +39,7 @@ export const CERTIFICATIONS = [
 export const CATEGORY_CARDS = [
   {
     slug: "bio-fertilizers",
-    title: { en: "Bio Fertilizers & Biostimulants", id: "Pupuk Hayati & Biostimulan" },
+    title: { en: "Bio Fertilizers & Biostimulant", id: "Pupuk Hayati & Biostimulan" },
     desc: {
       en: "Live microbes that fix nitrogen, solubilize phosphate and trigger a plant's own defenses — a stronger foundation from the roots up.",
       id: "Mikroba hidup yang mengikat nitrogen, melarutkan fosfat, dan memicu pertahanan alami tanaman — fondasi lebih kuat dari akar.",
@@ -49,7 +49,7 @@ export const CATEGORY_CARDS = [
   },
   {
     slug: "bio-crop-protection",
-    title: { en: "Bio Crop Protection", id: "Perlindungan Tanaman Hayati" },
+    title: { en: "Bio Protection", id: "Perlindungan Hayati" },
     desc: {
       en: "Insect-specific fungi and bacteria that control pests and disease through targeted infection — sparing pollinators and beneficials.",
       id: "Jamur dan bakteri spesifik yang mengendalikan hama dan penyakit lewat infeksi tertarget — aman bagi penyerbuk dan serangga bermanfaat.",
