@@ -19,8 +19,11 @@ export default function Footer() {
         <div className="md:col-span-2">
           {/* Logo lockup with real company emblem */}
           <div className="flex items-center gap-3 mb-5">
-            <img src="/logo.png" alt="Prima Agro Tech" className="w-8 h-8 object-contain bg-white/90 p-1 rounded-full" />
-            <span className="font-extrabold text-lg tracking-tight text-white">PRIMA AGRO TECH</span>
+            <img src="/logo.png" alt="Prima Agro Tech" className="w-10 h-10 object-contain" />
+            <div className="leading-none">
+              <span className="block font-black text-lg text-white tracking-tight">PRIMA</span>
+              <span className="block font-medium text-[11px] text-white/80 tracking-[0.15em] -mt-0.5">AGRO TECH</span>
+            </div>
           </div>
           <p className="text-white/70 max-w-md text-sm leading-relaxed">{t("footer.legal")}</p>
           <div className="flex items-center gap-3 mt-6">
@@ -35,7 +38,8 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-white hover:bg-white/10 transition-colors"
+                className="w-10 h-10 border border-white/20 flex items-center justify-center hover:border-white hover:bg-white/10 transition-colors"
+                style={{ borderRadius: '2px 12px 12px 12px' }}
                 data-testid={`footer-social-${label.toLowerCase()}`}
               >
                 <Icon className="w-4 h-4 text-white" />
