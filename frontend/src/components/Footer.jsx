@@ -18,12 +18,8 @@ export default function Footer() {
       <div className="container-pat py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
           {/* Logo lockup with real company emblem */}
-          <div className="flex items-center gap-3 mb-5">
-            <img src="/logo.png" alt="Prima Agro Tech" className="w-10 h-10 object-contain" />
-            <div className="leading-[1.05]">
-              <span className="block text-xl text-white tracking-tight" style={{ fontWeight: 900 }}>PRIMA</span>
-              <span className="block text-[12px] text-white/80 tracking-[0.22em]" style={{ fontWeight: 300 }}>AGRO TECH</span>
-            </div>
+          <div className="flex items-center mb-5">
+            <img src="/logo-full-white.png" alt="Prima Agro Tech" className="h-11 md:h-12 w-auto object-contain" />
           </div>
           <p className="text-white/70 max-w-md text-sm leading-relaxed">{t("footer.legal")}</p>
           <div className="flex items-center gap-3 mt-6">
