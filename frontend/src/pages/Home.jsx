@@ -336,6 +336,7 @@ function TestimonialCarousel() {
   const [idx, setIdx] = useState(0);
 
   useEffect(() => {
+    if (!process.env.REACT_APP_BACKEND_URL) return;
     const api = process.env.REACT_APP_BACKEND_URL + "/api/testimonials?approved_only=true";
     fetch(api)
       .then((r) => r.json())
