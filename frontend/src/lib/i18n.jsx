@@ -34,7 +34,7 @@ export const translations = {
       heroLine1: "Grow More.",
       heroLine2: "Harm Less.",
       heroLine3: "With Microbes.",
-      heroSub: "We help farmers do it — with Bio Fertilizers, Bio Crop Protection, and Soil Remediation, developed from 120+ microbial strains from Indonesia's environment.",
+      heroSub: "We help farmers do it — with Bio Fertilizers, Bio Crop Protection, and Bio Decomposer, developed from 120+ microbial strains from Indonesia's environment.",
       trustEyebrow: "Proven at scale",
       certsTitle: "Certified & independently verified",
       solutionsEyebrow: "What we make",

@@ -9,7 +9,7 @@ const SOL_LINKS = [
   { slug: "bio-insecticides", label: "Bio Insecticides" },
   { slug: "bio-fungicides", label: "Bio Fungicides" },
   { slug: "biostimulant-nutrition", label: "Bio-Stimulant & Nutrition" },
-  { slug: "soil-remediation", label: "Soil Remediation" },
+  { slug: "soil-remediation", label: "Bio Decomposer" },
 ];
 
 export default function Navbar() {

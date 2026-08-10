@@ -59,7 +59,7 @@ export const CATEGORY_CARDS = [
   },
   {
     slug: "soil-remediation",
-    title: { en: "Soil Remediation", id: "Remediasi Tanah" },
+    title: { en: "Bio Decomposer", id: "Bio-Decomposer" },
     desc: {
       en: "Bio-decomposers that turn crop residue and plantation waste into usable soil — a practical alternative to open burning.",
       id: "Bio-decomposer yang mengubah sisa panen dan limbah perkebunan menjadi tanah subur — alternatif praktis pembakaran terbuka.",
@@ -108,7 +108,7 @@ export const CATEGORY_PAGES = {
   },
   "soil-remediation": {
     type: "Bio-Decomposer",
-    title: "Soil Remediation",
+    title: "Bio Decomposer",
     image: IMAGES.soil,
     desc: {
       en: "Our bio-decomposers turn crop residue, plantation waste and manure into usable soil far faster than nature would on its own, while rebuilding the biological activity that healthy soil depends on. From rice straw to oil palm empty bunches, these products shorten the wait between harvest and healthy ground.",
