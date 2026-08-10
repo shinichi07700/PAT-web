@@ -100,9 +100,12 @@ export default function Home() {
           <StaggerGroup className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {STATS.map((s, idx) => (
               <motion.div key={s.key} variants={staggerItem} className="flex items-center gap-4" data-testid={`stat-${s.key}`}>
-                <div className="w-12 h-12 rounded-full bg-white/15 backdrop-blur-sm flex items-center justify-center text-white shrink-0">
+                <div
+                  className="w-14 h-14 md:w-16 md:h-16 bg-white/20 backdrop-blur-sm flex items-center justify-center text-white shrink-0 shadow-sm"
+                  style={{ borderRadius: '0 16px 0 16px' }}
+                >
                   {idx === 0 && (
-                    <svg viewBox="0 0 100 100" fill="none" className="w-6 h-6">
+                    <svg viewBox="0 0 100 100" fill="none" className="w-7 h-7 md:w-8 md:h-8">
                       <rect x="14" y="20" width="72" height="66" rx="14" stroke="white" strokeWidth="6" fill="none" />
                       <path d="M 14 38 L 86 38" stroke="white" strokeWidth="6" />
                       <rect x="32" y="10" width="7" height="18" rx="3.5" fill="white" />
@@ -116,16 +119,16 @@ export default function Home() {
                     </svg>
                   )}
                   {idx === 1 && (
-                    <svg viewBox="0 0 100 100" fill="none" className="w-6 h-6">
+                    <svg viewBox="0 0 100 100" fill="none" className="w-7 h-7 md:w-8 md:h-8">
                       <ellipse cx="50" cy="45" rx="34" ry="17" stroke="white" strokeWidth="6" fill="none" />
                       <path d="M 16 45 A 34 17 0 0 0 84 45 v 8 A 34 17 0 0 1 16 53 Z" stroke="white" strokeWidth="6" fill="none" />
                       <path d="M 35 43 C 30 39 28 49 40 49 C 48 49 45 41 35 43 Z" fill="white" />
                       <circle cx="64" cy="46" r="4.5" fill="white" />
                     </svg>
                   )}
-                  {idx === 2 && <MapPin className="w-6 h-6" />}
+                  {idx === 2 && <MapPin className="w-7 h-7 md:w-8 md:h-8" />}
                   {idx === 3 && (
-                    <svg viewBox="0 0 100 100" fill="none" className="w-6 h-6">
+                    <svg viewBox="0 0 100 100" fill="none" className="w-7 h-7 md:w-8 md:h-8">
                       <circle cx="50" cy="22" r="10" stroke="white" strokeWidth="6" fill="none" />
                       <circle cx="24" cy="34" r="8.5" stroke="white" strokeWidth="6" fill="none" />
                       <circle cx="76" cy="34" r="8.5" stroke="white" strokeWidth="6" fill="none" />
