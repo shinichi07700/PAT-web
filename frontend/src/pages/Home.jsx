@@ -175,24 +175,31 @@ export default function Home() {
               </Reveal>
             </div>
 
-            {/* Right 3 Cards matching mockup (Cream top + Green bottom) */}
+            {/* Right 3 Cards matching mockup with big content images & compact green label */}
             <div className="lg:col-span-8 grid sm:grid-cols-3 gap-6">
               {CATEGORY_CARDS.map((c) => (
                 <motion.div key={c.slug} variants={staggerItem}>
                   <Link
                     to={`/solutions/${c.slug === "bio-crop-protection" ? "bio-insecticides" : c.slug}`}
-                    className="group block bg-[#F3F1EC] rounded-asym-card overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 h-full flex flex-col justify-between"
+                    className="group block rounded-asym-card overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 h-full flex flex-col justify-between bg-white border border-gray-100"
                     data-testid={`solution-card-${c.slug}`}
                   >
-                    {/* Top Cream Area */}
-                    <div className="p-6 min-h-[160px] md:min-h-[180px] flex items-start justify-between">
-                      <div className="w-3 h-3 rounded-full bg-[#0E6E19]/30 group-hover:bg-[#0E6E19] transition-colors" />
-                      <ArrowUpRight className="w-5 h-5 text-[#0E6E19] opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                    {/* Top Content Image - Big & Prominent */}
+                    <div className="relative overflow-hidden h-60 md:h-72 flex-1 bg-[#F3F1EC]">
+                      <img
+                        src={c.image}
+                        alt={c.title[lang]}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-60" />
+                      <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#0E6E19] shadow-sm group-hover:bg-[#0E6E19] group-hover:text-white transition-colors">
+                        <ArrowUpRight className="w-4 h-4" />
+                      </div>
                     </div>
 
-                    {/* Bottom Solid Green Block matching mockup */}
-                    <div className="bg-[#0E6E19] text-white p-6 min-h-[120px] flex items-center justify-between">
-                      <h3 className="text-lg md:text-xl font-bold leading-tight text-white">{c.title[lang]}</h3>
+                    {/* Bottom Green Label Box - Compact & Sleek */}
+                    <div className="bg-[#0E6E19] text-white py-3.5 px-5 min-h-[60px] flex items-center justify-between">
+                      <h3 className="text-sm md:text-base font-bold leading-snug text-white tracking-tight">{c.title[lang]}</h3>
                     </div>
                   </Link>
                 </motion.div>

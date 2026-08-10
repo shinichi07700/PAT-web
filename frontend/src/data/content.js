@@ -44,7 +44,7 @@ export const CATEGORY_CARDS = [
       en: "Live microbes that fix nitrogen, solubilize phosphate and trigger a plant's own defenses — a stronger foundation from the roots up.",
       id: "Mikroba hidup yang mengikat nitrogen, melarutkan fosfat, dan memicu pertahanan alami tanaman — fondasi lebih kuat dari akar.",
     },
-    image: IMAGES.farm,
+    image: "/images/solution-bio-fertilizer.jpg",
     accent: "#43B14B",
   },
   {
@@ -54,7 +54,7 @@ export const CATEGORY_CARDS = [
       en: "Insect-specific fungi and bacteria that control pests and disease through targeted infection — sparing pollinators and beneficials.",
       id: "Jamur dan bakteri spesifik yang mengendalikan hama dan penyakit lewat infeksi tertarget — aman bagi penyerbuk dan serangga bermanfaat.",
     },
-    image: IMAGES.greenhouse,
+    image: "/images/solution-bio-protection.jpg",
     accent: "#2D6A35",
   },
   {
@@ -64,7 +64,7 @@ export const CATEGORY_CARDS = [
       en: "Bio-decomposers that turn crop residue and plantation waste into usable soil — a practical alternative to open burning.",
       id: "Bio-decomposer yang mengubah sisa panen dan limbah perkebunan menjadi tanah subur — alternatif praktis pembakaran terbuka.",
     },
-    image: IMAGES.soil,
+    image: "/images/solution-soil-remediation.jpg",
     accent: "#E8A500",
   },
 ];
