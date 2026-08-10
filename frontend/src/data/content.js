@@ -577,7 +577,7 @@ export const SEED_TESTIMONIALS = [
     role: "Petani Tomat · Cianjur",
     crop: "Tomat",
     province: "Cianjur",
-    image: "/images/testimonial-atep.png",
+    image: "/images/testimonial-atep.jpg",
     quote: {
       en: "Selama saya menanam tomat, keluhan saya banyak, seperti lodoh, keriting daun, buah kurang banyak, dan tanah kurang gembur. Produk pertama kali yang saya gunakan Humatop. Dari dulunya pH tanah lima koma lima, setelah saya menggunakan Humatop menjadi enam koma lima.",
       id: "Selama saya menanam tomat, keluhan saya banyak, seperti lodoh, keriting daun, buah kurang banyak, dan tanah kurang gembur. Produk pertama kali yang saya gunakan Humatop. Dari dulunya pH tanah lima koma lima, setelah saya menggunakan Humatop menjadi enam koma lima."

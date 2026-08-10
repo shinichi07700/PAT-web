@@ -72,6 +72,7 @@ export default function Footer() {
               </p>
               <div className="flex items-center gap-3 mt-6">
                 {[
+                  { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=61575486308292", label: "Facebook" },
                   { Icon: Instagram, href: "https://www.instagram.com/primaagrotech?igsh=YmRpOWJsYm94cnNj", label: "Instagram" },
                   { Icon: Youtube, href: "https://youtube.com/@sobatprimatani?si=98UEgcVkR6sNHWKR", label: "YouTube" },
                   { Icon: Linkedin, href: "https://www.linkedin.com/company/primaagrotech", label: "LinkedIn" },
