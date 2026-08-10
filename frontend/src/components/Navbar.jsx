@@ -49,9 +49,10 @@ export default function Navbar() {
       <div
         className={`max-w-5xl mx-auto pointer-events-auto transition-all duration-500 ${
           isTransparent
-            ? "bg-white/10 backdrop-blur-sm rounded-full border border-white/20 shadow-none"
-            : "bg-white/95 backdrop-blur-md rounded-full shadow-xl border border-gray-100/80"
+            ? "bg-white/10 backdrop-blur-sm border border-white/20 shadow-none"
+            : "bg-white/95 backdrop-blur-md shadow-xl border border-gray-100/80"
         }`}
+        style={{ borderRadius: isTransparent ? '0 24px 0 24px' : '0 28px 0 28px' }}
       >
         <nav
           className={`flex items-center justify-between px-5 md:px-7 transition-all duration-500 ${
