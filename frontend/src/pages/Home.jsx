@@ -310,36 +310,12 @@ export default function Home() {
 
 function TestimonialCarousel() {
   const { t, lang } = useLang();
-  const [items, setItems] = useState(SEED_TESTIMONIALS);
+  const items = SEED_TESTIMONIALS;
   const [idx, setIdx] = useState(0);
-
-  useEffect(() => {
-    if (!process.env.REACT_APP_BACKEND_URL) return;
-    const api = process.env.REACT_APP_BACKEND_URL + "/api/testimonials?approved_only=true";
-    fetch(api)
-      .then((r) => r.json())
-      .then((data) => {
-        if (Array.isArray(data) && data.length) {
-          const mapped = data.map((d) => ({ ...d, quote: { en: d.quote, id: d.quote } }));
-          setItems([...mapped, ...SEED_TESTIMONIALS]);
-        }
-      })
-      .catch(() => {});
-  }, []);
 
   const next = () => setIdx((i) => (i + 1) % items.length);
   const prev = () => setIdx((i) => (i - 1 + items.length) % items.length);
   const cur = items[idx];
-
-  // Specific photos per testimonial profile (Farmer, Dealer, Plantation)
-  const testimonialPhotos = [
-    IMAGES.farmerField,
-    IMAGES.scientist,
-    IMAGES.palmOil,
-    IMAGES.farm,
-  ];
-
-  const currentPhoto = testimonialPhotos[idx % testimonialPhotos.length];
 
   return (
     <section className="py-16 md:py-24 bg-white" data-testid="home-testimonials">
@@ -382,20 +358,20 @@ function TestimonialCarousel() {
             className="bg-white border border-gray-100 p-6 md:p-8 overflow-hidden shadow-xl grid md:grid-cols-12 items-center gap-6 md:gap-8"
             style={{ borderRadius: '0 36px 0 36px' }}
           >
-            {/* Left side photo with leaf design shape */}
-            <div className="md:col-span-4 relative min-h-[260px] md:min-h-[340px] overflow-hidden shadow-md" style={{ borderRadius: '0 24px 0 24px' }}>
+            {/* Left side photo nicely fitted inside leaf shape container */}
+            <div className="md:col-span-5 relative min-h-[300px] md:min-h-[380px] overflow-hidden shadow-md bg-[#F3F1EC]" style={{ borderRadius: '0 24px 0 24px' }}>
               <img
-                src={cur.image || currentPhoto}
+                src={cur.image}
                 alt={cur.name}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
             </div>
 
-            {/* Right side content matching mockup */}
-            <div className="md:col-span-8 p-4 md:p-6 flex flex-col justify-between h-full">
+            {/* Right side content */}
+            <div className="md:col-span-7 p-2 md:p-6 flex flex-col justify-between h-full">
               <div>
                 <div className="text-[#0E6E19] text-4xl font-serif leading-none mb-4 font-bold">&ldquo; &rdquo;</div>
-                <p className="text-base md:text-xl font-normal text-[#111827] leading-relaxed max-w-2xl">
+                <p className="text-base md:text-lg font-normal text-[#111827] leading-relaxed">
                   {cur.quote[lang] || cur.quote.en}
                 </p>
               </div>
