@@ -352,11 +352,22 @@ function TestimonialCarousel() {
         <AnimatePresence mode="wait">
           <motion.div
             key={idx}
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -30 }}
-            transition={{ duration: 0.4 }}
-            className="bg-white border border-gray-100 p-6 md:p-8 overflow-hidden shadow-xl grid md:grid-cols-12 items-center gap-6 md:gap-8"
+            exit={{ opacity: 0, x: -40 }}
+            transition={{ duration: 0.35 }}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.25}
+            onDragEnd={(e, { offset, velocity }) => {
+              const swipe = offset.x;
+              if (swipe < -40 || velocity.x < -300) {
+                next();
+              } else if (swipe > 40 || velocity.x > 300) {
+                prev();
+              }
+            }}
+            className="bg-white border border-gray-100 p-6 md:p-8 overflow-hidden shadow-xl grid md:grid-cols-12 items-center gap-6 md:gap-8 cursor-grab active:cursor-grabbing select-none touch-pan-y"
             style={{ borderRadius: '0 36px 0 36px' }}
           >
             {/* Left side photo filling leaf shape container completely */}
