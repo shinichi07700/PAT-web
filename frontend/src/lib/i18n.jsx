@@ -216,9 +216,9 @@ export const translations = {
       allRightsReserved: "Hak cipta dilindungi.",
     },
     home: {
-      heroLine1: "Panen Lebih.",
-      heroLine2: "Rusak Lebih Sedikit.",
-      heroLine3: "Dengan Mikroba.",
+      heroLine1: "Grow More.",
+      heroLine2: "Harm Less.",
+      heroLine3: "With Microbes.",
       heroSub: "Kami membantu petani mewujudkannya — dengan Solusi Bio yang dikembangkan dari 120+ strain mikroba dari lingkungan Indonesia.",
       trustEyebrow: "Terbukti dalam skala besar",
       certsTitle: "Tersertifikasi & terverifikasi independen",

@@ -40,7 +40,7 @@ export const CATEGORY_CARDS = [
   {
     slug: "bio-fertilizers",
     targetUrl: "/solutions?type=Bio-Fertilizer,Bio-Stimulant%20%26%20Nutrition",
-    title: { en: "Bio Fertilizers & Biostimulant", id: "Pupuk Hayati & Biostimulan" },
+    title: { en: "Bio Fertilizers & Biostimulant", id: "Bio Fertilizers & Biostimulant" },
     desc: {
       en: "Live microbes that fix nitrogen, solubilize phosphate and trigger a plant's own defenses — a stronger foundation from the roots up.",
       id: "Mikroba hidup yang mengikat nitrogen, melarutkan fosfat, dan memicu pertahanan alami tanaman — fondasi lebih kuat dari akar.",
@@ -51,7 +51,7 @@ export const CATEGORY_CARDS = [
   {
     slug: "bio-crop-protection",
     targetUrl: "/solutions?type=Bio-Insecticide,Bio-Fungicide",
-    title: { en: "Bio Protection", id: "Perlindungan Hayati" },
+    title: { en: "Bio Protection", id: "Bio Protection" },
     desc: {
       en: "Insect-specific fungi and bacteria that control pests and disease through targeted infection — sparing pollinators and beneficials.",
       id: "Jamur dan bakteri spesifik yang mengendalikan hama dan penyakit lewat infeksi tertarget — aman bagi penyerbuk dan serangga bermanfaat.",
@@ -62,7 +62,7 @@ export const CATEGORY_CARDS = [
   {
     slug: "soil-remediation",
     targetUrl: "/solutions?type=Bio-Decomposer",
-    title: { en: "Bio Decomposer", id: "Bio-Decomposer" },
+    title: { en: "Bio Decomposer", id: "Bio Decomposer" },
     desc: {
       en: "Bio-decomposers that turn crop residue and plantation waste into usable soil — a practical alternative to open burning.",
       id: "Bio-decomposer yang mengubah sisa panen dan limbah perkebunan menjadi tanah subur — alternatif praktis pembakaran terbuka.",
