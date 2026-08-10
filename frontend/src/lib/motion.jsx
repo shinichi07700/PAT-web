@@ -63,7 +63,7 @@ export const staggerItem = {
 };
 
 // Animated number counter
-export function StatCounter({ value, suffix = "", className = "" }) {
+export function StatCounter({ value, suffix = "", className = "", noFormat = false }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
   const [display, setDisplay] = useState(0);
@@ -76,7 +76,7 @@ export function StatCounter({ value, suffix = "", className = "" }) {
     });
     return () => controls.stop();
   }, [inView, value]);
-  const formatted = value >= 1000 ? display.toLocaleString() : display;
+  const formatted = noFormat ? display : (value >= 1000 ? display.toLocaleString() : display);
   return (
     <span ref={ref} className={className}>
       {formatted}

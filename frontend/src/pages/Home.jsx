@@ -137,7 +137,7 @@ export default function Home() {
                     )}
                   </div>
                   <div className="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
-                    <StatCounter value={s.value} suffix={s.suffix} />
+                    <StatCounter value={s.value} suffix={s.suffix} noFormat={s.noFormat} />
                   </div>
                 </div>
                 <div className="mt-2 text-white/80 text-xs md:text-sm font-medium pl-13">{t(`stats.${s.key}`)}</div>

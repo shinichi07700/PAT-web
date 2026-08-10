@@ -21,7 +21,7 @@ export const IMAGES = {
 export const WHATSAPP_NUMBER = "6285283790848";
 
 export const STATS = [
-  { value: 2008, suffix: "", key: "founded" },
+  { value: 2008, suffix: "", key: "founded", noFormat: true },
   { value: 120, suffix: "+", key: "isolates" },
   { value: 16, suffix: "+", key: "provinces" },
   { value: 15000, suffix: "+", key: "farmers" },
