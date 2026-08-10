@@ -136,11 +136,12 @@ export default function Navbar() {
             </button>
             <Link
               to="/contact"
-              className={`rounded-full font-semibold text-sm transition-all duration-300 ${
+              className={`font-semibold text-sm transition-all duration-300 ${
                 isTransparent
                   ? "border border-white/50 text-white px-4 py-1.5 hover:bg-white hover:text-[#1C3A1F]"
-                  : "btn-pill-green !py-2 !px-5"
+                  : "bg-[#0E6E19] text-white px-5 py-2 hover:bg-[#064016]"
               }`}
+              style={{ borderRadius: '0 14px 0 14px' }}
               data-testid="nav-contact-btn"
             >
               {t("nav.contactUs")}

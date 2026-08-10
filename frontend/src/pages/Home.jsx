@@ -31,10 +31,10 @@ export default function Home() {
 
   return (
     <div data-testid="home-page" className="bg-white">
-      {/* HERO - Full Bleed Video extending to top behind transparent navbar */}
+      {/* HERO - Full Bleed Vivid Video with text on the RIGHT */}
       <section className="relative overflow-hidden">
-        <div className="relative bg-[#064016] min-h-[100vh] md:min-h-[680px] flex items-end" style={{ borderRadius: '0 0 0 36px' }}>
-          {/* Background Video */}
+        <div className="relative min-h-[100vh] md:min-h-[680px] flex items-center" style={{ borderRadius: '0 0 0 36px' }}>
+          {/* Vivid Video - no dark overlay, "front out" */}
           <div className="absolute inset-0 z-0">
             <video
               autoPlay
@@ -42,51 +42,43 @@ export default function Home() {
               muted
               playsInline
               poster={IMAGES.heroField}
-              className="w-full h-full object-cover opacity-60"
+              className="w-full h-full object-cover"
             >
               <source src="./hero-video.mp4" type="video/mp4" />
-              {/* Fallback to static image if video can't play */}
               <img
                 src={IMAGES.heroField}
                 alt="Agricultural field"
                 className="w-full h-full object-cover"
               />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-r from-[#064016]/95 via-[#064016]/75 to-transparent" />
+            {/* Subtle gradient only on the RIGHT side for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-l from-[#064016]/70 via-[#064016]/40 to-transparent" />
           </div>
 
-          <MicrobeDots count={12} />
-
-          {/* Hero Content */}
-          <div className="relative z-10 p-8 md:p-16 lg:p-20 max-w-3xl">
-            <MaskedLines
-              as="h1"
-              className="text-white font-extrabold tracking-tight leading-[1.05] text-4xl md:text-6xl lg:text-[3.5rem]"
-              lines={[t("home.heroLine1"), t("home.heroLine2"), t("home.heroLine3")]}
-              delay={0.2}
-            />
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.6 }}
-              className="mt-6 text-white/90 text-base md:text-lg leading-relaxed font-normal"
-            >
-              {t("home.heroSub")}
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.9, duration: 0.6 }}
-              className="mt-8 flex flex-wrap gap-4"
-            >
-              <Link to="/solutions" className="btn-pill-green group" data-testid="hero-cta">
-                {t("common.findSolution")}
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link to="/about/oursciences" className="btn-pill-outline-white">
-                {t("common.seeFullProcess")}
-              </Link>
-            </motion.div>
+          {/* Hero Content - RIGHT aligned */}
+          <div className="relative z-10 w-full flex justify-end">
+            <div className="p-8 md:p-16 lg:p-20 max-w-xl text-right">
+              <MaskedLines
+                as="h1"
+                className="text-white font-extrabold tracking-tight leading-[1.05] text-4xl md:text-6xl lg:text-[3.5rem] italic"
+                lines={[t("home.heroLine1"), t("home.heroLine2"), t("home.heroLine3")]}
+                delay={0.2}
+              />
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.9, duration: 0.6 }}
+                className="mt-8 flex flex-wrap gap-4 justify-end"
+              >
+                <Link to="/solutions" className="btn-pill-green group" style={{ borderRadius: '0 14px 0 14px' }} data-testid="hero-cta">
+                  {t("common.findSolution")}
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link to="/about/oursciences" className="btn-pill-outline-white" style={{ borderRadius: '0 14px 0 14px' }}>
+                  {t("common.seeFullProcess")}
+                </Link>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
