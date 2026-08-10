@@ -10,28 +10,28 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-white text-white relative overflow-hidden pt-8 pb-12" data-testid="footer">
-      {/* Running Marquee Text - Kept at top */}
-      <div className="mb-8">
+    <footer className="w-full relative overflow-hidden bg-white" data-testid="footer">
+      {/* Running Marquee Text - Green background */}
+      <div className="bg-[#064016] border-t border-b border-white/10 overflow-hidden">
         <Marquee
           text="GROW MORE · HARM LESS · WITH MICROBES ·"
-          className="py-4 border-y border-gray-100 text-[#0E6E19]/15 font-extrabold text-4xl md:text-6xl tracking-tight"
+          className="py-5 text-white/25 font-extrabold text-4xl md:text-6xl tracking-tight"
           duration={30}
         />
       </div>
 
-      <div className="container-pat">
-        {/* Leaf-shaped Green Container matching mockup */}
-        <div
-          className="bg-gradient-to-b from-[#064016] to-[#04280d] text-white p-8 md:p-14 shadow-2xl overflow-hidden"
-          style={{ borderRadius: '0 36px 0 36px' }}
-        >
-          {/* Top Call To Action Section inside leaf container */}
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-2xl md:text-4xl font-extrabold text-white tracking-tight">
+      {/* Full Page Combined CTA + Footer Green Section */}
+      <div
+        className="w-full bg-gradient-to-b from-[#064016] via-[#053312] to-[#031c09] text-white shadow-2xl overflow-hidden"
+        style={{ borderRadius: '0 48px 0 0' }}
+      >
+        <div className="container-pat pt-16 md:pt-20 pb-12">
+          {/* Top Call To Action Section */}
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
               {t("home.ctaTitle")}
             </h2>
-            <p className="mt-3 text-white/80 text-sm md:text-base leading-relaxed">
+            <p className="mt-4 text-white/80 text-base md:text-lg leading-relaxed max-w-xl mx-auto">
               {t("home.ctaSub")}
             </p>
 
@@ -40,7 +40,7 @@ export default function Footer() {
                 href={`https://wa.me/${WHATSAPP_NUMBER}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 border border-white/60 text-white px-6 py-2.5 font-semibold text-sm hover:bg-white hover:text-[#064016] transition-all"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white/60 text-white px-7 py-3 font-semibold text-sm hover:bg-white hover:text-[#064016] transition-all"
                 style={{ borderRadius: '0 14px 0 14px' }}
                 data-testid="footer-cta-whatsapp"
               >
@@ -49,7 +49,7 @@ export default function Footer() {
               </a>
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-[#0E6E19] text-white px-6 py-2.5 font-semibold text-sm hover:bg-[#43B14B] transition-all shadow-md"
+                className="inline-flex items-center justify-center gap-2 bg-[#0E6E19] text-white px-7 py-3 font-semibold text-sm hover:bg-[#43B14B] transition-all shadow-lg"
                 style={{ borderRadius: '0 14px 0 14px' }}
                 data-testid="footer-cta-contact"
               >
@@ -59,14 +59,14 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="border-t border-white/15 my-8" />
+          <div className="border-t border-white/15 my-12" />
 
-          {/* Footer Grid matching mockup */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+          {/* Footer Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             <div className="md:col-span-2">
               {/* Logo lockup */}
-              <div className="flex items-center mb-4">
-                <img src="/logo-full-white.png" alt="Prima Agro Tech" className="h-10 md:h-11 w-auto object-contain" />
+              <div className="flex items-center mb-5">
+                <img src="/logo-full-white.png" alt="Prima Agro Tech" className="h-11 md:h-12 w-auto object-contain" />
               </div>
               <p className="text-white/75 max-w-md text-sm leading-relaxed">
                 Indonesian native microbial bio-solutions, developed end-to-end in-house since 2008.
@@ -84,7 +84,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="w-9 h-9 border border-white/30 flex items-center justify-center hover:border-white hover:bg-white/10 transition-colors"
+                    className="w-10 h-10 border border-white/30 flex items-center justify-center hover:border-white hover:bg-white/10 transition-colors"
                     style={{ borderRadius: '0 10px 0 10px' }}
                     data-testid={`footer-social-${label.toLowerCase()}`}
                   >
@@ -96,7 +96,7 @@ export default function Footer() {
 
             <div>
               <h4 className="text-white font-bold text-xs uppercase tracking-wider mb-4">{t("footer.explore")}</h4>
-              <ul className="space-y-2.5 text-white/75 text-sm font-medium">
+              <ul className="space-y-3 text-white/75 text-sm font-medium">
                 <li><Link to="/solutions" className="hover:text-white transition-colors">{t("nav.solutions")}</Link></li>
                 <li><Link to="/about/oursciences" className="hover:text-white transition-colors">{t("nav.oursciences")}</Link></li>
                 <li><Link to="/about/facilities" className="hover:text-white transition-colors">{t("nav.facilities")}</Link></li>
@@ -116,7 +116,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="border-t border-white/15 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-2 text-white/50 text-xs">
+          <div className="border-t border-white/15 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-3 text-white/50 text-xs">
             <span>© {year} Prima Agro Tech. {t("common.allRightsReserved")}</span>
             <span>{t("footer.tagline")}</span>
           </div>
