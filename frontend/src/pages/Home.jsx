@@ -382,10 +382,11 @@ function TestimonialCarousel() {
             {/* Right side content */}
             <div className="md:col-span-7 p-2 md:p-6 flex flex-col justify-between h-full">
               <div>
-                <div className="text-[#0E6E19] text-4xl font-serif leading-none mb-4 font-bold">&ldquo; &rdquo;</div>
-                <p className="text-base md:text-lg font-normal text-[#111827] leading-relaxed">
+                <div className="text-[#0E6E19] text-4xl md:text-5xl font-serif leading-none mb-3 font-bold">&ldquo;</div>
+                <p className="text-base md:text-lg font-normal text-[#111827] leading-relaxed px-1">
                   {cur.quote[lang] || cur.quote.en}
                 </p>
+                <div className="text-[#0E6E19] text-4xl md:text-5xl font-serif leading-none mt-3 text-right font-bold">&rdquo;</div>
               </div>
 
               <div className="mt-8">
