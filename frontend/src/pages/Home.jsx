@@ -119,11 +119,11 @@ export default function Home() {
                     </svg>
                   )}
                   {idx === 1 && (
-                    <svg viewBox="0 0 100 100" fill="none" className="w-7 h-7 md:w-8 md:h-8">
-                      <ellipse cx="50" cy="45" rx="34" ry="17" stroke="white" strokeWidth="6" fill="none" />
-                      <path d="M 16 45 A 34 17 0 0 0 84 45 v 8 A 34 17 0 0 1 16 53 Z" stroke="white" strokeWidth="6" fill="none" />
-                      <path d="M 35 43 C 30 39 28 49 40 49 C 48 49 45 41 35 43 Z" fill="white" />
-                      <circle cx="64" cy="46" r="4.5" fill="white" />
+                    <svg viewBox="0 0 100 100" fill="none" className="w-9 h-9 md:w-10 md:h-10 scale-110">
+                      <ellipse cx="50" cy="45" rx="36" ry="19" stroke="white" strokeWidth="6.5" fill="none" />
+                      <path d="M 14 45 A 36 19 0 0 0 86 45 v 9 A 36 19 0 0 1 14 54 Z" stroke="white" strokeWidth="6.5" fill="none" />
+                      <path d="M 33 43 C 28 39 26 49 38 49 C 46 49 43 41 33 43 Z" fill="white" />
+                      <circle cx="64" cy="46" r="5" fill="white" />
                     </svg>
                   )}
                   {idx === 2 && <MapPin className="w-7 h-7 md:w-8 md:h-8" />}
