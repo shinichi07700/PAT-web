@@ -358,12 +358,12 @@ function TestimonialCarousel() {
             className="bg-white border border-gray-100 p-6 md:p-8 overflow-hidden shadow-xl grid md:grid-cols-12 items-center gap-6 md:gap-8"
             style={{ borderRadius: '0 36px 0 36px' }}
           >
-            {/* Left side photo nicely fitted inside leaf shape container */}
-            <div className="md:col-span-5 relative min-h-[300px] md:min-h-[380px] overflow-hidden shadow-md bg-[#F3F1EC]" style={{ borderRadius: '0 24px 0 24px' }}>
+            {/* Left side photo filling leaf shape container completely */}
+            <div className="md:col-span-5 relative h-[300px] md:h-[380px] w-full overflow-hidden shadow-md" style={{ borderRadius: '0 24px 0 24px' }}>
               <img
                 src={cur.image}
                 alt={cur.name}
-                className="w-full h-full object-cover object-top"
+                className="absolute inset-0 w-full h-full object-cover object-center"
               />
             </div>
 
