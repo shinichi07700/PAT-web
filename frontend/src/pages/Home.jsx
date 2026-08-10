@@ -304,36 +304,6 @@ export default function Home() {
       {/* TESTIMONIALS - Section 4.6 Testimonial Card with Real Photo on Left & Top-Left 30px Radius */}
       <TestimonialCarousel />
 
-      {/* UNIFIED CTA & FOOTER BLOCK - Section 4.7 CTA Banner Merged into Deep Green Gradient Block */}
-      <section className="bg-gradient-to-b from-[#0E6E19] via-[#064016] to-[#04280d] text-white pt-20 pb-8 px-4 md:px-8 max-w-7xl mx-auto rounded-t-[40px] mt-12 grain relative overflow-hidden">
-        <MicrobeDots count={10} />
-        <div className="container-pat relative text-center max-w-3xl mx-auto mb-16">
-          <Reveal>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight text-balance">
-              {t("home.ctaTitle")}
-            </h2>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <p className="mt-4 text-white/80 text-base md:text-lg">{t("home.ctaSub")}</p>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <div className="mt-8 flex flex-wrap gap-4 justify-center">
-              <a
-                href="https://wa.me/6285283790848"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-pill-green !bg-[#0E6E19] hover:!bg-[#04280d]"
-                data-testid="cta-whatsapp"
-              >
-                {t("common.chatWhatsapp")}
-              </a>
-              <Link to="/contact" className="btn-pill-outline-white">
-                {t("nav.contactUs")}
-              </Link>
-            </div>
-          </Reveal>
-        </div>
-      </section>
     </div>
   );
 }
