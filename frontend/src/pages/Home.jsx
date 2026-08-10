@@ -31,16 +31,27 @@ export default function Home() {
 
   return (
     <div data-testid="home-page" className="bg-white">
-      {/* HERO - Section 4.2 Full Bleed Field Photo with Asymmetric Radius */}
+      {/* HERO - Section 4.2 Full Bleed Video with Asymmetric Radius */}
       <section className="relative pt-24 pb-12 px-4 md:px-8 max-w-7xl mx-auto overflow-hidden">
         <div className="relative rounded-asym-banner overflow-hidden shadow-2xl bg-[#064016] min-h-[520px] md:min-h-[580px] flex items-center">
-          {/* Background Field Image */}
+          {/* Background Video */}
           <div className="absolute inset-0 z-0">
-            <img
-              src={IMAGES.heroField}
-              alt="Agricultural field"
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              poster={IMAGES.heroField}
               className="w-full h-full object-cover opacity-60"
-            />
+            >
+              <source src="./hero-video.mp4" type="video/mp4" />
+              {/* Fallback to static image if video can't play */}
+              <img
+                src={IMAGES.heroField}
+                alt="Agricultural field"
+                className="w-full h-full object-cover"
+              />
+            </video>
             <div className="absolute inset-0 bg-gradient-to-r from-[#064016]/95 via-[#064016]/75 to-transparent" />
           </div>
 
