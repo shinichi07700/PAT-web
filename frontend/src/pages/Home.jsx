@@ -136,10 +136,7 @@ export default function Home() {
         </div>
 
         {/* Certifications row below on clean background */}
-        <div className="mt-8 py-6 px-4 flex flex-wrap items-center justify-center gap-3 text-center">
-          <span className="text-[#4B5563] text-xs font-bold uppercase tracking-wider mr-2 flex items-center gap-1">
-            <ShieldCheck className="w-4 h-4 text-[#0E6E19]" /> {t("home.certsTitle")}
-          </span>
+        <div className="mt-8 py-4 px-4 flex flex-wrap items-center justify-center gap-3 text-center">
           {CERTIFICATIONS.map((c) => (
             <span key={c} className="px-4 py-1.5 bg-[#F3F1EC] text-[#111827] text-xs font-semibold" style={{ borderRadius: '2px 10px 2px 10px' }}>
               {c}
