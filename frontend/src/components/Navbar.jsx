@@ -12,8 +12,10 @@ export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const isHome = location.pathname === "/";
+
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -34,23 +36,43 @@ export default function Navbar() {
     { path: "/about/career", label: t("nav.career") },
   ];
 
+  // Transparent mode: on homepage before scroll
+  const isTransparent = isHome && !scrolled;
+
   return (
-    <header className="fixed top-4 inset-x-0 z-50 px-4 md:px-6 pointer-events-none" data-testid="main-navbar">
+    <header
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
+        isTransparent ? "pt-3 px-6 md:px-10" : "pt-3 px-4 md:px-6"
+      } pointer-events-none`}
+      data-testid="main-navbar"
+    >
       <div
-        className={`max-w-5xl mx-auto pointer-events-auto transition-all duration-300 bg-white/95 backdrop-blur-md rounded-full shadow-lg border border-gray-100/80 ${
-          scrolled ? "shadow-xl border-gray-200" : ""
+        className={`max-w-5xl mx-auto pointer-events-auto transition-all duration-500 ${
+          isTransparent
+            ? "bg-white/10 backdrop-blur-sm rounded-full border border-white/20 shadow-none"
+            : "bg-white/95 backdrop-blur-md rounded-full shadow-xl border border-gray-100/80"
         }`}
       >
-        <nav className="flex items-center justify-between h-[64px] px-5 md:px-7">
-          {/* Logo - Official emblem + Wordmark */}
+        <nav
+          className={`flex items-center justify-between px-5 md:px-7 transition-all duration-500 ${
+            isTransparent ? "h-[48px]" : "h-[64px]"
+          }`}
+        >
+          {/* Logo */}
           <Link to="/" className="flex items-center group" data-testid="nav-logo">
-            <img src="/logo-full.png" alt="Prima Agro Tech" className="h-10 md:h-11 w-auto object-contain group-hover:scale-105 transition-transform" />
+            <img
+              src={isTransparent ? "/logo-full-white.png" : "/logo-full.png"}
+              alt="Prima Agro Tech"
+              className={`w-auto object-contain group-hover:scale-105 transition-all duration-500 ${
+                isTransparent ? "h-7 md:h-8" : "h-10 md:h-11"
+              }`}
+            />
           </Link>
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-1">
-            <NavItem to="/" active={isActive("/")}>{t("nav.home")}</NavItem>
-            <NavItem to="/solutions" active={isActive("/solutions")}>{t("nav.solutions")}</NavItem>
+            <NavItem to="/" active={isActive("/")} transparent={isTransparent}>{t("nav.home")}</NavItem>
+            <NavItem to="/solutions" active={isActive("/solutions")} transparent={isTransparent}>{t("nav.solutions")}</NavItem>
 
             {/* About dropdown */}
             <div
@@ -59,7 +81,11 @@ export default function Navbar() {
               onMouseLeave={() => setOpenMenu(null)}
             >
               <button
-                className="flex items-center gap-1 px-3.5 py-2 text-sm font-semibold text-[#111827]/80 hover:text-[#0E6E19] transition-colors"
+                className={`flex items-center gap-1 px-3.5 py-2 text-sm font-semibold transition-colors ${
+                  isTransparent
+                    ? "text-white/90 hover:text-white"
+                    : "text-[#111827]/80 hover:text-[#0E6E19]"
+                }`}
                 data-testid="nav-about-trigger"
                 onClick={() => navigate("/about")}
               >
@@ -97,28 +123,42 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <button
               onClick={toggle}
-              className="flex items-center gap-1 text-[#111827]/70 hover:text-[#0E6E19] text-xs font-bold transition-colors px-2 py-1"
+              className={`flex items-center gap-1 text-xs font-bold transition-colors px-2 py-1 ${
+                isTransparent ? "text-white/80 hover:text-white" : "text-[#111827]/70 hover:text-[#0E6E19]"
+              }`}
               data-testid="lang-toggle"
               aria-label="Toggle language"
             >
               <Globe className="w-3.5 h-3.5" />
-              <span className={lang === "en" ? "text-[#0E6E19]" : ""}>EN</span>
-              <span className="text-gray-300">/</span>
-              <span className={lang === "id" ? "text-[#0E6E19]" : ""}>ID</span>
+              <span className={lang === "en" ? (isTransparent ? "text-white" : "text-[#0E6E19]") : ""}>EN</span>
+              <span className={isTransparent ? "text-white/40" : "text-gray-300"}>/</span>
+              <span className={lang === "id" ? (isTransparent ? "text-white" : "text-[#0E6E19]") : ""}>ID</span>
             </button>
-            <Link to="/contact" className="btn-pill-green !py-2 !px-5 text-sm" data-testid="nav-contact-btn">
+            <Link
+              to="/contact"
+              className={`rounded-full font-semibold text-sm transition-all duration-300 ${
+                isTransparent
+                  ? "border border-white/50 text-white px-4 py-1.5 hover:bg-white hover:text-[#1C3A1F]"
+                  : "btn-pill-green !py-2 !px-5"
+              }`}
+              data-testid="nav-contact-btn"
+            >
               {t("nav.contactUs")}
             </Link>
           </div>
 
           {/* Mobile toggle */}
           <div className="flex md:hidden items-center gap-2">
-            <button onClick={toggle} className="text-[#111827] text-xs font-bold px-2 py-1" data-testid="lang-toggle-mobile">
+            <button
+              onClick={toggle}
+              className={`text-xs font-bold px-2 py-1 ${isTransparent ? "text-white" : "text-[#111827]"}`}
+              data-testid="lang-toggle-mobile"
+            >
               {lang.toUpperCase()}
             </button>
             <button
               onClick={() => setMobileOpen((o) => !o)}
-              className="text-[#111827] p-1"
+              className={`p-1 ${isTransparent ? "text-white" : "text-[#111827]"}`}
               data-testid="mobile-menu-btn"
               aria-label="Menu"
             >
@@ -158,12 +198,14 @@ export default function Navbar() {
   );
 }
 
-function NavItem({ to, active, children }) {
+function NavItem({ to, active, children, transparent }) {
   return (
     <Link
       to={to}
       className={`px-3.5 py-2 text-sm font-semibold transition-colors ${
-        active ? "text-[#0E6E19]" : "text-[#111827]/80 hover:text-[#0E6E19]"
+        transparent
+          ? active ? "text-white" : "text-white/80 hover:text-white"
+          : active ? "text-[#0E6E19]" : "text-[#111827]/80 hover:text-[#0E6E19]"
       }`}
     >
       {children}
@@ -183,4 +225,3 @@ function MobileLink({ to, children, sub }) {
     </Link>
   );
 }
-

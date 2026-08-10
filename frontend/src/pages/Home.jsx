@@ -31,9 +31,9 @@ export default function Home() {
 
   return (
     <div data-testid="home-page" className="bg-white">
-      {/* HERO - Section 4.2 Full Bleed Video with Asymmetric Radius */}
-      <section className="relative pt-24 pb-12 px-4 md:px-8 max-w-7xl mx-auto overflow-hidden">
-        <div className="relative rounded-asym-banner overflow-hidden shadow-2xl bg-[#064016] min-h-[520px] md:min-h-[580px] flex items-center">
+      {/* HERO - Full Bleed Video extending to top behind transparent navbar */}
+      <section className="relative overflow-hidden">
+        <div className="relative bg-[#064016] min-h-[100vh] md:min-h-[680px] flex items-end" style={{ borderRadius: '0 0 0 36px' }}>
           {/* Background Video */}
           <div className="absolute inset-0 z-0">
             <video
