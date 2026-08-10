@@ -23,7 +23,6 @@ export default function Footer() {
       {/* Full Page Combined CTA + Footer Green Section */}
       <div
         className="w-full bg-gradient-to-b from-[#064016] via-[#053312] to-[#031c09] text-white shadow-2xl overflow-hidden"
-        style={{ borderRadius: '0 48px 0 0' }}
       >
         <div className="container-pat pt-16 md:pt-20 pb-12">
           {/* Top Call To Action Section */}
