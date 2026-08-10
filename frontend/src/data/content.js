@@ -39,6 +39,7 @@ export const CERTIFICATIONS = [
 export const CATEGORY_CARDS = [
   {
     slug: "bio-fertilizers",
+    targetUrl: "/solutions?type=Bio-Fertilizer,Bio-Stimulant%20%26%20Nutrition",
     title: { en: "Bio Fertilizers & Biostimulant", id: "Pupuk Hayati & Biostimulan" },
     desc: {
       en: "Live microbes that fix nitrogen, solubilize phosphate and trigger a plant's own defenses — a stronger foundation from the roots up.",
@@ -49,6 +50,7 @@ export const CATEGORY_CARDS = [
   },
   {
     slug: "bio-crop-protection",
+    targetUrl: "/solutions?type=Bio-Insecticide,Bio-Fungicide",
     title: { en: "Bio Protection", id: "Perlindungan Hayati" },
     desc: {
       en: "Insect-specific fungi and bacteria that control pests and disease through targeted infection — sparing pollinators and beneficials.",
@@ -59,6 +61,7 @@ export const CATEGORY_CARDS = [
   },
   {
     slug: "soil-remediation",
+    targetUrl: "/solutions?type=Bio-Decomposer",
     title: { en: "Bio Decomposer", id: "Bio-Decomposer" },
     desc: {
       en: "Bio-decomposers that turn crop residue and plantation waste into usable soil — a practical alternative to open burning.",

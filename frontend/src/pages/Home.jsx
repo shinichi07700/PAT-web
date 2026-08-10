@@ -177,7 +177,7 @@ export default function Home() {
               {CATEGORY_CARDS.map((c) => (
                 <motion.div key={c.slug} variants={staggerItem}>
                   <Link
-                    to={`/solutions/${c.slug === "bio-crop-protection" ? "bio-insecticides" : c.slug}`}
+                    to={c.targetUrl || "/solutions"}
                     className="group block rounded-asym-card overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 h-full flex flex-col justify-between bg-white border border-gray-100"
                     data-testid={`solution-card-${c.slug}`}
                   >

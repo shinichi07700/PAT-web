@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Search, ArrowUpRight, Download, X } from "lucide-react";
 import { useLang } from "../lib/i18n";
@@ -38,9 +38,37 @@ export function ProductCard({ p, lang, t }) {
 
 export default function Solutions() {
   const { t, lang } = useLang();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState("");
-  const [type, setType] = useState("");
   const [crop, setCrop] = useState("");
+
+  const typeParam = searchParams.get("type") || "";
+  const selectedTypes = useMemo(() => {
+    return typeParam ? typeParam.split(",").map((s) => s.trim()).filter(Boolean) : [];
+  }, [typeParam]);
+
+  const handleTypeToggle = (targetType) => {
+    const next = new URLSearchParams(searchParams);
+    if (!targetType) {
+      next.delete("type");
+      setSearchParams(next);
+      return;
+    }
+
+    let updated = [];
+    if (selectedTypes.includes(targetType)) {
+      updated = selectedTypes.filter((t) => t !== targetType);
+    } else {
+      updated = [...selectedTypes, targetType];
+    }
+
+    if (updated.length > 0) {
+      next.set("type", updated.join(","));
+    } else {
+      next.delete("type");
+    }
+    setSearchParams(next);
+  };
 
   const filtered = useMemo(() => {
     return ALL_PRODUCTS.filter((p) => {
@@ -51,13 +79,21 @@ export default function Solutions() {
         p.type.toLowerCase().includes(q) ||
         p.crops.some((c) => c.toLowerCase().includes(q)) ||
         p.keyBenefit[lang].toLowerCase().includes(q);
-      const matchType = !type || p.type === type;
+      const matchType = selectedTypes.length === 0 || selectedTypes.includes(p.type);
       const matchCrop = !crop || p.crops.includes(crop);
       return matchSearch && matchType && matchCrop;
     });
-  }, [search, type, crop, lang]);
+  }, [search, selectedTypes, crop, lang]);
 
-  const hasFilters = search || type || crop;
+  const hasFilters = search || selectedTypes.length > 0 || crop;
+
+  const clearAllFilters = () => {
+    setSearch("");
+    setCrop("");
+    const next = new URLSearchParams(searchParams);
+    next.delete("type");
+    setSearchParams(next);
+  };
 
   return (
     <div data-testid="solutions-page">
@@ -81,15 +117,29 @@ export default function Solutions() {
 
           {/* Filters */}
           <div className="space-y-4 mb-4">
-            <FilterRow label={t("solutions.filterType")} options={SOLUTION_TYPES} value={type} onChange={setType} testid="type" tAll={t("solutions.all")} />
-            <FilterRow label={t("solutions.filterCrop")} options={CROPS} value={crop} onChange={setCrop} testid="crop" tAll={t("solutions.all")} />
+            <TypeFilterRow
+              label={t("solutions.filterType")}
+              options={SOLUTION_TYPES}
+              selected={selectedTypes}
+              onToggle={handleTypeToggle}
+              testid="type"
+              tAll={t("solutions.all")}
+            />
+            <FilterRow
+              label={t("solutions.filterCrop")}
+              options={CROPS}
+              value={crop}
+              onChange={setCrop}
+              testid="crop"
+              tAll={t("solutions.all")}
+            />
           </div>
 
           <div className="flex items-center justify-between mb-8">
             <span className="text-sm text-[#5C5C5C]">{filtered.length} {t("solutions.resultsCount")}</span>
             {hasFilters && (
               <button
-                onClick={() => { setSearch(""); setType(""); setCrop(""); }}
+                onClick={clearAllFilters}
                 className="flex items-center gap-1 text-sm text-[#2D6A35] font-semibold hover:text-[#43B14B]"
                 data-testid="clear-filters"
               >
@@ -99,7 +149,7 @@ export default function Solutions() {
           </div>
 
           {filtered.length > 0 ? (
-            <StaggerGroup className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" key={`${type}-${crop}-${search}`}>
+            <StaggerGroup className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" key={`${selectedTypes.join("-")}-${crop}-${search}`}>
               {filtered.map((p) => <ProductCard key={p.slug} p={p} lang={lang} t={t} />)}
             </StaggerGroup>
           ) : (
@@ -119,16 +169,30 @@ export default function Solutions() {
             <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight">{t("solutions.catalogueTitle")}</h2>
             <p className="mt-4 text-white/70 max-w-xl mx-auto">{t("solutions.catalogueSub")}</p>
             <div className="mt-8 flex flex-wrap gap-4 justify-center">
-              <button className="btn-primary !bg-[#43B14B] hover:!bg-[#2D6A35]" data-testid="download-catalogue" onClick={() => window.alert("Catalogue PDF coming soon.")}>
-                <Download className="w-4 h-4" /> {t("common.downloadCatalogue")}
-              </button>
-              <Link to="/contact" className="inline-flex items-center justify-center gap-2 bg-transparent text-white border-2 border-white/40 rounded-full px-7 py-3 font-semibold hover:bg-white hover:text-[#1C3A1F] transition-colors">
-                {t("nav.contactUs")}
+              <a href="/catalogue.pdf" download className="btn-primary bg-[#43B14B] hover:bg-[#2D6A35]" data-testid="download-catalogue">
+                <Download className="w-4 h-4 mr-2" /> {t("common.downloadCatalogue")}
+              </a>
+              <Link to="/contact" className="btn-secondary text-white border-white hover:bg-white hover:text-[#1C3A1F]">
+                {t("common.talkToTeam")}
               </Link>
             </div>
           </div>
         </div>
       </section>
+    </div>
+  );
+}
+
+function TypeFilterRow({ label, options, selected, onToggle, testid, tAll }) {
+  return (
+    <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+      <span className="text-sm font-semibold text-[#1C3A1F] min-w-[110px]">{label}</span>
+      <div className="flex flex-wrap gap-2">
+        <Pill active={selected.length === 0} onClick={() => onToggle("")} testid={`${testid}-all`}>{tAll}</Pill>
+        {options.map((o) => (
+          <Pill key={o} active={selected.includes(o)} onClick={() => onToggle(o)} testid={`${testid}-${o}`}>{o}</Pill>
+        ))}
+      </div>
     </div>
   );
 }

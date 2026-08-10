@@ -4,14 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, Globe } from "lucide-react";
 import { useLang } from "../lib/i18n";
 
-const SOL_LINKS = [
-  { slug: "bio-fertilizers", label: "Bio Fertilizers" },
-  { slug: "bio-insecticides", label: "Bio Insecticides" },
-  { slug: "bio-fungicides", label: "Bio Fungicides" },
-  { slug: "biostimulant-nutrition", label: "Bio-Stimulant & Nutrition" },
-  { slug: "soil-remediation", label: "Bio Decomposer" },
-];
-
 export default function Navbar() {
   const { t, lang, toggle } = useLang();
   const [scrolled, setScrolled] = useState(false);
@@ -58,46 +50,7 @@ export default function Navbar() {
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-1">
             <NavItem to="/" active={isActive("/")}>{t("nav.home")}</NavItem>
-
-            {/* Solutions dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setOpenMenu("solutions")}
-              onMouseLeave={() => setOpenMenu(null)}
-            >
-              <button
-                className="flex items-center gap-1 px-3.5 py-2 text-sm font-semibold text-[#111827]/80 hover:text-[#0E6E19] transition-colors"
-                data-testid="nav-solutions-trigger"
-                onClick={() => navigate("/solutions")}
-              >
-                {t("nav.solutions")} <ChevronDown className="w-3.5 h-3.5" />
-              </button>
-              <AnimatePresence>
-                {openMenu === "solutions" && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 8 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 pt-2"
-                  >
-                    <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-2 w-60">
-                      {SOL_LINKS.map((s) => (
-                        <Link
-                          key={s.slug}
-                          to={`/solutions/${s.slug}`}
-                          className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium text-[#111827] hover:bg-[#F3F1EC] hover:text-[#0E6E19] transition-colors"
-                          data-testid={`nav-sol-${s.slug}`}
-                        >
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#0E6E19]" />
-                          {s.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+            <NavItem to="/solutions" active={isActive("/solutions")}>{t("nav.solutions")}</NavItem>
 
             {/* About dropdown */}
             <div
@@ -187,9 +140,6 @@ export default function Navbar() {
               <div className="px-6 py-4 flex flex-col gap-1">
                 <MobileLink to="/">{t("nav.home")}</MobileLink>
                 <MobileLink to="/solutions">{t("nav.solutions")}</MobileLink>
-                {SOL_LINKS.map((s) => (
-                  <MobileLink key={s.slug} to={`/solutions/${s.slug}`} sub>{s.label}</MobileLink>
-                ))}
                 {aboutLinks.map((a) => (
                   <MobileLink key={a.path} to={a.path}>{a.label}</MobileLink>
                 ))}
