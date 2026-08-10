@@ -55,28 +55,20 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-l from-[#064016]/70 via-[#064016]/40 to-transparent" />
           </div>
 
-          {/* Hero Content - RIGHT aligned */}
-          <div className="relative z-10 w-full flex justify-end">
-            <div className="p-8 md:p-16 lg:p-20 max-w-2xl lg:max-w-3xl text-right">
+          {/* Hero Content - RIGHT aligned inside max-w-7xl container to align with below sections */}
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 flex justify-end">
+            <div className="py-12 md:py-20 lg:py-24 max-w-2xl text-right">
               <MaskedLines
                 as="h1"
                 className="text-white font-extrabold tracking-tight leading-[1.05] text-4xl md:text-6xl lg:text-[3.5rem]"
                 lines={[t("home.heroLine1"), t("home.heroLine2"), t("home.heroLine3")]}
                 delay={0.2}
               />
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7, duration: 0.6 }}
-                className="mt-6 text-white/90 text-base md:text-lg leading-relaxed font-normal"
-              >
-                {t("home.heroSub")}
-              </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.9, duration: 0.6 }}
-                className="mt-8 flex flex-wrap gap-4 justify-end"
+                transition={{ delay: 0.7, duration: 0.6 }}
+                className="mt-8 flex flex-wrap gap-4 justify-end items-center"
               >
                 <Link to="/solutions" className="btn-pill-green group" style={{ borderRadius: '0 14px 0 14px' }} data-testid="hero-cta">
                   {t("common.findSolution")}
