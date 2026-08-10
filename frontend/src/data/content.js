@@ -540,36 +540,47 @@ export const TIMELINE = [
 
 export const SEED_TESTIMONIALS = [
   {
-    name: "PUTRA DARMAWAN",
-    role: "Manager Lapangan Tembak",
-    crop: "Oil Palm",
-    province: "West Java",
-    image: "/images/putra_darmawan.jpg",
+    name: "Pak Ibrahim",
+    role: "Petani Padi · Bekasi",
+    crop: "Padi",
+    province: "Bekasi",
+    image: "/images/testimonial-ibrahim.jpg",
     quote: {
-      en: "DECOPALMA turned our replanting waste into compost in half the time. For our RSPO reporting, that's a documented win.",
-      id: "DECOPALMA mengubah limbah peremajaan kami menjadi kompos dalam separuh waktu. Untuk pelaporan RSPO kami, itu kemenangan terdokumentasi."
+      en: "Awalnya di umur 30 hari, tanaman padi saya sempat memerah dan terserang sundep. Tapi setelah memakai Humatop, hanya dalam 3 hari warna daun kembali hijau segar. Memasuki umur 50–60 hari, saya lanjutkan penyemprotan Kalimagsu dan hasilnya bulir padi keluar cepat serta terisi sangat bagus. Dari yang sebelumnya cuma dapat 5 ton, musim ini saya optimis bisa capai 7–8 ton per hektar.",
+      id: "Awalnya di umur 30 hari, tanaman padi saya sempat memerah dan terserang sundep. Tapi setelah memakai Humatop, hanya dalam 3 hari warna daun kembali hijau segar. Memasuki umur 50–60 hari, saya lanjutkan penyemprotan Kalimagsu dan hasilnya bulir padi keluar cepat serta terisi sangat bagus. Dari yang sebelumnya cuma dapat 5 ton, musim ini saya optimis bisa capai 7–8 ton per hektar."
     }
   },
   {
-    name: "Pak Sutrisno",
-    role: "Petani Padi",
-    crop: "Paddy",
-    province: "West Java",
-    image: IMAGES.farmerField,
+    name: "Pak Rahmat",
+    role: "Petani Paprika · Bandung Barat",
+    crop: "Paprika",
+    province: "Bandung Barat",
+    image: "/images/testimonial-rahmat.jpg",
     quote: {
-      en: "After switching to ORIZAPLUS I cut my urea by a quarter and still got a better harvest. The field agent came back twice to check on me.",
-      id: "Setelah beralih ke ORIZAPLUS, urea saya turun seperempat dan panen tetap lebih baik. Petugas lapangan datang dua kali untuk memantau."
+      en: "Sebelumnya, masa tanam paprika saya dari awal hingga panen memakan waktu 90 hingga 100 hari. Setelah menggunakan HumatPro, saya bisa panen lebih cepat di angka 75 sampai 80 hari. Hasilnya alhamdulillah sangat memuaskan, sehingga sekarang saya mempercayakan seluruh tahapan pemeliharaan tanaman ke produk-produk PT Prima Agro Tech.",
+      id: "Sebelumnya, masa tanam paprika saya dari awal hingga panen memakan waktu 90 hingga 100 hari. Setelah menggunakan HumatPro, saya bisa panen lebih cepat di angka 75 sampai 80 hari. Hasilnya alhamdulillah sangat memuaskan, sehingga sekarang saya mempercayakan seluruh tahapan pemeliharaan tanaman ke produk-produk PT Prima Agro Tech."
     }
   },
   {
-    name: "Bu Ratna",
-    role: "Dealer Hortikultura",
-    crop: "Horticulture",
-    province: "Central Java",
-    image: IMAGES.scientist,
+    name: "Pak Usep",
+    role: "Petani Cabai · Garut",
+    crop: "Cabai",
+    province: "Garut",
+    image: "/images/testimonial-usep.jpg",
     quote: {
-      en: "Dealers trust products that keep. The powder format lasts on my shelf and the farmers keep coming back for BT-MAX.",
-      id: "Dealer percaya produk yang tahan lama. Format bubuk awet di rak saya dan petani terus kembali untuk BT-MAX."
+      en: "Alhamdulillah setelah menggunakan produk PAT, pertumbuhan tanaman bagus dilihat dari daun yang hijau dan tanaman yang terkena layu berkurang. Produk PAT harga terjangkau, mudah diaplikasikan, hasilnya cepat terlihat di tanaman. Sekarang giliran sobat primatani untuk menggunakannya.",
+      id: "Alhamdulillah setelah menggunakan produk PAT, pertumbuhan tanaman bagus dilihat dari daun yang hijau dan tanaman yang terkena layu berkurang. Produk PAT harga terjangkau, mudah diaplikasikan, hasilnya cepat terlihat di tanaman. Sekarang giliran sobat primatani untuk menggunakannya."
+    }
+  },
+  {
+    name: "Pak Atep",
+    role: "Petani Tomat · Cianjur",
+    crop: "Tomat",
+    province: "Cianjur",
+    image: "/images/testimonial-atep.png",
+    quote: {
+      en: "Selama saya menanam tomat, keluhan saya banyak, seperti lodoh, keriting daun, buah kurang banyak, dan tanah kurang gembur. Produk pertama kali yang saya gunakan Humatop. Dari dulunya pH tanah lima koma lima, setelah saya menggunakan Humatop menjadi enam koma lima.",
+      id: "Selama saya menanam tomat, keluhan saya banyak, seperti lodoh, keriting daun, buah kurang banyak, dan tanah kurang gembur. Produk pertama kali yang saya gunakan Humatop. Dari dulunya pH tanah lima koma lima, setelah saya menggunakan Humatop menjadi enam koma lima."
     }
   }
 ];
