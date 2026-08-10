@@ -409,28 +409,29 @@ function TestimonialCarousel() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -30 }}
             transition={{ duration: 0.4 }}
-            className="bg-[#F3F1EC] rounded-2xl overflow-hidden shadow-sm grid md:grid-cols-12 items-stretch"
+            className="bg-white border border-gray-100 p-6 md:p-8 overflow-hidden shadow-xl grid md:grid-cols-12 items-center gap-6 md:gap-8"
+            style={{ borderRadius: '0 36px 0 36px' }}
           >
-            {/* Left side photo with top-left 30px radius */}
-            <div className="md:col-span-4 relative min-h-[280px] md:min-h-[380px]">
+            {/* Left side photo with leaf design shape */}
+            <div className="md:col-span-4 relative min-h-[260px] md:min-h-[340px] overflow-hidden shadow-md" style={{ borderRadius: '0 24px 0 24px' }}>
               <img
                 src={cur.image || currentPhoto}
                 alt={cur.name}
-                className="w-full h-full object-cover rounded-asym-card"
+                className="w-full h-full object-cover"
               />
             </div>
 
             {/* Right side content matching mockup */}
-            <div className="md:col-span-8 p-8 md:p-12 flex flex-col justify-between">
+            <div className="md:col-span-8 p-4 md:p-6 flex flex-col justify-between h-full">
               <div>
-                <div className="text-black text-4xl font-serif leading-none mb-4 font-bold">&ldquo; &rdquo;</div>
+                <div className="text-[#0E6E19] text-4xl font-serif leading-none mb-4 font-bold">&ldquo; &rdquo;</div>
                 <p className="text-base md:text-xl font-normal text-[#111827] leading-relaxed max-w-2xl">
                   {cur.quote[lang] || cur.quote.en}
                 </p>
               </div>
 
               <div className="mt-8">
-                <div className="inline-block bg-[#0E6E19] text-white px-6 py-3 shadow-sm" style={{ borderRadius: '2px 16px 2px 16px' }}>
+                <div className="inline-block bg-[#0E6E19] text-white px-6 py-3 shadow-sm" style={{ borderRadius: '0 14px 0 14px' }}>
                   <div className="font-extrabold text-sm uppercase tracking-wide text-white">
                     {cur.name}
                   </div>

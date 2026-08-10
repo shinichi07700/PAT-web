@@ -69,7 +69,7 @@ export default function Testimonials() {
         <div className="container-pat">
           <StaggerGroup className="grid md:grid-cols-2 gap-6">
             {items.map((item, i) => (
-              <motion.div key={i} variants={staggerItem} className="card-pat p-8 bg-white" data-testid={`testimonial-${i}`}>
+              <motion.div key={i} variants={staggerItem} className="p-8 bg-white shadow-md border border-gray-100" style={{ borderRadius: '0 24px 0 24px' }} data-testid={`testimonial-${i}`}>
                 <Quote className="w-8 h-8 text-[#43B14B] mb-4" />
                 <p className="text-lg text-[#1C3A1F] leading-relaxed">{item.quote[lang] || item.quote.en}</p>
                 <div className="mt-6 flex items-center gap-3">
