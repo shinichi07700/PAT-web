@@ -197,8 +197,8 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* Bottom Green Label Box - Compact & Sleek */}
-                    <div className="bg-[#0E6E19] text-white py-3.5 px-5 min-h-[60px] flex items-center justify-between">
+                    {/* Bottom Green Label Box - Perfectly Aligned Fixed Height */}
+                    <div className="bg-[#0E6E19] text-white px-5 py-3 h-[76px] flex items-center justify-between shrink-0">
                       <h3 className="text-sm md:text-base font-bold leading-snug text-white tracking-tight">{c.title[lang]}</h3>
                     </div>
                   </Link>
