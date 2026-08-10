@@ -57,13 +57,21 @@ export default function Home() {
 
           {/* Hero Content - RIGHT aligned */}
           <div className="relative z-10 w-full flex justify-end">
-            <div className="p-8 md:p-16 lg:p-20 max-w-xl text-right">
+            <div className="p-8 md:p-16 lg:p-20 max-w-2xl lg:max-w-3xl text-right">
               <MaskedLines
                 as="h1"
-                className="text-white font-extrabold tracking-tight leading-[1.05] text-4xl md:text-6xl lg:text-[3.5rem] italic"
+                className="text-white font-extrabold tracking-tight leading-[1.05] text-4xl md:text-6xl lg:text-[3.5rem]"
                 lines={[t("home.heroLine1"), t("home.heroLine2"), t("home.heroLine3")]}
                 delay={0.2}
               />
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.6 }}
+                className="mt-6 text-white/90 text-base md:text-lg leading-relaxed font-normal"
+              >
+                {t("home.heroSub")}
+              </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
