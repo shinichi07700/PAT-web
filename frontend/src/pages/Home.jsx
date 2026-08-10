@@ -64,10 +64,18 @@ export default function Home() {
                 lines={[t("home.heroLine1"), t("home.heroLine2"), t("home.heroLine3")]}
                 delay={0.2}
               />
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.6 }}
+                className="mt-6 text-white/90 text-base md:text-lg leading-relaxed font-normal"
+              >
+                {t("home.heroSub")}
+              </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7, duration: 0.6 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
                 className="mt-8 flex flex-wrap gap-4 justify-end items-center"
               >
                 <Link to="/solutions" className="btn-pill-green group" style={{ borderRadius: '0 14px 0 14px' }} data-testid="hero-cta">
