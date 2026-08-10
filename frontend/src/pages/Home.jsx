@@ -91,62 +91,60 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TRUST / STAT BAR - Section 4.3 Deep Forest Green Gradient Container with Asymmetric Radius & Leaf Icons */}
+      {/* TRUST / STAT BAR - Matching Mockup with Leaf Card Shape & Circular Icon Badges */}
       <section className="py-8 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-gradient-to-r from-[#0E6E19] via-[#064016] to-[#04280d] text-white rounded-asym-banner p-8 md:p-12 shadow-xl">
-          <StaggerGroup className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div
+          className="bg-[#0E6E19] text-white p-6 md:p-10 shadow-xl overflow-hidden"
+          style={{ borderRadius: '28px 0 28px 0' }}
+        >
+          <StaggerGroup className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {STATS.map((s, idx) => (
-              <motion.div key={s.key} variants={staggerItem} className="flex flex-col items-start" data-testid={`stat-${s.key}`}>
-                <div className="flex items-center gap-3">
-                  <div
-                    className="w-10 h-10 bg-white/20 backdrop-blur-sm flex items-center justify-center text-white shrink-0"
-                    style={{ borderRadius: "2px 14px 2px 14px" }}
-                  >
-                    {idx === 0 && (
-                      <svg viewBox="0 0 100 100" fill="none" className="w-5 h-5">
-                        <rect x="14" y="20" width="72" height="66" rx="14" stroke="white" strokeWidth="6" fill="none" />
-                        <path d="M 14 38 L 86 38" stroke="white" strokeWidth="6" />
-                        <rect x="32" y="10" width="7" height="18" rx="3.5" fill="white" />
-                        <rect x="61" y="10" width="7" height="18" rx="3.5" fill="white" />
-                        <circle cx="32" cy="53" r="5" fill="white" />
-                        <circle cx="50" cy="53" r="5" fill="white" />
-                        <circle cx="68" cy="53" r="5" fill="white" />
-                        <circle cx="32" cy="71" r="5" fill="white" />
-                        <circle cx="50" cy="71" r="5" fill="white" />
-                        <circle cx="68" cy="71" r="5" fill="white" />
-                      </svg>
-                    )}
-                    {idx === 1 && (
-                      <svg viewBox="0 0 100 100" fill="none" className="w-5 h-5">
-                        <ellipse cx="50" cy="45" rx="34" ry="17" stroke="white" strokeWidth="6" fill="none" />
-                        <path d="M 16 45 A 34 17 0 0 0 84 45 v 8 A 34 17 0 0 1 16 53 Z" stroke="white" strokeWidth="6" fill="none" />
-                        <path d="M 35 43 C 30 39 28 49 40 49 C 48 49 45 41 35 43 Z" fill="white" />
-                        <circle cx="64" cy="46" r="4.5" fill="white" />
-                      </svg>
-                    )}
-                    {idx === 2 && <MapPin className="w-5 h-5" />}
-                    {idx === 3 && (
-                      <svg viewBox="0 0 100 100" fill="none" className="w-5 h-5">
-                        <circle cx="50" cy="22" r="10" stroke="white" strokeWidth="6" fill="none" />
-                        <circle cx="24" cy="34" r="8.5" stroke="white" strokeWidth="6" fill="none" />
-                        <circle cx="76" cy="34" r="8.5" stroke="white" strokeWidth="6" fill="none" />
-                        <path d="M 16 80 A 34 34 0 0 1 84 80" stroke="white" strokeWidth="6.5" fill="none" strokeLinecap="round" />
-                        <path d="M 6 82 A 20 20 0 0 1 36 68" stroke="white" strokeWidth="6" fill="none" strokeLinecap="round" />
-                        <path d="M 94 82 A 20 20 0 0 0 64 68" stroke="white" strokeWidth="6" fill="none" strokeLinecap="round" />
-                      </svg>
-                    )}
-                  </div>
-                  <div className="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+              <motion.div key={s.key} variants={staggerItem} className="flex items-center gap-4" data-testid={`stat-${s.key}`}>
+                <div className="w-12 h-12 rounded-full bg-white/15 backdrop-blur-sm flex items-center justify-center text-white shrink-0">
+                  {idx === 0 && (
+                    <svg viewBox="0 0 100 100" fill="none" className="w-6 h-6">
+                      <rect x="14" y="20" width="72" height="66" rx="14" stroke="white" strokeWidth="6" fill="none" />
+                      <path d="M 14 38 L 86 38" stroke="white" strokeWidth="6" />
+                      <rect x="32" y="10" width="7" height="18" rx="3.5" fill="white" />
+                      <rect x="61" y="10" width="7" height="18" rx="3.5" fill="white" />
+                      <circle cx="32" cy="53" r="5" fill="white" />
+                      <circle cx="50" cy="53" r="5" fill="white" />
+                      <circle cx="68" cy="53" r="5" fill="white" />
+                      <circle cx="32" cy="71" r="5" fill="white" />
+                      <circle cx="50" cy="71" r="5" fill="white" />
+                      <circle cx="68" cy="71" r="5" fill="white" />
+                    </svg>
+                  )}
+                  {idx === 1 && (
+                    <svg viewBox="0 0 100 100" fill="none" className="w-6 h-6">
+                      <ellipse cx="50" cy="45" rx="34" ry="17" stroke="white" strokeWidth="6" fill="none" />
+                      <path d="M 16 45 A 34 17 0 0 0 84 45 v 8 A 34 17 0 0 1 16 53 Z" stroke="white" strokeWidth="6" fill="none" />
+                      <path d="M 35 43 C 30 39 28 49 40 49 C 48 49 45 41 35 43 Z" fill="white" />
+                      <circle cx="64" cy="46" r="4.5" fill="white" />
+                    </svg>
+                  )}
+                  {idx === 2 && <MapPin className="w-6 h-6" />}
+                  {idx === 3 && (
+                    <svg viewBox="0 0 100 100" fill="none" className="w-6 h-6">
+                      <circle cx="50" cy="22" r="10" stroke="white" strokeWidth="6" fill="none" />
+                      <circle cx="24" cy="34" r="8.5" stroke="white" strokeWidth="6" fill="none" />
+                      <circle cx="76" cy="34" r="8.5" stroke="white" strokeWidth="6" fill="none" />
+                      <path d="M 16 80 A 34 34 0 0 1 84 80" stroke="white" strokeWidth="6.5" fill="none" strokeLinecap="round" />
+                      <path d="M 6 82 A 20 20 0 0 1 36 68" stroke="white" strokeWidth="6" fill="none" strokeLinecap="round" />
+                      <path d="M 94 82 A 20 20 0 0 0 64 68" stroke="white" strokeWidth="6" fill="none" strokeLinecap="round" />
+                    </svg>
+                  )}
+                </div>
+                <div>
+                  <div className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-none">
                     <StatCounter value={s.value} suffix={s.suffix} noFormat={s.noFormat} />
                   </div>
+                  <div className="mt-1 text-white/85 text-xs font-medium">{t(`stats.${s.key}`)}</div>
                 </div>
-                <div className="mt-2 text-white/80 text-xs md:text-sm font-medium pl-13">{t(`stats.${s.key}`)}</div>
               </motion.div>
             ))}
           </StaggerGroup>
         </div>
-
-
       </section>
 
       {/* SOLUTIONS - Section 4.4 Cream Top + Solid Green Bottom Cards with Asymmetric Top-Left Radius */}

@@ -27,8 +27,16 @@ export default function Footer() {
         <div className="container-pat pt-16 md:pt-20 pb-12">
           {/* Top Call To Action Section */}
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
-              {t("home.ctaTitle")}
+            <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+              {lang === "id" ? (
+                <>
+                  Siap panen lebih,<br />dan merusak lebih sedikit?
+                </>
+              ) : (
+                <>
+                  Ready to grow,<br />and harm less?
+                </>
+              )}
             </h2>
             <p className="mt-4 text-white/80 text-base md:text-lg leading-relaxed max-w-xl mx-auto">
               {t("home.ctaSub")}
