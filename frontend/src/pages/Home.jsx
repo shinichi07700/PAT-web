@@ -135,14 +135,7 @@ export default function Home() {
           </StaggerGroup>
         </div>
 
-        {/* Certifications row below on clean background */}
-        <div className="mt-8 py-4 px-4 flex flex-wrap items-center justify-center gap-3 text-center">
-          {CERTIFICATIONS.map((c) => (
-            <span key={c} className="px-4 py-1.5 bg-[#F3F1EC] text-[#111827] text-xs font-semibold" style={{ borderRadius: '2px 10px 2px 10px' }}>
-              {c}
-            </span>
-          ))}
-        </div>
+
       </section>
 
       {/* SOLUTIONS - Section 4.4 Cream Top + Solid Green Bottom Cards with Asymmetric Top-Left Radius */}
