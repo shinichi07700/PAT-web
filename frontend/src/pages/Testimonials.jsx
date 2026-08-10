@@ -19,20 +19,7 @@ const VIDEOS = [
 
 export default function Testimonials() {
   const { t, lang } = useLang();
-  const [items, setItems] = useState(SEED_TESTIMONIALS);
-
-  const refresh = () => {
-    if (!API) return;
-    axios.get(`${API}/testimonials?approved_only=true`)
-      .then((r) => {
-        if (Array.isArray(r.data) && r.data.length) {
-          const mapped = r.data.map((d) => ({ ...d, quote: { en: d.quote, id: d.quote } }));
-          setItems([...mapped, ...SEED_TESTIMONIALS]);
-        }
-      })
-      .catch(() => {});
-  };
-  useEffect(refresh, []);
+  const items = SEED_TESTIMONIALS;
 
   return (
     <div data-testid="testimonials-page">
@@ -93,7 +80,7 @@ export default function Testimonials() {
             <p className="mt-3 text-[#5C5C5C]">{t("testimonials.formSub")}</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <TestimonialForm onDone={refresh} />
+            <TestimonialForm onDone={() => {}} />
           </Reveal>
         </div>
       </section>
