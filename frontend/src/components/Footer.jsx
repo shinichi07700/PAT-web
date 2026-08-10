@@ -6,7 +6,7 @@ import { Marquee } from "../lib/motion";
 import { WHATSAPP_NUMBER } from "../data/content";
 
 export default function Footer() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const year = new Date().getFullYear();
 
   return (
