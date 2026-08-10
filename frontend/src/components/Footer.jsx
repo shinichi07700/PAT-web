@@ -72,10 +72,9 @@ export default function Footer() {
               </p>
               <div className="flex items-center gap-3 mt-6">
                 {[
-                  { Icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-                  { Icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-                  { Icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-                  { Icon: Youtube, href: "https://youtube.com", label: "YouTube" },
+                  { Icon: Instagram, href: "https://www.instagram.com/primaagrotech?igsh=YmRpOWJsYm94cnNj", label: "Instagram" },
+                  { Icon: Youtube, href: "https://youtube.com/@sobatprimatani?si=98UEgcVkR6sNHWKR", label: "YouTube" },
+                  { Icon: Linkedin, href: "https://www.linkedin.com/company/primaagrotech", label: "LinkedIn" },
                 ].map(({ Icon, href, label }) => (
                   <a
                     key={label}
