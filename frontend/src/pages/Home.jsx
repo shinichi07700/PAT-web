@@ -78,11 +78,11 @@ export default function Home() {
                 transition={{ delay: 0.8, duration: 0.6 }}
                 className="mt-8 flex flex-wrap gap-4 justify-end items-center"
               >
-                <Link to="/solutions" className="btn-pill-green group" style={{ borderRadius: '16px 0 16px 0' }} data-testid="hero-cta">
+                <Link to="/solutions" className="btn-pill-green group" style={{ borderRadius: '18px 0 18px 0' }} data-testid="hero-cta">
                   {t("common.findSolution")}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link to="/about/oursciences" className="btn-pill-outline-white" style={{ borderRadius: '16px 0 16px 0' }}>
+                <Link to="/about/oursciences" className="btn-pill-outline-white" style={{ borderRadius: '18px 0 18px 0' }}>
                   {t("common.seeFullProcess")}
                 </Link>
               </motion.div>
@@ -95,7 +95,7 @@ export default function Home() {
       <section className="py-8 px-4 md:px-8 max-w-7xl mx-auto">
         <div
           className="bg-[#0E6E19] text-white p-6 md:p-10 shadow-xl overflow-hidden"
-          style={{ borderRadius: '36px 0 36px 0' }}
+          style={{ borderRadius: '40px 0 40px 0' }}
         >
           <StaggerGroup className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {STATS.map((s, idx) => (
@@ -133,8 +133,8 @@ export default function Home() {
                       <circle cx="24" cy="34" r="8.5" stroke="white" strokeWidth="6" fill="none" />
                       <circle cx="76" cy="34" r="8.5" stroke="white" strokeWidth="6" fill="none" />
                       <path d="M 16 80 A 34 34 0 0 1 84 80" stroke="white" strokeWidth="6.5" fill="none" strokeLinecap="round" />
-                      <path d="M 6 82 A 20 20 0 0 1 36 68" stroke="white" strokeWidth="6" fill="none" strokeLinecap="round" />
-                      <path d="M 94 82 A 20 20 0 0 0 64 68" stroke="white" strokeWidth="6" fill="none" strokeLinecap="round" />
+                      <path d="M 6 82 A 20 20 0 0 1 36 68" stroke="white" strokeWidth="6.5" fill="none" strokeLinecap="round" />
+                      <path d="M 94 82 A 20 20 0 0 0 64 68" stroke="white" strokeWidth="6.5" fill="none" strokeLinecap="round" />
                     </svg>
                   )}
                 </div>
@@ -170,7 +170,7 @@ export default function Home() {
               </div>
               <Reveal delay={0.2}>
                 <div className="mt-8">
-                  <Link to="/solutions" className="btn-leaf" data-testid="solutions-explore-btn">
+                  <Link to="/solutions" className="btn-leaf" style={{ borderRadius: '0 20px 0 20px' }} data-testid="solutions-explore-btn">
                     {lang === "id" ? "Jelajahi Solusi" : "Explore Solution"}
                   </Link>
                 </div>
@@ -294,7 +294,7 @@ export default function Home() {
 
           <Reveal delay={0.5}>
             <div className="mt-14">
-              <Link to="/about/oursciences" className="btn-pill-outline-green" data-testid="process-cta">
+              <Link to="/about/oursciences" className="btn-pill-outline-green" style={{ borderRadius: '18px 0 18px 0' }} data-testid="process-cta">
                 {t("common.seeFullProcess")}
               </Link>
             </div>
