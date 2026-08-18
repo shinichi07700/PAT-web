@@ -149,19 +149,18 @@ export default function Solutions() {
       />
 
       {/* Main Content Section */}
-      <section className="py-12 md:py-16">
+      <section className="py-10 md:py-14">
         <div className="container-pat">
-          {/* Subheading Intro Body Text */}
-          <Reveal>
-            <p className="text-[#5C5C5C] text-base md:text-lg max-w-3xl mb-8 leading-relaxed font-normal">
-              {t("solutions.body")}
-            </p>
-          </Reveal>
-
-          {/* Search Bar matching mockup */}
+          {/* Search Bar matching mockup with Leaf Design */}
           <div className="max-w-2xl mb-8">
-            <div className="flex items-center border border-[#5C5C5C]/25 rounded-full p-1.5 bg-white shadow-sm hover:border-[#2D6A35] transition-colors">
-              <button className="bg-[#1C3A1F] hover:bg-[#2D6A35] text-white px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold flex items-center gap-1.5 transition-colors shrink-0 shadow-sm">
+            <div
+              className="flex items-center border border-[#5C5C5C]/25 p-1.5 bg-white shadow-sm hover:border-[#0E6E19] transition-colors"
+              style={{ borderRadius: "0 24px 0 24px" }}
+            >
+              <button
+                className="bg-[#0E6E19] hover:bg-[#064016] text-white px-5 py-2.5 text-xs sm:text-sm font-semibold flex items-center gap-1.5 transition-colors shrink-0 shadow-sm"
+                style={{ borderRadius: "0 16px 0 16px" }}
+              >
                 <span>Search</span>
                 <Search className="w-3.5 h-3.5" />
               </button>
@@ -207,7 +206,7 @@ export default function Solutions() {
             {hasFilters && (
               <button
                 onClick={clearAllFilters}
-                className="flex items-center gap-1 text-xs sm:text-sm text-[#2D6A35] font-semibold hover:text-[#43B14B]"
+                className="flex items-center gap-1 text-xs sm:text-sm text-[#0E6E19] font-semibold hover:text-[#064016]"
                 data-testid="clear-filters"
               >
                 <X className="w-3.5 h-3.5" /> {t("solutions.clear")}
@@ -229,8 +228,8 @@ export default function Solutions() {
                 <div className="mt-12 text-center">
                   <button
                     onClick={() => setVisibleCount((prev) => prev + 8)}
-                    style={{ borderRadius: "0 14px 0 14px" }}
-                    className="bg-[#1C3A1F] hover:bg-[#2D6A35] text-white px-10 py-3 text-sm font-bold shadow-md hover:shadow-lg transition-all duration-300"
+                    style={{ borderRadius: "0 16px 0 16px" }}
+                    className="bg-[#0E6E19] hover:bg-[#064016] text-white px-10 py-3 text-sm font-bold shadow-md hover:shadow-lg transition-all duration-300"
                   >
                     See More
                   </button>
@@ -266,8 +265,8 @@ function FilterButtonGroup({ label, options, selected, onToggle, isMultiSelect, 
           style={{ borderRadius: "0 10px 0 10px" }}
           className={`px-4 py-1.5 text-xs font-semibold transition-all border ${
             isAllActive
-              ? "bg-[#1C3A1F] text-white border-[#1C3A1F] shadow-sm"
-              : "bg-white text-[#5C5C5C] border-[#5C5C5C]/25 hover:border-[#2D6A35] hover:text-[#1C3A1F]"
+              ? "bg-[#0E6E19] text-white border-[#0E6E19] shadow-sm"
+              : "bg-white text-[#5C5C5C] border-[#5C5C5C]/25 hover:border-[#0E6E19] hover:text-[#0E6E19]"
           }`}
         >
           All
@@ -284,8 +283,8 @@ function FilterButtonGroup({ label, options, selected, onToggle, isMultiSelect, 
               style={{ borderRadius: "0 10px 0 10px" }}
               className={`px-4 py-1.5 text-xs font-semibold transition-all border ${
                 active
-                  ? "bg-[#1C3A1F] text-white border-[#1C3A1F] shadow-sm"
-                  : "bg-white text-[#5C5C5C] border-[#5C5C5C]/25 hover:border-[#2D6A35] hover:text-[#1C3A1F]"
+                  ? "bg-[#0E6E19] text-white border-[#0E6E19] shadow-sm"
+                  : "bg-white text-[#5C5C5C] border-[#5C5C5C]/25 hover:border-[#0E6E19] hover:text-[#0E6E19]"
               }`}
             >
               {displayLabel}
