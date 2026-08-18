@@ -78,11 +78,11 @@ export default function Home() {
                 transition={{ delay: 0.8, duration: 0.6 }}
                 className="mt-8 flex flex-wrap gap-4 justify-end items-center"
               >
-                <Link to="/solutions" className="btn-pill-green group" style={{ borderRadius: '0 14px 0 14px' }} data-testid="hero-cta">
+                <Link to="/solutions" className="btn-pill-green group" style={{ borderRadius: '16px 0 16px 0' }} data-testid="hero-cta">
                   {t("common.findSolution")}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link to="/about/oursciences" className="btn-pill-outline-white" style={{ borderRadius: '0 14px 0 14px' }}>
+                <Link to="/about/oursciences" className="btn-pill-outline-white" style={{ borderRadius: '16px 0 16px 0' }}>
                   {t("common.seeFullProcess")}
                 </Link>
               </motion.div>
@@ -95,14 +95,14 @@ export default function Home() {
       <section className="py-8 px-4 md:px-8 max-w-7xl mx-auto">
         <div
           className="bg-[#0E6E19] text-white p-6 md:p-10 shadow-xl overflow-hidden"
-          style={{ borderRadius: '28px 0 28px 0' }}
+          style={{ borderRadius: '36px 0 36px 0' }}
         >
           <StaggerGroup className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {STATS.map((s, idx) => (
               <motion.div key={s.key} variants={staggerItem} className="flex items-center gap-4" data-testid={`stat-${s.key}`}>
                 <div
                   className="w-14 h-14 md:w-16 md:h-16 bg-white/20 backdrop-blur-sm flex items-center justify-center text-white shrink-0 shadow-sm"
-                  style={{ borderRadius: '0 16px 0 16px' }}
+                  style={{ borderRadius: '16px 0 16px 0' }}
                 >
                   {idx === 0 && (
                     <svg viewBox="0 0 100 100" fill="none" className="w-7 h-7 md:w-8 md:h-8">

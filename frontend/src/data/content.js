@@ -67,7 +67,7 @@ export const CATEGORY_CARDS = [
       en: "Bio-decomposers that turn crop residue and plantation waste into usable soil — a practical alternative to open burning.",
       id: "Bio-decomposer yang mengubah sisa panen dan limbah perkebunan menjadi tanah subur — alternatif praktis pembakaran terbuka.",
     },
-    image: "/images/solution-soil-remediation.jpg",
+    image: "/images/bio-decomposer.jpg",
     accent: "#E8A500",
   },
 ];
