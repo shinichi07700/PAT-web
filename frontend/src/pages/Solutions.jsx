@@ -10,9 +10,6 @@ import PageHero from "../components/PageHero";
 export function ProductCard({ p, lang }) {
   const displayTags = p.cardCrops && p.cardCrops.length > 0 ? p.cardCrops : p.crops.slice(0, 3);
   
-  // Format type nicely like "Bio - Stimulant & Nutrition"
-  const formattedType = p.type.replace("Bio-", "Bio - ");
-
   return (
     <motion.div variants={staggerItem}>
       <Link
@@ -37,11 +34,11 @@ export function ProductCard({ p, lang }) {
           {/* Right Column: Info & Details */}
           <div className="flex-1 p-5 sm:p-6 flex flex-col justify-between">
             <div>
-              <span className="text-xs sm:text-sm font-semibold text-[#2D6A35] block mb-1">
-                {formattedType}
+              <span className="text-xs sm:text-sm font-semibold text-[#0E6E19] block mb-1">
+                {p.type}
               </span>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-[#1C3A1F] tracking-tight group-hover:text-[#2D6A35] transition-colors">
-                {p.name}
+              <h3 className="text-xl sm:text-2xl font-extrabold text-[#1C3A1F] tracking-tight group-hover:text-[#0E6E19] transition-colors">
+                {p.name.toUpperCase()}
               </h3>
               <p className="mt-2 text-xs sm:text-sm text-[#5C5C5C] leading-relaxed line-clamp-2">
                 {p.keyBenefit[lang] || p.keyBenefit.en}
@@ -187,7 +184,6 @@ export default function Solutions() {
               selected={selectedTypes}
               onToggle={handleTypeToggle}
               isMultiSelect={true}
-              formatDisplay={(t) => t.replace("Bio-", "Bio - ")}
             />
             <FilterButtonGroup
               label="Crop"

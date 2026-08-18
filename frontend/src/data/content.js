@@ -39,7 +39,7 @@ export const CERTIFICATIONS = [
 export const CATEGORY_CARDS = [
   {
     slug: "bio-fertilizers",
-    targetUrl: "/solutions?type=Bio-Fertilizer,Bio-Stimulant%20%26%20Nutrition",
+    targetUrl: "/solutions?type=Bio%20Fertilizer,Bio%20Stimulant%20%26%20Nutrition",
     title: { en: "Bio Fertilizers & Biostimulant", id: "Bio Fertilizers & Biostimulant" },
     desc: {
       en: "Live microbes that fix nitrogen, solubilize phosphate and trigger a plant's own defenses — a stronger foundation from the roots up.",
@@ -50,7 +50,7 @@ export const CATEGORY_CARDS = [
   },
   {
     slug: "bio-crop-protection",
-    targetUrl: "/solutions?type=Bio-Insecticide,Bio-Fungicide",
+    targetUrl: "/solutions?type=Bio%20Insecticide,Bio%20Fungicide",
     title: { en: "Bio Protection", id: "Bio Protection" },
     desc: {
       en: "Insect-specific fungi and bacteria that control pests and disease through targeted infection — sparing pollinators and beneficials.",
@@ -61,7 +61,7 @@ export const CATEGORY_CARDS = [
   },
   {
     slug: "soil-remediation",
-    targetUrl: "/solutions?type=Bio-Decomposer",
+    targetUrl: "/solutions?type=Bio%20Decomposer",
     title: { en: "Bio Decomposer", id: "Bio Decomposer" },
     desc: {
       en: "Bio-decomposers that turn crop residue and plantation waste into usable soil — a practical alternative to open burning.",
@@ -74,16 +74,16 @@ export const CATEGORY_CARDS = [
 
 // 5 detailed filter categories + their category grid pages
 export const SOLUTION_TYPES = [
-  "Bio-Fertilizer",
-  "Bio-Insecticide",
-  "Bio-Fungicide",
-  "Bio-Stimulant & Nutrition",
-  "Bio-Decomposer",
+  "Bio Fertilizer",
+  "Bio Insecticide",
+  "Bio Fungicide",
+  "Bio Stimulant & Nutrition",
+  "Bio Decomposer",
 ];
 
 export const CATEGORY_PAGES = {
   "bio-fertilizers": {
-    type: "Bio-Fertilizer",
+    type: "Bio Fertilizer",
     title: "Bio Fertilizers",
     image: IMAGES.farm,
     desc: {
@@ -92,7 +92,7 @@ export const CATEGORY_PAGES = {
     },
   },
   "bio-fungicides": {
-    type: "Bio-Fungicide",
+    type: "Bio Fungicide",
     title: "Bio Fungicides",
     image: IMAGES.greenhouse,
     desc: {
@@ -101,7 +101,7 @@ export const CATEGORY_PAGES = {
     },
   },
   "bio-insecticides": {
-    type: "Bio-Insecticide",
+    type: "Bio Insecticide",
     title: "Bio Insecticides",
     image: IMAGES.farmerField,
     desc: {
@@ -110,7 +110,7 @@ export const CATEGORY_PAGES = {
     },
   },
   "soil-remediation": {
-    type: "Bio-Decomposer",
+    type: "Bio Decomposer",
     title: "Bio Decomposer",
     image: IMAGES.soil,
     desc: {
@@ -119,8 +119,8 @@ export const CATEGORY_PAGES = {
     },
   },
   "biostimulant-nutrition": {
-    type: "Bio-Stimulant & Nutrition",
-    title: "Bio-Stimulant & Nutrition",
+    type: "Bio Stimulant & Nutrition",
+    title: "Bio Stimulant & Nutrition",
     image: IMAGES.ricePaddy,
     desc: {
       en: "Our bio-stimulant and nutrition products fill the gaps that fertilizer alone cannot reach, from micronutrients and amino acids to natural plant hormones and soil conditioners. Each one is built to support a specific stage of growth, whether that is stronger roots early on or fuller grain and fruit at the finish.",
@@ -135,7 +135,7 @@ export const PRODUCTS = [
   {
     slug: "biotracol",
     name: "BIOTRACOL",
-    type: "Bio-Fungicide",
+    type: "Bio Fungicide",
     categorySlug: "bio-fungicides",
     cardCrops: ["Banana", "Chilli", "Tomato"],
     crops: ["Banana", "Chilli", "Tomato", "Potato", "Cacao", "Avocado", "Cabbage", "Citrus", "Durian"],
@@ -168,7 +168,7 @@ export const PRODUCTS = [
   {
     slug: "bt-max",
     name: "BT-MAX",
-    type: "Bio-Insecticide",
+    type: "Bio Insecticide",
     categorySlug: "bio-insecticides",
     cardCrops: ["Oil Palm", "Paddy", "Shallot"],
     crops: ["Oil Palm", "Paddy", "Shallot", "Banana", "Corn", "Sugarcane", "Cabbage", "Edamame"],
@@ -201,7 +201,7 @@ export const PRODUCTS = [
   {
     slug: "humatop",
     name: "HUMATOP",
-    type: "Bio-Stimulant & Nutrition",
+    type: "Bio Stimulant & Nutrition",
     categorySlug: "biostimulant-nutrition",
     cardCrops: ["Oil Palm", "Paddy", "Chilli"],
     crops: ["Oil Palm", "Paddy", "Chilli", "Tomato", "Shallot", "Potato", "Corn", "Cacao", "Avocado", "Cabbage", "Citrus", "Cucumber", "Dragon Fruit", "Durian", "Edamame", "Melon", "Patchouli", "Radish", "Watermelon"],
@@ -234,7 +234,7 @@ export const PRODUCTS = [
   {
     slug: "decopalma",
     name: "DECOPALMA",
-    type: "Bio-Decomposer",
+    type: "Bio Decomposer",
     categorySlug: "soil-remediation",
     cardCrops: ["Oil Palm"],
     crops: ["Oil Palm"],
@@ -265,7 +265,7 @@ export const PRODUCTS = [
   {
     slug: "orizaplus",
     name: "ORIZAPLUS",
-    type: "Bio-Fertilizer",
+    type: "Bio Fertilizer",
     categorySlug: "bio-fertilizers",
     cardCrops: ["Paddy"],
     crops: ["Paddy"],
@@ -295,8 +295,8 @@ export const PRODUCTS = [
   },
   {
     slug: "endopalma",
-    name: "EndoPalma",
-    type: "Bio-Fertilizer",
+    name: "ENDOPALMA",
+    type: "Bio Fertilizer",
     categorySlug: "bio-fertilizers",
     cardCrops: ["Oil Palm"],
     crops: ["Oil Palm"],
@@ -327,7 +327,7 @@ export const PRODUCTS = [
   {
     slug: "decoprima",
     name: "DECOPRIMA",
-    type: "Bio-Decomposer",
+    type: "Bio Decomposer",
     categorySlug: "soil-remediation",
     cardCrops: ["Banana", "Paddy", "Chilli"],
     crops: ["Banana", "Paddy", "Chilli", "Tomato", "Shallot", "Potato", "Avocado", "Cabbage", "Citrus", "Cucumber", "Dragon Fruit", "Durian", "Edamame", "Melon", "Patchouli", "Radish", "Watermelon"],
@@ -358,7 +358,7 @@ export const PRODUCTS = [
 ];
 
 const TYPE_META = {
-  "Bio-Fertilizer": {
+  "Bio Fertilizer": {
     slug: "bio-fertilizers",
     image: IMAGES.farm,
     form: [
@@ -369,7 +369,7 @@ const TYPE_META = {
     ],
     app: [["General use", "2 kg/ha", "Soil / seed", "At planting / land prep"]],
   },
-  "Bio-Insecticide": {
+  "Bio Insecticide": {
     slug: "bio-insecticides",
     image: IMAGES.farmerField,
     form: [
@@ -380,7 +380,7 @@ const TYPE_META = {
     ],
     app: [["General use", "1–2 kg/ha or 5 g/L", "Foliar / soil", "At pest onset, repeat 10–14 days"]],
   },
-  "Bio-Fungicide": {
+  "Bio Fungicide": {
     slug: "bio-fungicides",
     image: IMAGES.greenhouse,
     form: [
@@ -391,7 +391,7 @@ const TYPE_META = {
     ],
     app: [["General use", "5 g/L water", "Foliar & drench", "Preventive, every 10–14 days"]],
   },
-  "Bio-Stimulant & Nutrition": {
+  "Bio Stimulant & Nutrition": {
     slug: "biostimulant-nutrition",
     image: IMAGES.ricePaddy,
     form: [
@@ -402,7 +402,7 @@ const TYPE_META = {
     ],
     app: [["General use", "2–3 g/L or per label", "Foliar / fertigation", "Per growth stage"]],
   },
-  "Bio-Decomposer": {
+  "Bio Decomposer": {
     slug: "soil-remediation",
     image: IMAGES.soil,
     form: [
@@ -421,88 +421,88 @@ const normCrop = (c) => (c === "Rice" ? "Paddy" : c);
 // Remaining catalogue (24 items), strictly following client per-product tag order
 const RAW_PRODUCTS = [
   {
-    name: "Terapalma",
-    type: "Bio-Decomposer",
+    name: "TERAPALMA",
+    type: "Bio Decomposer",
     cardCrops: ["Oil Palm"],
     crops: ["Oil Palm"],
     benefit: "Breaks down oil palm fronds and empty bunches faster, building organic carbon back into plantation soil.",
     image: "/images/products/terapalma.jpg",
   },
   {
-    name: "Seudoflor",
-    type: "Bio-Fungicide",
+    name: "SEUDOFLOR",
+    type: "Bio Fungicide",
     cardCrops: ["Banana", "Chilli", "Tomato"],
     crops: ["Banana", "Chilli", "Tomato", "Potato", "Melon"],
     benefit: "Protects roots from sudden wilting and rot, working in the soil before problems ever reach the plant.",
     image: "/images/products/seudoflor.jpg",
   },
   {
-    name: "Molerimax",
-    type: "Bio-Fungicide",
+    name: "MOLERIMAX",
+    type: "Bio Fungicide",
     cardCrops: ["Shallot"],
     crops: ["Shallot"],
     benefit: "Protects shallot from Moler disease, the fusarium wilt that can wipe out a crop before harvest.",
     image: "/images/products/molerimax.jpg",
   },
   {
-    name: "Paenamaxi",
-    type: "Bio-Fungicide",
+    name: "PAENAMAXI",
+    type: "Bio Fungicide",
     cardCrops: ["Shallot", "Cucumber", "Melon"],
     crops: ["Shallot", "Cucumber", "Melon", "Watermelon"],
     benefit: "Keeps roots healthy by holding off the fungi and bacteria that cause root rot and wilting.",
     image: "/images/products/paenamaxi.jpg",
   },
   {
-    name: "Metarizep",
-    type: "Bio-Insecticide",
+    name: "METARIZEP",
+    type: "Bio Insecticide",
     cardCrops: ["Oil Palm", "Paddy"],
     crops: ["Oil Palm", "Paddy"],
     benefit: "Protects crops from brown planthopper, stink bug and thrips using entomopathogenic fungi that infect pests on contact.",
     image: "/images/products/metarizep.jpg",
   },
   {
-    name: "Entomobac",
-    type: "Bio-Insecticide",
+    name: "ENTOMOBAC",
+    type: "Bio Insecticide",
     cardCrops: ["Oil Palm", "Paddy", "Shallot"],
     crops: ["Oil Palm", "Paddy", "Shallot", "Cacao", "Cucumber", "Edamame", "Melon", "Watermelon"],
     benefit: "Controls planthoppers and borers across several crops while helping prevent pests from building resistance over time.",
     image: "/images/products/entomobac.jpg",
   },
   {
-    name: "BT Plus",
-    type: "Bio-Insecticide",
+    name: "BT PLUS",
+    type: "Bio Insecticide",
     cardCrops: ["Oil Palm", "Paddy", "Banana"],
     crops: ["Oil Palm", "Paddy", "Banana", "Corn", "Sugarcane"],
     benefit: "Targets armyworm and stem borer directly, without harming the beneficial insects working alongside your crop.",
     image: "/images/products/bt-plus.jpg",
   },
   {
-    name: "Biokillia",
-    type: "Bio-Insecticide",
+    name: "BIOKILLIA",
+    type: "Bio Insecticide",
     cardCrops: ["Chilli", "Melon"],
     crops: ["Chilli", "Melon"],
     benefit: "Controls aphids, leafhoppers and mealybugs through natural infection, avoiding chemical pesticide resistance.",
     image: "/images/products/biokillia.jpg",
   },
   {
-    name: "Crysokill",
-    type: "Bio-Insecticide",
+    name: "CRYSOKILL",
+    type: "Bio Insecticide",
     cardCrops: ["Sugarcane", "Avocado", "Citrus"],
     crops: ["Sugarcane", "Avocado", "Citrus", "Dragon Fruit", "Durian"],
     benefit: "Controls sucking and chewing pests on vegetables and fruit crops while staying safe for pollinators.",
     image: "/images/products/crysokill.jpg",
   },
   {
-    name: "Bionemato",
-    type: "Bio-Insecticide",
+    name: "BIONEMATO",
+    type: "Bio Insecticide",
     cardCrops: ["Potato", "Cabbage"],
     crops: ["Potato", "Cabbage"],
     benefit: "Takes on pest larvae and plant-parasitic nematodes living in the soil, protecting roots without harming earthworms.",
     image: "/images/products/bionemato.jpg",
   },
   {
-    name: "BactoHorti",
-    type: "Bio-Fertilizer",
+    name: "BACTOHORTI",
+    type: "Bio Fertilizer",
     cardCrops: ["Citrus"],
     crops: ["Citrus"],
     regNo: "03.03.2022.1135",
@@ -510,16 +510,16 @@ const RAW_PRODUCTS = [
     image: "/images/products/bactohorti.jpg",
   },
   {
-    name: "TerraBio",
-    type: "Bio-Fertilizer",
+    name: "TERRABIO",
+    type: "Bio Fertilizer",
     cardCrops: ["Corn", "Avocado", "Dragon Fruit"],
     crops: ["Corn", "Avocado", "Dragon Fruit", "Durian", "Edamame", "Patchouli"],
     benefit: "Helps crops pull more nutrients from the soil, working through the roots to build healthier plants from the ground up.",
     image: "/images/products/terrabio.jpg",
   },
   {
-    name: "Boosbloom",
-    type: "Bio-Stimulant & Nutrition",
+    name: "BOOSBLOOM",
+    type: "Bio Stimulant & Nutrition",
     cardCrops: ["Chilli", "Tomato", "Shallot"],
     crops: ["Chilli", "Tomato", "Shallot", "Potato", "Cacao", "Cabbage", "Citrus", "Cucumber", "Edamame", "Melon", "Patchouli", "Radish", "Watermelon"],
     regNo: "02.03.2022.895",
@@ -527,56 +527,56 @@ const RAW_PRODUCTS = [
     image: "/images/products/boosbloom.jpg",
   },
   {
-    name: "Kalsika",
-    type: "Bio-Stimulant & Nutrition",
+    name: "KALSIKA",
+    type: "Bio Stimulant & Nutrition",
     cardCrops: ["Oil Palm", "Paddy", "Chilli"],
     crops: ["Oil Palm", "Paddy", "Chilli", "Tomato", "Shallot", "Potato", "Corn", "Sugarcane", "Avocado", "Cucumber", "Dragon Fruit", "Radish"],
     benefit: "Strengthens plant stems and cell walls, helping crops stand up to wind, rain and pest pressure without falling over.",
     image: "/images/products/kalsika.jpg",
   },
   {
-    name: "Kalimagsu",
-    type: "Bio-Stimulant & Nutrition",
+    name: "KALIMAGSU",
+    type: "Bio Stimulant & Nutrition",
     cardCrops: ["Chilli", "Tomato", "Shallot"],
     crops: ["Chilli", "Tomato", "Shallot", "Cucumber", "Melon", "Watermelon"],
     benefit: "Supplies potassium, magnesium and sulfur from a natural mineral source, improving harvest quality without salt buildup in the soil.",
     image: "/images/products/kalimagsu.jpg",
   },
   {
-    name: "AminoTOP",
-    type: "Bio-Stimulant & Nutrition",
+    name: "AMINOTOP",
+    type: "Bio Stimulant & Nutrition",
     cardCrops: ["Paddy", "Chilli", "Tomato"],
     crops: ["Paddy", "Chilli", "Tomato", "Potato", "Cucumber"],
     benefit: "Booster generatif berbasis asam amino, asam fulvat, dan hara esensial untuk memaksimalkan pembungaan, fruit set, dan pengisian bulir/buah.",
     image: "/images/products/aminotop.jpg",
   },
   {
-    name: "Microbloom",
-    type: "Bio-Stimulant & Nutrition",
+    name: "MICROBLOOM",
+    type: "Bio Stimulant & Nutrition",
     cardCrops: ["Paddy", "Chilli", "Tomato"],
     crops: ["Paddy", "Chilli", "Tomato", "Shallot", "Cucumber", "Melon", "Watermelon"],
     benefit: "Delivers balanced micronutrient and amino acid support for enhanced vigor, flowering, and fruit set.",
     image: "/images/products/microbloom.jpg",
   },
   {
-    name: "NutriBK+",
-    type: "Bio-Fertilizer",
+    name: "NUTRIBK+",
+    type: "Bio Fertilizer",
     cardCrops: ["Oil Palm", "Cacao", "Avocado"],
     crops: ["Oil Palm", "Cacao", "Avocado", "Citrus", "Dragon Fruit", "Durian"],
     benefit: "A complete water-soluble NPK fertilizer blend, supporting both optimal vegetative growth and flowering/fruiting.",
     image: "/images/products/nutribk.jpg",
   },
   {
-    name: "Biostick",
-    type: "Bio-Stimulant & Nutrition",
+    name: "BIOSTICK",
+    type: "Bio Stimulant & Nutrition",
     cardCrops: ["Oil Palm", "Chilli", "Tomato"],
     crops: ["Oil Palm", "Chilli", "Tomato", "Potato", "Banana", "Sugarcane", "Cacao", "Avocado", "Citrus", "Cucumber", "Dragon Fruit", "Durian", "Melon", "Watermelon"],
     benefit: "Perekat pestisida biologi dengan kandungan Zinc dan Mangan, meningkatkan daya rekat dan perataan aplikasi pada daun serta efektivitas perlindungan.",
     image: "/images/products/biostick.jpg",
   },
   {
-    name: "BactoPlus",
-    type: "Bio-Fertilizer",
+    name: "BACTOPLUS",
+    type: "Bio Fertilizer",
     cardCrops: [],
     crops: [],
     regNo: "03.03.2023.417",
@@ -584,32 +584,32 @@ const RAW_PRODUCTS = [
     image: "/images/products/bactoplus.jpg",
   },
   {
-    name: "Primadeco",
-    type: "Bio-Fungicide",
+    name: "PRIMADECO",
+    type: "Bio Fungicide",
     cardCrops: [],
     crops: [],
     benefit: "Helps food and horticultural crops resist soil-borne disease while building up the beneficial microbes already living in the soil.",
     image: "/images/products/primadeco.jpg",
   },
   {
-    name: "Microblas",
-    type: "Bio-Fungicide",
+    name: "MICROBLAS",
+    type: "Bio Fungicide",
     cardCrops: ["Paddy"],
     crops: ["Paddy"],
     benefit: "Built to protect rice from blast disease that can spread quickly across a field if left unchecked.",
     image: "/images/products/microblas.jpg",
   },
   {
-    name: "Biofungal",
-    type: "Bio-Fungicide",
+    name: "BIOFUNGAL",
+    type: "Bio Fungicide",
     cardCrops: ["Banana", "Cacao", "Durian"],
     crops: ["Banana", "Cacao", "Durian"],
     benefit: "Bio fungisida tepung larut (WP) berbahan aktif cendawan antagonis untuk mengendalikan busuk daun Phytophthora, Alternaria, dan embun tepung.",
     image: "/images/products/biofungal.jpg",
   },
   {
-    name: "Vertiplus",
-    type: "Bio-Insecticide",
+    name: "VERTIPLUS",
+    type: "Bio Insecticide",
     cardCrops: ["Chilli", "Tomato"],
     crops: ["Chilli", "Tomato"],
     benefit: "Keeps aphids, whitefly and thrips under control, and works especially well in humid conditions where these pests thrive.",
