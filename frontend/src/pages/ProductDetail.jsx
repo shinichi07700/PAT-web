@@ -27,8 +27,8 @@ export default function ProductDetail() {
           </Link>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
             <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7 }}>
-              <div className="rounded-[24px] md:rounded-[28px] overflow-hidden aspect-[4/3] shadow-xl relative">
-                <img src={p.image} alt={p.name} className="w-full h-full object-cover" />
+              <div className="overflow-hidden aspect-[4/3] bg-white border border-[#5C5C5C]/15 shadow-xl relative flex items-center justify-center p-6" style={{ borderRadius: "0 32px 0 32px" }}>
+                <img src={p.image} alt={p.name} className="max-h-full max-w-full object-contain" />
                 <span className="badge-pat absolute top-3 left-3 md:top-4 md:left-4">{p.type}</span>
               </div>
             </motion.div>
