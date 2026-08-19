@@ -137,11 +137,7 @@ export default function Navbar() {
             </button>
             <Link
               to="/contact"
-              className={`font-semibold text-sm transition-all duration-300 ${
-                isTransparent
-                  ? "border border-white/50 text-white px-4 py-1.5 hover:bg-white hover:text-[#1C3A1F]"
-                  : "bg-[#0E6E19] text-white px-5 py-2 hover:bg-[#064016]"
-              }`}
+              className="bg-gradient-to-r from-[#238416] to-[#075905] text-white font-semibold text-sm px-5 py-2 hover:opacity-90 shadow-sm transition-all duration-300 inline-flex items-center justify-center"
               style={{ borderRadius: '0 14px 0 14px' }}
               data-testid="nav-contact-btn"
             >
@@ -187,7 +183,11 @@ export default function Navbar() {
                 ))}
                 <MobileLink to="/contact">{t("nav.contact")}</MobileLink>
                 <div className="pt-2">
-                  <Link to="/contact" className="btn-pill-green w-full text-center !py-2 text-sm">
+                  <Link
+                    to="/contact"
+                    className="w-full text-center bg-gradient-to-r from-[#238416] to-[#075905] text-white font-semibold !py-2.5 text-sm shadow-sm transition-all duration-300 block"
+                    style={{ borderRadius: '0 14px 0 14px' }}
+                  >
                     {t("nav.contactUs")}
                   </Link>
                 </div>
