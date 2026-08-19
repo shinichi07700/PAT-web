@@ -56,7 +56,7 @@ export default function Footer() {
               </a>
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-[#0E6E19] text-white px-7 py-3 font-semibold text-sm hover:bg-[#43B14B] transition-all shadow-lg"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#238416] to-[#075905] text-white px-7 py-3 font-semibold text-sm hover:opacity-90 transition-all shadow-lg"
                 style={{ borderRadius: '0 14px 0 14px' }}
                 data-testid="footer-cta-contact"
               >
