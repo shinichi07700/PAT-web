@@ -117,6 +117,8 @@ export default function Solutions() {
         !q ||
         p.name.toLowerCase().includes(q) ||
         p.type.toLowerCase().includes(q) ||
+        (p.activeOrganism && p.activeOrganism.toLowerCase().includes(q)) ||
+        (p.formulation && p.formulation.some(([k, v]) => v.toLowerCase().includes(q))) ||
         p.crops.some((c) => c.toLowerCase().includes(q)) ||
         (p.keyBenefit && (p.keyBenefit[lang] || p.keyBenefit.en || "").toLowerCase().includes(q));
       const matchType = selectedTypes.length === 0 || selectedTypes.includes(p.type);
@@ -164,7 +166,7 @@ export default function Solutions() {
               <input
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Search by product name, crop, or pest/disease..."
+                placeholder="Search by product name, active organism, crop, or pest/disease..."
                 className="w-full pl-3 pr-4 text-xs sm:text-sm text-[#1A1A1A] placeholder-[#5C5C5C]/60 bg-transparent outline-none border-none"
                 data-testid="solutions-search"
               />

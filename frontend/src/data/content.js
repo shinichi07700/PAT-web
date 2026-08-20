@@ -136,6 +136,7 @@ export const PRODUCTS = [
     slug: "biotracol",
     name: "BIOTRACOL",
     type: "Bio Fungicide",
+    activeOrganism: "Trichoderma asperellum + Bacillus subtilis",
     categorySlug: "bio-fungicides",
     cardCrops: ["Banana", "Chilli", "Tomato"],
     crops: ["Banana", "Chilli", "Tomato", "Potato", "Cacao", "Avocado", "Cabbage", "Citrus", "Durian"],
@@ -169,6 +170,7 @@ export const PRODUCTS = [
     slug: "bt-max",
     name: "BT-MAX",
     type: "Bio Insecticide",
+    activeOrganism: "Bacillus thuringiensis strain 4042 + Serratia marcescens",
     categorySlug: "bio-insecticides",
     cardCrops: ["Oil Palm", "Paddy", "Shallot"],
     crops: ["Oil Palm", "Paddy", "Shallot", "Banana", "Corn", "Sugarcane", "Cabbage", "Edamame"],
@@ -202,6 +204,7 @@ export const PRODUCTS = [
     slug: "humatop",
     name: "HUMATOP",
     type: "Bio Stimulant & Nutrition",
+    activeOrganism: "Humic acid ≥ 12%, Fulvic acid ≥ 3% (Leonardite)",
     categorySlug: "biostimulant-nutrition",
     cardCrops: ["Oil Palm", "Paddy", "Chilli"],
     crops: ["Oil Palm", "Paddy", "Chilli", "Tomato", "Shallot", "Potato", "Corn", "Cacao", "Avocado", "Cabbage", "Citrus", "Cucumber", "Dragon Fruit", "Durian", "Edamame", "Melon", "Patchouli", "Radish", "Watermelon"],
@@ -235,6 +238,7 @@ export const PRODUCTS = [
     slug: "decopalma",
     name: "DECOPALMA",
     type: "Bio Decomposer",
+    activeOrganism: "Trichoderma spp. + cellulolytic Bacillus",
     categorySlug: "soil-remediation",
     cardCrops: ["Oil Palm"],
     crops: ["Oil Palm"],
@@ -266,6 +270,7 @@ export const PRODUCTS = [
     slug: "orizaplus",
     name: "ORIZAPLUS",
     type: "Bio Fertilizer",
+    activeOrganism: "Azospirillum sp. + Bacillus megaterium",
     categorySlug: "bio-fertilizers",
     cardCrops: ["Paddy"],
     crops: ["Paddy"],
@@ -297,6 +302,7 @@ export const PRODUCTS = [
     slug: "endopalma",
     name: "ENDOPALMA",
     type: "Bio Fertilizer",
+    activeOrganism: "Endophytic Bacillus + Serratia marcescens",
     categorySlug: "bio-fertilizers",
     cardCrops: ["Oil Palm"],
     crops: ["Oil Palm"],
@@ -328,6 +334,7 @@ export const PRODUCTS = [
     slug: "decoprima",
     name: "DECOPRIMA",
     type: "Bio Decomposer",
+    activeOrganism: "Trichoderma spp. + cellulolytic & lignolytic consortium",
     categorySlug: "soil-remediation",
     cardCrops: ["Banana", "Paddy", "Chilli"],
     crops: ["Banana", "Paddy", "Chilli", "Tomato", "Shallot", "Potato", "Avocado", "Cabbage", "Citrus", "Cucumber", "Dragon Fruit", "Durian", "Edamame", "Melon", "Patchouli", "Radish", "Watermelon"],
@@ -423,6 +430,7 @@ const RAW_PRODUCTS = [
   {
     name: "TERAPALMA",
     type: "Bio Decomposer",
+    activeOrganism: "Trichoderma spp. + cellulolytic Bacillus",
     cardCrops: ["Oil Palm"],
     crops: ["Oil Palm"],
     benefit: "Breaks down oil palm fronds and empty bunches faster, building organic carbon back into plantation soil.",
@@ -431,6 +439,7 @@ const RAW_PRODUCTS = [
   {
     name: "SEUDOFLOR",
     type: "Bio Fungicide",
+    activeOrganism: "Pseudomonas fluorescens",
     cardCrops: ["Banana", "Chilli", "Tomato"],
     crops: ["Banana", "Chilli", "Tomato", "Potato", "Melon"],
     benefit: "Protects roots from sudden wilting and rot, working in the soil before problems ever reach the plant.",
@@ -439,6 +448,7 @@ const RAW_PRODUCTS = [
   {
     name: "MOLERIMAX",
     type: "Bio Fungicide",
+    activeOrganism: "Trichoderma asperellum + Bacillus velezensis",
     cardCrops: ["Shallot"],
     crops: ["Shallot"],
     benefit: "Protects shallot from Moler disease, the fusarium wilt that can wipe out a crop before harvest.",
@@ -447,6 +457,7 @@ const RAW_PRODUCTS = [
   {
     name: "PAENAMAXI",
     type: "Bio Fungicide",
+    activeOrganism: "Paenibacillus polymyxa",
     cardCrops: ["Shallot", "Cucumber", "Melon"],
     crops: ["Shallot", "Cucumber", "Melon", "Watermelon"],
     benefit: "Keeps roots healthy by holding off the fungi and bacteria that cause root rot and wilting.",
@@ -455,6 +466,7 @@ const RAW_PRODUCTS = [
   {
     name: "METARIZEP",
     type: "Bio Insecticide",
+    activeOrganism: "Metarhizium anisopliae",
     cardCrops: ["Oil Palm", "Paddy"],
     crops: ["Oil Palm", "Paddy"],
     benefit: "Protects crops from brown planthopper, stink bug and thrips using entomopathogenic fungi that infect pests on contact.",
@@ -463,6 +475,7 @@ const RAW_PRODUCTS = [
   {
     name: "ENTOMOBAC",
     type: "Bio Insecticide",
+    activeOrganism: "Bacillus thuringiensis + Beauveria bassiana",
     cardCrops: ["Oil Palm", "Paddy", "Shallot"],
     crops: ["Oil Palm", "Paddy", "Shallot", "Cacao", "Cucumber", "Edamame", "Melon", "Watermelon"],
     benefit: "Controls planthoppers and borers across several crops while helping prevent pests from building resistance over time.",
@@ -471,6 +484,7 @@ const RAW_PRODUCTS = [
   {
     name: "BT PLUS",
     type: "Bio Insecticide",
+    activeOrganism: "Bacillus thuringiensis",
     cardCrops: ["Oil Palm", "Paddy", "Banana"],
     crops: ["Oil Palm", "Paddy", "Banana", "Corn", "Sugarcane"],
     benefit: "Targets armyworm and stem borer directly, without harming the beneficial insects working alongside your crop.",
@@ -479,6 +493,7 @@ const RAW_PRODUCTS = [
   {
     name: "BIOKILLIA",
     type: "Bio Insecticide",
+    activeOrganism: "Beauveria bassiana",
     cardCrops: ["Chilli", "Melon"],
     crops: ["Chilli", "Melon"],
     benefit: "Controls aphids, leafhoppers and mealybugs through natural infection, avoiding chemical pesticide resistance.",
@@ -487,6 +502,7 @@ const RAW_PRODUCTS = [
   {
     name: "CRYSOKILL",
     type: "Bio Insecticide",
+    activeOrganism: "Lecanicillium lecanii",
     cardCrops: ["Sugarcane", "Avocado", "Citrus"],
     crops: ["Sugarcane", "Avocado", "Citrus", "Dragon Fruit", "Durian"],
     benefit: "Controls sucking and chewing pests on vegetables and fruit crops while staying safe for pollinators.",
@@ -495,6 +511,7 @@ const RAW_PRODUCTS = [
   {
     name: "BIONEMATO",
     type: "Bio Insecticide",
+    activeOrganism: "Purpureocillium lilacinum (Paecilomyces lilacinus)",
     cardCrops: ["Potato", "Cabbage"],
     crops: ["Potato", "Cabbage"],
     benefit: "Takes on pest larvae and plant-parasitic nematodes living in the soil, protecting roots without harming earthworms.",
@@ -503,6 +520,7 @@ const RAW_PRODUCTS = [
   {
     name: "BACTOHORTI",
     type: "Bio Fertilizer",
+    activeOrganism: "Endophytic Bacillus + Serratia marcescens",
     cardCrops: ["Citrus"],
     crops: ["Citrus"],
     regNo: "03.03.2022.1135",
@@ -512,6 +530,7 @@ const RAW_PRODUCTS = [
   {
     name: "TERRABIO",
     type: "Bio Fertilizer",
+    activeOrganism: "Azotobacter sp. + Bacillus sp. + Trichoderma sp.",
     cardCrops: ["Corn", "Avocado", "Dragon Fruit"],
     crops: ["Corn", "Avocado", "Dragon Fruit", "Durian", "Edamame", "Patchouli"],
     benefit: "Helps crops pull more nutrients from the soil, working through the roots to build healthier plants from the ground up.",
@@ -520,6 +539,7 @@ const RAW_PRODUCTS = [
   {
     name: "BOOSBLOOM",
     type: "Bio Stimulant & Nutrition",
+    activeOrganism: "Ascophyllum nodosum (Organic Seaweed extract) + Cytokinin & Gibberellin",
     cardCrops: ["Chilli", "Tomato", "Shallot"],
     crops: ["Chilli", "Tomato", "Shallot", "Potato", "Cacao", "Cabbage", "Citrus", "Cucumber", "Edamame", "Melon", "Patchouli", "Radish", "Watermelon"],
     regNo: "02.03.2022.895",
@@ -529,6 +549,7 @@ const RAW_PRODUCTS = [
   {
     name: "KALSIKA",
     type: "Bio Stimulant & Nutrition",
+    activeOrganism: "Micronized Calcium (Ca) & Silica (Si) Complex",
     cardCrops: ["Oil Palm", "Paddy", "Chilli"],
     crops: ["Oil Palm", "Paddy", "Chilli", "Tomato", "Shallot", "Potato", "Corn", "Sugarcane", "Avocado", "Cucumber", "Dragon Fruit", "Radish"],
     benefit: "Strengthens plant stems and cell walls, helping crops stand up to wind, rain and pest pressure without falling over.",
@@ -537,6 +558,7 @@ const RAW_PRODUCTS = [
   {
     name: "KALIMAGSU",
     type: "Bio Stimulant & Nutrition",
+    activeOrganism: "Potassium, Magnesium & Sulfur (K-Mg-S) Mineral Complex",
     cardCrops: ["Chilli", "Tomato", "Shallot"],
     crops: ["Chilli", "Tomato", "Shallot", "Cucumber", "Melon", "Watermelon"],
     benefit: "Supplies potassium, magnesium and sulfur from a natural mineral source, improving harvest quality without salt buildup in the soil.",
@@ -545,6 +567,7 @@ const RAW_PRODUCTS = [
   {
     name: "AMINOTOP",
     type: "Bio Stimulant & Nutrition",
+    activeOrganism: "L-Amino Acids 17+ Complex + Fulvic Acid",
     cardCrops: ["Paddy", "Chilli", "Tomato"],
     crops: ["Paddy", "Chilli", "Tomato", "Potato", "Cucumber"],
     benefit: "Booster generatif berbasis asam amino, asam fulvat, dan hara esensial untuk memaksimalkan pembungaan, fruit set, dan pengisian bulir/buah.",
@@ -553,6 +576,7 @@ const RAW_PRODUCTS = [
   {
     name: "MICROBLOOM",
     type: "Bio Stimulant & Nutrition",
+    activeOrganism: "Chelated Micronutrient (Fe, Zn, Mn, B, Cu, Mo) + Amino Acids",
     cardCrops: ["Paddy", "Chilli", "Tomato"],
     crops: ["Paddy", "Chilli", "Tomato", "Shallot", "Cucumber", "Melon", "Watermelon"],
     benefit: "Delivers balanced micronutrient and amino acid support for enhanced vigor, flowering, and fruit set.",
@@ -561,6 +585,7 @@ const RAW_PRODUCTS = [
   {
     name: "NUTRIBK+",
     type: "Bio Fertilizer",
+    activeOrganism: "Water-soluble NPK + Trace Elements + Bacillus sp.",
     cardCrops: ["Oil Palm", "Cacao", "Avocado"],
     crops: ["Oil Palm", "Cacao", "Avocado", "Citrus", "Dragon Fruit", "Durian"],
     benefit: "A complete water-soluble NPK fertilizer blend, supporting both optimal vegetative growth and flowering/fruiting.",
@@ -569,6 +594,7 @@ const RAW_PRODUCTS = [
   {
     name: "BIOSTICK",
     type: "Bio Stimulant & Nutrition",
+    activeOrganism: "Bio-surfactant Adjuvant + Zinc (Zn) + Manganese (Mn)",
     cardCrops: ["Oil Palm", "Chilli", "Tomato"],
     crops: ["Oil Palm", "Chilli", "Tomato", "Potato", "Banana", "Sugarcane", "Cacao", "Avocado", "Citrus", "Cucumber", "Dragon Fruit", "Durian", "Melon", "Watermelon"],
     benefit: "Perekat pestisida biologi dengan kandungan Zinc dan Mangan, meningkatkan daya rekat dan perataan aplikasi pada daun serta efektivitas perlindungan.",
@@ -577,6 +603,7 @@ const RAW_PRODUCTS = [
   {
     name: "BACTOPLUS",
     type: "Bio Fertilizer",
+    activeOrganism: "Endophytic Bacillus + Pseudomonas sp.",
     cardCrops: [],
     crops: [],
     regNo: "03.03.2023.417",
@@ -586,6 +613,7 @@ const RAW_PRODUCTS = [
   {
     name: "PRIMADECO",
     type: "Bio Fungicide",
+    activeOrganism: "Trichoderma harzianum + Streptomyces sp.",
     cardCrops: [],
     crops: [],
     benefit: "Helps food and horticultural crops resist soil-borne disease while building up the beneficial microbes already living in the soil.",
@@ -594,6 +622,7 @@ const RAW_PRODUCTS = [
   {
     name: "MICROBLAS",
     type: "Bio Fungicide",
+    activeOrganism: "Streptomyces sp. + Trichoderma virens",
     cardCrops: ["Paddy"],
     crops: ["Paddy"],
     benefit: "Built to protect rice from blast disease that can spread quickly across a field if left unchecked.",
@@ -602,6 +631,7 @@ const RAW_PRODUCTS = [
   {
     name: "BIOFUNGAL",
     type: "Bio Fungicide",
+    activeOrganism: "Trichoderma viride + Gliocladium sp.",
     cardCrops: ["Banana", "Cacao", "Durian"],
     crops: ["Banana", "Cacao", "Durian"],
     benefit: "Bio fungisida tepung larut (WP) berbahan aktif cendawan antagonis untuk mengendalikan busuk daun Phytophthora, Alternaria, dan embun tepung.",
@@ -610,6 +640,7 @@ const RAW_PRODUCTS = [
   {
     name: "VERTIPLUS",
     type: "Bio Insecticide",
+    activeOrganism: "Verticillium lecanii",
     cardCrops: ["Chilli", "Tomato"],
     crops: ["Chilli", "Tomato"],
     benefit: "Keeps aphids, whitefly and thrips under control, and works especially well in humid conditions where these pests thrive.",
@@ -619,10 +650,15 @@ const RAW_PRODUCTS = [
 
 export const EXTRA_PRODUCTS = RAW_PRODUCTS.map((r) => {
   const m = TYPE_META[r.type];
+  const form = r.form || [
+    [r.type.includes("Stimulant") ? "Active content" : "Active organism", r.activeOrganism || m.form[0][1]],
+    ...m.form.slice(1),
+  ];
   return {
     slug: slugify(r.name),
     name: r.name,
     type: r.type,
+    activeOrganism: r.activeOrganism || m.form[0][1],
     categorySlug: m.slug,
     cardCrops: r.cardCrops || [],
     crops: (r.crops || []).map(normCrop),
@@ -630,7 +666,7 @@ export const EXTRA_PRODUCTS = RAW_PRODUCTS.map((r) => {
     image: r.image || `/images/products/${slugify(r.name)}.jpg`,
     keyBenefit: { en: r.benefit, id: r.benefit },
     what: { en: r.benefit, id: r.benefit },
-    formulation: r.form || m.form,
+    formulation: form,
     application: r.app || m.app,
     trials: [["Field validation (Indonesia)", "PAT trial network", "1 season", "Positive response vs untreated"]],
   };
