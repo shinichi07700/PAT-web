@@ -34,7 +34,7 @@ export default function Footer() {
                 </>
               ) : (
                 <>
-                  Ready to grow,<br />and harm less?
+                  Ready to grow more,<br />and harm less?
                 </>
               )}
             </h2>
