@@ -459,14 +459,29 @@ export function LangProvider({ children }) {
     localStorage.setItem("pat_lang", lang);
     document.documentElement.lang = lang;
   }, [lang]);
-  const t = (path) => {
+  const t = (path, fallback) => {
+    if (!path) return fallback || "";
     const parts = path.split(".");
     let cur = translations[lang];
     for (const p of parts) {
       cur = cur?.[p];
-      if (cur === undefined) return path;
+      if (cur === undefined) break;
     }
-    return cur;
+    if (cur !== undefined) return cur;
+
+    // Fallback to EN if in another language
+    if (lang !== "en") {
+      let enCur = translations.en;
+      for (const p of parts) {
+        enCur = enCur?.[p];
+        if (enCur === undefined) break;
+      }
+      if (enCur !== undefined) return enCur;
+    }
+
+    if (fallback !== undefined) return fallback;
+    // Return last segment if it looks like a namespaced key, avoiding raw key prefixes in the UI
+    return parts.length > 1 ? parts[parts.length - 1] : path;
   };
   const toggle = () => setLang((l) => (l === "en" ? "id" : "en"));
   return (
