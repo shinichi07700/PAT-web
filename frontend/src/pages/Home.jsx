@@ -228,19 +228,23 @@ export default function Home() {
           {/* Horizontal 3-Step Process with Custom Icons & Arrow Connector Line */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-6 relative">
             {/* Connector Line between Step 1 and Step 2 */}
-            <div className="hidden md:flex absolute top-10 left-[22%] w-[22%] items-center justify-center z-0 pointer-events-none">
-              <div className="flex-1 h-[2px] bg-[#0E6E19]/35" />
-              <svg className="w-4 h-4 text-[#0E6E19]/70 shrink-0 -ml-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
+            <div className="hidden md:flex absolute top-10 left-[21%] w-[24%] items-center justify-center z-0 pointer-events-none -translate-y-1/2">
+              <div className="w-full relative flex items-center justify-center">
+                <div className="w-full h-[2.5px] bg-[#064016]" />
+                <svg className="absolute w-4 h-4 text-[#064016]" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M 5 3 L 11 8 L 5 13" />
+                </svg>
+              </div>
             </div>
 
             {/* Connector Line between Step 2 and Step 3 */}
-            <div className="hidden md:flex absolute top-10 left-[56%] w-[22%] items-center justify-center z-0 pointer-events-none">
-              <div className="flex-1 h-[2px] bg-[#0E6E19]/35" />
-              <svg className="w-4 h-4 text-[#0E6E19]/70 shrink-0 -ml-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
+            <div className="hidden md:flex absolute top-10 left-[55%] w-[24%] items-center justify-center z-0 pointer-events-none -translate-y-1/2">
+              <div className="w-full relative flex items-center justify-center">
+                <div className="w-full h-[2.5px] bg-[#064016]" />
+                <svg className="absolute w-4 h-4 text-[#064016]" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M 5 3 L 11 8 L 5 13" />
+                </svg>
+              </div>
             </div>
 
             {/* Step 1 - Bioprospecting */}
