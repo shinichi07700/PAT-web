@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, MessageCircle } from "lucide-react";
+import { ArrowLeft, MessageCircle, ShieldCheck, Award } from "lucide-react";
 import { useLang } from "../lib/i18n";
 import { Reveal, MicrobeDots } from "../lib/motion";
 import { getProduct, getRelated, WHATSAPP_NUMBER } from "../data/content";
@@ -76,6 +76,41 @@ export default function ProductDetail() {
 
           <Block title={t("product.application")}>
             <DataTable head={["Crop", "Dosage", "Method", "Timing"]} rows={p.application} />
+          </Block>
+
+          <Block title={t("product.certifications")}>
+            <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
+              {/* Organik Indonesia */}
+              <div className="p-5 md:p-6 bg-[#F7F6F2] rounded-2xl border border-[#5C5C5C]/15 flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-white border border-[#5C5C5C]/10 flex items-center justify-center shrink-0 shadow-sm">
+                  <ShieldCheck className="w-6 h-6 text-[#0E6E19]" />
+                </div>
+                <div>
+                  <h3 className="font-extrabold text-base md:text-lg text-[#1C3A1F] mb-1">Organik Indonesia</h3>
+                  <p className="text-xs md:text-sm text-[#5C5C5C] leading-relaxed">
+                    {t("product.certOrganikDesc")}
+                  </p>
+                </div>
+              </div>
+
+              {/* Control Union / USDA (INOFICE) */}
+              <div className="p-5 md:p-6 bg-[#F7F6F2] rounded-2xl border border-[#5C5C5C]/15 flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-white border border-[#5C5C5C]/10 flex items-center justify-center shrink-0 shadow-sm">
+                  <Award className="w-6 h-6 text-[#2D6A35]" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex flex-wrap items-center gap-2 mb-1">
+                    <h3 className="font-extrabold text-base md:text-lg text-[#1C3A1F]">Control Union / USDA (INOFICE)</h3>
+                    <span className="text-[11px] font-bold px-2 py-0.5 rounded-md bg-[#FFF4E5] text-[#B76E00] border border-[#FFE2B8]">
+                      {t("product.renewalTag")}
+                    </span>
+                  </div>
+                  <p className="text-xs md:text-sm text-[#5C5C5C] leading-relaxed">
+                    {t("product.certControlUnionDesc")}
+                  </p>
+                </div>
+              </div>
+            </div>
           </Block>
         </div>
       </section>
