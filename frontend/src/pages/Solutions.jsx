@@ -7,6 +7,18 @@ import { Reveal, StaggerGroup, staggerItem } from "../lib/motion";
 import { ALL_PRODUCTS, SOLUTION_TYPES, CROPS } from "../data/content";
 import PageHero from "../components/PageHero";
 
+const PRIORITY_SLUGS = [
+  "decopalma",
+  "humatop",
+  "bt-max",
+  "endopalma",
+  "entomobac",
+  "biotracol",
+  "seudoflor",
+  "decoprima",
+  "orizaplus",
+];
+
 export function ProductCard({ p, lang }) {
   const { t } = useLang();
   const displayTags = p.cardCrops && p.cardCrops.length > 0 ? p.cardCrops : p.crops.slice(0, 3);
@@ -15,7 +27,7 @@ export function ProductCard({ p, lang }) {
     <motion.div variants={staggerItem}>
       <Link
         to={`/products/${p.slug}`}
-        className="group block bg-white border border-[#5C5C5C]/15 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden h-full"
+        className="group block bg-white border border-[#5C5C5C]/15 shadow-sm hover:shadow-[0_10px_30px_rgba(43,173,65,0.18)] hover:border-[#2BAD41] active:border-[#2BAD41] active:ring-2 active:ring-[#2BAD41]/50 hover:-translate-y-1 transition-all duration-300 overflow-hidden h-full"
         style={{ borderRadius: "0 28px 0 28px" }}
         data-testid={`product-card-${p.slug}`}
       >
@@ -81,7 +93,6 @@ export default function Solutions() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState("");
   const [crop, setCrop] = useState("");
-  const [visibleCount, setVisibleCount] = useState(8);
 
   const typeParam = searchParams.get("type") || "";
   const selectedTypes = useMemo(() => {
@@ -112,7 +123,7 @@ export default function Solutions() {
   };
 
   const filtered = useMemo(() => {
-    return ALL_PRODUCTS.filter((p) => {
+    const list = ALL_PRODUCTS.filter((p) => {
       const q = search.toLowerCase();
       const typeTranslated = (t(`solutions.types.${p.type}`) || "").toLowerCase();
       const matchSearch =
@@ -128,9 +139,18 @@ export default function Solutions() {
       const matchCrop = !crop || p.crops.includes(crop);
       return matchSearch && matchType && matchCrop;
     });
+
+    return list.sort((a, b) => {
+      const idxA = PRIORITY_SLUGS.indexOf(a.slug);
+      const idxB = PRIORITY_SLUGS.indexOf(b.slug);
+      if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+      if (idxA !== -1) return -1;
+      if (idxB !== -1) return 1;
+      return 0;
+    });
   }, [search, selectedTypes, crop, lang, t]);
 
-  const hasFilters = search || selectedTypes.length > 0 || crop;
+  const hasFilters = Boolean(search || selectedTypes.length > 0 || crop);
 
   const clearAllFilters = () => {
     setSearch("");
@@ -140,7 +160,8 @@ export default function Solutions() {
     setSearchParams(next);
   };
 
-  const displayedProducts = filtered.slice(0, visibleCount);
+  // Unfiltered view capped at 6 (3 rows); Filtered view has NO cap
+  const displayedProducts = hasFilters ? filtered : filtered.slice(0, 6);
 
   return (
     <div data-testid="solutions-page" className="min-h-screen bg-white">
@@ -206,9 +227,7 @@ export default function Solutions() {
           {/* Result Count and Clear Filters */}
           <div className="flex items-center justify-between mb-6 pb-2 border-b border-[#5C5C5C]/10">
             <h2 className="text-base sm:text-lg font-bold text-[#1C3A1F]">
-              {lang === "id"
-                ? `Ditemukan ${filtered.length} solusi produk:`
-                : `Found ${filtered.length} product solution${filtered.length !== 1 ? "s" : ""}:`}
+              {displayedProducts.length} {lang === "id" ? "Produk" : "Products"}
             </h2>
             {hasFilters && (
               <button
@@ -222,27 +241,12 @@ export default function Solutions() {
           </div>
 
           {/* Products Grid: 2 columns with horizontal leaf cards */}
-          {filtered.length > 0 ? (
-            <>
-              <StaggerGroup className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8" key={`${selectedTypes.join("-")}-${crop}-${search}`}>
-                {displayedProducts.map((p) => (
-                  <ProductCard key={p.slug} p={p} lang={lang} />
-                ))}
-              </StaggerGroup>
-
-              {/* See More Button */}
-              {visibleCount < filtered.length && (
-                <div className="mt-12 text-center">
-                  <button
-                    onClick={() => setVisibleCount((prev) => prev + 8)}
-                    style={{ borderRadius: "0 16px 0 16px" }}
-                    className="bg-[#0E6E19] hover:bg-[#064016] text-white px-10 py-3 text-sm font-bold shadow-md hover:shadow-lg transition-all duration-300"
-                  >
-                    {t("solutions.seeMore")}
-                  </button>
-                </div>
-              )}
-            </>
+          {displayedProducts.length > 0 ? (
+            <StaggerGroup className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8" key={`${selectedTypes.join("-")}-${crop}-${search}`}>
+              {displayedProducts.map((p) => (
+                <ProductCard key={p.slug} p={p} lang={lang} />
+              ))}
+            </StaggerGroup>
           ) : (
             <div className="text-center py-16 bg-[#F7F6F2] rounded-3xl border border-[#5C5C5C]/15" data-testid="empty-state">
               <p className="text-[#5C5C5C] max-w-md mx-auto">{t("solutions.empty")}</p>
@@ -251,9 +255,21 @@ export default function Solutions() {
               </button>
             </div>
           )}
+
+          {/* Bottom CTA to About Us */}
+          <div className="mt-16 text-center">
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-2 bg-[#0E6E19] hover:bg-[#064016] text-white px-8 py-3.5 text-sm sm:text-base font-bold shadow-md hover:shadow-lg transition-all duration-300"
+              style={{ borderRadius: "0 18px 0 18px" }}
+              data-testid="solutions-about-cta"
+            >
+              <span>{lang === "id" ? "Kenali Kami Lebih Dekat" : "Get to Know Us"}</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
-    </div>
   );
 }
 
