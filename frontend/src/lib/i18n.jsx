@@ -62,9 +62,8 @@ export const translations = {
       deployDesc: "Reaching 15,000+ farms across 16+ provinces.",
     },
     solutions: {
-      title: "Find Your Solution",
-      intro: "Every product here started as a microbe isolated from Indonesian soil, then went through our own labs before it ever reached a field. Filter by what you're growing, or by the problem you're solving.",
-      body: "Prima Agro Tech develops every product from strain isolation to registered, field-validated formulation, entirely in-house. Nothing here is imported or licensed from another company's library.",
+      title: "Find Your Microbes",
+      intro: "Every product here started as a microbe isolated from nature, then went through our own labs before it ever reached a field. Filter by what you're growing, or by the problem you're solving.",
       searchPlaceholder: "Search by product name, active organism, crop, or pest/disease…",
       searchButton: "Search",
       filterType: "Solution type",
@@ -278,9 +277,8 @@ export const translations = {
       deployDesc: "Menjangkau 15.000+ lahan di 16+ provinsi.",
     },
     solutions: {
-      title: "Temukan Solusi Anda",
-      intro: "Setiap produk di sini berawal dari mikroba yang diisolasi dari tanah Indonesia, lalu melewati laboratorium kami sendiri sebelum sampai ke lahan. Saring berdasarkan tanaman Anda, atau masalah yang ingin diselesaikan.",
-      body: "Prima Agro Tech mengembangkan setiap produk dari isolasi strain hingga formulasi terdaftar dan teruji lapangan, sepenuhnya secara in-house. Tidak ada yang diimpor atau dilisensi dari pustaka perusahaan lain.",
+      title: "Temukan Mikroba Anda",
+      intro: "Setiap produk berawal dari mikroba asal alam Indonesia, lalu melewati proses pengembangan internal kami sebelum sampai ke lahan. Saring berdasarkan tanaman Anda, atau masalah yang ingin diselesaikan.",
       searchPlaceholder: "Cari nama produk, organisme aktif, tanaman, atau hama/penyakit…",
       searchButton: "Cari",
       filterType: "Jenis solusi",
