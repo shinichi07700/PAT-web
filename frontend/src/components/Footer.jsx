@@ -28,15 +28,7 @@ export default function Footer() {
           {/* Top Call To Action Section */}
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
-              {lang === "id" ? (
-                <>
-                  Siap panen lebih,<br />dan merusak lebih sedikit?
-                </>
-              ) : (
-                <>
-                  Ready to grow more,<br />and harm less?
-                </>
-              )}
+              {t("home.ctaTitle")}
             </h2>
             <p className="mt-4 text-white/80 text-base md:text-lg leading-relaxed max-w-xl mx-auto">
               {t("home.ctaSub")}
@@ -52,7 +44,7 @@ export default function Footer() {
                 data-testid="footer-cta-whatsapp"
               >
                 <MessageCircle className="w-4 h-4" />
-                Chat on WhatsApp
+                {t("common.chatWhatsapp")}
               </a>
               <Link
                 to="/contact"
@@ -76,7 +68,7 @@ export default function Footer() {
                 <img src="/logo-full-white.png" alt="Prima Agro Tech" className="h-11 md:h-12 w-auto object-contain" />
               </div>
               <p className="text-white/75 max-w-md text-sm leading-relaxed">
-                Indonesian native microbial bio-solutions, developed end-to-end in-house since 2008.
+                {t("footer.legal")}
               </p>
               <div className="flex items-center gap-3 mt-6">
                 {[
