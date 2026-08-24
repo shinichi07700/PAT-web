@@ -28,7 +28,7 @@ export default function Footer() {
           {/* Top Call To Action Section */}
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
-              {t("home.ctaTitle")}
+              Ready to grow more,<br />and harm less?
             </h2>
             <p className="mt-4 text-white/80 text-base md:text-lg leading-relaxed max-w-xl mx-auto">
               {t("home.ctaSub")}
