@@ -160,8 +160,8 @@ export const translations = {
     },
     testimonials: {
       eyebrow: "Testimonials",
-      title: "Cerita Tani — real stories from the field",
-      intro: "Social proof from the growers, dealers, and plantations who use our products season after season.",
+      title: "Real Stories from the Field",
+      intro: "What farmers, distributors, and plantations say about our products, season after season.",
       formTitle: "Submit your story with our products",
       formSub: "Used a Prima Agro Tech product? Tell us how it performed — your story may be featured here.",
       submit: "Submit your story",
@@ -361,8 +361,8 @@ export const translations = {
     },
     testimonials: {
       eyebrow: "Testimoni",
-      title: "Cerita Tani — kisah nyata dari lapangan",
-      intro: "Bukti sosial dari petani, dealer, dan perkebunan yang menggunakan produk kami musim demi musim.",
+      title: "Kisah Nyata dari Lapangan",
+      intro: "Apa kata petani, distributor, dan perkebunan yang menggunakan produk kami musim demi musim?",
       formTitle: "Kirim cerita Anda dengan produk kami",
       formSub: "Pernah memakai produk Prima Agro Tech? Ceritakan hasilnya — kisah Anda bisa ditampilkan di sini.",
       submit: "Kirim cerita Anda",
