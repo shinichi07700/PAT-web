@@ -270,6 +270,7 @@ export default function Solutions() {
           </div>
         </div>
       </section>
+    </div>
   );
 }
 
