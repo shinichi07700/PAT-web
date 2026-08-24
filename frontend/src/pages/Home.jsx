@@ -226,18 +226,21 @@ export default function Home() {
           </Reveal>
 
           {/* Horizontal 3-Step Process with Custom Icons & Arrow Connector Line */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 relative">
-            {/* Arrow Connector Line overlay for md+ */}
-            <div className="hidden md:flex absolute top-10 left-[18%] right-[18%] items-center z-0">
-              <div className="flex-1 h-[2px] bg-[#0E6E19]/40" />
-              <svg className="w-5 h-5 text-[#0E6E19] shrink-0 -mx-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-6 relative">
+            {/* Connector Line between Step 1 and Step 2 */}
+            <div className="hidden md:flex absolute top-10 left-[22%] w-[22%] items-center justify-center z-0 pointer-events-none">
+              <div className="flex-1 h-[2px] bg-[#0E6E19]/35" />
+              <svg className="w-4 h-4 text-[#0E6E19]/70 shrink-0 -ml-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="9 18 15 12 9 6" />
               </svg>
-              <div className="flex-1 h-[2px] bg-[#0E6E19]/40" />
-              <svg className="w-5 h-5 text-[#0E6E19] shrink-0 -mx-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            </div>
+
+            {/* Connector Line between Step 2 and Step 3 */}
+            <div className="hidden md:flex absolute top-10 left-[56%] w-[22%] items-center justify-center z-0 pointer-events-none">
+              <div className="flex-1 h-[2px] bg-[#0E6E19]/35" />
+              <svg className="w-4 h-4 text-[#0E6E19]/70 shrink-0 -ml-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="9 18 15 12 9 6" />
               </svg>
-              <div className="flex-1 h-[2px] bg-[#0E6E19]/40" />
             </div>
 
             {/* Step 1 - Bioprospecting */}
@@ -248,7 +251,7 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="relative z-10 flex flex-col items-center text-center px-4"
             >
-              <div className="w-20 h-20 flex items-center justify-center mb-5 hover:scale-105 transition-transform">
+              <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mb-5 hover:scale-105 transition-transform">
                 <img src="/images/icons/icon-bioprospecting.png" alt="Bioprospecting" className="w-20 h-20 object-contain drop-shadow-sm" />
               </div>
               <h4 className="font-extrabold text-lg text-[#111827]">{t("steps.bioprospecting")}</h4>
@@ -265,7 +268,7 @@ export default function Home() {
               transition={{ delay: 0.3 }}
               className="relative z-10 flex flex-col items-center text-center px-4"
             >
-              <div className="w-20 h-20 flex items-center justify-center mb-5 hover:scale-105 transition-transform">
+              <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mb-5 hover:scale-105 transition-transform">
                 <img src="/images/icons/icon-stabilization.png" alt="Stabilization" className="w-20 h-20 object-contain drop-shadow-sm" />
               </div>
               <h4 className="font-extrabold text-lg text-[#111827]">{t("steps.stabilization")}</h4>
@@ -282,8 +285,8 @@ export default function Home() {
               transition={{ delay: 0.4 }}
               className="relative z-10 flex flex-col items-center text-center px-4"
             >
-              <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm mb-5 hover:scale-105 transition-transform" style={{ borderRadius: '2px 20px 2px 20px' }}>
-                <SachetIcon className="w-20 h-20" />
+              <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mb-5 hover:scale-105 transition-transform">
+                <img src="/images/icons/icon-deploy.png" alt="Deploy" className="w-20 h-20 object-contain drop-shadow-sm" />
               </div>
               <h4 className="font-extrabold text-lg text-[#111827]">{t("steps.deploy")}</h4>
               <p className="text-[#4B5563] text-xs md:text-sm mt-2 leading-relaxed max-w-xs">
