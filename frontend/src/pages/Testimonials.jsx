@@ -96,16 +96,27 @@ function TestimonialForm({ onDone }) {
   const [loading, setLoading] = useState(false);
   const upd = (k) => (e) => setForm({ ...form, [k]: e.target.value });
 
+  const roleOptions = [
+    { value: "farmer", label: t("testimonials.roles.farmer") },
+    { value: "distributor", label: t("testimonials.roles.distributor") },
+    { value: "store", label: t("testimonials.roles.store") },
+    { value: "plantation", label: t("testimonials.roles.plantation") },
+    { value: "institution", label: t("testimonials.roles.institution") },
+  ];
+
   const submit = async (e) => {
     e.preventDefault();
     setLoading(true);
     try {
+      const selectedRoleObj = roleOptions.find((r) => r.value === form.role);
+      const displayRole = selectedRoleObj ? selectedRoleObj.label : form.role;
+
       const emailPayload = {
         _subject: `New Testimonial Submitted by ${form.name}`,
         _captcha: "false",
         _template: "table",
         "Full Name": form.name,
-        "Role": form.role,
+        "Role": displayRole,
         "Crop": form.crop || "-",
         "Province": form.province || "-",
         "Product Used": form.product || "-",
@@ -115,7 +126,7 @@ function TestimonialForm({ onDone }) {
       await axios.post(`https://formsubmit.co/ajax/${TARGET_EMAIL}`, emailPayload);
 
       if (API) {
-        axios.post(`${API}/testimonials`, form).catch(() => {});
+        axios.post(`${API}/testimonials`, { ...form, role: displayRole }).catch(() => {});
       }
 
       toast.success(t("testimonials.thanks"));
@@ -132,32 +143,32 @@ function TestimonialForm({ onDone }) {
     <form onSubmit={submit} className="mt-8 space-y-5" data-testid="testimonial-form">
       <div className="grid sm:grid-cols-2 gap-5">
         <div>
-          <label className="label-pat">{t("contact.name")}</label>
+          <label className="label-pat">{t("testimonials.fullName") || t("contact.name")}</label>
           <input required value={form.name} onChange={upd("name")} className="input-pat" data-testid="testimonial-name" />
         </div>
         <div>
-          <label className="label-pat">Role</label>
+          <label className="label-pat">{t("testimonials.role")}</label>
           <select value={form.role} onChange={upd("role")} className="input-pat" data-testid="testimonial-role">
-            <option value="farmer">Farmer</option>
-            <option value="dealer">Dealer</option>
-            <option value="plantation">Plantation</option>
+            {roleOptions.map((opt) => (
+              <option key={opt.value} value={opt.value}>{opt.label}</option>
+            ))}
           </select>
         </div>
         <div>
-          <label className="label-pat">Crop</label>
+          <label className="label-pat">{t("testimonials.crop")}</label>
           <input value={form.crop} onChange={upd("crop")} className="input-pat" data-testid="testimonial-crop" />
         </div>
         <div>
-          <label className="label-pat">Province</label>
+          <label className="label-pat">{t("testimonials.province")}</label>
           <input value={form.province} onChange={upd("province")} className="input-pat" data-testid="testimonial-province" />
         </div>
       </div>
       <div>
-        <label className="label-pat">Product used</label>
+        <label className="label-pat">{t("testimonials.productUsed")}</label>
         <input value={form.product} onChange={upd("product")} className="input-pat" data-testid="testimonial-product" />
       </div>
       <div>
-        <label className="label-pat">Your story</label>
+        <label className="label-pat">{t("testimonials.yourStory")}</label>
         <textarea required rows={4} value={form.quote} onChange={upd("quote")} className="input-pat resize-none" data-testid="testimonial-quote" />
       </div>
       <button type="submit" disabled={loading} className="btn-primary disabled:opacity-60" data-testid="testimonial-submit">
