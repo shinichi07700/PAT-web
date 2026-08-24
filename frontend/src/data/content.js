@@ -51,7 +51,7 @@ export const CATEGORY_CARDS = [
   {
     slug: "bio-crop-protection",
     targetUrl: "/solutions?type=Bio%20Insecticide,Bio%20Fungicide",
-    title: { en: "Bio Protection", id: "Bio Protection" },
+    title: { en: "Bio Crop Protection", id: "Bio Crop Protection" },
     desc: {
       en: "Insect-specific fungi and bacteria that control pests and disease through targeted infection — sparing pollinators and beneficials.",
       id: "Jamur dan bakteri spesifik yang mengendalikan hama dan penyakit lewat infeksi tertarget — aman bagi penyerbuk dan serangga bermanfaat.",

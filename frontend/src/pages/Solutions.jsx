@@ -8,6 +8,7 @@ import { ALL_PRODUCTS, SOLUTION_TYPES, CROPS } from "../data/content";
 import PageHero from "../components/PageHero";
 
 export function ProductCard({ p, lang }) {
+  const { t } = useLang();
   const displayTags = p.cardCrops && p.cardCrops.length > 0 ? p.cardCrops : p.crops.slice(0, 3);
   
   return (
@@ -54,7 +55,7 @@ export function ProductCard({ p, lang }) {
                       style={{ borderRadius: "0 6px 0 6px" }}
                       className="text-[11px] px-2.5 py-0.5 border border-[#5C5C5C]/25 text-[#5C5C5C] bg-[#F7F6F2]/60 font-medium"
                     >
-                      {c}
+                      {t(`solutions.crops.${c}`) || c}
                     </span>
                   ))}
                 </div>
@@ -64,7 +65,7 @@ export function ProductCard({ p, lang }) {
 
               <div className="mt-4 pt-3 border-t border-[#5C5C5C]/10 flex items-center">
                 <span className="text-xs sm:text-sm font-bold text-[#2D6A35] group-hover:text-[#43B14B] inline-flex items-center gap-1.5 transition-colors">
-                  Learn More <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  {t("common.learnMore")} <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </div>
             </div>
@@ -113,19 +114,21 @@ export default function Solutions() {
   const filtered = useMemo(() => {
     return ALL_PRODUCTS.filter((p) => {
       const q = search.toLowerCase();
+      const typeTranslated = (t(`solutions.types.${p.type}`) || "").toLowerCase();
       const matchSearch =
         !q ||
         p.name.toLowerCase().includes(q) ||
         p.type.toLowerCase().includes(q) ||
+        typeTranslated.includes(q) ||
         (p.activeOrganism && p.activeOrganism.toLowerCase().includes(q)) ||
         (p.formulation && p.formulation.some(([k, v]) => v.toLowerCase().includes(q))) ||
-        p.crops.some((c) => c.toLowerCase().includes(q)) ||
+        p.crops.some((c) => c.toLowerCase().includes(q) || (t(`solutions.crops.${c}`) || "").toLowerCase().includes(q)) ||
         (p.keyBenefit && (p.keyBenefit[lang] || p.keyBenefit.en || "").toLowerCase().includes(q));
       const matchType = selectedTypes.length === 0 || selectedTypes.includes(p.type);
       const matchCrop = !crop || p.crops.includes(crop);
       return matchSearch && matchType && matchCrop;
     });
-  }, [search, selectedTypes, crop, lang]);
+  }, [search, selectedTypes, crop, lang, t]);
 
   const hasFilters = search || selectedTypes.length > 0 || crop;
 
@@ -160,13 +163,13 @@ export default function Solutions() {
                 className="bg-[#0E6E19] hover:bg-[#064016] text-white px-5 py-2.5 text-xs sm:text-sm font-semibold flex items-center gap-1.5 transition-colors shrink-0 shadow-sm"
                 style={{ borderRadius: "0 16px 0 16px" }}
               >
-                <span>Search</span>
+                <span>{t("solutions.searchButton")}</span>
                 <Search className="w-3.5 h-3.5" />
               </button>
               <input
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Search by product name, active organism, crop, or pest/disease..."
+                placeholder={t("solutions.searchPlaceholder")}
                 className="w-full pl-3 pr-4 text-xs sm:text-sm text-[#1A1A1A] placeholder-[#5C5C5C]/60 bg-transparent outline-none border-none"
                 data-testid="solutions-search"
               />
@@ -181,25 +184,31 @@ export default function Solutions() {
           {/* Filters matching mockup with Leaf design buttons */}
           <div className="space-y-4 mb-8">
             <FilterButtonGroup
-              label="Solution type"
+              label={t("solutions.filterType")}
               options={SOLUTION_TYPES}
               selected={selectedTypes}
               onToggle={handleTypeToggle}
               isMultiSelect={true}
+              formatDisplay={(type) => t(`solutions.types.${type}`) || type}
+              allLabel={t("solutions.all")}
             />
             <FilterButtonGroup
-              label="Crop"
+              label={t("solutions.filterCrop")}
               options={CROPS}
               selected={crop ? [crop] : []}
               onToggle={(c) => setCrop(crop === c ? "" : c)}
               isMultiSelect={false}
+              formatDisplay={(c) => t(`solutions.crops.${c}`) || c}
+              allLabel={t("solutions.all")}
             />
           </div>
 
           {/* Result Count and Clear Filters */}
           <div className="flex items-center justify-between mb-6 pb-2 border-b border-[#5C5C5C]/10">
             <h2 className="text-base sm:text-lg font-bold text-[#1C3A1F]">
-              Found {filtered.length} product solution{filtered.length !== 1 ? "s" : ""}:
+              {lang === "id"
+                ? `Ditemukan ${filtered.length} solusi produk:`
+                : `Found ${filtered.length} product solution${filtered.length !== 1 ? "s" : ""}:`}
             </h2>
             {hasFilters && (
               <button
@@ -229,7 +238,7 @@ export default function Solutions() {
                     style={{ borderRadius: "0 16px 0 16px" }}
                     className="bg-[#0E6E19] hover:bg-[#064016] text-white px-10 py-3 text-sm font-bold shadow-md hover:shadow-lg transition-all duration-300"
                   >
-                    See More
+                    {t("solutions.seeMore")}
                   </button>
                 </div>
               )}
@@ -238,7 +247,7 @@ export default function Solutions() {
             <div className="text-center py-16 bg-[#F7F6F2] rounded-3xl border border-[#5C5C5C]/15" data-testid="empty-state">
               <p className="text-[#5C5C5C] max-w-md mx-auto">{t("solutions.empty")}</p>
               <button onClick={clearAllFilters} className="btn-primary mt-6">
-                Clear Filters
+                {t("solutions.clear")}
               </button>
             </div>
           )}
@@ -248,7 +257,7 @@ export default function Solutions() {
   );
 }
 
-function FilterButtonGroup({ label, options, selected, onToggle, isMultiSelect, formatDisplay }) {
+function FilterButtonGroup({ label, options, selected, onToggle, isMultiSelect, formatDisplay, allLabel = "All" }) {
   const isAllActive = selected.length === 0;
 
   return (
@@ -267,7 +276,7 @@ function FilterButtonGroup({ label, options, selected, onToggle, isMultiSelect, 
               : "bg-white text-[#5C5C5C] border-[#5C5C5C]/25 hover:border-[#0E6E19] hover:text-[#0E6E19]"
           }`}
         >
-          All
+          {allLabel}
         </button>
 
         {/* Options with Leaf Shape */}
