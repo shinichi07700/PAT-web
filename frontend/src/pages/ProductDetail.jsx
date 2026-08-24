@@ -44,9 +44,15 @@ export default function ProductDetail() {
                   <div className="text-sm"><span className="text-[#5C5C5C]">{t("product.regNo")}: </span><span className="font-semibold text-[#1C3A1F]">{p.regNo}</span></div>
                   <div className="flex flex-wrap gap-1.5 pt-1 items-center">
                     <span className="text-sm text-[#5C5C5C] mr-1">{t("product.targetCrops")}:</span>
-                    {p.crops.map((c) => (
-                      <span key={c} className="text-xs px-2.5 py-1 rounded-full bg-white border border-[#5C5C5C]/15 text-[#1C3A1F] font-medium">{t(`solutions.crops.${c}`) || c}</span>
-                    ))}
+                    {p.crops && p.crops.length > 0 ? (
+                      p.crops.map((c) => (
+                        <span key={c} className="text-xs px-2.5 py-1 rounded-full bg-white border border-[#5C5C5C]/15 text-[#1C3A1F] font-medium">{t(`solutions.crops.${c}`) || c}</span>
+                      ))
+                    ) : (
+                      <span className="text-xs px-2.5 py-1 rounded-full bg-white border border-[#5C5C5C]/15 text-[#5C5C5C] italic">
+                        {lang === "id" ? "Data sedang diperbarui" : "Pending data"}
+                      </span>
+                    )}
                   </div>
                 </div>
               </Reveal>
