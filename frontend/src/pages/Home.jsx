@@ -248,8 +248,8 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="relative z-10 flex flex-col items-center text-center px-4"
             >
-              <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm mb-5 hover:scale-105 transition-transform" style={{ borderRadius: '2px 20px 2px 20px' }}>
-                <PetriDishIcon className="w-20 h-20" />
+              <div className="w-20 h-20 flex items-center justify-center mb-5 hover:scale-105 transition-transform">
+                <img src="/images/icons/icon-bioprospecting.png" alt="Bioprospecting" className="w-20 h-20 object-contain drop-shadow-sm" />
               </div>
               <h4 className="font-extrabold text-lg text-[#111827]">{t("steps.bioprospecting")}</h4>
               <p className="text-[#4B5563] text-xs md:text-sm mt-2 leading-relaxed max-w-xs">
@@ -265,8 +265,8 @@ export default function Home() {
               transition={{ delay: 0.3 }}
               className="relative z-10 flex flex-col items-center text-center px-4"
             >
-              <div className="w-20 h-20 bg-white flex items-center justify-center shadow-sm mb-5 hover:scale-105 transition-transform" style={{ borderRadius: '2px 20px 2px 20px' }}>
-                <HexagonMicrobeIcon className="w-20 h-20" />
+              <div className="w-20 h-20 flex items-center justify-center mb-5 hover:scale-105 transition-transform">
+                <img src="/images/icons/icon-stabilization.png" alt="Stabilization" className="w-20 h-20 object-contain drop-shadow-sm" />
               </div>
               <h4 className="font-extrabold text-lg text-[#111827]">{t("steps.stabilization")}</h4>
               <p className="text-[#4B5563] text-xs md:text-sm mt-2 leading-relaxed max-w-xs">
