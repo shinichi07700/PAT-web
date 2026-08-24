@@ -36,7 +36,7 @@ export function ProductCard({ p, lang }) {
           <div className="flex-1 p-5 sm:p-6 flex flex-col justify-between">
             <div>
               <span className="text-xs sm:text-sm font-semibold text-[#0E6E19] block mb-1">
-                {p.type}
+                {t(`solutions.types.${p.type}`) || p.type}
               </span>
               <h3 className="text-xl sm:text-2xl font-extrabold text-[#1C3A1F] tracking-tight group-hover:text-[#0E6E19] transition-colors">
                 {p.name.toUpperCase()}

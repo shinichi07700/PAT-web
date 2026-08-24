@@ -29,7 +29,7 @@ export default function ProductDetail() {
             <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7 }}>
               <div className="overflow-hidden aspect-[4/3] bg-white border border-[#5C5C5C]/15 shadow-xl relative flex items-center justify-center p-6" style={{ borderRadius: "0 32px 0 32px" }}>
                 <img src={p.image} alt={p.name} className="max-h-full max-w-full object-contain" />
-                <span className="badge-pat absolute top-3 left-3 md:top-4 md:left-4">{p.type}</span>
+                <span className="badge-pat absolute top-3 left-3 md:top-4 md:left-4">{t(`solutions.types.${p.type}`) || p.type}</span>
               </div>
             </motion.div>
             <div>
@@ -45,7 +45,7 @@ export default function ProductDetail() {
                   <div className="flex flex-wrap gap-1.5 pt-1 items-center">
                     <span className="text-sm text-[#5C5C5C] mr-1">{t("product.targetCrops")}:</span>
                     {p.crops.map((c) => (
-                      <span key={c} className="text-xs px-2.5 py-1 rounded-full bg-white border border-[#5C5C5C]/15 text-[#1C3A1F] font-medium">{c}</span>
+                      <span key={c} className="text-xs px-2.5 py-1 rounded-full bg-white border border-[#5C5C5C]/15 text-[#1C3A1F] font-medium">{t(`solutions.crops.${c}`) || c}</span>
                     ))}
                   </div>
                 </div>
@@ -91,7 +91,7 @@ export default function ProductDetail() {
                 <Link key={r.slug} to={`/products/${r.slug}`} className="group card-pat overflow-hidden hover:shadow-xl hover:-translate-y-1" data-testid={`related-${r.slug}`}>
                   <div className="h-36 overflow-hidden"><img src={r.image} alt={r.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /></div>
                   <div className="p-5">
-                    <span className="badge-pat mb-2">{r.type}</span>
+                    <span className="badge-pat mb-2">{t(`solutions.types.${r.type}`) || r.type}</span>
                     <h3 className="font-extrabold text-[#1C3A1F]">{r.name}</h3>
                   </div>
                 </Link>
