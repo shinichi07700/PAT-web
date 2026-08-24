@@ -63,7 +63,9 @@ export default function Testimonials() {
                   <span className="w-11 h-11 rounded-full bg-[#2D6A35] text-white flex items-center justify-center font-bold">{item.name.charAt(0)}</span>
                   <div>
                     <div className="font-bold text-[#1C3A1F]">{item.name}</div>
-                    <div className="text-sm text-[#5C5C5C] capitalize">{item.role} · {item.crop} · {item.province}</div>
+                    <div className="text-sm text-[#5C5C5C] capitalize">
+                      {typeof item.role === "object" ? (item.role[lang] || item.role.en) : item.role}
+                    </div>
                   </div>
                 </div>
               </motion.div>

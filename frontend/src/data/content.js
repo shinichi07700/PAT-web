@@ -748,45 +748,45 @@ export const TIMELINE = [
 export const SEED_TESTIMONIALS = [
   {
     name: "Pak Ibrahim",
-    role: "Petani Padi · Bekasi",
+    role: { en: "Rice Farmer · Bekasi", id: "Petani Padi · Bekasi" },
     crop: "Padi",
     province: "Bekasi",
     image: "/images/testimonial-ibrahim.jpg",
     quote: {
-      en: "Awalnya di umur 30 hari, tanaman padi saya sempat memerah dan terserang sundep. Tapi setelah memakai Humatop, hanya dalam 3 hari warna daun kembali hijau segar. Memasuki umur 50–60 hari, saya lanjutkan penyemprotan Kalimagsu dan hasilnya bulir padi keluar cepat serta terisi sangat bagus. Dari yang sebelumnya cuma dapat 5 ton, musim ini saya optimis bisa capai 7–8 ton per hektar.",
+      en: "At 30 days, my rice started turning red and got hit by stem borers. But after using Humatop, the leaves were green and healthy again in just 3 days. By 50 to 60 days, I followed up with Kalimagsu spraying, and the grains filled out fast and full. I used to get only 5 tons; this season I'm confident I can reach 7 to 8 tons per hectare.",
       id: "Awalnya di umur 30 hari, tanaman padi saya sempat memerah dan terserang sundep. Tapi setelah memakai Humatop, hanya dalam 3 hari warna daun kembali hijau segar. Memasuki umur 50–60 hari, saya lanjutkan penyemprotan Kalimagsu dan hasilnya bulir padi keluar cepat serta terisi sangat bagus. Dari yang sebelumnya cuma dapat 5 ton, musim ini saya optimis bisa capai 7–8 ton per hektar."
     }
   },
   {
     name: "Pak Rahmat",
-    role: "Petani Paprika · Bandung Barat",
+    role: { en: "Paprika Farmer · West Bandung", id: "Petani Paprika · Bandung Barat" },
     crop: "Paprika",
     province: "Bandung Barat",
     image: "/images/testimonial-rahmat.jpg",
     quote: {
-      en: "Sebelumnya, masa tanam paprika saya dari awal hingga panen memakan waktu 90 hingga 100 hari. Setelah menggunakan HumatPro, saya bisa panen lebih cepat di angka 75 sampai 80 hari. Hasilnya alhamdulillah sangat memuaskan, sehingga sekarang saya mempercayakan seluruh tahapan pemeliharaan tanaman ke produk-produk PT Prima Agro Tech.",
+      en: "Before, my paprika took 90 to 100 days from planting to harvest. After using HumatPro, I could harvest faster, in 75 to 80 days. The results were very satisfying, so now I trust every stage of my crop care to Prima Agro Tech products.",
       id: "Sebelumnya, masa tanam paprika saya dari awal hingga panen memakan waktu 90 hingga 100 hari. Setelah menggunakan HumatPro, saya bisa panen lebih cepat di angka 75 sampai 80 hari. Hasilnya alhamdulillah sangat memuaskan, sehingga sekarang saya mempercayakan seluruh tahapan pemeliharaan tanaman ke produk-produk PT Prima Agro Tech."
     }
   },
   {
     name: "Pak Usep",
-    role: "Petani Cabai · Garut",
+    role: { en: "Chilli Farmer · Garut", id: "Petani Cabai · Garut" },
     crop: "Cabai",
     province: "Garut",
     image: "/images/testimonial-usep.jpg",
     quote: {
-      en: "Alhamdulillah setelah menggunakan produk PAT, pertumbuhan tanaman bagus dilihat dari daun yang hijau dan tanaman yang terkena layu berkurang. Produk PAT harga terjangkau, mudah diaplikasikan, hasilnya cepat terlihat di tanaman. Sekarang giliran sobat primatani untuk menggunakannya.",
+      en: "Since using PAT products, my plants have grown well. The leaves are green and fewer plants are affected by wilt. PAT products are affordable, easy to apply, and the results show quickly. Now it's your turn, fellow farmers, to give it a try.",
       id: "Alhamdulillah setelah menggunakan produk PAT, pertumbuhan tanaman bagus dilihat dari daun yang hijau dan tanaman yang terkena layu berkurang. Produk PAT harga terjangkau, mudah diaplikasikan, hasilnya cepat terlihat di tanaman. Sekarang giliran sobat primatani untuk menggunakannya."
     }
   },
   {
     name: "Pak Atep",
-    role: "Petani Tomat · Cianjur",
+    role: { en: "Tomato Farmer · Cianjur", id: "Petani Tomat · Cianjur" },
     crop: "Tomat",
     province: "Cianjur",
     image: "/images/testimonial-atep.jpg",
     quote: {
-      en: "Selama saya menanam tomat, keluhan saya banyak, seperti lodoh, keriting daun, buah kurang banyak, dan tanah kurang gembur. Produk pertama kali yang saya gunakan Humatop. Dari dulunya pH tanah lima koma lima, setelah saya menggunakan Humatop menjadi enam koma lima.",
+      en: "Growing tomatoes, I used to deal with a lot of problems: waterlogged roots, curled leaves, low fruit yield, and compacted soil. The first product I used was Humatop. My soil pH used to be 5.5; after using Humatop, it rose to 6.5.",
       id: "Selama saya menanam tomat, keluhan saya banyak, seperti lodoh, keriting daun, buah kurang banyak, dan tanah kurang gembur. Produk pertama kali yang saya gunakan Humatop. Dari dulunya pH tanah lima koma lima, setelah saya menggunakan Humatop menjadi enam koma lima."
     }
   }

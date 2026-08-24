@@ -395,7 +395,7 @@ function TestimonialCarousel() {
                     {cur.name}
                   </div>
                   <div className="text-xs text-white/90 font-medium mt-0.5">
-                    {cur.role}
+                    {typeof cur.role === "object" ? (cur.role[lang] || cur.role.en) : cur.role}
                   </div>
                 </div>
               </div>
