@@ -703,8 +703,8 @@ export const SCIENCE_STAGES = [
     n: "03",
     title: { en: "ANHYDRIOM™ Stabilization", id: "Stabilisasi ANHYDRIOM™" },
     body: {
-      en: "Keeps live microbes dormant, stable, and potent — shelf-stable 3+ years in pure powder form. Prolonged shelf life, lighter and cheaper to ship, high purity.",
-      id: "Menjaga mikroba hidup tetap dorman, stabil, dan potensial — tahan simpan 3+ tahun dalam bentuk bubuk murni. Umur simpan panjang, lebih ringan dan murah dikirim.",
+      en: "Most beneficial microbes are metabolically active, moisture-dependent, and prone to losing potency within weeks unless kept refrigerated. ANHYDRIOM™ takes a different approach: by removing the moisture microbes need to stay active, it induces a dormant, biologically stable state that halts this decline. Many bacteria and fungi can enter a dormant, desiccation-tolerant state when moisture is removed, remaining biologically stable for extended periods before reactivating once rehydrated. ANHYDRIOM™ applies this principle at production scale, stabilizing our strains into a dry, dormant powder that holds its potency for 3+ years at room temperature.",
+      id: "Sebagian besar mikroba bermanfaat memerlukan kelembapan agar tetap aktif secara metabolik. Namun, kondisi aktif ini membuatnya rentan, efikasinya bisa menurun seiring lama masa penyimpanan apabila tidak disimpan dalam suhu dingin. ANHYDRIOM™ menggunakan pendekatan berbeda: dengan menghilangkan kelembapan yang membuat mikroba tetap aktif, teknologi ini menginduksi kondisi dorman yang stabil secara biologis pada mikroba, sehingga penurunan efikasi tersebut terhenti. Banyak bakteri dan jamur memang secara alami mampu memasuki kondisi dorman yang tahan kekeringan saat kelembapan dihilangkan — tetap stabil secara biologis dalam waktu lama, lalu aktif kembali begitu terhidrasi. ANHYDRIOM™ menerapkan prinsip ini dalam skala produksi, menstabilkan mikroba kami dalam bubuk kering yang mempertahankan efikasinya hingga 3+ tahun pada suhu ruang.",
     },
     image: IMAGES.testTubes,
   },
@@ -738,11 +738,20 @@ export const SCIENCE_STAGES = [
 ];
 
 export const TIMELINE = [
-  { year: "2008", en: "Prima Agro Tech founded — first microbial isolates cultured.", id: "Prima Agro Tech berdiri — isolat mikroba pertama dikultur." },
-  { year: "2015", en: "Laboratory upgraded to expand strain characterization capacity.", id: "Laboratorium ditingkatkan untuk memperluas kapasitas karakterisasi strain." },
-  { year: "2018", en: "Second lab upgrade; ANHYDRIOM™ stabilization scaled up.", id: "Peningkatan laboratorium kedua; stabilisasi ANHYDRIOM™ diperbesar." },
-  { year: "2024", en: "ISO 17025:2017 accreditation achieved for testing lab.", id: "Akreditasi ISO 17025:2017 diperoleh untuk laboratorium uji." },
-  { year: "Today", en: "120+ isolates, 15,000+ farmers, 16+ provinces, exports underway across SEA.", id: "120+ isolat, 15.000+ petani, 16+ provinsi, ekspor berjalan di Asia Tenggara." },
+  { year: "2008", en: "First entry into agri-tech, supporting rubber tree farmers", id: "Langkah pertama di agri-tech, mendukung petani karet" },
+  { year: "2011", en: "Pivoted to a full microbial biological solutions platform", id: "Bertransformasi menjadi platform solusi biologis berbasis mikroba" },
+  { year: "2013", en: "Organic certification obtained", id: "Sertifikasi organik diperoleh" },
+  { year: "2016", en: "Production scale-up", id: "Peningkatan skala produksi" },
+  { year: "2018", en: "ISO 9001:2015 certified", id: "Tersertifikasi ISO 9001:2015" },
+  { year: "2020", en: "Molecular-level strain identification achieved", id: "Identifikasi strain tingkat molekuler tercapai" },
+  { year: "2023", en: "Nation-wide distribution", id: "Distribusi ke seluruh Indonesia" },
+  { year: "2026", en: "Entering markets across Southeast Asia", id: "Memasuki pasar di Asia Tenggara" },
+];
+
+export const FOOTPRINT_STATS = [
+  { value: 16, suffix: "+", key: "provincesServed" },
+  { value: 50, suffix: "+", key: "plantationsServed" },
+  { value: 15000, suffix: "+", key: "farmerPartners" },
 ];
 
 export const SEED_TESTIMONIALS = [

@@ -67,7 +67,7 @@ export default function OurSciences() {
           </Reveal>
           <Reveal delay={0.1}>
             <Link to="/solutions" className="btn-primary !bg-[#43B14B] hover:!bg-white hover:!text-[#1C3A1F] mt-8 group">
-              {t("common.exploreSolutions")} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              {t("sciences.closingCta") || t("common.exploreSolutions")} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Reveal>
         </div>

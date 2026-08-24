@@ -1,5 +1,5 @@
 import "@/App.css";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Toaster } from "sonner";
 import { LangProvider } from "@/lib/i18n";
 import Layout from "@/components/Layout";
@@ -10,7 +10,6 @@ import ProductDetail from "@/pages/ProductDetail";
 import About from "@/pages/About";
 import OurSciences from "@/pages/OurSciences";
 import Facilities from "@/pages/Facilities";
-import Sustainability from "@/pages/Sustainability";
 import Testimonials from "@/pages/Testimonials";
 import Career from "@/pages/Career";
 import Contact from "@/pages/Contact";
@@ -30,7 +29,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/about/oursciences" element={<OurSciences />} />
               <Route path="/about/facilities" element={<Facilities />} />
-              <Route path="/about/sustainability" element={<Sustainability />} />
+              <Route path="/about/sustainability" element={<Navigate to="/about" replace />} />
               <Route path="/about/testimonials" element={<Testimonials />} />
               <Route path="/about/career" element={<Career />} />
               <Route path="/contact" element={<Contact />} />

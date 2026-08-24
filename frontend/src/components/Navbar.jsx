@@ -31,7 +31,6 @@ export default function Navbar() {
     { path: "/about", label: t("nav.about") },
     { path: "/about/oursciences", label: t("nav.oursciences") },
     { path: "/about/facilities", label: t("nav.facilities") },
-    { path: "/about/sustainability", label: t("nav.sustainability") },
     { path: "/about/testimonials", label: t("nav.testimonials") },
     { path: "/about/career", label: t("nav.career") },
   ];
