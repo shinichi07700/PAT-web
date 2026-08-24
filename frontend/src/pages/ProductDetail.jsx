@@ -1,10 +1,10 @@
 import React from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, Download, FileText, CheckCircle2, MessageCircle } from "lucide-react";
+import { ArrowLeft, MessageCircle } from "lucide-react";
 import { useLang } from "../lib/i18n";
 import { Reveal, MicrobeDots } from "../lib/motion";
-import { getProduct, getRelated, CERTIFICATIONS, WHATSAPP_NUMBER } from "../data/content";
+import { getProduct, getRelated, WHATSAPP_NUMBER } from "../data/content";
 
 export default function ProductDetail() {
   const { slug } = useParams();
@@ -65,48 +65,18 @@ export default function ProductDetail() {
 
       {/* Body */}
       <section className="bg-white py-10 md:py-20">
-        <div className="container-pat grid lg:grid-cols-3 gap-8 lg:gap-12">
-          <div className="lg:col-span-2 space-y-10 md:space-y-14">
-            <Block title={t("product.whatItDoes")}>
-              <p className="text-[#1A1A1A] text-base md:text-lg leading-relaxed">{p.what[lang]}</p>
-            </Block>
+        <div className="container-pat max-w-4xl space-y-10 md:space-y-14">
+          <Block title={t("product.whatItDoes")}>
+            <p className="text-[#1A1A1A] text-base md:text-lg leading-relaxed">{p.what[lang]}</p>
+          </Block>
 
-            <Block title={t("product.formulation")}>
-              <SpecTable rows={p.formulation} />
-            </Block>
+          <Block title={t("product.formulation")}>
+            <SpecTable rows={p.formulation} />
+          </Block>
 
-            <Block title={t("product.application")}>
-              <DataTable head={["Crop", "Dosage", "Method", "Timing"]} rows={p.application} />
-            </Block>
-
-            <Block title={t("product.trials")}>
-              <DataTable head={["Trial", "Partner", "Duration", "Outcome vs control"]} rows={p.trials} />
-            </Block>
-          </div>
-
-          {/* Sidebar */}
-          <aside className="space-y-6 md:space-y-8">
-            <div className="card-pat p-5 sm:p-6 bg-[#F7F6F2]">
-              <h4 className="font-bold text-[#1C3A1F] mb-3.5">{t("product.certifications")}</h4>
-              <ul className="space-y-2.5">
-                {CERTIFICATIONS.map((c) => (
-                  <li key={c} className="flex items-start gap-2 text-sm text-[#1A1A1A]">
-                    <CheckCircle2 className="w-4 h-4 text-[#43B14B] shrink-0 mt-0.5" /> {c}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="card-pat p-5 sm:p-6">
-              <h4 className="font-bold text-[#1C3A1F] mb-3.5">{t("product.downloads")}</h4>
-              <div className="space-y-3">
-                {[t("product.brochure"), t("product.catalogue")].map((d) => (
-                  <button key={d} onClick={() => window.alert("PDF coming soon.")} className="flex items-center gap-3 w-full text-left text-sm text-[#2D6A35] font-semibold hover:text-[#43B14B]">
-                    <FileText className="w-4 h-4" /> {d}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </aside>
+          <Block title={t("product.application")}>
+            <DataTable head={["Crop", "Dosage", "Method", "Timing"]} rows={p.application} />
+          </Block>
         </div>
       </section>
 
