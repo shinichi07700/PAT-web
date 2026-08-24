@@ -733,7 +733,7 @@ export const SCIENCE_STAGES = [
       en: "Reaches 15,000+ farmer partners across 16+ provinces, with in-house field agent support and exports underway across South East Asia.",
       id: "Menjangkau 15.000+ mitra petani di 16+ provinsi, dengan dukungan petugas lapangan in-house dan ekspor berjalan di Asia Tenggara.",
     },
-    image: IMAGES.farm,
+    image: "/images/science/science-stage-6.jpg",
   },
 ];
 

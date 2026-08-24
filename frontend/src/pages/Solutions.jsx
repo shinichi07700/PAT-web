@@ -160,8 +160,8 @@ export default function Solutions() {
     setSearchParams(next);
   };
 
-  // Unfiltered view capped at 6 (3 rows); Filtered view has NO cap
-  const displayedProducts = hasFilters ? filtered : filtered.slice(0, 6);
+  // Show all products matching filters (or all 31 products when All is selected)
+  const displayedProducts = filtered;
 
   return (
     <div data-testid="solutions-page" className="min-h-screen bg-white">
