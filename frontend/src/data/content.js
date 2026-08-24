@@ -688,7 +688,7 @@ export const SCIENCE_STAGES = [
       en: "50+ field expeditions across 6 Indonesian islands, collecting microbial material from soil, volcanic hot springs, plant tissue, pest specimens, and active disease outbreak sites.",
       id: "50+ ekspedisi lapangan di 6 pulau Indonesia, mengumpulkan material mikroba dari tanah, mata air panas vulkanik, jaringan tanaman, spesimen hama, dan lokasi wabah penyakit aktif.",
     },
-    image: IMAGES.expedition,
+    image: "/images/science/science-stage-1.jpg",
   },
   {
     n: "02",
@@ -697,7 +697,7 @@ export const SCIENCE_STAGES = [
       en: "Each sample is cultured and molecularly identified (PCR-verified), building a proprietary library of 120+ characterized isolates.",
       id: "Setiap sampel dikultur dan diidentifikasi secara molekuler (terverifikasi PCR), membangun pustaka proprietary 120+ isolat terkarakterisasi.",
     },
-    image: IMAGES.lab,
+    image: "/images/science/science-stage-2.jpg",
   },
   {
     n: "03",
@@ -706,7 +706,7 @@ export const SCIENCE_STAGES = [
       en: "Most beneficial microbes are metabolically active, moisture-dependent, and prone to losing potency within weeks unless kept refrigerated. ANHYDRIOM™ takes a different approach: by removing the moisture microbes need to stay active, it induces a dormant, biologically stable state that halts this decline. Many bacteria and fungi can enter a dormant, desiccation-tolerant state when moisture is removed, remaining biologically stable for extended periods before reactivating once rehydrated. ANHYDRIOM™ applies this principle at production scale, stabilizing our strains into a dry, dormant powder that holds its potency for 3+ years at room temperature.",
       id: "Sebagian besar mikroba bermanfaat memerlukan kelembapan agar tetap aktif secara metabolik. Namun, kondisi aktif ini membuatnya rentan, efikasinya bisa menurun seiring lama masa penyimpanan apabila tidak disimpan dalam suhu dingin. ANHYDRIOM™ menggunakan pendekatan berbeda: dengan menghilangkan kelembapan yang membuat mikroba tetap aktif, teknologi ini menginduksi kondisi dorman yang stabil secara biologis pada mikroba, sehingga penurunan efikasi tersebut terhenti. Banyak bakteri dan jamur memang secara alami mampu memasuki kondisi dorman yang tahan kekeringan saat kelembapan dihilangkan — tetap stabil secara biologis dalam waktu lama, lalu aktif kembali begitu terhidrasi. ANHYDRIOM™ menerapkan prinsip ini dalam skala produksi, menstabilkan mikroba kami dalam bubuk kering yang mempertahankan efikasinya hingga 3+ tahun pada suhu ruang.",
     },
-    image: IMAGES.testTubes,
+    image: "/images/science/science-stage-3.jpg",
   },
   {
     n: "04",
@@ -715,7 +715,7 @@ export const SCIENCE_STAGES = [
       en: "Strains combined into multi-strain formulations — broader spectrum, resilience built in, wider coverage, synergistic mechanisms.",
       id: "Strain digabung menjadi formulasi multi-strain — spektrum lebih luas, ketahanan bawaan, cakupan lebih lebar, mekanisme sinergis.",
     },
-    image: IMAGES.microbes,
+    image: "/images/science/science-stage-4.jpg",
   },
   {
     n: "05",
@@ -724,7 +724,7 @@ export const SCIENCE_STAGES = [
       en: "Every formulation is field-tested against real pest, disease, and soil conditions before commercialisation.",
       id: "Setiap formulasi diuji lapangan melawan kondisi hama, penyakit, dan tanah nyata sebelum dikomersialkan.",
     },
-    image: IMAGES.farmerField,
+    image: "/images/science/science-stage-5.jpg",
   },
   {
     n: "06",
