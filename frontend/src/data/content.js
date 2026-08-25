@@ -16,6 +16,7 @@ export const IMAGES = {
   expedition: "https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200",
   production: "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200",
   teamField: "https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200",
+  careerLab: "./images/career/career-lab.jpg",
 };
 
 export const WHATSAPP_NUMBER = "6285283790848";
