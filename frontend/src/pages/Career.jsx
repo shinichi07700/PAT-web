@@ -23,7 +23,7 @@ export default function Career() {
   useEffect(() => {
     const timer = setInterval(() => {
       setFieldIndex((prev) => (prev + 1) % FIELD_IMAGES.length);
-    }, 2000);
+    }, 4000);
     return () => clearInterval(timer);
   }, []);
 
