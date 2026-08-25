@@ -20,6 +20,7 @@ export const IMAGES = {
 };
 
 export const WHATSAPP_NUMBER = "6285283790848";
+export const LINKEDIN_URL = "https://www.linkedin.com/company/primaagrotech";
 
 export const STATS = [
   { value: 2008, suffix: "", key: "founded", noFormat: true },

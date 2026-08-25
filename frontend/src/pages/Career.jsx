@@ -3,7 +3,7 @@ import { Linkedin, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLang } from "../lib/i18n";
 import { Reveal, Parallax } from "../lib/motion";
-import { IMAGES } from "../data/content";
+import { IMAGES, LINKEDIN_URL } from "../data/content";
 import PageHero from "../components/PageHero";
 
 const FIELD_IMAGES = [
@@ -114,7 +114,7 @@ export default function Career() {
             {t("career.cta")}
           </p>
           <a
-            href="https://linkedin.com"
+            href={LINKEDIN_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary !bg-[#43B14B] hover:!bg-white hover:!text-[#1C3A1F] mt-8"
