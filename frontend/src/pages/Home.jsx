@@ -104,7 +104,7 @@ export default function Home() {
                   className="w-14 h-14 md:w-16 md:h-16 bg-white/20 backdrop-blur-sm flex items-center justify-center text-white shrink-0 shadow-sm"
                   style={{ borderRadius: '0 16px 0 16px' }}
                 >
-                  {idx === 0 && (
+                  {s.key === "founded" && (
                     <svg viewBox="0 0 100 100" fill="none" className="w-7 h-7 md:w-8 md:h-8">
                       <rect x="14" y="20" width="72" height="66" rx="14" stroke="white" strokeWidth="6" fill="none" />
                       <path d="M 14 38 L 86 38" stroke="white" strokeWidth="6" />
@@ -118,16 +118,7 @@ export default function Home() {
                       <circle cx="68" cy="71" r="5" fill="white" />
                     </svg>
                   )}
-                  {idx === 1 && (
-                    <svg viewBox="0 0 100 100" fill="none" className="w-9 h-9 md:w-10 md:h-10 scale-110">
-                      <ellipse cx="50" cy="45" rx="36" ry="19" stroke="white" strokeWidth="6.5" fill="none" />
-                      <path d="M 14 45 A 36 19 0 0 0 86 45 v 9 A 36 19 0 0 1 14 54 Z" stroke="white" strokeWidth="6.5" fill="none" />
-                      <path d="M 33 43 C 28 39 26 49 38 49 C 46 49 43 41 33 43 Z" fill="white" />
-                      <circle cx="64" cy="46" r="5" fill="white" />
-                    </svg>
-                  )}
-                  {idx === 2 && <MapPin className="w-7 h-7 md:w-8 md:h-8" />}
-                  {idx === 3 && (
+                  {s.key === "farmers" && (
                     <svg viewBox="0 0 100 100" fill="none" className="w-7 h-7 md:w-8 md:h-8">
                       <circle cx="50" cy="22" r="10" stroke="white" strokeWidth="6" fill="none" />
                       <circle cx="24" cy="34" r="8.5" stroke="white" strokeWidth="6" fill="none" />
@@ -135,6 +126,26 @@ export default function Home() {
                       <path d="M 16 80 A 34 34 0 0 1 84 80" stroke="white" strokeWidth="6.5" fill="none" strokeLinecap="round" />
                       <path d="M 6 82 A 20 20 0 0 1 36 68" stroke="white" strokeWidth="6.5" fill="none" strokeLinecap="round" />
                       <path d="M 94 82 A 20 20 0 0 0 64 68" stroke="white" strokeWidth="6.5" fill="none" strokeLinecap="round" />
+                    </svg>
+                  )}
+                  {s.key === "provinces" && (
+                    <svg viewBox="0 0 100 100" fill="none" className="w-7 h-7 md:w-8 md:h-8">
+                      <path
+                        d="M 50 90 C 50 90 82 58 82 38 C 82 20.3 67.7 6 50 6 C 32.3 6 18 20.3 18 38 C 18 58 50 90 50 90 Z"
+                        stroke="white"
+                        strokeWidth="6.5"
+                        strokeLinejoin="round"
+                        fill="none"
+                      />
+                      <circle cx="50" cy="38" r="11" stroke="white" strokeWidth="6.5" fill="none" />
+                    </svg>
+                  )}
+                  {s.key === "isolates" && (
+                    <svg viewBox="0 0 100 100" fill="none" className="w-9 h-9 md:w-10 md:h-10 scale-110">
+                      <ellipse cx="50" cy="42" rx="36" ry="18" stroke="white" strokeWidth="6.5" fill="none" />
+                      <path d="M 14 42 A 36 18 0 0 0 86 42 v 10 A 36 18 0 0 1 14 52 Z" stroke="white" strokeWidth="6.5" fill="none" />
+                      <path d="M 33 40 C 28 36 26 46 38 46 C 46 46 43 38 33 40 Z" fill="white" />
+                      <circle cx="64" cy="43" r="5" fill="white" />
                     </svg>
                   )}
                 </div>

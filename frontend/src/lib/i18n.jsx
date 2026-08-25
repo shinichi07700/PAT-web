@@ -272,10 +272,10 @@ export const translations = {
       ctaSub: "Bicarakan solusi yang tepat untuk lahan atau perkebunan Anda dengan tim kami.",
     },
     stats: {
-      founded: "Tahun berdiri",
-      isolates: "Isolat mikroba",
-      provinces: "Provinsi terlayani",
-      farmers: "Mitra petani",
+      founded: "Tahun Berdiri",
+      isolates: "Isolat Mikroba",
+      provinces: "Provinsi Terlayani",
+      farmers: "Mitra Petani",
     },
     steps: {
       bioprospecting: "Bioprospeksi",
