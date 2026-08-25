@@ -60,7 +60,7 @@ export default function Home() {
             <div className="py-12 md:py-20 lg:py-24 max-w-2xl text-right">
               <MaskedLines
                 as="h1"
-                className="text-white font-extrabold tracking-tight leading-[1.05] text-4xl md:text-6xl lg:text-[3.5rem]"
+                className="text-white font-extrabold tracking-tight leading-[1.15] text-4xl md:text-6xl lg:text-[3.5rem]"
                 lines={[t("home.heroLine1"), t("home.heroLine2"), t("home.heroLine3")]}
                 delay={0.2}
               />

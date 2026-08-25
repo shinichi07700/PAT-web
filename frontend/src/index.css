@@ -114,9 +114,12 @@ html.lenis, html.lenis body { height: auto; }
   border-radius: 0 36px 0 36px !important;
 }
 
-.text-balance { text-wrap: balance; }
-
-.mask-line { display: block; overflow: hidden; }
+.mask-line { 
+  display: block; 
+  overflow: hidden; 
+  padding-bottom: 0.22em; 
+  margin-bottom: -0.22em; 
+}
 
 /* Grain overlay */
 .grain::after {

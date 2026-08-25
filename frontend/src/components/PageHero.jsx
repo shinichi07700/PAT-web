@@ -15,7 +15,7 @@ export default function PageHero({ eyebrow, title, intro, image }) {
       <div className="container-pat relative py-16 md:py-24">
         <MaskedLines
           as="h1"
-          className="text-white font-extrabold tracking-tight leading-[1.02] text-4xl md:text-6xl max-w-4xl"
+          className="text-white font-extrabold tracking-tight leading-[1.18] text-4xl md:text-6xl max-w-4xl"
           lines={Array.isArray(title) ? title : [title]}
           delay={0.15}
         />
