@@ -101,14 +101,52 @@ export default function Home() {
             {STATS.map((s, idx) => (
               <motion.div key={s.key} variants={staggerItem} className="flex items-center gap-4" data-testid={`stat-${s.key}`}>
                 <div
-                  className="w-14 h-14 md:w-16 md:h-16 bg-white/20 backdrop-blur-sm flex items-center justify-center text-white shrink-0 shadow-sm p-3"
+                  className="w-14 h-14 md:w-16 md:h-16 bg-white/20 backdrop-blur-sm flex items-center justify-center text-white shrink-0 shadow-sm"
                   style={{ borderRadius: '0 16px 0 16px' }}
                 >
-                  <img
-                    src={`./images/icons/stat-${s.key}.png`}
-                    alt={t(`stats.${s.key}`)}
-                    className="w-7 h-7 md:w-8 md:h-8 object-contain drop-shadow-sm"
-                  />
+                  {s.key === "founded" && (
+                    <svg viewBox="0 0 100 100" fill="none" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7 md:w-8 md:h-8">
+                      <rect x="18" y="22" width="64" height="60" rx="12" stroke="white" strokeWidth="4.5" fill="none" />
+                      <line x1="18" y1="38" x2="82" y2="38" stroke="white" strokeWidth="4.5" />
+                      <rect x="32" y="11" width="7" height="17" rx="3.5" fill="white" />
+                      <rect x="61" y="11" width="7" height="17" rx="3.5" fill="white" />
+                      <circle cx="33" cy="51" r="4.2" fill="white" />
+                      <circle cx="50" cy="51" r="4.2" fill="white" />
+                      <circle cx="67" cy="51" r="4.2" fill="white" />
+                      <circle cx="33" cy="67" r="4.2" fill="white" />
+                      <circle cx="50" cy="67" r="4.2" fill="white" />
+                      <circle cx="67" cy="67" r="4.2" fill="white" />
+                    </svg>
+                  )}
+                  {s.key === "isolates" && (
+                    <svg viewBox="0 0 100 100" fill="none" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 md:w-9 md:h-9">
+                      <ellipse cx="50" cy="38" rx="38" ry="17" stroke="white" strokeWidth="4.5" fill="none" />
+                      <path d="M 12 38 v 13 A 38 17 0 0 0 88 51 v -13" stroke="white" strokeWidth="4.5" fill="none" />
+                      <path d="M 34 35 C 27 32 25 42 36 42 C 44 42 43 34 34 35 Z" fill="white" />
+                      <circle cx="64" cy="38" r="4.5" fill="white" />
+                    </svg>
+                  )}
+                  {s.key === "provinces" && (
+                    <svg viewBox="0 0 100 100" fill="none" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7 md:w-8 md:h-8">
+                      <path
+                        d="M 50 88 C 50 88 80 56 80 37 C 80 20.4 66.6 7 50 7 C 33.4 7 20 20.4 20 37 C 20 56 50 88 50 88 Z"
+                        stroke="white"
+                        strokeWidth="4.5"
+                        fill="none"
+                      />
+                      <circle cx="50" cy="37" r="11.5" stroke="white" strokeWidth="4.5" fill="none" />
+                    </svg>
+                  )}
+                  {s.key === "farmers" && (
+                    <svg viewBox="0 0 100 100" fill="none" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 md:w-9 md:h-9">
+                      <circle cx="50" cy="23" r="10" stroke="white" strokeWidth="4.5" fill="none" />
+                      <circle cx="23" cy="35" r="8.5" stroke="white" strokeWidth="4.5" fill="none" />
+                      <circle cx="77" cy="35" r="8.5" stroke="white" strokeWidth="4.5" fill="none" />
+                      <path d="M 18 80 A 32 32 0 0 1 82 80" stroke="white" strokeWidth="4.5" fill="none" />
+                      <path d="M 6 82 A 20 20 0 0 1 36 67" stroke="white" strokeWidth="4.5" fill="none" />
+                      <path d="M 94 82 A 20 20 0 0 0 64 67" stroke="white" strokeWidth="4.5" fill="none" />
+                    </svg>
+                  )}
                 </div>
                 <div>
                   <div className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-none">
