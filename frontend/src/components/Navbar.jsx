@@ -244,8 +244,7 @@ export default function Navbar() {
                   </AnimatePresence>
                 </div>
 
-                <MobileLink to="/contact" active={isActive("/contact")}>{t("nav.contact")}</MobileLink>
-                <div className="pt-2">
+                <div className="pt-3">
                   <Link
                     to="/contact"
                     onClick={() => setMobileOpen(false)}
