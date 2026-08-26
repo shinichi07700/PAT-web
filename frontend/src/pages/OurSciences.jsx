@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useLang } from "../lib/i18n";
-import { Reveal, Marquee, Parallax } from "../lib/motion";
+import { Reveal, Parallax } from "../lib/motion";
 import { SCIENCE_STAGES, IMAGES } from "../data/content";
 import PageHero from "../components/PageHero";
 
@@ -16,11 +16,6 @@ export default function OurSciences() {
   return (
     <div data-testid="sciences-page">
       <PageHero eyebrow={t("sciences.eyebrow")} title={t("sciences.title")} intro={t("sciences.intro")} image={IMAGES.microbes} />
-
-      {/* Marquee band */}
-      <div className="bg-[#F5C842] py-4 overflow-hidden">
-        <Marquee text={t("sciences.marquee")} className="text-[#1C3A1F] font-extrabold text-2xl md:text-4xl tracking-tight" duration={24} />
-      </div>
 
       {/* Stages */}
       <section className="bg-white py-16 md:py-24 relative" ref={containerRef}>
