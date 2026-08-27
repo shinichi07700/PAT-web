@@ -1603,3 +1603,54 @@ export const SEED_TESTIMONIALS = [
     }
   }
 ];
+
+export const FIELD_VIDEOS = [
+  {
+    title: "Cerita Tani — Padi, Jawa Barat",
+    crop: "Padi",
+    location: "Jawa Barat",
+    thumb: "https://images.unsplash.com/photo-1536657464919-892534f60d6e?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+    url: "https://www.youtube.com/watch?v=tj89dLIYVLg&t=38s",
+    embedId: "tj89dLIYVLg",
+  },
+  {
+    title: "Cerita Tani — Sawit, Riau",
+    crop: "Sawit",
+    location: "Riau",
+    thumb: "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+    url: "https://www.youtube.com/watch?v=NITS6bAB8pg&t=11s",
+    embedId: "NITS6bAB8pg",
+  },
+  {
+    title: "Cerita Tani — Cabai, Brebes",
+    crop: "Cabai",
+    location: "Brebes",
+    thumb: "https://images.unsplash.com/photo-1588252303782-cb80119abd6d?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+    url: "https://www.youtube.com/watch?v=wrpHZqOc4-A&t=1s",
+    embedId: "wrpHZqOc4-A",
+  },
+  {
+    title: "Cerita Tani — Paprika, Cisarua",
+    crop: "Paprika",
+    location: "Cisarua",
+    thumb: "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+    url: "https://www.youtube.com/watch?v=NITS6bAB8pg&t=11s",
+    embedId: "NITS6bAB8pg",
+  },
+  {
+    title: "Cerita Tani — Padi, Karangsambung",
+    crop: "Padi",
+    location: "Karangsambung",
+    thumb: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+    url: "https://www.youtube.com/watch?v=tj89dLIYVLg&t=38s",
+    embedId: "tj89dLIYVLg",
+  },
+  {
+    title: "Cerita Tani — Stroberi, Bandung",
+    crop: "Stroberi",
+    location: "Bandung",
+    thumb: "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+    url: "https://www.youtube.com/watch?v=wrpHZqOc4-A&t=1s",
+    embedId: "wrpHZqOc4-A",
+  },
+];
