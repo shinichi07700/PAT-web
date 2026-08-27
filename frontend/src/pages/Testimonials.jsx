@@ -23,7 +23,7 @@ export default function Testimonials() {
       {/* Video cards */}
       <section className="bg-white py-16 md:py-24">
         <div className="container-pat">
-          <StaggerGroup className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <StaggerGroup className="grid md:grid-cols-3 gap-6">
             {FIELD_VIDEOS.map((v, i) => (
               <motion.button
                 key={i}
