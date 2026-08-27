@@ -90,12 +90,6 @@ export default function ProductDetail() {
             </Block>
           )}
 
-          {p.what && p.what[lang] && (
-            <Block title={t("product.whatItDoes")}>
-              <p className="text-[#1A1A1A] text-base md:text-lg leading-relaxed">{p.what[lang]}</p>
-            </Block>
-          )}
-
           <Block title={t("product.formulation")}>
             <SpecTable rows={p.formulation} />
           </Block>
