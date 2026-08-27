@@ -107,6 +107,7 @@ export const translations = {
       },
     },
     product: {
+      keyBenefits: "Key Benefits",
       whatItDoes: "What it does",
       formulation: "Formulation",
       application: "Application guide",
@@ -331,6 +332,7 @@ export const translations = {
       },
     },
     product: {
+      keyBenefits: "Keunggulan & Manfaat",
       whatItDoes: "Cara kerja",
       formulation: "Formulasi",
       application: "Panduan aplikasi",

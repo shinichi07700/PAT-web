@@ -41,7 +41,12 @@ export default function ProductDetail() {
               </Reveal>
               <Reveal delay={0.15}>
                 <div className="mt-5 md:mt-6 space-y-2">
-                  <div className="text-sm"><span className="text-[#5C5C5C]">{t("product.regNo")}: </span><span className="font-semibold text-[#1C3A1F]">{p.regNo}</span></div>
+                  {p.regNo && (
+                    <div className="text-sm">
+                      <span className="text-[#5C5C5C]">{t("product.regNo")}: </span>
+                      <span className="font-semibold text-[#1C3A1F]">{p.regNo}</span>
+                    </div>
+                  )}
                   <div className="flex flex-wrap gap-1.5 pt-1 items-center">
                     <span className="text-sm text-[#5C5C5C] mr-1">{t("product.targetCrops")}:</span>
                     {p.crops && p.crops.length > 0 ? (
@@ -72,9 +77,24 @@ export default function ProductDetail() {
       {/* Body */}
       <section className="bg-white py-10 md:py-20">
         <div className="container-pat max-w-4xl space-y-10 md:space-y-14">
-          <Block title={t("product.whatItDoes")}>
-            <p className="text-[#1A1A1A] text-base md:text-lg leading-relaxed">{p.what[lang]}</p>
-          </Block>
+          {p.benefits && p.benefits[lang] && p.benefits[lang].length > 0 && (
+            <Block title={t("product.keyBenefits")}>
+              <ul className="space-y-3">
+                {p.benefits[lang].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-[#1A1A1A] text-base md:text-lg leading-relaxed">
+                    <span className="w-2 h-2 rounded-full bg-[#0E6E19] mt-2.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </Block>
+          )}
+
+          {p.what && p.what[lang] && (
+            <Block title={t("product.whatItDoes")}>
+              <p className="text-[#1A1A1A] text-base md:text-lg leading-relaxed">{p.what[lang]}</p>
+            </Block>
+          )}
 
           <Block title={t("product.formulation")}>
             <SpecTable rows={p.formulation} />
