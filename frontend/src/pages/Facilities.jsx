@@ -11,14 +11,14 @@ export default function Facilities() {
   const [showKanCert, setShowKanCert] = useState(false);
 
   const blocks = [
-    { title: t("facilities.title"), body: t("facilities.intro"), image: IMAGES.production, tag: "Location", icon: true },
-    { title: t("facilities.labTitle"), body: t("facilities.lab"), image: IMAGES.lab, tag: "R&D Laboratory" },
-    { title: t("facilities.prodTitle"), body: t("facilities.prod"), image: IMAGES.testTubes, tag: "Production" },
+    { title: t("facilities.title"), body: t("facilities.intro"), image: IMAGES.facilityComplex, tag: "Location", icon: true },
+    { title: t("facilities.labTitle"), body: t("facilities.lab"), image: IMAGES.facilityLab, tag: "R&D Laboratory" },
+    { title: t("facilities.prodTitle"), body: t("facilities.prod"), image: IMAGES.facilityWarehouse, tag: "Production & Warehouse" },
   ];
 
   return (
     <div data-testid="facilities-page">
-      <PageHero eyebrow={t("facilities.eyebrow")} title={t("facilities.title")} intro={t("facilities.intro")} image={IMAGES.production} />
+      <PageHero eyebrow={t("facilities.eyebrow")} title={t("facilities.title")} intro={t("facilities.intro")} image={IMAGES.facilityComplex} />
       
       {/* Facilities Overview Blocks */}
       <section className="bg-white py-16 md:py-24">

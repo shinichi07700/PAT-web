@@ -3,9 +3,12 @@
 
 export const IMAGES = {
   heroField: "https://images.pexels.com/photos/5555232/pexels-photo-5555232.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200",
-  lab: "https://images.pexels.com/photos/3735711/pexels-photo-3735711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200",
+  lab: "/images/facilities/facility-lab.jpg",
   microbes: "https://images.pexels.com/photos/5842129/pexels-photo-5842129.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200",
-  testTubes: "https://images.pexels.com/photos/8533087/pexels-photo-8533087.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200",
+  testTubes: "/images/facilities/facility-warehouse.jpg",
+  facilityComplex: "/images/facilities/facility-complex.jpg",
+  facilityLab: "/images/facilities/facility-lab.jpg",
+  facilityWarehouse: "/images/facilities/facility-warehouse.jpg",
   farm: "https://images.unsplash.com/photo-1560493676-04071c5f467b?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
   ricePaddy: "https://images.unsplash.com/photo-1536657464919-892534f60d6e?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
   palmOil: "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
@@ -14,7 +17,7 @@ export const IMAGES = {
   farmerField: "https://images.pexels.com/photos/2382904/pexels-photo-2382904.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200",
   greenhouse: "https://images.pexels.com/photos/2933243/pexels-photo-2933243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200",
   expedition: "https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200",
-  production: "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200",
+  production: "/images/facilities/facility-complex.jpg",
   teamField: "https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200",
   careerLab: "./images/career/career-lab.jpg",
 };
@@ -1622,11 +1625,11 @@ export const FIELD_VIDEOS = [
     embedId: "tj89dLIYVLg",
   },
   {
-    title: "Cerita Tani — Stroberi, Bandung",
-    crop: "Stroberi",
-    location: "Bandung",
-    thumb: "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
-    url: "https://www.youtube.com/watch?v=wrpHZqOc4-A&t=1s",
-    embedId: "wrpHZqOc4-A",
+    title: "Cerita Tani — Toko Siar Pusaka Tani, Karawang",
+    crop: "Toko Pertanian / Padi",
+    location: "Karawang",
+    thumb: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+    url: "https://www.youtube.com/watch?v=UY6IsAgmBv4&t=1s",
+    embedId: "UY6IsAgmBv4",
   },
 ];
