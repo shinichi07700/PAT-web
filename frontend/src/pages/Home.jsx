@@ -101,13 +101,13 @@ export default function Home() {
             {STATS.map((s, idx) => (
               <motion.div key={s.key} variants={staggerItem} className="flex items-center gap-4" data-testid={`stat-${s.key}`}>
                 <div
-                  className="w-12 h-12 md:w-14 md:h-14 bg-white/20 backdrop-blur-sm flex items-center justify-center text-white shrink-0 shadow-sm"
-                  style={{ borderRadius: '0 16px 0 16px' }}
+                  className="w-14 h-14 md:w-16 md:h-16 bg-white/20 backdrop-blur-sm flex items-center justify-center text-white shrink-0 shadow-sm"
+                  style={{ borderRadius: '0 18px 0 18px' }}
                 >
                   <img
                     src={`./images/icons/stat-${s.key}.png`}
                     alt={t(`stats.${s.key}`)}
-                    className="max-w-[22px] max-h-[22px] md:max-w-[26px] md:max-h-[26px] object-contain"
+                    className="w-7 h-7 md:w-9 md:h-9 object-contain"
                   />
                 </div>
                 <div>
