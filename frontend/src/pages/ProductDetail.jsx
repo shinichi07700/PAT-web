@@ -230,31 +230,42 @@ function SpecTable({ rows }) {
   );
 }
 
-function DataTable({ head, rows, slideLabel }) {
-  const { t } = useLang();
+function DataTable({ head, rows }) {
+  // Column width hints: Crop ~24%, Dosage ~26%, Method ~24%, Timing ~26%
+  const colWidths = ["w-[24%]", "w-[26%]", "w-[24%]", "w-[26%]"];
+
   return (
-    <div className="relative">
-      <div className="rounded-2xl border border-[#5C5C5C]/15 overflow-x-auto touch-pan-x">
-        <table className="w-full text-xs sm:text-sm min-w-[460px] sm:min-w-[520px]">
-          <thead>
-            <tr className="bg-[#1C3A1F] text-white">
-              {head.map((h) => <th key={h} className="px-3.5 sm:px-5 py-3 text-left font-semibold">{h}</th>)}
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map((r, i) => (
-              <tr key={i} className={i % 2 ? "bg-[#F7F6F2]" : "bg-white"}>
-                {r.map((cell, j) => (
-                  <td key={j} className={`px-3.5 sm:px-5 py-3 sm:py-3.5 ${j === 0 ? "font-semibold text-[#1C3A1F]" : "text-[#1A1A1A]"}`}>{cell}</td>
-                ))}
-              </tr>
+    <div className="rounded-2xl border border-[#5C5C5C]/15 overflow-hidden">
+      <table className="w-full table-fixed text-[11px] sm:text-xs md:text-sm">
+        <thead>
+          <tr className="bg-[#1C3A1F] text-white">
+            {head.map((h, idx) => (
+              <th
+                key={h}
+                className={`px-2 sm:px-4 py-2.5 sm:py-3 text-left font-semibold leading-tight break-words ${colWidths[idx] || ""}`}
+              >
+                {h}
+              </th>
             ))}
-          </tbody>
-        </table>
-      </div>
-      <div className="sm:hidden text-[11px] text-[#5C5C5C]/60 text-right mt-1 font-medium">
-        {slideLabel || t("product.slideTable") || "← Slide table →"}
-      </div>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r, i) => (
+            <tr key={i} className={i % 2 ? "bg-[#F7F6F2]" : "bg-white"}>
+              {r.map((cell, j) => (
+                <td
+                  key={j}
+                  className={`px-2 sm:px-4 py-2.5 sm:py-3.5 align-top leading-snug break-words ${
+                    j === 0 ? "font-semibold text-[#1C3A1F]" : "text-[#1A1A1A]"
+                  } ${colWidths[j] || ""}`}
+                >
+                  {cell}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
