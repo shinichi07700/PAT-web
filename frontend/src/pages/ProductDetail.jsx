@@ -44,7 +44,9 @@ export default function ProductDetail() {
                   {p.regNo && (
                     <div className="text-sm">
                       <span className="text-[#5C5C5C]">{t("product.regNo")}: </span>
-                      <span className="font-semibold text-[#1C3A1F]">{p.regNo}</span>
+                      <span className="font-semibold text-[#1C3A1F]">
+                        {typeof p.regNo === "object" ? (p.regNo[lang] || p.regNo.en) : p.regNo}
+                      </span>
                     </div>
                   )}
                   <div className="flex flex-wrap gap-1.5 pt-1 items-center">
@@ -90,13 +92,34 @@ export default function ProductDetail() {
             </Block>
           )}
 
-          <Block title={t("product.formulation")}>
-            <SpecTable rows={p.formulation} />
-          </Block>
+          {(() => {
+            const formulationRows = p.formulation
+              ? (Array.isArray(p.formulation)
+                  ? p.formulation
+                  : (p.formulation[lang] || p.formulation.en || []))
+              : [];
+            return formulationRows.length > 0 ? (
+              <Block title={t("product.formulation")}>
+                <SpecTable rows={formulationRows} />
+              </Block>
+            ) : null;
+          })()}
 
-          <Block title={t("product.application")}>
-            <DataTable head={["Crop", "Dosage", "Method", "Timing"]} rows={p.application} />
-          </Block>
+          {(() => {
+            const applicationRows = p.application
+              ? (Array.isArray(p.application)
+                  ? p.application
+                  : (p.application[lang] || p.application.en || []))
+              : [];
+            const applicationHead = lang === "id"
+              ? ["Tanaman", "Dosis", "Metode", "Waktu Aplikasi"]
+              : ["Crop", "Dosage", "Method", "Timing"];
+            return applicationRows.length > 0 ? (
+              <Block title={t("product.application")}>
+                <DataTable head={applicationHead} rows={applicationRows} />
+              </Block>
+            ) : null;
+          })()}
 
           <Block title={t("product.certifications")}>
             <div className="grid sm:grid-cols-2 gap-4 md:gap-6">

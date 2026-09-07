@@ -134,7 +134,11 @@ export const CATEGORY_PAGES = {
   },
 };
 
-export const CROPS = ["Paddy", "Corn", "Chilli", "Tomato", "Potato", "Shallot", "Oil Palm", "Sugarcane", "Banana", "Durian", "Cacao", "Citrus"];
+export const CROPS = [
+  "Paddy", "Corn", "Chilli", "Tomato", "Potato", "Shallot", "Oil Palm", "Sugarcane",
+  "Banana", "Durian", "Cacao", "Citrus", "Avocado", "Cabbage", "Cucumber", "Dragon Fruit",
+  "Edamame", "Melon", "Patchouli", "Radish", "Watermelon"
+];
 
 const TYPE_META = {
   "Bio Fertilizer": {
@@ -201,10 +205,10 @@ export const ALL_PRODUCTS_DATA = [
   {
     name: "SEUDOFLOR",
     type: "Bio Fungicide",
-    activeOrganism: "Pseudomonas fluorescens",
+    activeOrganism: "Pseudomonas fluorescens + Bacillus subtilis + Bacillus velezensis",
     regNo: "RI.01060120258873",
-    cardCrops: ["Banana", "Chilli", "Tomato"],
-    crops: ["Banana", "Chilli", "Tomato", "Potato", "Melon"],
+    cardCrops: ["Banana","Chilli","Tomato"],
+    crops: ["Banana","Chilli","Tomato","Potato","Melon"],
     image: "/images/products/seudoflor.jpg",
     keyBenefit: {
       en: "Formulated as a soil protector & root activator for horticultural crops, preventing sudden wilting and Pythium infection.",
@@ -226,71 +230,38 @@ export const ALL_PRODUCTS_DATA = [
         "Diformulasikan sebagai pelindung akar & aktivator tanah untuk tanaman hortikultura",
       ],
     },
-    what: {
-      en: "SEUDOFLOR is formulated with Pseudomonas fluorescens to protect root zones against sudden wilt and early Pythium damping-off while mobilizing bound phosphate for vigorous root establishment.",
-      id: "SEUDOFLOR diformulasikan dengan Pseudomonas fluorescens untuk melindungi zona perakaran dari layu mendadak dan infeksi Pythium sejak awal tanam, sekaligus melarutkan fosfat untuk pertumbuhan akar yang optimal.",
-    },
-    formulation: [
-      ["Active organism", "Pseudomonas fluorescens"],
-      ["Concentration", "≥ 1 × 10⁸ CFU/g"],
-      ["Formulation type", "Wettable powder (WP)"],
-      ["Shelf life", "24 months (ANHYDRIOM™)"],
-    ],
-    application: [
-      ["Chilli / Tomato", "2.5–5 g/L water", "Root drench / spray", "At planting & every 10–14 days"],
-      ["Potato / Melon", "2–5 kg/ha", "Soil application", "Pre-planting soil treatment"],
-    ],
-  },
-  {
-    name: "PAENAMAXI",
-    type: "Bio Fungicide",
-    activeOrganism: "Paenibacillus polymyxa + Bacillus amyloliquefaciens",
-    regNo: "RI.01020120227340",
-    cardCrops: ["Shallot", "Paddy", "Cucumber"],
-    crops: ["Shallot", "Paddy", "Cucumber", "Melon", "Watermelon"],
-    image: "/images/products/paenamaxi.jpg",
-    keyBenefit: {
-      en: "Contains bioactive compounds that help control Rice Blast, Bacterial Leaf Blight, and shallot Purple Spot.",
-      id: "Mengandung senyawa bioaktif untuk membantu mengendalikan Blas, Hawar Daun Bakteri pada padi, dan Bercak Ungu bawang merah.",
-    },
-    benefits: {
+    formulation: {
       en: [
-        "Developed to help control Rice Blast and Bacterial Leaf Blight in rice",
-        "Helps control Purple Spot/Alternaria Leaf Spot in shallot",
-        "Supports control of Powdery Mildew and Downy Mildew",
-        "Helps manage Coffee Leaf Rust; preventive application is recommended",
-        "Contains Paenibacillus polymyxa and Bacillus amyloliquefaciens, which produce bioactive compounds that inhibit fungal and bacterial pathogens",
+        ["Active organism", "Pseudomonas fluorescens + Bacillus subtilis + Bacillus velezensis"],
+        ["Concentration", "≥ 1 × 10⁸ CFU/g"],
+        ["Formulation type", "Wettable powder (WP)"],
+        ["Shelf life", "60 months (ANHYDRIOM™)"],
       ],
       id: [
-        "Dikembangkan untuk membantu mengendalikan Blas dan Hawar Daun Bakteri pada padi",
-        "Membantu mengendalikan Bercak Ungu/Alternaria pada bawang merah",
-        "Mendukung pengendalian Embun Tepung dan Embun Bulu",
-        "Membantu mengatasi Karat Daun pada tanaman kopi; aplikasi preventif disarankan",
-        "Mengandung Paenibacillus polymyxa dan Bacillus amyloliquefaciens yang menghasilkan senyawa bioaktif penghambat patogen jamur dan bakteri",
+        ["Organisme aktif", "Pseudomonas fluorescens + Bacillus subtilis + Bacillus velezensis"],
+        ["Konsentrasi", "≥ 1 × 10⁸ CFU/g"],
+        ["Jenis formulasi", "Tepung yang Dapat Disuspensikan (WP)"],
+        ["Masa simpan", "60 bulan (ANHYDRIOM™)"],
       ],
     },
-    what: {
-      en: "PAENAMAXI uses a dual-strain bacterial biofungicide (Paenibacillus polymyxa and Bacillus amyloliquefaciens) to produce bioactive secondary metabolites that inhibit both fungal and bacterial leaf and panicle diseases.",
-      id: "PAENAMAXI menggunakan biofungisida bakteri ganda (Paenibacillus polymyxa dan Bacillus amyloliquefaciens) yang menghasilkan metabolit sekunder bioaktif untuk menghambat patogen jamur dan bakteri pada daun dan malai.",
+    application: {
+      en: [
+        ["Chilli / Tomato", "400 g/Ha/app", "Root drench / soil spray", "At planting & every 10–14 days"],
+        ["Potato / Melon", "400 g/Ha/app", "Root drench", "Pre-planting & every 10–14 days"],
+      ],
+      id: [
+        ["Cabai / Tomat", "400 g/Ha/app", "Kocor akar / semprot tanah", "Saat tanam & setiap 10–14 hari"],
+        ["Kentang / Melon", "400 g/Ha/app", "Kocor akar", "Pra-tanam & setiap 10–14 hari"],
+      ],
     },
-    formulation: [
-      ["Active organism", "Paenibacillus polymyxa + Bacillus amyloliquefaciens"],
-      ["Concentration", "≥ 1 × 10⁸ CFU/g"],
-      ["Formulation type", "Wettable powder (WP)"],
-      ["Shelf life", "24 months (ANHYDRIOM™)"],
-    ],
-    application: [
-      ["Paddy", "2.5–5 g/L water", "Foliar spray", "At tillering and booting stage"],
-      ["Shallot", "2.5–5 g/L water", "Foliar spray", "Every 7–10 days preventive"],
-    ],
   },
   {
     name: "BIOTRACOL",
     type: "Bio Fungicide",
-    activeOrganism: "Trichoderma asperellum + Bacillus subtilis",
+    activeOrganism: "Trichoderma sp. + Streptomyces sp.",
     regNo: "RI.01020120186156",
-    cardCrops: ["Banana", "Chilli", "Cacao"],
-    crops: ["Banana", "Chilli", "Tomato", "Potato", "Cacao", "Avocado", "Cabbage", "Citrus", "Durian"],
+    cardCrops: ["Banana","Chilli","Tomato"],
+    crops: ["Banana","Chilli","Tomato","Potato","Cacao","Avocado","Cabbage","Citrus","Durian"],
     image: "/images/products/biotracol.jpg",
     keyBenefit: {
       en: "Contains active microorganisms that help suppress symptoms of Phytophthora (fruit rot, root rot) and Sigatoka disease.",
@@ -310,69 +281,40 @@ export const ALL_PRODUCTS_DATA = [
         "Mendukung kondisi tanaman cabai, kakao, dan pisang tetap sehat dan produktif dengan aplikasi yang tepat dan teratur",
       ],
     },
-    what: {
-      en: "BIOTRACOL combines active antagonist microorganisms that colonize crop surfaces to outcompete and suppress Phytophthora fruit/root rot and Sigatoka disease, leaving zero chemical residue.",
-      id: "BIOTRACOL menggabungkan mikroorganisme antagonis aktif yang mengoloni permukaan tanaman untuk menekan penyakit busuk Phytophthora dan Sigatoka tanpa meninggalkan residu kimia berbahaya.",
-    },
-    formulation: [
-      ["Active organism", "Trichoderma asperellum + Bacillus subtilis"],
-      ["Concentration", "≥ 1 × 10⁹ CFU/g"],
-      ["Formulation type", "Wettable powder (WP)"],
-      ["Shelf life", "24 months (ANHYDRIOM™)"],
-    ],
-    application: [
-      ["Banana", "5 g/L water", "Foliar & drench", "Every 10–14 days"],
-      ["Durian", "10 g/L water", "Soil drench", "Monthly"],
-      ["Cacao", "5 g/L water", "Foliar spray", "Every 14 days"],
-    ],
-  },
-  {
-    name: "MOLERIMAX",
-    type: "Bio Fungicide",
-    activeOrganism: "Acremonium variecolor",
-    regNo: "RI.01020120258841",
-    cardCrops: ["Shallot"],
-    crops: ["Shallot"],
-    image: "/images/products/molerimax.jpg",
-    keyBenefit: {
-      en: "Developed specifically to help control Fusarium Wilt (Moler disease) in shallot using endophytic Acremonium variecolor.",
-      id: "Dikembangkan khusus untuk membantu mengendalikan penyakit Layu Fusarium (Moler) pada bawang merah dengan cendawan endofit.",
-    },
-    benefits: {
+    formulation: {
       en: [
-        "Developed specifically to help control Fusarium Wilt (Moler disease) in shallot",
-        "Contains an endophytic fungus (Acremonium variecolor) that enters plant tissue to help defend against Fusarium oxysporum",
-        "Works by boosting the plant's own defensive exudates against the pathogen",
-        "Soluble powder formulation, easy to apply mixed with fertilizer or as a drench",
+        ["Active organism", "Trichoderma sp. + Streptomyces sp."],
+        ["Concentration", "≥ 1 × 106 CFU/g"],
+        ["Formulation type", "Wettable powder (WP)"],
+        ["Shelf life", "60 months (ANHYDRIOM™)"],
       ],
       id: [
-        "Dikembangkan khusus untuk membantu mengendalikan penyakit Layu Fusarium (Moler) pada bawang merah",
-        "Mengandung cendawan endofit (Acremonium variecolor) yang masuk ke jaringan tanaman untuk membantu melawan Fusarium oxysporum",
-        "Bekerja dengan meningkatkan eksudat pertahanan alami tanaman terhadap patogen",
-        "Formulasi tepung larut, mudah diaplikasikan dicampur pupuk atau dikocorkan",
+        ["Organisme aktif", "Trichoderma sp. + Streptomyces sp."],
+        ["Konsentrasi", "≥ 1 × 106 CFU/g"],
+        ["Jenis formulasi", "Tepung yang Dapat Disuspensikan (WP)"],
+        ["Masa simpan", "60 bulan (ANHYDRIOM™)"],
       ],
     },
-    what: {
-      en: "MOLERIMAX is an endophytic biofungicide containing Acremonium variecolor that colonizes shallot vascular tissue, stimulating defensive exudates that suppress Fusarium oxysporum (Moler disease).",
-      id: "MOLERIMAX adalah biofungisida endofit berbahan aktif Acremonium variecolor yang mengoloni jaringan tanaman bawang merah, memicu eksudat pertahanan alami untuk melawan Fusarium oxysporum (penyakit Moler).",
+    application: {
+      en: [
+        ["Banana", "0,5 - 1 g/L water", "Foliar Spray", "Every 7 – 14 days"],
+        ["Durian", "0,5 - 1 g/L water", "Foliar spray / Soil drench", "Monthly"],
+        ["Cacao", "0,5 - 1 g/L water", "Foliar spray / Soil drench", "Every 14 days"],
+      ],
+      id: [
+        ["Pisang", "0,5 – 1 g/L air", "Semprot daun", "Setiap 7–14 hari"],
+        ["Durian", "0,5 – 1 g/L air", "Semprot daun / Kocor tanah", "Bulanan"],
+        ["Kakao", "0,5 – 1 g/L air", "Semprot daun / Kocor tanah", "Setiap 14 hari"],
+      ],
     },
-    formulation: [
-      ["Active organism", "Acremonium variecolor (endophytic fungus)"],
-      ["Concentration", "≥ 1 × 10⁸ CFU/g"],
-      ["Formulation type", "Soluble powder"],
-      ["Shelf life", "24 months (ANHYDRIOM™)"],
-    ],
-    application: [
-      ["Shallot", "2–5 kg/ha or 5 g/L", "Soil drench / fertilizer mix", "At planting, 15, and 30 DAP"],
-    ],
   },
   {
     name: "BT PLUS",
     type: "Bio Insecticide",
     activeOrganism: "Bacillus thuringiensis + Serratia marcescens",
     regNo: "RI.01010120175741",
-    cardCrops: ["Oil Palm", "Paddy", "Banana"],
-    crops: ["Oil Palm", "Paddy", "Banana", "Corn", "Sugarcane"],
+    cardCrops: ["Oil Palm","Paddy","Banana"],
+    crops: ["Oil Palm","Paddy","Banana","Corn","Sugarcane"],
     image: "/images/products/bt-plus.jpg",
     keyBenefit: {
       en: "Helps control armyworm, rice leaf folder, stem borer, and fire caterpillar specifically without harming pollinators.",
@@ -392,28 +334,38 @@ export const ALL_PRODUCTS_DATA = [
         "Kombinasi Bacillus thuringiensis dan Serratia marcescens bekerja melalui sistem pencernaan larva",
       ],
     },
-    what: {
-      en: "BT PLUS combines Bacillus thuringiensis and Serratia marcescens to deliver potent biological control targeting the digestive systems of Lepidopteran larvae across food crops and plantations.",
-      id: "BT PLUS memadukan Bacillus thuringiensis dan Serratia marcescens untuk memberikan pengendalian hayati efektif yang merusak sistem pencernaan larva Lepidoptera pada tanaman pangan dan perkebunan.",
+    formulation: {
+      en: [
+        ["Active organism", "Bacillus thuringiensis + Serratia marcescens"],
+        ["Concentration", "≥ 1 × 10⁸ CFU/g"],
+        ["Formulation type", "Wettable powder (WP)"],
+        ["Shelf life", "60 months (ANHYDRIOM™)"],
+      ],
+      id: [
+        ["Organisme aktif", "Bacillus thuringiensis + Serratia marcescens"],
+        ["Konsentrasi", "≥ 1 × 10⁸ CFU/g"],
+        ["Jenis formulasi", "Tepung yang Dapat Disuspensikan (WP)"],
+        ["Masa simpan", "60 bulan (ANHYDRIOM™)"],
+      ],
     },
-    formulation: [
-      ["Active organism", "Bacillus thuringiensis + Serratia marcescens"],
-      ["Concentration", "≥ 1 × 10⁸ CFU/g"],
-      ["Formulation type", "Wettable powder (WP)"],
-      ["Shelf life", "36 months (ANHYDRIOM™)"],
-    ],
-    application: [
-      ["Paddy", "1–2 kg/ha", "Foliar spray", "At early larval infestation"],
-      ["Oil Palm", "2 kg/ha", "Foliar / fogging", "Targeting fire caterpillar"],
-    ],
+    application: {
+      en: [
+        ["Paddy", "300 g/Ha/app", "Mix Fertilizer (Direct Spread)", "1st and 2nd fertilizing"],
+        ["Oil Palm", "250 – 500 g/Ha/app", "Foliar Spray", "Approaching the treshold"],
+      ],
+      id: [
+        ["Padi", "300 g/Ha/app", "Campur pupuk (sebar langsung)", "Pemupukan pertama dan kedua"],
+        ["Kelapa Sawit", "250 – 500 g/Ha/app", "Semprot daun", "Mendekati ambang batas (threshold)"],
+      ],
+    },
   },
   {
-    name: "BT-MAX",
+    name: "BT MAX",
     type: "Bio Insecticide",
     activeOrganism: "Bacillus thuringiensis + Serratia marcescens",
     regNo: "RI.01010120227288",
-    cardCrops: ["Oil Palm", "Paddy", "Shallot"],
-    crops: ["Oil Palm", "Paddy", "Shallot", "Banana", "Corn", "Sugarcane", "Cabbage", "Edamame"],
+    cardCrops: ["Oil Palm","Paddy","Shallot"],
+    crops: ["Oil Palm","Paddy","Shallot","Banana","Corn","Sugarcane","Cabbage","Edamame"],
     image: "/images/products/bt-max.jpg",
     keyBenefit: {
       en: "Targets Lepidoptera pests specifically to stop feeding activity while reducing pest resistance risk.",
@@ -433,69 +385,38 @@ export const ALL_PRODUCTS_DATA = [
         "Bekerja melalui sistem pencernaan larva untuk menghentikan aktivitas makan hama",
       ],
     },
-    what: {
-      en: "BT-MAX delivers high-potency Bacillus thuringiensis and Serratia marcescens that act on larval midguts to quickly halt feeding and control destructive caterpillar populations.",
-      id: "BT-MAX menghadirkan Bacillus thuringiensis dan Serratia marcescens berpotensi tinggi yang bekerja pada saluran cerna larva untuk segera menghentikan aktivitas makan ulat hama.",
-    },
-    formulation: [
-      ["Active organism", "Bacillus thuringiensis + Serratia marcescens"],
-      ["Concentration", "≥ 1 × 10⁹ CFU/g"],
-      ["Formulation type", "Wettable powder (WP)"],
-      ["Shelf life", "36 months (ANHYDRIOM™)"],
-    ],
-    application: [
-      ["Oil Palm", "2 kg/ha", "Mix with fertilizer / spray", "Per fertilization cycle"],
-      ["Corn / Cabbage", "1 kg/ha", "Foliar spray", "At early vegetative stage"],
-    ],
-  },
-  {
-    name: "BIONEMATO",
-    type: "Bio Insecticide",
-    activeOrganism: "Acremonium variecolor + Cordyceps fumosorosea",
-    regNo: "RI.01130120259178",
-    cardCrops: ["Potato", "Tomato"],
-    crops: ["Potato", "Tomato", "Cabbage"],
-    image: "/images/products/bionemato.jpg",
-    keyBenefit: {
-      en: "Bio-nematicide containing entomopathogenic fungi to control Yellow Cyst Nematode in potato and Root-Knot Nematode in tomato.",
-      id: "Bio-nematisida berbahan cendawan entomopatogen untuk mengendalikan Nematoda Sista Kuning pada kentang dan Puru Akar pada tomat.",
-    },
-    benefits: {
+    formulation: {
       en: [
-        "Developed as a bio-nematicide to help control Yellow Cyst Nematode in potato",
-        "Helps control Root-Knot Nematode in tomato",
-        "Contains entomopathogenic fungi (Acremonium variecolor and Cordyceps fumosorosea) that target nematode eggs and larvae",
-        "Recommended as a preventive soil drench at planting, with follow-up applications at 30, 45, and 60 days after planting",
+        ["Active organism", "Bacillus thuringiensis + Serratia marcescens"],
+        ["Concentration", "≥ 1 × 107 CFU/g"],
+        ["Formulation type", "Wettable powder (WP)"],
+        ["Shelf life", "60 months (ANHYDRIOM™)"],
       ],
       id: [
-        "Dikembangkan sebagai bio-nematisida untuk membantu mengendalikan Nematoda Sista Kuning pada kentang",
-        "Membantu mengendalikan Nematoda Puru Akar pada tomat",
-        "Mengandung cendawan entomopatogen (Acremonium variecolor dan Cordyceps fumosorosea) yang menyasar telur dan larva nematoda",
-        "Direkomendasikan sebagai pengocoran preventif saat tanam, dilanjutkan pada 30, 45, dan 60 hari setelah tanam",
+        ["Organisme aktif", "Bacillus thuringiensis + Serratia marcescens"],
+        ["Konsentrasi", "≥ 1 × 107 CFU/g"],
+        ["Jenis formulasi", "Tepung yang Dapat Disuspensikan (WP)"],
+        ["Masa simpan", "60 bulan (ANHYDRIOM™)"],
       ],
     },
-    what: {
-      en: "BIONEMATO is an innovative bio-nematicide formulated with Acremonium variecolor and Cordyceps fumosorosea to parasitize and destroy plant-parasitic nematode eggs and juveniles in the root zone.",
-      id: "BIONEMATO adalah bio-nematisida inovatif berbahan aktif Acremonium variecolor dan Cordyceps fumosorosea yang memparasit dan merusak telur serta larva nematoda parasit tanaman di zona perakaran.",
+    application: {
+      en: [
+        ["Oil Palm", "250 – 500 g/Ha/App", "Mix with fertilizer / spray", "Approaching the treshold"],
+        ["Corn / Cabbage", "1 g/L", "Foliar spray", "Once a week"],
+      ],
+      id: [
+        ["Kelapa Sawit", "250 – 500 g/Ha/App", "Campur dengan pupuk / semprot", "Mendekati ambang batas (threshold)"],
+        ["Jagung / Kubis", "1 g/L", "Semprot daun", "Sekali seminggu"],
+      ],
     },
-    formulation: [
-      ["Active organism", "Acremonium variecolor + Cordyceps fumosorosea"],
-      ["Concentration", "≥ 1 × 10⁸ CFU/g"],
-      ["Formulation type", "Wettable powder (WP)"],
-      ["Shelf life", "24 months (ANHYDRIOM™)"],
-    ],
-    application: [
-      ["Potato", "5 kg/ha or 5 g/L", "Soil drench", "At planting, 30, 45, 60 DAP"],
-      ["Tomato", "5 g/L water", "Root zone drench", "At planting & monthly"],
-    ],
   },
   {
     name: "METARIZEP",
     type: "Bio Insecticide",
     activeOrganism: "Metarhizium anisopliae + Beauveria bassiana",
     regNo: "RI.01010120175772",
-    cardCrops: ["Paddy", "Chilli", "Shallot"],
-    crops: ["Paddy", "Chilli", "Shallot", "Oil Palm"],
+    cardCrops: ["Paddy","Chilli","Shallot"],
+    crops: ["Paddy","Chilli","Shallot","Oil Palm"],
     image: "/images/products/metarizep.jpg",
     keyBenefit: {
       en: "Dual entomopathogenic fungi protecting rice from brown planthopper/rice bug and controlling thrips on chili and shallot.",
@@ -515,28 +436,38 @@ export const ALL_PRODUCTS_DATA = [
         "Mendukung rotasi program pengendalian hama",
       ],
     },
-    what: {
-      en: "METARIZEP uses a dual entomopathogenic fungi formulation that infects sap-sucking and chewing insect pests through direct cuticle contact, providing broad protection with minimal resistance risk.",
-      id: "METARIZEP menggunakan formulasi jamur entomopatogen ganda yang menginfeksi hama pengisap dan pengunyah melalui kontak kutikula, memberikan perlindungan luas dengan risiko resistensi minimal.",
+    formulation: {
+      en: [
+        ["Active organism", "Metarhizium anisopliae + Beauveria bassiana"],
+        ["Concentration", "≥ 1 × 106 CFU/g"],
+        ["Formulation type", "Wettable powder (WP)"],
+        ["Shelf life", "60 months (ANHYDRIOM™)"],
+      ],
+      id: [
+        ["Organisme aktif", "Metarhizium anisopliae + Beauveria bassiana"],
+        ["Konsentrasi", "≥ 1 × 106 CFU/g"],
+        ["Jenis formulasi", "Tepung yang Dapat Disuspensikan (WP)"],
+        ["Masa simpan", "60 bulan (ANHYDRIOM™)"],
+      ],
     },
-    formulation: [
-      ["Active organism", "Metarhizium anisopliae + Beauveria bassiana"],
-      ["Concentration", "≥ 1 × 10⁹ CFU/g"],
-      ["Formulation type", "Wettable powder (WP)"],
-      ["Shelf life", "36 months (ANHYDRIOM™)"],
-    ],
-    application: [
-      ["Paddy", "2–4 g/L water", "Foliar spray", "At first sign of planthoppers"],
-      ["Chilli / Shallot", "2–3 g/L water", "Foliar spray", "Targeting thrips preventive"],
-    ],
+    application: {
+      en: [
+        ["Paddy", "1 - 2 g/L water", "Foliar spray", "At first sign of planthoppers"],
+        ["Chilli / Melon", "1 - 2 g/L water", "Foliar spray", "1 – 2 times a week"],
+      ],
+      id: [
+        ["Padi", "1 – 2 g/L air", "Semprot daun", "Saat tanda awal wereng muncul"],
+        ["Cabai / Melon", "1 – 2 g/L air", "Semprot daun", "1–2 kali seminggu"],
+      ],
+    },
   },
   {
     name: "ENTOMOBAC",
     type: "Bio Insecticide",
     activeOrganism: "Metarhizium anisopliae + Beauveria bassiana",
     regNo: "RI.01010120186029",
-    cardCrops: ["Paddy", "Cacao", "Oil Palm"],
-    crops: ["Paddy", "Cacao", "Oil Palm", "Shallot", "Cucumber", "Edamame", "Melon", "Watermelon"],
+    cardCrops: ["Paddy","Cacao","Oil Palm"],
+    crops: ["Paddy","Cacao","Oil Palm","Shallot","Cucumber","Edamame","Melon","Watermelon"],
     image: "/images/products/entomobac.jpg",
     keyBenefit: {
       en: "Dual entomopathogenic fungi formulation to control brown planthopper, legume leafminer, and coffee berry borer.",
@@ -558,28 +489,38 @@ export const ALL_PRODUCTS_DATA = [
         "Mendukung rotasi program pengendalian hama",
       ],
     },
-    what: {
-      en: "ENTOMOBAC is a purely fungal dual-agent bioinsecticide combining Metarhizium anisopliae and Beauveria bassiana to control difficult plantation and horticultural insect pests.",
-      id: "ENTOMOBAC adalah bioinsektisida berbahan aktif dua jamur (Metarhizium anisopliae dan Beauveria bassiana) untuk mengendalikan hama penting pada tanaman perkebunan dan hortikultura.",
+    formulation: {
+      en: [
+        ["Active organism", "Metarhizium anisopliae + Beauveria bassiana"],
+        ["Concentration", "≥ 1 × 106 CFU/g"],
+        ["Formulation type", "Wettable powder (WP)"],
+        ["Shelf life", "60 months (ANHYDRIOM™)"],
+      ],
+      id: [
+        ["Organisme aktif", "Metarhizium anisopliae + Beauveria bassiana"],
+        ["Konsentrasi", "≥ 1 × 106 CFU/g"],
+        ["Jenis formulasi", "Tepung yang Dapat Disuspensikan (WP)"],
+        ["Masa simpan", "60 bulan (ANHYDRIOM™)"],
+      ],
     },
-    formulation: [
-      ["Active organism", "Metarhizium anisopliae + Beauveria bassiana"],
-      ["Concentration", "≥ 1 × 10⁹ CFU/g"],
-      ["Formulation type", "Wettable powder (WP)"],
-      ["Shelf life", "36 months (ANHYDRIOM™)"],
-    ],
-    application: [
-      ["Paddy", "2–4 g/L water", "Foliar spray", "At early pest onset"],
-      ["Legumes", "2 g/L water", "Foliar spray", "Every 7–10 days"],
-    ],
+    application: {
+      en: [
+        ["Paddy", "1 - 2 g/L water", "Foliar spray", "At first sign of planthoppers"],
+        ["Chilli / Melon", "1 - 2 g/L water", "Foliar spray", "1 – 2 times a week"],
+      ],
+      id: [
+        ["Padi", "1 – 2 g/L air", "Semprot daun", "Saat tanda awal wereng muncul"],
+        ["Cabai / Melon", "1 – 2 g/L air", "Semprot daun", "1–2 kali seminggu"],
+      ],
+    },
   },
   {
     name: "CRYSOKILL",
     type: "Bio Insecticide",
-    activeOrganism: "Lecanicillium lecanii",
+    activeOrganism: "Metarhizium robertsii + Cordyceps fumosorosea",
     regNo: "RI.01010120227511",
-    cardCrops: ["Sugarcane", "Citrus", "Avocado"],
-    crops: ["Sugarcane", "Citrus", "Avocado", "Dragon Fruit", "Durian"],
+    cardCrops: ["Sugarcane","Citrus","Avocado"],
+    crops: ["Sugarcane","Citrus","Avocado","Dragon Fruit","Durian"],
     image: "/images/products/crysokill.jpg",
     keyBenefit: {
       en: "Natural entomopathogenic fungi controlling sap-sucking and chewing pests, including Oteng-oteng and scale insects.",
@@ -599,28 +540,40 @@ export const ALL_PRODUCTS_DATA = [
         "Cocok untuk pengendalian tahap awal serangan hama pada tanaman hortikultura dan perkebunan",
       ],
     },
-    what: {
-      en: "CRYSOKILL contains natural entomopathogenic fungi that infect sap-sucking and chewing insect pests on contact, suited for early preventive management in orchards and plantations.",
-      id: "CRYSOKILL mengandung cendawan entomopatogen alami yang menginfeksi hama pengisap dan pengunyah melalui kontak langsung, cocok untuk pengendalian preventif pada tanaman buah dan perkebunan.",
+    formulation: {
+      en: [
+        ["Active organism", "Metarhizium robertsii + Cordyceps fumosorosea"],
+        ["Concentration", "≥ 1 × 106 CFU/g"],
+        ["Formulation type", "Wettable powder (WP)"],
+        ["Shelf life", "60 months (ANHYDRIOM™)"],
+      ],
+      id: [
+        ["Organisme aktif", "Metarhizium robertsii + Cordyceps fumosorosea"],
+        ["Konsentrasi", "≥ 1 × 106 CFU/g"],
+        ["Jenis formulasi", "Tepung yang Dapat Disuspensikan (WP)"],
+        ["Masa simpan", "60 bulan (ANHYDRIOM™)"],
+      ],
     },
-    formulation: [
-      ["Active organism", "Lecanicillium lecanii"],
-      ["Concentration", "≥ 1 × 10⁹ CFU/g"],
-      ["Formulation type", "Wettable powder (WP)"],
-      ["Shelf life", "36 months (ANHYDRIOM™)"],
-    ],
-    application: [
-      ["Sugarcane", "2 kg/ha", "Foliar spray", "Early scale insect detection"],
-      ["Citrus / Avocado", "2–3 g/L water", "Foliar spray", "Every 10–14 days"],
-    ],
+    application: {
+      en: [
+        ["Sugarcane", "200 g/Ha/app", "Foliar spray", "Early scale insect detection"],
+        ["Citrus", "1 g/L", "Foliar spray", "Every 10–14 days"],
+        ["Dragon Fruit", "1 g/L", "Foliar spray", "Every 10–14 days"],
+      ],
+      id: [
+        ["Tebu", "200 g/Ha/app", "Semprot daun", "Deteksi dini serangan kutu perisai"],
+        ["Jeruk", "1 g/L", "Semprot daun", "Setiap 10–14 hari"],
+        ["Buah Naga", "1 g/L", "Semprot daun", "Setiap 10–14 hari"],
+      ],
+    },
   },
   {
     name: "BIOKILLIA",
     type: "Bio Insecticide",
-    activeOrganism: "Beauveria bassiana",
+    activeOrganism: "Verticillium lecanii + Isaria fumosorosea",
     regNo: "RI.01010120206816",
-    cardCrops: ["Chilli", "Melon"],
-    crops: ["Chilli", "Melon"],
+    cardCrops: ["Chilli","Melon"],
+    crops: ["Chilli","Melon"],
     image: "/images/products/biokillia.jpg",
     keyBenefit: {
       en: "Natural pest control without inducing resistance, helping control aphids, leafhoppers, and mealybugs.",
@@ -640,28 +593,38 @@ export const ALL_PRODUCTS_DATA = [
         "Membantu mengendalikan kutu daun, empoasca, dan kutu putih",
       ],
     },
-    what: {
-      en: "BIOKILLIA leverages biological infection to suppress homopteran pests like aphids and leafhoppers while conserving beneficial predators in integrated pest management systems.",
-      id: "BIOKILLIA memanfaatkan mekanisme infeksi biologis untuk menekan populasi kutu daun dan empoasca sekaligus menjaga kelestarian predator alami dalam sistem PHT.",
+    formulation: {
+      en: [
+        ["Active organism", "Verticillium lecanii + Isaria fumosorosea"],
+        ["Concentration", "≥ 1 × 106 CFU/g"],
+        ["Formulation type", "Wettable powder (WP)"],
+        ["Shelf life", "60 months (ANHYDRIOM™)"],
+      ],
+      id: [
+        ["Organisme aktif", "Verticillium lecanii + Isaria fumosorosea"],
+        ["Konsentrasi", "≥ 1 × 106 CFU/g"],
+        ["Jenis formulasi", "Tepung yang Dapat Disuspensikan (WP)"],
+        ["Masa simpan", "60 bulan (ANHYDRIOM™)"],
+      ],
     },
-    formulation: [
-      ["Active organism", "Beauveria bassiana"],
-      ["Concentration", "≥ 1 × 10⁹ CFU/g"],
-      ["Formulation type", "Wettable powder (WP)"],
-      ["Shelf life", "36 months (ANHYDRIOM™)"],
-    ],
-    application: [
-      ["Chilli", "2–3 g/L water", "Foliar spray", "At first appearance of aphids/thrips"],
-      ["Melon", "2–3 g/L water", "Foliar spray", "Every 7–10 days"],
-    ],
+    application: {
+      en: [
+        ["Chilli", "1 - 2 g/L water", "Foliar spray", "At first appearance of aphids/thrips"],
+        ["Melon", "1 - 2 g/L water", "Foliar spray", "Every 3 - 7 days"],
+      ],
+      id: [
+        ["Cabai", "1 – 2 g/L air", "Semprot daun", "Saat kutu daun/thrips pertama muncul"],
+        ["Melon", "1 – 2 g/L air", "Semprot daun", "Setiap 3 – 7 hari"],
+      ],
+    },
   },
   {
     name: "DECOPRIMA",
     type: "Bio Decomposer",
-    activeOrganism: "Mixed cellulolytic & lignolytic consortium",
+    activeOrganism: "Streptomyces thermovulgaris + Geobacillus thermocatenulatus + Trichoderma harzianum",
     regNo: "03.03.2022.1126",
-    cardCrops: ["Paddy", "Banana", "Chilli"],
-    crops: ["Paddy", "Banana", "Chilli", "Tomato", "Shallot", "Potato", "Avocado", "Cabbage", "Citrus", "Cucumber", "Dragon Fruit", "Durian", "Edamame", "Melon", "Patchouli", "Radish", "Watermelon"],
+    cardCrops: ["Paddy","Banana","Chilli"],
+    crops: ["Paddy","Banana","Chilli","Tomato","Shallot","Potato","Avocado","Cabbage","Citrus","Cucumber","Dragon Fruit","Durian","Edamame","Melon","Patchouli","Radish","Watermelon"],
     image: "/images/products/decoprima.jpg",
     keyBenefit: {
       en: "Aerobic decomposer that accelerates decomposition of rice straw, crop residues, and animal manure into fertile soil.",
@@ -681,28 +644,40 @@ export const ALL_PRODUCTS_DATA = [
         "Dekomposer aerob berbentuk tepung larut, mudah dan praktis diaplikasikan",
       ],
     },
-    what: {
-      en: "DECOPRIMA is a soluble aerobic decomposer consortium that rapidly breaks down cellulose and lignin in agricultural waste, preventing soil-borne disease and restoring biological activity.",
-      id: "DECOPRIMA adalah konsorsium dekomposer aerob larut yang dengan cepat menguraikan selulosa dan lignin pada limbah pertanian, mencegah patogen tular tanah, dan memulihkan aktivitas biologis tanah.",
+    formulation: {
+      en: [
+        ["Active organism", "Streptomyces thermovulgaris + Geobacillus thermocatenulatus + Trichoderma harzianum"],
+        ["Concentration", "≥ 1 × 105 CFU/g"],
+        ["Formulation type", "Powder"],
+        ["Shelf life", "60 months"],
+      ],
+      id: [
+        ["Organisme aktif", "Streptomyces thermovulgaris + Geobacillus thermocatenulatus + Trichoderma harzianum"],
+        ["Konsentrasi", "≥ 1 × 105 CFU/g"],
+        ["Jenis formulasi", "Tepung"],
+        ["Masa simpan", "60 bulan"],
+      ],
     },
-    formulation: [
-      ["Active organism", "Mixed cellulolytic & lignolytic consortium"],
-      ["Concentration", "≥ 1 × 10⁹ CFU/g"],
-      ["Formulation type", "Powder"],
-      ["Shelf life", "24 months"],
-    ],
-    application: [
-      ["Rice straw", "1 kg/tonne", "Spray & incorporate", "Post-harvest"],
-      ["Corn stover", "1 kg/tonne", "Windrow composting", "Post-harvest"],
-    ],
+    application: {
+      en: [
+        ["Rice straw composting", "1 kg/tonne", "Spray & incorporate", "Post-harvest"],
+        ["Soil Preparation", "400 g/Ha", "Soil Spray", "After land preparation"],
+        ["Fusarium Control", "400 g/Ha/App", "Soil Drench", "Every 14 – 30 days"],
+      ],
+      id: [
+        ["Pengomposan Jerami Padi", "1 kg/ton", "Semprot & campur", "Pasca panen"],
+        ["Persiapan Tanah", "400 g/Ha", "Semprot Tanah", "Setelah persiapan lahan"],
+        ["Kontrol Fusarium", "400 g/Ha/App", "Kocor Tanah", "Setiap 14 – 30 hari"],
+      ],
+    },
   },
   {
     name: "TERAPALMA",
     type: "Bio Decomposer",
     activeOrganism: "Bacillus subtilis + Enterobacter sacchari + Trichoderma harzianum + Streptomyces sp.",
-    regNo: "Registration number on progress",
-    cardCrops: ["Oil Palm", "Sugarcane"],
-    crops: ["Oil Palm", "Sugarcane"],
+    regNo: {"en":"Registration number on progress.","id":"Nomor registrasi dalam proses."},
+    cardCrops: ["Oil Palm","Sugarcane"],
+    crops: ["Oil Palm","Sugarcane"],
     image: "/images/products/terapalma.jpg",
     keyBenefit: {
       en: "Facultative aerobic decomposer producing enzymes to decompose oil palm trunk, empty fruit bunches, and bagasse.",
@@ -720,25 +695,37 @@ export const ALL_PRODUCTS_DATA = [
         "Berperan sebagai biokontrol ekosistem perakaran tanaman untuk membantu menekan potensi serangan Ganoderma sp.",
       ],
     },
-    what: {
-      en: "TERAPALMA delivers robust multi-enzyme producing microbes (cellulolytic, lignolytic, proteolytic, chitinolytic) to decompose bulky oil palm and sugarcane residues while reducing Oryctes breeding sites and Ganoderma pressure.",
-      id: "TERAPALMA menghadirkan mikroba penghasil enzim lengkap (selulolitik, lignolitik, proteolitik, kitinolitik) untuk mendekomposisi limbah padat sawit dan tebu sekaligus menekan sarang hama kumbang tanduk Oryctes dan jamur Ganoderma.",
+    formulation: {
+      en: [
+        ["Active organism", "Bacillus subtilis + Enterobacter sacchari + Trichoderma harzianum + Streptomyces sp."],
+        ["Concentration", "≥ 1 × 105 CFU/g"],
+        ["Formulation type", "Powder"],
+        ["Shelf life", "60 months"],
+      ],
+      id: [
+        ["Organisme aktif", "Bacillus subtilis + Enterobacter sacchari + Trichoderma harzianum + Streptomyces sp."],
+        ["Konsentrasi", "≥ 1 × 105 CFU/g"],
+        ["Jenis formulasi", "Tepung"],
+        ["Masa simpan", "60 bulan"],
+      ],
     },
-    formulation: [
-      ["Active organism", "Bacillus subtilis + Enterobacter sacchari + Trichoderma harzianum + Streptomyces sp."],
-      ["Concentration", "≥ 1 × 10⁸ CFU/g"],
-      ["Formulation type", "Powder"],
-      ["Shelf life", "24 months"],
-    ],
-    application: [
-      ["Oil Palm Trunk / EFB", "1–2 kg/tonne", "Spray on shred / windrow", "During replanting / composting"],
-      ["Sugarcane Bagasse", "1 kg/tonne", "Moisten & pile", "Post-milling"],
-    ],
+    application: {
+      en: [
+        ["Oil Palm Trunk Composting", "1 kg/Ha", "Spray on shred / windrow", "2 – 4 weeks after chipping"],
+        ["EFB Composting", "1 kg/ 5 tonne", "Spray", "1 – 2 weeks after production"],
+        ["Ganoderma Prevention", "500 g/Ha/app", "Soil & Trunk Spray (mix with Endopalma)", "2 times a year"],
+      ],
+      id: [
+        ["Pengomposan Batang Kelapa Sawit", "1 kg/Ha", "Semprot pada hasil cacahan / windrow", "2 – 4 minggu setelah pencacahan"],
+        ["Pengomposan EFB", "1 kg / 5 ton", "Semprot", "1 – 2 minggu setelah produksi"],
+        ["Pencegahan Ganoderma", "500 g/Ha/app", "Semprot Tanah & Batang (dicampur dengan Endopalma)", "2 kali setahun"],
+      ],
+    },
   },
   {
     name: "DECOPALMA",
     type: "Bio Decomposer",
-    activeOrganism: "Geobacillus thermocatenulatus + Trichoderma harzianum + Streptomyces thermovulgaris",
+    activeOrganism: "Bacillus subtilis + Enterobacter sacchari + Trichoderma harzianum + Streptomyces sp.",
     regNo: "03.03.2023.936",
     cardCrops: ["Oil Palm"],
     crops: ["Oil Palm"],
@@ -761,20 +748,32 @@ export const ALL_PRODUCTS_DATA = [
         "Membantu mengurangi ketergantungan pada penggunaan alat berat secara berulang serta mendukung prinsip RSPO (Climate Change/GHG) dan skema carbon credit",
       ],
     },
-    what: {
-      en: "DECOPALMA features thermophilic and antagonist microbes (Geobacillus, Trichoderma, Streptomyces) that remain active above 50°C to dismantle Ganoderma inoculum sources and accelerate organic replanting decomposition.",
-      id: "DECOPALMA mengandung mikroba termofilik dan antagonis (Geobacillus, Trichoderma, Streptomyces) yang tetap aktif di atas 50°C untuk menghancurkan inokulum Ganoderma serta mempercepat proses dekomposisi saat replanting.",
+    formulation: {
+      en: [
+        ["Active organism", "Bacillus subtilis + Enterobacter sacchari + Trichoderma harzianum + Streptomyces sp."],
+        ["Concentration", "≥ 1 × 105 CFU/g"],
+        ["Formulation type", "Powder"],
+        ["Shelf life", "60 months"],
+      ],
+      id: [
+        ["Organisme aktif", "Bacillus subtilis + Enterobacter sacchari + Trichoderma harzianum + Streptomyces sp."],
+        ["Konsentrasi", "≥ 1 × 105 CFU/g"],
+        ["Jenis formulasi", "Tepung"],
+        ["Masa simpan", "60 bulan"],
+      ],
     },
-    formulation: [
-      ["Active organism", "Geobacillus thermocatenulatus + Trichoderma harzianum + Streptomyces thermovulgaris"],
-      ["Concentration", "≥ 1 × 10⁸ CFU/g"],
-      ["Formulation type", "Powder"],
-      ["Shelf life", "24 months"],
-    ],
-    application: [
-      ["Empty fruit bunch", "2 kg/tonne", "Layer & moisten", "Once per pile"],
-      ["Frond stacking", "1 kg/tonne", "Spray on windrow", "Per cycle"],
-    ],
+    application: {
+      en: [
+        ["Oil Palm Trunk Composting", "1 kg/Ha", "Spray on shred / windrow", "2 – 4 weeks after chipping"],
+        ["EFB Composting", "1 kg/ 5 tonne", "Spray", "1 – 2 weeks after production"],
+        ["Ganoderma Prevention", "500 g/Ha/app", "Soil & Trunk Spray (mix with Endopalma)", "2 times a year"],
+      ],
+      id: [
+        ["Pengomposan Batang Kelapa Sawit", "1 kg/Ha", "Semprot pada hasil cacahan / windrow", "2 – 4 minggu setelah pencacahan"],
+        ["Pengomposan EFB", "1 kg / 5 ton", "Semprot", "1 – 2 minggu setelah produksi"],
+        ["Pencegahan Ganoderma", "500 g/Ha/app", "Semprot Tanah & Batang (dicampur dengan Endopalma)", "2 kali setahun"],
+      ],
+    },
   },
   {
     name: "ENDOPALMA",
@@ -802,20 +801,30 @@ export const ALL_PRODUCTS_DATA = [
         "Berperan sebagai biokontrol untuk membantu menekan potensi serangan Ganoderma sp. dan Fusarium sp.",
       ],
     },
-    what: {
-      en: "ENDOPALMA introduces endophytic bacteria into oil palm seedling vascular systems, stimulating root elongation, nutrient uptake, and systemic resistance against soil pathogens like Ganoderma and Fusarium.",
-      id: "ENDOPALMA memasukkan bakteri endofit ke dalam sistem perakaran bibit kelapa sawit, merangsang penyerapan hara dan memperkuat ketahanan sistemik terhadap serangan jamur Ganoderma dan Fusarium.",
+    formulation: {
+      en: [
+        ["Active organism", "Endophytic PGPR Consortium"],
+        ["Concentration", "≥ 1 × 105 CFU/g"],
+        ["Formulation type", "Soluble powder"],
+        ["Shelf life", "60 months"],
+      ],
+      id: [
+        ["Organisme aktif", "Konsorsium PGPR Endofit"],
+        ["Konsentrasi", "≥ 1 × 105 CFU/g"],
+        ["Jenis formulasi", "Tepung larut"],
+        ["Masa simpan", "60 bulan"],
+      ],
     },
-    formulation: [
-      ["Active organism", "Endophytic PGPR Consortium"],
-      ["Concentration", "≥ 1 × 10⁸ CFU/g"],
-      ["Formulation type", "Soluble powder"],
-      ["Shelf life", "24 months"],
-    ],
-    application: [
-      ["Oil Palm Seedlings", "25–50 g/polybag", "Soil apply / drench", "During nursery stage"],
-      ["Mature Palm", "50 g/tree", "Soil application", "Per fertilization cycle"],
-    ],
+    application: {
+      en: [
+        ["Oil Palm Seedlings", "2,5 g/polybag/app", "Soil apply / drench", "During nursery stage"],
+        ["Ganoderma Prevention", "500 g/Ha/app", "Soil & Trunks spray (mix with Decopalma/Terapalma)", "2 times a year"],
+      ],
+      id: [
+        ["Bibit Kelapa Sawit", "2,5 g/polybag/app", "Aplikasi tanah / kocor", "Saat fase pembibitan"],
+        ["Pencegahan Ganoderma", "500 g/Ha/app", "Semprot Tanah & Batang (dicampur dengan Decopalma/Terapalma)", "2 kali setahun"],
+      ],
+    },
   },
   {
     name: "ORIZAPLUS",
@@ -843,28 +852,38 @@ export const ALL_PRODUCTS_DATA = [
         "Diformulasikan dengan mikroba endofitik spesifik pada tanaman padi, mendukung pertumbuhan akar yang lebih kuat dan penyerapan nutrisi",
       ],
     },
-    what: {
-      en: "ORIZAPLUS is a specialized rice endophytic biofertilizer that stimulates productive tillering, enhances nutrient uptake, and reduces bacterial leaf blight symptoms, supporting yield increases of 10–20%.",
-      id: "ORIZAPLUS adalah pupuk hayati endofit khusus padi yang merangsang anakan produktif, meningkatkan serapan nutrisi, serta menekan penyakit kresek/hawar daun dengan potensi peningkatan hasil 10–20%.",
+    formulation: {
+      en: [
+        ["Active organism", "Rice-specific Endophytic PGPR Consortium"],
+        ["Concentration", "≥ 1 × 107 CFU/g"],
+        ["Formulation type", "Carrier-based powder"],
+        ["Shelf life", "60 months"],
+      ],
+      id: [
+        ["Organisme aktif", "Konsorsium PGPR Endofit Spesifik Padi"],
+        ["Konsentrasi", "≥ 1 × 107 CFU/g"],
+        ["Jenis formulasi", "Tepung berbahan pembawa"],
+        ["Masa simpan", "60 bulan"],
+      ],
     },
-    formulation: [
-      ["Active organism", "Rice-specific Endophytic PGPR Consortium"],
-      ["Concentration", "≥ 1 × 10⁸ CFU/g"],
-      ["Formulation type", "Carrier-based powder"],
-      ["Shelf life", "24 months"],
-    ],
-    application: [
-      ["Paddy Seed Treatment", "25 g/kg seed", "Soak / coat", "Pre-germination"],
-      ["Paddy Field", "2 kg/ha", "Soil broadcast / spray", "At land prep & tillering"],
-    ],
+    application: {
+      en: [
+        ["Paddy Seed Treatment", "100 g / 25 kg seed", "Soak / coat", "Pre-germination"],
+        ["Paddy Field", "400 g / Ha / App", "Spray", "2 times a season (vegetative phase)"],
+      ],
+      id: [
+        ["Perlakuan Benih Padi", "100 g / 25 kg benih", "Rendam / lapisi", "Pra-perkecambahan"],
+        ["Lahan Padi", "400 g/Ha/App", "Semprot", "2 kali per musim (fase vegetatif)"],
+      ],
+    },
   },
   {
     name: "TERRABIO",
     type: "Bio Fertilizer",
     activeOrganism: "Nitrogen-fixing & Phosphate-solubilizing Microbes",
-    regNo: "03.03.2026.295",
-    cardCrops: ["Corn", "Edamame", "Avocado"],
-    crops: ["Corn", "Edamame", "Avocado", "Dragon Fruit", "Durian", "Patchouli"],
+    regNo: "03.03.2021.472",
+    cardCrops: ["Corn","Edamame","Avocado"],
+    crops: ["Corn","Edamame","Avocado","Dragon Fruit","Durian","Patchouli"],
     image: "/images/products/terrabio.jpg",
     keyBenefit: {
       en: "Contains N-fixing and P-solubilizing microbes that strengthen root development and improve synthetic fertilizer efficiency.",
@@ -884,113 +903,95 @@ export const ALL_PRODUCTS_DATA = [
         "Cocok untuk tanaman kacang-kacangan dan jagung, mendukung viabilitas dan pembentukan bintil akar pada kacang-kacangan",
       ],
     },
-    what: {
-      en: "TERRABIO supplies beneficial nitrogen-fixing and phosphate-solubilizing soil microbes that enhance root nodulation in legumes and improve fertilizer efficiency across corn and horticulture.",
-      id: "TERRABIO menyediakan mikroba penambat nitrogen dan pelarut fosfat tanah yang mendukung pembentukan bintil akar pada tanaman kacang-kacangan dan mengefisienkan pupuk anorganik pada jagung dan hortikultura.",
-    },
-    formulation: [
-      ["Active organism", "Nitrogen-fixing & Phosphate-solubilizing Microbes"],
-      ["Concentration", "≥ 1 × 10⁸ CFU/g"],
-      ["Formulation type", "Carrier-based powder"],
-      ["Shelf life", "24 months"],
-    ],
-    application: [
-      ["Corn / Legumes", "2 kg/ha", "Soil / in-furrow", "At planting"],
-      ["Fruit trees", "50 g/tree", "Root drench", "Every 3 months"],
-    ],
-  },
-  {
-    name: "BACTOHORTI",
-    type: "Bio Fertilizer",
-    activeOrganism: "Bacillus velezensis + Pseudomonas fluorescens + Trichoderma viride",
-    regNo: "03.03.2022.1135",
-    cardCrops: ["Citrus", "Chilli", "Tomato"],
-    crops: ["Citrus", "Chilli", "Tomato", "Potato", "Shallot"],
-    image: "/images/products/bactohorti.jpg",
-    keyBenefit: {
-      en: "Helps improve vegetative growth, boost plant immunity, and make fertilizer uptake up to 30% more efficient.",
-      id: "Meningkatkan pertumbuhan vegetatif, imunitas tanaman, dan efisiensi serapan pupuk hingga 30%.",
-    },
-    benefits: {
+    formulation: {
       en: [
-        "Helps improve vegetative growth and fruit/tuber production",
-        "Helps boost plant immunity/preventive resistance against disease",
-        "Helps make fertilizer uptake more efficient, with potential to reduce synthetic fertilizer use by up to 30%",
-        "Helps restore soil fertility and beneficial soil microbe populations",
-        "Contains nitrogen-fixing and phosphate-solubilizing endophytic bacteria plus Trichoderma",
+        ["Active organism", "Nitrogen-fixing & Phosphate-solubilizing Microbes"],
+        ["Concentration", "≥ 1 × 105 CFU/g"],
+        ["Formulation type", "Carrier-based powder"],
+        ["Shelf life", "60 months"],
       ],
       id: [
-        "Meningkatkan pertumbuhan vegetatif dan produksi buah/umbi",
-        "Meningkatkan imunitas/preventif tanaman terhadap penyakit",
-        "Mengefektifkan serapan pupuk oleh tanaman, berpotensi mengurangi dosis pupuk anorganik hingga 30%",
-        "Mengembalikan tingkat kesuburan dan populasi mikroba tanah",
-        "Mengandung bakteri endofit penambat nitrogen dan pelarut fosfat, serta cendawan Trichoderma",
+        ["Organisme aktif", "Mikroba Penambat Nitrogen & Pelarut Fosfat"],
+        ["Konsentrasi", "≥ 1 × 105 CFU/g"],
+        ["Jenis formulasi", "Tepung berbahan pembawa"],
+        ["Masa simpan", "60 bulan"],
       ],
     },
-    what: {
-      en: "BACTOHORTI combines endophytic bacteria (Bacillus velezensis, Pseudomonas fluorescens) with Trichoderma viride to restore soil fertility, prime systemic immunity, and increase fertilizer absorption efficiency by up to 30%.",
-      id: "BACTOHORTI menggabungkan bakteri endofit (Bacillus velezensis, Pseudomonas fluorescens) dan jamur Trichoderma viride untuk memulihkan kesuburan tanah, meningkatkan kekebalan tanaman, serta mengoptimalkan serapan pupuk hingga 30%.",
+    application: {
+      en: [
+        ["Seed Treatment", "200 gram / 25 kg seed", "Spray / Coat", "Pre-germination"],
+        ["Plant Growth", "400 gram / Ha / App", "Soil Spray", "2 times a season"],
+        ["Fruit trees", "400 gram / Ha / App", "Soil Spray / Drench", "Every 3 months"],
+      ],
+      id: [
+        ["Perlakuan Benih", "200 gram / 25 kg benih", "Semprot / Lapisi", "Pra-perkecambahan"],
+        ["Pertumbuhan Tanaman", "400 gram/Ha/App", "Semprot Tanah", "2 kali per musim"],
+        ["Tanaman Buah", "400 gram/Ha/App", "Semprot Tanah / Kocor", "Setiap 3 bulan"],
+      ],
     },
-    formulation: [
-      ["Active organism", "Bacillus velezensis + Pseudomonas fluorescens + Trichoderma viride"],
-      ["Concentration", "≥ 1 × 10⁸ CFU/g"],
-      ["Formulation type", "Carrier-based powder"],
-      ["Shelf life", "24 months"],
-    ],
-    application: [
-      ["Citrus / Horticulture", "2.5–5 g/L water", "Soil drench / spray", "Every 2–3 weeks"],
-    ],
   },
   {
     name: "HUMATOP",
     type: "Bio Stimulant & Nutrition",
-    activeOrganism: "High Fulvic Acid + Potassium (Leonardite Complex)",
-    regNo: "04.03.2022.911",
-    cardCrops: ["Paddy", "Shallot", "Chilli"],
-    crops: ["Paddy", "Shallot", "Chilli", "Tomato", "Potato", "Corn", "Cacao", "Avocado", "Cabbage", "Citrus", "Cucumber", "Dragon Fruit", "Durian", "Edamame", "Melon", "Patchouli", "Radish", "Watermelon", "Oil Palm"],
+    activeOrganism: "Leonardite Humic Acid Complex (>65%) + K₂O (10.30%)",
+    regNo: "04.03.2022.911 (100g/1kg pupuk organik); 04.03.2023.308 (100g/1kg pembenah tanah senyawa humat); 04.02.2023.738 (1 liter)",
+    cardCrops: ["Paddy","Shallot","Chilli"],
+    crops: ["Paddy","Shallot","Chilli","Tomato","Potato","Corn","Cacao","Avocado","Cabbage","Citrus","Cucumber","Dragon Fruit","Durian","Edamame","Melon","Patchouli","Radish","Watermelon","Oil Palm"],
     image: "/images/products/humatop.jpg",
     keyBenefit: {
-      en: "High fulvic and potassium combination supporting photosynthesis translocation, optimal grain filling, and fruit/tuber size.",
-      id: "Kombinasi fulvat tinggi dan kalium untuk memperlancar translokasi fotosintesis, pengisian bulir padi, dan pembesaran umbi/buah.",
+      en: "A leonardite-based organic soil conditioner that raises and stabilizes soil pH, creating a healthier root-zone environment for beneficial microbes.",
+      id: "Pembenah tanah organik berbahan leonardite yang meningkatkan dan menstabilkan pH tanah, menciptakan area perakaran yang sehat bagi mikroba bermanfaat.",
     },
     benefits: {
       en: [
-        "Helps improve translocation of photosynthesis products to fruit and tubers, supporting more optimal, even filling",
-        "Acts as an easily absorbed energy source and metabolic activator, supporting fruit and tuber tissue formation",
-        "Helps make micro and macro nutrients easier for plants to absorb, especially during the critical filling stage",
-        "Helps increase grain fill in rice and fruit/tuber size, as well as seed/pod count",
-        "Natural essential nutrients absorbable directly through foliar application",
+        "Made from leonardite mineral, the highest-quality source of humic acid",
+        "Helps raise and stabilize soil pH by binding excess Fe (iron) and Al (aluminium)",
+        "Maximizes the absorption of macro and micro nutrients by plant root systems",
+        "Formulated with potassium enrichment to enhance nutrient mobility and uptake",
+        "Creates a healthy root-zone environment ideal for beneficial microbes (Trichoderma, Pseudomonas, Bacillus, etc.)",
       ],
       id: [
-        "Kombinasi fulvat tinggi dan kalium membantu memperlancar translokasi hasil fotosintesis ke buah dan umbi, sehingga pengisian lebih optimal dan seragam",
-        "Berperan sebagai sumber energi siap serap dan aktivator metabolisme, mendukung pembentukan jaringan buah dan umbi secara maksimal",
-        "Membantu unsur hara mikro dan makro lebih mudah diserap tanaman, terutama pada fase kritis pengisian hasil",
-        "Meningkatkan pengisian bulir padi, besar buah dan umbi, serta jumlah biji/polong",
-        "Nutrisi esensial alami yang dapat diserap langsung melalui daun (Foliar Application)",
+        "Terbuat dari mineral leonardite sebagai sumber asam humat dengan kualitas terbaik",
+        "Mampu meningkatkan pH tanah secara stabil dan konsisten melalui mekanisme pengikatan Fe (besi) dan Al (Alumunium) berlebih",
+        "Memaksimalkan penyerapan unsur hara makro dan mikro oleh perakaran tanaman",
+        "Diformulasikan dengan pengkayaan Kalium untuk meningkatkan mobilitas hara",
+        "Menciptakan area perakaran yang sehat dan ideal bagi mikroba bermanfaat (Trichoderma, Pseudomonas, Bacillus, dsb.)",
       ],
     },
-    what: {
-      en: "HUMATOP delivers concentrated fulvic acid and potassium designed for rapid foliar uptake, accelerating carbohydrate translocation during critical generative filling stages.",
-      id: "HUMATOP menghadirkan asam fulvat pekat dan kalium yang diformulasikan untuk serapan daun cepat, mempercepat translokasi karbohidrat pada fase generatif pengisian buah dan umbi.",
+    formulation: {
+      en: [
+        ["Active content", "C-organik 31.10% + K₂O 10.30% + Ca 1.70% + SiO2 3.40% + Zn 70 ppm + Senyawa Humat >65% (pH 8.8)"],
+        ["Source", "Leonardite complex"],
+        ["Formulation type", "Soluble powder"],
+        ["Shelf life", "36 months"],
+      ],
+      id: [
+        ["Kandungan aktif", "C-organik 31,10% + K₂O 10,30% + Ca 1,70% + SiO2 3,40% + Zn 70 ppm + Senyawa Humat >65% (pH 8,8)"],
+        ["Sumber", "Kompleks leonardite"],
+        ["Jenis formulasi", "Tepung larut"],
+        ["Masa simpan", "36 bulan"],
+      ],
     },
-    formulation: [
-      ["Active content", "High Fulvic Acid + Potassium + Organic Nutrients"],
-      ["Source", "Leonardite complex"],
-      ["Formulation type", "Soluble powder"],
-      ["Shelf life", "36 months"],
-    ],
-    application: [
-      ["Paddy", "1–2 g/L water", "Foliar spray", "At generative filling stage (45 & 65 DAP)"],
-      ["Horticulture / Fruit", "1–2 g/L water", "Foliar spray", "Every 7–10 days during fruit sizing"],
-    ],
+    application: {
+      en: [
+        ["Paddy & Corn", "2 – 4 kg / Ha", "Direct Cast", "1st and 2nd fertilizing"],
+        ["Horticulture", "1 – 2 kg / Ha / app", "Soil Drench", "Every 30 days"],
+        ["Palm Oil", "3,5 – 7 kg / Ha / app", "Directs Cast", "2 times a year"],
+      ],
+      id: [
+        ["Padi & Jagung", "2 – 4 kg/Ha", "Tabur Langsung", "Pemupukan pertama dan kedua"],
+        ["Hortikultura", "1 – 2 kg/Ha/app", "Kocor Tanah", "Setiap 30 hari"],
+        ["Kelapa Sawit", "3,5 – 7 kg/Ha/app", "Tabur Langsung", "2 kali setahun"],
+      ],
+    },
   },
   {
     name: "KALSIKA",
     type: "Bio Stimulant & Nutrition",
-    activeOrganism: "Potassium (K) & Silica (Si) Complex",
+    activeOrganism: "Potassium (K) + Silica (Si) Mineral Complex",
     regNo: "01.03.2024.111",
-    cardCrops: ["Shallot", "Paddy", "Chilli"],
-    crops: ["Shallot", "Paddy", "Chilli", "Tomato", "Potato", "Corn", "Sugarcane", "Avocado", "Cucumber", "Dragon Fruit", "Radish", "Oil Palm"],
+    cardCrops: ["Shallot","Paddy","Chilli"],
+    crops: ["Shallot","Paddy","Chilli","Tomato","Potato","Corn","Sugarcane","Avocado","Cucumber","Dragon Fruit","Radish","Oil Palm"],
     image: "/images/products/kalsika.jpg",
     keyBenefit: {
       en: "Potassium and Silica combination that thickens cell walls, prevents lodging in rice/shallot, and reduces flower/fruit drop.",
@@ -1012,27 +1013,38 @@ export const ALL_PRODUCTS_DATA = [
         "Kombinasi Kalium (K) dan Silika (Si) berperan memperkokoh jaringan tanaman melalui penebalan dinding sel",
       ],
     },
-    what: {
-      en: "KALSIKA fortifies plant structural tissues with bioavailable Potassium and Silica, strengthening stem rigidity against weather-induced lodging and reducing blossom drop.",
-      id: "KALSIKA memperkokoh struktur jaringan tanaman dengan kalium dan silika yang mudah diserap, meningkatkan ketahanan batang terhadap angin dan hujan serta mencegah kerontokan bunga.",
+    formulation: {
+      en: [
+        ["Active content", "Potassium (K) + Silica (Si) Mineral Complex"],
+        ["Formulation type", "Soluble powder"],
+        ["Shelf life", "36 months"],
+      ],
+      id: [
+        ["Kandungan aktif", "Kompleks Mineral Kalium (K) + Silika (Si)"],
+        ["Jenis formulasi", "Tepung larut"],
+        ["Masa simpan", "36 bulan"],
+      ],
     },
-    formulation: [
-      ["Active content", "Potassium (K) + Silica (Si) Mineral Complex"],
-      ["Formulation type", "Soluble powder"],
-      ["Shelf life", "36 months"],
-    ],
-    application: [
-      ["Paddy / Shallot", "1–2 g/L water", "Foliar spray", "Vegetative & generative stages"],
-      ["Chilli / Fruit", "2 g/L water", "Foliar spray", "Pre-flowering & fruit sizing"],
-    ],
+    application: {
+      en: [
+        ["Paddy", "1–2 g/L water", "Foliar spray", "Vegetative & generative stages"],
+        ["Shallot", "1 - 2 g/L water", "Foliar spray", "Pre-flowering & fruit sizing"],
+        ["Chilli", "1 - 2 g/L water", "Foliar spray", "Pre-flowering & fruit sizing"],
+      ],
+      id: [
+        ["Padi", "1 – 2 g/L air", "Semprot daun", "Fase vegetatif & generatif"],
+        ["Bawang Merah", "1 – 2 g/L air", "Semprot daun", "Pra-berbunga & pembesaran buah"],
+        ["Cabai", "1 – 2 g/L air", "Semprot daun", "Pra-berbunga & pembesaran buah"],
+      ],
+    },
   },
   {
     name: "BOOSBLOOM",
     type: "Bio Stimulant & Nutrition",
-    activeOrganism: "Organic Seaweed Extract (Cytokinin & Gibberellin) + Micronutrients",
+    activeOrganism: "Ascophyllum nodosum Seaweed Extract + Cytokinin, Gibberellin, B, Zn, K",
     regNo: "02.03.2022.895",
-    cardCrops: ["Chilli", "Tomato", "Shallot"],
-    crops: ["Chilli", "Tomato", "Shallot", "Potato", "Cacao", "Cabbage", "Citrus", "Cucumber", "Edamame", "Melon", "Patchouli", "Radish", "Watermelon"],
+    cardCrops: ["Chilli","Tomato","Shallot"],
+    crops: ["Chilli","Tomato","Shallot","Potato","Cacao","Cabbage","Citrus","Cucumber","Edamame","Melon","Patchouli","Radish","Watermelon"],
     image: "/images/products/boosbloom.jpg",
     keyBenefit: {
       en: "Natural seaweed extract with cytokinin and gibberellin hormones to stimulate branching, uniform flowering, and fruit formation.",
@@ -1054,26 +1066,34 @@ export const ALL_PRODUCTS_DATA = [
         "Hormon pertumbuhan sitokinin dan giberelin alami dari ekstrak rumput laut",
       ],
     },
-    what: {
-      en: "BOOSBLOOM pairs natural seaweed phytohormones (cytokinins, gibberellins) with essential micronutrients (B, Zn, K) to stimulate balanced shoot branching, leaf expansion, and prolific fruit set.",
-      id: "BOOSBLOOM memadukan fitohormon alami ekstrak rumput laut (sitokinin, giberelin) dengan unsur mikro esensial (B, Zn, K) untuk memacu percabangan tunas, pembesaran daun, dan pembentukan bakal buah.",
+    formulation: {
+      en: [
+        ["Active content", "Ascophyllum nodosum Seaweed Extract + Cytokinin, Gibberellin, B, Zn, K"],
+        ["Formulation type", "Soluble powder"],
+        ["Shelf life", "36 months"],
+      ],
+      id: [
+        ["Kandungan aktif", "Ekstrak Rumput Laut Ascophyllum nodosum + Sitokinin, Giberelin, B, Zn, K"],
+        ["Jenis formulasi", "Tepung larut"],
+        ["Masa simpan", "36 bulan"],
+      ],
     },
-    formulation: [
-      ["Active content", "Ascophyllum nodosum Seaweed Extract + Cytokinin, Gibberellin, B, Zn, K"],
-      ["Formulation type", "Soluble powder"],
-      ["Shelf life", "36 months"],
-    ],
-    application: [
-      ["Horticultural crops", "1–2 g/L water", "Foliar spray", "Early vegetative & flowering stage"],
-    ],
+    application: {
+      en: [
+        ["Horticultural crops", "1–2 g/L water", "Foliar spray", "Early vegetative & flowering stage"],
+      ],
+      id: [
+        ["Tanaman Hortikultura", "1 – 2 g/L air", "Semprot daun", "Fase vegetatif awal & pembungaan"],
+      ],
+    },
   },
   {
     name: "KALIMAGSU",
     type: "Bio Stimulant & Nutrition",
-    activeOrganism: "K₂O >21% + S >16% + Mg >6% + Cl <3%",
+    activeOrganism: "K₂O 17.0%, MgO 12.2%, S 21.0%, Cl <3%",
     regNo: "01.03.2023.629",
-    cardCrops: ["Chilli", "Tomato", "Shallot"],
-    crops: ["Chilli", "Tomato", "Shallot", "Cucumber", "Melon", "Watermelon"],
+    cardCrops: ["Chilli","Tomato","Shallot"],
+    crops: ["Chilli","Tomato","Shallot","Cucumber","Melon","Watermelon"],
     image: "/images/products/kalimagsu.jpg",
     keyBenefit: {
       en: "99% soluble neutral mineral nutrition (K-Mg-S) that improves photosynthesis and harvest quality without soil salt buildup.",
@@ -1095,65 +1115,83 @@ export const ALL_PRODUCTS_DATA = [
         "Meningkatkan kualitas hasil panen (rasa dan warna buah/umbi)",
       ],
     },
-    what: {
-      en: "KALIMAGSU provides a high-purity (99% soluble, pH 7) mineral source of potassium, magnesium, and sulfur to fuel chlorophyll synthesis and enzyme activity without chloride toxicity or soil salinization.",
-      id: "KALIMAGSU menyediakan sumber mineral murni (larut 99%, pH 7) kalium, magnesium, dan sulfur untuk fotosintesis dan sintesis enzim tanaman tanpa risiko akumulasi garam atau toksisitas klorida.",
+    formulation: {
+      en: [
+        ["Active content", "K₂O 17.0%, MgO 12.2%, S 21.0%, Cl <3%"],
+        ["Formulation type", "Soluble powder (pH 7)"],
+        ["Shelf life", "36 months"],
+      ],
+      id: [
+        ["Kandungan aktif", "K₂O 17,0%, MgO 12,2%, S 21,0%, Cl <3%"],
+        ["Jenis formulasi", "Tepung larut (pH 7)"],
+        ["Masa simpan", "36 bulan"],
+      ],
     },
-    formulation: [
-      ["Active content", "K₂O >21%, S >16%, Mg >6%, Cl <3%"],
-      ["Formulation type", "Soluble powder (pH 7)"],
-      ["Shelf life", "36 months"],
-    ],
-    application: [
-      ["Shallot / Chilli / Melon", "2–3 g/L water", "Foliar / fertigation", "During generative filling"],
-    ],
+    application: {
+      en: [
+        ["Shallot / Chilli / Melon", "2–5 g/L water", "Foliar / fertigation", "During generative filling"],
+      ],
+      id: [
+        ["Bawang Merah / Cabai / Melon", "2 – 5 g/L air", "Semprot daun / fertigasi", "Saat pengisian generatif"],
+      ],
+    },
   },
   {
     name: "BIOSTICK",
     type: "Bio Stimulant & Nutrition",
-    activeOrganism: "Ekstrak Bawang Putih (Allium sativum) 25% + Adjuvant 75%",
-    regNo: "",
-    cardCrops: ["Chilli", "Tomato", "Shallot"],
-    crops: ["Oil Palm", "Chilli", "Tomato", "Potato", "Banana", "Sugarcane", "Cacao", "Avocado", "Citrus", "Cucumber", "Dragon Fruit", "Durian", "Melon", "Watermelon"],
+    activeOrganism: "Cellulose Derivative (water-based bio-adjuvant / microfiber technology)",
+    regNo: {"en":"Not registered separately (adjuvant)","id":"Tidak didaftarkan terpisah (adjuvan)"},
+    cardCrops: ["Oil Palm","Chilli","Tomato"],
+    crops: ["Oil Palm","Chilli","Tomato","Potato","Banana","Sugarcane","Cacao","Avocado","Citrus","Cucumber","Dragon Fruit","Durian","Melon","Watermelon"],
     image: "/images/products/biostick.jpg",
     keyBenefit: {
-      en: "Adjuvant and spreader-sticker with garlic extract providing natural repellent action and micronutrients (Mn, Zn) against thrips and mites.",
-      id: "Perekat & adjuvan dengan ekstrak bawang putih sebagai penolak hama alami serta diperkaya mikro Mn dan Zn untuk mengendalikan thrips dan tungau.",
+      en: "A water-based bio-adjuvant built on microfiber technology that improves spray coverage and is compatible with fertilizers, pesticides, and herbicides.",
+      id: "Bio-adjuvan berbasis air dengan teknologi microfiber yang meningkatkan daya sebar semprotan serta kompatibel dengan pupuk, pestisida, dan herbisida.",
     },
     benefits: {
       en: [
-        "An adjuvant/spreader-sticker containing garlic extract, which also functions as a natural repellent",
-        "Contains the micronutrients Mn and Zn, which can help support leaf greenness",
-        "Helps control thrips and mites",
-        "Helps improve the effectiveness of biopesticide applications when tank-mixed",
+        "A water-based bio-adjuvant built on microfiber technology, supporting sustainable spray application practices",
+        "Increases spreading and surface wetting by optimally lowering the spray solution's surface tension",
+        "Highly stable across variations in pH, temperature, ionic strength, and salinity",
+        "Compatible with biological pesticides, synthetic pesticides, foliar fertilizers, and herbicides — improving the field performance of the product it's tank-mixed with",
       ],
       id: [
-        "Perekat/adjuvan yang mengandung ekstrak bawang putih, yang juga berfungsi sebagai repellent (penolak hama)",
-        "Mengandung unsur mikro Mn dan Zn yang dapat membantu meningkatkan zat hijau daun",
-        "Mampu membantu mengendalikan thrips dan tungau/mites",
-        "Membantu meningkatkan efektivitas aplikasi biopestisida saat dicampur dalam larutan semprot",
+        "Formulasi berbasis air yang mendukung praktik aplikasi semprot yang berkelanjutan",
+        "Meningkatkan daya sebar dan pembasahan permukaan melalui penurunan tegangan permukaan larutan semprot secara optimal",
+        "Stabilitas tinggi terhadap variasi pH, suhu, kekuatan ionik, dan salinitas",
+        "Kompatibel dengan pestisida biologi, pestisida sintetik, pupuk daun, dan herbisida — meningkatkan performa produk yang dicampurkan bersamanya",
       ],
     },
-    what: {
-      en: "BIOSTICK acts as an advanced bio-adjuvant and spreader formulated with natural garlic extract and trace micronutrients (Mn, Zn), improving spray droplet adherence while deterring thrips and mites.",
-      id: "BIOSTICK berfungsi sebagai perekat-perata semprot yang diformulasikan dengan ekstrak bawang putih alami dan unsur mikro (Mn, Zn) untuk meningkatkan efektivitas semprotan dan mengusir thrips serta tungau.",
+    formulation: {
+      en: [
+        ["Active content", "Cellulose Derivative (water-based bio-adjuvant / microfiber technology)"],
+        ["Formulation type", "Liquid adjuvant"],
+        ["Shelf life", "36 months"],
+      ],
+      id: [
+        ["Kandungan aktif", "Turunan Selulosa (bio-adjuvant berbasis air / teknologi microfiber)"],
+        ["Jenis formulasi", "Adjuvan cair"],
+        ["Masa simpan", "36 bulan"],
+      ],
     },
-    formulation: [
-      ["Active content", "Ekstrak Bawang Putih 25% + Adjuvant 75% + Mn, Zn"],
-      ["Formulation type", "Liquid adjuvant"],
-      ["Shelf life", "36 months"],
-    ],
-    application: [
-      ["All crops (tank mix)", "0.5 ml / L water", "Spray mix addition", "With every pesticide/fertilizer application"],
-    ],
+    application: {
+      en: [
+        ["All crops (tank mix)", "0.5 ml/L water", "Knapsack / Air Blast / Steam Sprayer — add to spray solution", "After fertilizer/pesticide/herbicide is already mixed in"],
+        ["All crops (tank mix, drone application)", "0.25 ml/L water", "Drone Sprayer — add to spray solution", "After fertilizer/pesticide/herbicide is already mixed in"],
+      ],
+      id: [
+        ["Semua tanaman (campur tangki)", "0,5 ml/L air", "Knapsack / Air Blast / Steam Sprayer — tambahkan ke larutan semprot", "Setelah pupuk/pestisida/herbisida sudah tercampur"],
+        ["Semua tanaman (campur tangki, aplikasi drone)", "0,25 ml/L air", "Drone Sprayer — tambahkan ke larutan semprot", "Setelah pupuk/pestisida/herbisida sudah tercampur"],
+      ],
+    },
   },
   {
     name: "AMINOTOP",
     type: "Bio Stimulant & Nutrition",
-    activeOrganism: "L-Amino Acids + High Fulvic Acid + Ca + K",
+    activeOrganism: "L-Amino Acids (17 types, 12.9%) + Fulvic Compound (39.0%) + C-Organic (26.92%)",
     regNo: "02.03.2023.373",
-    cardCrops: ["Paddy", "Chilli", "Tomato"],
-    crops: ["Paddy", "Chilli", "Tomato", "Potato", "Cucumber"],
+    cardCrops: ["Paddy","Corn","Shallot"],
+    crops: ["Paddy","Corn","Shallot","Chilli","Tomato","Potato","Watermelon","Durian","Citrus"],
     image: "/images/products/aminotop.jpg",
     keyBenefit: {
       en: "Generative booster based on amino acids and high fulvic acid to maximize flowering, fruit set, and uniform grain/fruit fill.",
@@ -1164,35 +1202,45 @@ export const ALL_PRODUCTS_DATA = [
         "A generative booster based on amino acids and high fulvic acid content, developed to help maximize flowering and fruit formation",
         "Helps improve fruit set and result filling, for fuller, more uniform grain and fruit",
         "Contains Ca, K, and amino acids to help strengthen plant tissue and reduce grain/fruit drop",
-        "High fulvic content helps speed up nutrient uptake and supports stress tolerance",
+        "Enriched with high fulvic content to help speed up nutrient uptake, increase stress tolerance, and optimize harvest yield",
       ],
       id: [
-        "Booster generatif berbasis asam amino & asam fulvat tinggi untuk membantu memaksimalkan pembungaan dan pembentukan buah",
-        "Membantu meningkatkan fruit set & pengisian hasil sehingga bulir lebih penuh dan buah lebih optimal serta seragam",
-        "Mengandung Ca, K, dan asam amino untuk membantu memperkuat jaringan tanaman dan mengurangi kerontokan bulir/buah",
-        "Diperkaya fulvat tinggi untuk membantu mempercepat serapan hara dan mendukung ketahanan terhadap stres",
+        "Booster generatif berbasis asam amino & fulvat tinggi untuk memaksimalkan pembungaan dan pembentukan buah",
+        "Meningkatkan fruit set & pengisian hasil sehingga bulir lebih penuh dan buah lebih optimal serta seragam",
+        "Mengandung Ca, K, dan asam amino untuk memperkuat jaringan tanaman dan mengurangi kerontokan bulir/buah",
+        "Diperkaya fulvat tinggi untuk mempercepat serapan hara, meningkatkan ketahanan stres, dan mengoptimalkan hasil panen",
       ],
     },
-    what: {
-      en: "AMINOTOP is a potent generative bio-stimulant rich in L-amino acids, fulvic acid, Calcium, and Potassium, designed to accelerate nutrient assimilation and prevent abortion of blossoms and young fruit.",
-      id: "AMINOTOP adalah biostimulan generatif berbahan asam amino esensial, asam fulvat, Kalsium, dan Kalium untuk mempercepat serapan hara serta mencegah kerontokan bunga dan bakal buah.",
+    formulation: {
+      en: [
+        ["Active content", "C-Organic 26.92% + C/N 9 + N 3.24% + P2O5 0.13% + K2O 2.95% + Fulvic Compound 39.0% + Amino Acids (17 types) 12.9% + Fe-total 5866 ppm + Fe-available 156 ppm + Zn 16 ppm (pH 7.6, Moisture 8.28%)"],
+        ["Formulation type", "Solid organic fertilizer, water-soluble powder"],
+        ["Shelf life", "36 months"],
+      ],
+      id: [
+        ["Kandungan aktif", "C-Organik 26,92% + C/N 9 + N 3,24% + P2O5 0,13% + K2O 2,95% + Senyawa Fulvat 39,0% + Asam Amino (17 jenis) 12,9% + Fe-total 5866 ppm + Fe-tersedia 156 ppm + Zn 16 ppm (pH 7,6, Kadar Air 8,28%)"],
+        ["Jenis formulasi", "Pupuk organik padat, tepung larut air"],
+        ["Masa simpan", "36 bulan"],
+      ],
     },
-    formulation: [
-      ["Active content", "L-Amino Acids + Fulvic Acid + Ca + K"],
-      ["Formulation type", "Soluble powder"],
-      ["Shelf life", "36 months"],
-    ],
-    application: [
-      ["Paddy / Horticulture", "1–2 g/L water", "Foliar spray", "Pre-flowering & grain/fruit fill"],
-    ],
+    application: {
+      en: [
+        ["Paddy, Corn, Shallot, Chilli, Tomato, Potato, Watermelon", "1–2 g/L water", "Foliar spray", "Not specified on brochure — apply per routine program"],
+        ["Durian, Citrus", "2–4 g/L water", "Foliar spray", "Not specified on brochure — apply per routine program"],
+      ],
+      id: [
+        ["Padi, Jagung, Bawang Merah, Cabai, Tomat, Kentang, Semangka", "1 – 2 g/L air", "Semprot daun", "Tidak dicantumkan pada brosur — aplikasikan sesuai program rutin"],
+        ["Durian, Jeruk", "2 – 4 g/L air", "Semprot daun", "Tidak dicantumkan pada brosur — aplikasikan sesuai program rutin"],
+      ],
+    },
   },
   {
     name: "NUTRI BK+",
     type: "Bio Fertilizer",
-    activeOrganism: "Water-soluble Micronutrient / Nutrition Complex",
-    regNo: "01.03.2023.1531",
-    cardCrops: ["Oil Palm", "Cacao", "Avocado"],
-    crops: ["Oil Palm", "Cacao", "Avocado", "Citrus", "Dragon Fruit", "Durian"],
+    activeOrganism: "Water-soluble Micronutrient & Plant Nutrition Complex (Zn, Mn, Ca, B, K, Amino Acids, Fulvic Acid)",
+    regNo: {"en":"01.03.2023.1531 (registered under prior product name \"Nutriplan (Mikro Majemuk)\") — number carried over from the Product Directory; not shown on the brosur baru image itself, so unverified against packaging.","id":"01.03.2023.1531 (terdaftar dengan nama sebelumnya \"Nutriplan (Mikro Majemuk)\") — nomor diambil dari Direktori Produk; tidak tercantum pada gambar brosur baru sehingga belum terverifikasi dengan kemasan."},
+    cardCrops: ["Oil Palm","Cacao","Avocado"],
+    crops: ["Oil Palm","Cacao","Avocado","Citrus","Dragon Fruit","Durian"],
     image: "/images/products/nutribk.jpg",
     keyBenefit: {
       en: "Powder-form nutrition product formulated for spray or soil-drench application across immature and mature plant phases.",
@@ -1200,255 +1248,40 @@ export const ALL_PRODUCTS_DATA = [
     },
     benefits: {
       en: [
-        "A powder-form nutrition product formulated for spray or soil-drench application across immature-plant (TBM) and mature-plant (TM) phases",
-        "Can be mixed with synthetic fertilizers or pesticides as part of a routine application program",
-        "(Specific composition and crop benefit claims are not yet available)",
+        "A fruiting-stage nutrition product combining Zn, Mn, Ca, B, and K with amino acids and fulvic acid, helping plants produce more uniform flowering for higher fruit-set potential",
+        "Reduces flower and young-fruit drop, increasing the number of fruits that develop through to harvest",
+        "Supports optimal fruit filling for better size, weight, and harvest quality",
+        "Helps plants stay healthy, recover faster from stress, and sustain productivity season after season",
+        "Can be mixed with synthetic fertilizers or pesticides as part of a routine application program; suited to fruit crops such as durian, mango, avocado, and citrus",
       ],
       id: [
-        "Produk nutrisi berbentuk tepung yang diformulasikan untuk aplikasi semprot atau pengocoran pada fase TBM (Tanaman Belum Menghasilkan) dan TM (Tanaman Menghasilkan)",
-        "Dapat dicampur dengan pupuk atau pestisida sintetis sebagai bagian dari program aplikasi rutin",
-        "(Klaim komposisi dan manfaat spesifik per komoditas belum tersedia)",
+        "Nutrisi esensial pembuahan tanaman berbasis Zn, Mn, Ca, B, dan K yang diperkaya asam amino dan asam fulvat, membantu tanaman menghasilkan pembungaan yang lebih seragam sehingga potensi pembentukan buah menjadi lebih tinggi",
+        "Mengurangi kehilangan bunga dan buah muda serta meningkatkan jumlah buah yang berkembang hingga panen",
+        "Mendukung pengisian buah secara optimal sehingga menghasilkan ukuran, bobot, dan kualitas panen yang lebih baik",
+        "Membantu tanaman tetap sehat, pulih lebih cepat dari cekaman, dan mempertahankan produktivitas secara berkelanjutan",
+        "Dapat dicampur dengan pupuk atau pestisida sintetik lainnya; cocok untuk komoditas buah seperti durian, mangga, alpukat, dan jeruk",
       ],
     },
-    what: {
-      en: "NUTRI BK+ is a versatile powder nutrition supplement formulated for foliar spray or root drenching across both immature (TBM) and productive (TM) crop growth phases.",
-      id: "NUTRI BK+ adalah suplemen nutrisi berbentuk tepung untuk aplikasi semprot daun atau kocor akar pada fase belum menghasilkan (TBM) maupun fase menghasilkan (TM).",
-    },
-    formulation: [
-      ["Active content", "Water-soluble micronutrient and plant nutrition complex"],
-      ["Formulation type", "Soluble powder"],
-      ["Shelf life", "36 months"],
-    ],
-    application: [
-      ["Plantations (TBM & TM)", "2–5 kg/ha", "Foliar / soil drench", "Per routine schedule"],
-    ],
-  },
-  {
-    name: "BACTOPLUS",
-    type: "Bio Fertilizer",
-    activeOrganism: "Endophytic Bacillus + Pseudomonas sp.",
-    regNo: "03.03.2023.417",
-    cardCrops: [],
-    crops: [],
-    image: "/images/products/bactoplus.jpg",
-    keyBenefit: {
-      en: "Endophytic biofertilizer for increasing yield, immunity against White Root Fungus (JAP), and soil fertility.",
-      id: "Pupuk hayati majemuk endofit untuk meningkatkan produksi getah/buah, imunitas terhadap Jamur Akar Putih (JAP), dan kesuburan tanah.",
-    },
-    benefits: {
+    formulation: {
       en: [
-        "Helps enhance latex and fruit yield in plantation crops",
-        "Boosts systemic immunity against White Root Fungus (JAP)",
-        "Restores soil biological fertility and root health",
+        ["Active content", "Water-soluble micronutrient and plant nutrition complex"],
+        ["Formulation type", "Soluble powder"],
+        ["Shelf life", "36 months"],
       ],
       id: [
-        "Meningkatkan produksi getah dan buah pada tanaman perkebunan",
-        "Meningkatkan imunitas terhadap Jamur Akar Putih (JAP)",
-        "Memulihkan kesuburan biologi tanah dan kesehatan perakaran",
+        ["Kandungan aktif", "Kompleks nutrisi tanaman & mikronutrien larut air"],
+        ["Jenis formulasi", "Tepung larut"],
+        ["Masa simpan", "36 bulan"],
       ],
     },
-    what: {
-      en: "BACTOPLUS provides endophytic bacterial protection and nutrition, boosting resistance to root rot diseases like JAP.",
-      id: "BACTOPLUS menyediakan nutrisi dan perlindungan bakteri endofit untuk meningkatkan ketahanan terhadap penyakit akar seperti JAP.",
-    },
-    formulation: [
-      ["Active organism", "Endophytic Bacillus + Pseudomonas sp."],
-      ["Concentration", "≥ 1 × 10⁸ CFU/g"],
-      ["Formulation type", "Carrier-based powder"],
-      ["Shelf life", "24 months"],
-    ],
-    application: [
-      ["Plantation crops", "50 g/tree", "Soil application", "Per fertilization cycle"],
-    ],
-  },
-  {
-    name: "PRIMADECO",
-    type: "Bio Fungicide",
-    activeOrganism: "Trichoderma harzianum + Streptomyces sp.",
-    regNo: "",
-    cardCrops: [],
-    crops: [],
-    image: "/images/products/primadeco.jpg",
-    keyBenefit: {
-      en: "Helps crops resist soil-borne diseases while building up beneficial soil microbial populations.",
-      id: "Membantu tanaman menahan penyakit tular tanah sekaligus meningkatkan populasi mikroba bermanfaat tanah.",
-    },
-    benefits: {
+    application: {
       en: [
-        "Protects against soil-borne root rots and wilts",
-        "Enhances beneficial antagonist microbial colonies in the soil",
-        "Supports vigorous root system expansion",
+        ["Plantations (TBM & TM)", "2–5 kg/ha", "Foliar / soil drench", "Per routine schedule"],
       ],
       id: [
-        "Melindungi dari penyakit tular tanah dan busuk akar",
-        "Meningkatkan koloni mikroba antagonis bermanfaat di dalam tanah",
-        "Mendukung ekspansi sistem perakaran yang kuat",
+        ["Perkebunan (TBM & TM)", "2 – 5 kg/ha", "Semprot daun / Kocor tanah", "Sesuai jadwal rutin"],
       ],
     },
-    what: {
-      en: "PRIMADECO supplies active Trichoderma harzianum and Streptomyces to suppress soil-borne pathogens.",
-      id: "PRIMADECO menghadirkan Trichoderma harzianum dan Streptomyces aktif untuk menekan patogen tular tanah.",
-    },
-    formulation: [
-      ["Active organism", "Trichoderma harzianum + Streptomyces sp."],
-      ["Concentration", "≥ 1 × 10⁸ CFU/g"],
-      ["Formulation type", "Powder"],
-      ["Shelf life", "24 months"],
-    ],
-    application: [
-      ["General crops", "2–5 kg/ha", "Soil broadcast", "At land prep"],
-    ],
-  },
-  {
-    name: "MICROBLAS",
-    type: "Bio Fungicide",
-    activeOrganism: "Streptomyces sp. + Trichoderma virens",
-    regNo: "",
-    cardCrops: ["Paddy"],
-    crops: ["Paddy"],
-    image: "/images/products/microblas.jpg",
-    keyBenefit: {
-      en: "Built to protect rice from blast disease that can spread quickly across fields.",
-      id: "Diformulasikan untuk melindungi padi dari penyakit blas yang dapat menyebar cepat.",
-    },
-    benefits: {
-      en: [
-        "Targeted biological defense against Pyricularia oryzae (Rice Blast)",
-        "Strengthens leaf sheath resistance against blast lesions",
-        "Compatible with sustainable rice management programs",
-      ],
-      id: [
-        "Pertahanan hayati tertarget melawan Pyricularia oryzae (Blas Padi)",
-        "Memperkuat ketahanan pelepah daun terhadap bercak blas",
-        "Cocok untuk program budidaya padi ramah lingkungan",
-      ],
-    },
-    what: {
-      en: "MICROBLAS provides biological antagonist microbes to prevent and manage blast disease outbreaks in wetland rice.",
-      id: "MICROBLAS menyediakan mikroba antagonis biologis untuk mencegah dan mengendalikan serangan penyakit blas pada padi sawah.",
-    },
-    formulation: [
-      ["Active organism", "Streptomyces sp. + Trichoderma virens"],
-      ["Concentration", "≥ 1 × 10⁸ CFU/g"],
-      ["Formulation type", "Wettable powder (WP)"],
-      ["Shelf life", "24 months"],
-    ],
-    application: [
-      ["Paddy", "2.5–5 g/L water", "Foliar spray", "At tillering & booting"],
-    ],
-  },
-  {
-    name: "BIOFUNGAL",
-    type: "Bio Fungicide",
-    activeOrganism: "Trichoderma viride + Gliocladium sp.",
-    regNo: "",
-    cardCrops: ["Banana", "Cacao", "Durian"],
-    crops: ["Banana", "Cacao", "Durian"],
-    image: "/images/products/biofungal.jpg",
-    keyBenefit: {
-      en: "Biofungicide containing antagonist fungi to control Phytophthora leaf rot, Alternaria, and powdery mildew.",
-      id: "Bio fungisida tepung larut (WP) berbahan aktif cendawan antagonis untuk mengendalikan busuk daun Phytophthora, Alternaria, dan embun tepung.",
-    },
-    benefits: {
-      en: [
-        "Controls Phytophthora leaf and fruit rot on fruit trees",
-        "Suppresses Alternaria spot and powdery mildew",
-        "Leaves zero chemical residue on harvest",
-      ],
-      id: [
-        "Mengendalikan busuk daun dan buah Phytophthora pada tanaman buah",
-        "Menekan bercak Alternaria dan embun tepung",
-        "Tidak meninggalkan residu kimia pada hasil panen",
-      ],
-    },
-    what: {
-      en: "BIOFUNGAL leverages Trichoderma viride and Gliocladium to protect fruit orchards and plantation crops against destructive foliar fungal diseases.",
-      id: "BIOFUNGAL memanfaatkan Trichoderma viride dan Gliocladium untuk melindungi kebun buah dan tanaman perkebunan dari penyakit jamur daun.",
-    },
-    formulation: [
-      ["Active organism", "Trichoderma viride + Gliocladium sp."],
-      ["Concentration", "≥ 1 × 10⁸ CFU/g"],
-      ["Formulation type", "Wettable powder (WP)"],
-      ["Shelf life", "24 months"],
-    ],
-    application: [
-      ["Banana / Cacao / Durian", "5 g/L water", "Foliar spray", "Every 10–14 days"],
-    ],
-  },
-  {
-    name: "VERTIPLUS",
-    type: "Bio Insecticide",
-    activeOrganism: "Verticillium lecanii",
-    regNo: "",
-    cardCrops: ["Chilli", "Tomato"],
-    crops: ["Chilli", "Tomato"],
-    image: "/images/products/vertiplus.jpg",
-    keyBenefit: {
-      en: "Keeps aphids, whitefly, and thrips under control, performing exceptionally in humid growing conditions.",
-      id: "Mengendalikan kutu daun, kutu kebul, dan thrips, bekerja sangat optimal pada kondisi kelembapan tinggi.",
-    },
-    benefits: {
-      en: [
-        "Controls aphids, whiteflies, and thrips via fungal infection",
-        "High efficacy in greenhouse and humid tropical field conditions",
-        "Safe for natural predators and pollinators",
-      ],
-      id: [
-        "Mengendalikan kutu daun, kutu kebul, dan thrips lewat infeksi jamur",
-        "Efikasi tinggi di lahan terbuka maupun greenhouse",
-        "Aman bagi predator alami dan penyerbuk",
-      ],
-    },
-    what: {
-      en: "VERTIPLUS contains Verticillium lecanii to manage whiteflies and aphids through entomopathogenic fungal parasitism.",
-      id: "VERTIPLUS mengandung Verticillium lecanii untuk mengendalikan kutu kebul dan kutu daun melalui parasitisme jamur entomopatogen.",
-    },
-    formulation: [
-      ["Active organism", "Verticillium lecanii"],
-      ["Concentration", "≥ 1 × 10⁹ CFU/g"],
-      ["Formulation type", "Wettable powder (WP)"],
-      ["Shelf life", "36 months (ANHYDRIOM™)"],
-    ],
-    application: [
-      ["Chilli / Tomato", "2–3 g/L water", "Foliar spray", "At early pest onset"],
-    ],
-  },
-  {
-    name: "MICROBLOOM",
-    type: "Bio Stimulant & Nutrition",
-    activeOrganism: "Chelated Micronutrient (Fe, Zn, Mn, B, Cu, Mo) + Amino Acids",
-    regNo: "",
-    cardCrops: ["Paddy", "Chilli", "Tomato"],
-    crops: ["Paddy", "Chilli", "Tomato", "Shallot", "Cucumber", "Melon", "Watermelon"],
-    image: "/images/products/microbloom.jpg",
-    keyBenefit: {
-      en: "Delivers balanced micronutrient and amino acid support for enhanced vigor, flowering, and fruit set.",
-      id: "Menyediakan kombinasi mikronutrien kelat dan asam amino seimbang untuk meningkatkan vigor, pembungaan, dan fruit set.",
-    },
-    benefits: {
-      en: [
-        "Balanced chelated micronutrients (Fe, Zn, Mn, B, Cu, Mo) for rapid cellular uptake",
-        "Enriched with amino acids to stimulate metabolic activity",
-        "Prevents micronutrient deficiencies during peak vegetative and flowering phases",
-      ],
-      id: [
-        "Mikronutrien kelat seimbang (Fe, Zn, Mn, B, Cu, Mo) untuk serapan seluler cepat",
-        "Diperkaya asam amino untuk memicu metabolisme tanaman",
-        "Mencegah defisiensi unsur mikro pada fase vegetatif dan pembungaan",
-      ],
-    },
-    what: {
-      en: "MICROBLOOM provides essential chelated trace minerals and amino acids for peak photosynthetic activity and fruit setting.",
-      id: "MICROBLOOM menyediakan unsur mikro kelat esensial dan asam amino untuk memaksimalkan aktivitas fotosintesis dan pembentukan buah.",
-    },
-    formulation: [
-      ["Active content", "Chelated Fe, Zn, Mn, B, Cu, Mo + Amino Acids"],
-      ["Formulation type", "Soluble powder"],
-      ["Shelf life", "36 months"],
-    ],
-    application: [
-      ["Paddy / Horticulture", "1–2 g/L water", "Foliar spray", "Every 10–14 days"],
-    ],
   },
 ];
 

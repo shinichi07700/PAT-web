@@ -132,7 +132,13 @@ export default function Solutions() {
         p.type.toLowerCase().includes(q) ||
         typeTranslated.includes(q) ||
         (p.activeOrganism && p.activeOrganism.toLowerCase().includes(q)) ||
-        (p.formulation && p.formulation.some(([k, v]) => v.toLowerCase().includes(q))) ||
+        (() => {
+          const f = p.formulation;
+          if (!f) return false;
+          if (Array.isArray(f)) return f.some(([k, v]) => (v && v.toLowerCase().includes(q)) || (k && k.toLowerCase().includes(q)));
+          const rows = [...(f.en || []), ...(f.id || [])];
+          return rows.some(([k, v]) => (v && v.toLowerCase().includes(q)) || (k && k.toLowerCase().includes(q)));
+        })() ||
         p.crops.some((c) => c.toLowerCase().includes(q) || (t(`solutions.crops.${c}`) || "").toLowerCase().includes(q)) ||
         (p.keyBenefit && (p.keyBenefit[lang] || p.keyBenefit.en || "").toLowerCase().includes(q));
       const matchType = selectedTypes.length === 0 || selectedTypes.includes(p.type);
