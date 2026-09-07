@@ -960,7 +960,7 @@ export const ALL_PRODUCTS_DATA = [
     },
     formulation: {
       en: [
-        ["Active content", "C-organik 31.10% + K₂O 10.30% + Ca 1.70% + SiO2 3.40% + Zn 70 ppm + Senyawa Humat >65% (pH 8.8)"],
+        ["Active content", "C-organik 31.10% + K₂O 10.30% + Ca 1.70% + SiO2 3.40% + Zn 70 ppm + Humic Substances >65% (pH 8.8)"],
         ["Source", "Leonardite complex"],
         ["Formulation type", "Soluble powder"],
         ["Shelf life", "36 months"],
