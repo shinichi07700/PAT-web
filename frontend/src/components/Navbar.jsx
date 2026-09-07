@@ -68,7 +68,7 @@ export default function Navbar() {
         style={{ borderRadius: isTransparent ? '0 24px 0 24px' : '0 28px 0 28px' }}
       >
         <nav
-          className={`flex items-center justify-between px-5 md:px-7 transition-all duration-500 ${
+          className={`flex items-center justify-between pl-5 md:pl-7 pr-3 md:pr-4 transition-all duration-500 ${
             isTransparent ? "h-[48px]" : "h-[64px]"
           }`}
         >
