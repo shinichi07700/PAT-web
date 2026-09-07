@@ -41,12 +41,13 @@ export default function Home() {
               loop
               muted
               playsInline
-              poster={IMAGES.heroField}
+              preload="auto"
+              poster="/hero-poster.jpg"
               className="w-full h-full object-cover"
             >
-              <source src="./hero-video.mp4" type="video/mp4" />
+              <source src="/hero-video.mp4" type="video/mp4" />
               <img
-                src={IMAGES.heroField}
+                src="/hero-poster.jpg"
                 alt="Agricultural field"
                 className="w-full h-full object-cover"
               />
