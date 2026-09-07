@@ -230,7 +230,8 @@ function SpecTable({ rows }) {
   );
 }
 
-function DataTable({ head, rows }) {
+function DataTable({ head, rows, slideLabel }) {
+  const { t } = useLang();
   return (
     <div className="relative">
       <div className="rounded-2xl border border-[#5C5C5C]/15 overflow-x-auto touch-pan-x">
@@ -251,7 +252,9 @@ function DataTable({ head, rows }) {
           </tbody>
         </table>
       </div>
-      <div className="sm:hidden text-[11px] text-[#5C5C5C]/60 text-right mt-1 font-medium">← Geser tabel →</div>
+      <div className="sm:hidden text-[11px] text-[#5C5C5C]/60 text-right mt-1 font-medium">
+        {slideLabel || t("product.slideTable") || "← Slide table →"}
+      </div>
     </div>
   );
 }

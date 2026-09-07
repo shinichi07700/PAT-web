@@ -125,6 +125,7 @@ export const translations = {
       certControlUnionDesc: "USDA / International Organic Certification",
       brochure: "Download Product Brochure (PDF)",
       catalogue: "Download Full Catalogue (PDF)",
+      slideTable: "← Slide table →",
     },
     about: {
       eyebrow: "About Us",
@@ -350,6 +351,7 @@ export const translations = {
       certControlUnionDesc: "Sertifikasi Standar Organik USDA / Internasional",
       brochure: "Unduh Brosur Produk (PDF)",
       catalogue: "Unduh Katalog Lengkap (PDF)",
+      slideTable: "← Geser tabel →",
     },
     about: {
       eyebrow: "Tentang Kami",
