@@ -37,7 +37,9 @@ export default function ProductDetail() {
                 <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-[#1C3A1F] tracking-tight">{p.name}</h1>
               </Reveal>
               <Reveal delay={0.1}>
-                <p className="mt-3 md:mt-4 text-[#5C5C5C] text-base md:text-lg leading-relaxed">{p.keyBenefit[lang]}</p>
+                <p className="mt-3 md:mt-4 text-[#5C5C5C] text-base md:text-lg leading-relaxed">
+                  {p.keyBenefit?.[lang] || p.keyBenefit?.en || ""}
+                </p>
               </Reveal>
               <Reveal delay={0.15}>
                 <div className="mt-5 md:mt-6 space-y-2">
@@ -79,18 +81,21 @@ export default function ProductDetail() {
       {/* Body */}
       <section className="bg-white py-10 md:py-20">
         <div className="container-pat max-w-4xl space-y-10 md:space-y-14">
-          {p.benefits && p.benefits[lang] && p.benefits[lang].length > 0 && (
-            <Block title={t("product.keyBenefits")}>
-              <ul className="space-y-3">
-                {p.benefits[lang].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-[#1A1A1A] text-base md:text-lg leading-relaxed">
-                    <span className="w-2 h-2 rounded-full bg-[#0E6E19] mt-2.5 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </Block>
-          )}
+          {(() => {
+            const benefitsList = p.benefits ? (p.benefits[lang] || p.benefits.en || []) : [];
+            return benefitsList.length > 0 ? (
+              <Block title={t("product.keyBenefits")}>
+                <ul className="space-y-3">
+                  {benefitsList.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-[#1A1A1A] text-base md:text-lg leading-relaxed">
+                      <span className="w-2 h-2 rounded-full bg-[#0E6E19] mt-2.5 shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Block>
+            ) : null;
+          })()}
 
           {(() => {
             const formulationRows = p.formulation

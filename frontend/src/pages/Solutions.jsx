@@ -20,7 +20,8 @@ const PRIORITY_SLUGS = [
 ];
 
 export function ProductCard({ p, lang }) {
-  const { t } = useLang();
+  const { t, lang: ctxLang } = useLang();
+  const currentLang = lang || ctxLang || "en";
   const displayTags = p.cardCrops && p.cardCrops.length > 0 ? p.cardCrops : p.crops.slice(0, 3);
   
   return (
@@ -54,7 +55,7 @@ export function ProductCard({ p, lang }) {
                 {p.name.toUpperCase()}
               </h3>
               <p className="mt-2 text-xs sm:text-sm text-[#5C5C5C] leading-relaxed line-clamp-2">
-                {p.keyBenefit[lang] || p.keyBenefit.en}
+                {p.keyBenefit?.[currentLang] || p.keyBenefit?.en || ""}
               </p>
             </div>
 

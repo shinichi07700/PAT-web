@@ -284,13 +284,13 @@ export const ALL_PRODUCTS_DATA = [
     formulation: {
       en: [
         ["Active organism", "Trichoderma sp. + Streptomyces sp."],
-        ["Concentration", "≥ 1 × 106 CFU/g"],
+        ["Concentration", "≥ 1 × 10⁸ CFU/g"],
         ["Formulation type", "Wettable powder (WP)"],
         ["Shelf life", "60 months (ANHYDRIOM™)"],
       ],
       id: [
         ["Organisme aktif", "Trichoderma sp. + Streptomyces sp."],
-        ["Konsentrasi", "≥ 1 × 106 CFU/g"],
+        ["Konsentrasi", "≥ 1 × 10⁸ CFU/g"],
         ["Jenis formulasi", "Tepung yang Dapat Disuspensikan (WP)"],
         ["Masa simpan", "60 bulan (ANHYDRIOM™)"],
       ],
@@ -388,13 +388,13 @@ export const ALL_PRODUCTS_DATA = [
     formulation: {
       en: [
         ["Active organism", "Bacillus thuringiensis + Serratia marcescens"],
-        ["Concentration", "≥ 1 × 107 CFU/g"],
+        ["Concentration", "≥ 1 × 10⁷ CFU/g"],
         ["Formulation type", "Wettable powder (WP)"],
         ["Shelf life", "60 months (ANHYDRIOM™)"],
       ],
       id: [
         ["Organisme aktif", "Bacillus thuringiensis + Serratia marcescens"],
-        ["Konsentrasi", "≥ 1 × 107 CFU/g"],
+        ["Konsentrasi", "≥ 1 × 10⁷ CFU/g"],
         ["Jenis formulasi", "Tepung yang Dapat Disuspensikan (WP)"],
         ["Masa simpan", "60 bulan (ANHYDRIOM™)"],
       ],
@@ -439,13 +439,13 @@ export const ALL_PRODUCTS_DATA = [
     formulation: {
       en: [
         ["Active organism", "Metarhizium anisopliae + Beauveria bassiana"],
-        ["Concentration", "≥ 1 × 106 CFU/g"],
+        ["Concentration", "≥ 1 × 10⁶ CFU/g"],
         ["Formulation type", "Wettable powder (WP)"],
         ["Shelf life", "60 months (ANHYDRIOM™)"],
       ],
       id: [
         ["Organisme aktif", "Metarhizium anisopliae + Beauveria bassiana"],
-        ["Konsentrasi", "≥ 1 × 106 CFU/g"],
+        ["Konsentrasi", "≥ 1 × 10⁶ CFU/g"],
         ["Jenis formulasi", "Tepung yang Dapat Disuspensikan (WP)"],
         ["Masa simpan", "60 bulan (ANHYDRIOM™)"],
       ],
@@ -492,13 +492,13 @@ export const ALL_PRODUCTS_DATA = [
     formulation: {
       en: [
         ["Active organism", "Metarhizium anisopliae + Beauveria bassiana"],
-        ["Concentration", "≥ 1 × 106 CFU/g"],
+        ["Concentration", "≥ 1 × 10⁶ CFU/g"],
         ["Formulation type", "Wettable powder (WP)"],
         ["Shelf life", "60 months (ANHYDRIOM™)"],
       ],
       id: [
         ["Organisme aktif", "Metarhizium anisopliae + Beauveria bassiana"],
-        ["Konsentrasi", "≥ 1 × 106 CFU/g"],
+        ["Konsentrasi", "≥ 1 × 10⁶ CFU/g"],
         ["Jenis formulasi", "Tepung yang Dapat Disuspensikan (WP)"],
         ["Masa simpan", "60 bulan (ANHYDRIOM™)"],
       ],
@@ -543,13 +543,13 @@ export const ALL_PRODUCTS_DATA = [
     formulation: {
       en: [
         ["Active organism", "Metarhizium robertsii + Cordyceps fumosorosea"],
-        ["Concentration", "≥ 1 × 106 CFU/g"],
+        ["Concentration", "≥ 1 × 10⁶ CFU/g"],
         ["Formulation type", "Wettable powder (WP)"],
         ["Shelf life", "60 months (ANHYDRIOM™)"],
       ],
       id: [
         ["Organisme aktif", "Metarhizium robertsii + Cordyceps fumosorosea"],
-        ["Konsentrasi", "≥ 1 × 106 CFU/g"],
+        ["Konsentrasi", "≥ 1 × 10⁶ CFU/g"],
         ["Jenis formulasi", "Tepung yang Dapat Disuspensikan (WP)"],
         ["Masa simpan", "60 bulan (ANHYDRIOM™)"],
       ],
@@ -596,13 +596,13 @@ export const ALL_PRODUCTS_DATA = [
     formulation: {
       en: [
         ["Active organism", "Verticillium lecanii + Isaria fumosorosea"],
-        ["Concentration", "≥ 1 × 106 CFU/g"],
+        ["Concentration", "≥ 1 × 10⁶ CFU/g"],
         ["Formulation type", "Wettable powder (WP)"],
         ["Shelf life", "60 months (ANHYDRIOM™)"],
       ],
       id: [
         ["Organisme aktif", "Verticillium lecanii + Isaria fumosorosea"],
-        ["Konsentrasi", "≥ 1 × 106 CFU/g"],
+        ["Konsentrasi", "≥ 1 × 10⁶ CFU/g"],
         ["Jenis formulasi", "Tepung yang Dapat Disuspensikan (WP)"],
         ["Masa simpan", "60 bulan (ANHYDRIOM™)"],
       ],
@@ -647,13 +647,13 @@ export const ALL_PRODUCTS_DATA = [
     formulation: {
       en: [
         ["Active organism", "Streptomyces thermovulgaris + Geobacillus thermocatenulatus + Trichoderma harzianum"],
-        ["Concentration", "≥ 1 × 105 CFU/g"],
+        ["Concentration", "≥ 1 × 10⁵ CFU/g"],
         ["Formulation type", "Powder"],
         ["Shelf life", "60 months"],
       ],
       id: [
         ["Organisme aktif", "Streptomyces thermovulgaris + Geobacillus thermocatenulatus + Trichoderma harzianum"],
-        ["Konsentrasi", "≥ 1 × 105 CFU/g"],
+        ["Konsentrasi", "≥ 1 × 10⁵ CFU/g"],
         ["Jenis formulasi", "Tepung"],
         ["Masa simpan", "60 bulan"],
       ],
@@ -698,13 +698,13 @@ export const ALL_PRODUCTS_DATA = [
     formulation: {
       en: [
         ["Active organism", "Bacillus subtilis + Enterobacter sacchari + Trichoderma harzianum + Streptomyces sp."],
-        ["Concentration", "≥ 1 × 105 CFU/g"],
+        ["Concentration", "≥ 1 × 10⁵ CFU/g"],
         ["Formulation type", "Powder"],
         ["Shelf life", "60 months"],
       ],
       id: [
         ["Organisme aktif", "Bacillus subtilis + Enterobacter sacchari + Trichoderma harzianum + Streptomyces sp."],
-        ["Konsentrasi", "≥ 1 × 105 CFU/g"],
+        ["Konsentrasi", "≥ 1 × 10⁵ CFU/g"],
         ["Jenis formulasi", "Tepung"],
         ["Masa simpan", "60 bulan"],
       ],
@@ -751,13 +751,13 @@ export const ALL_PRODUCTS_DATA = [
     formulation: {
       en: [
         ["Active organism", "Bacillus subtilis + Enterobacter sacchari + Trichoderma harzianum + Streptomyces sp."],
-        ["Concentration", "≥ 1 × 105 CFU/g"],
+        ["Concentration", "≥ 1 × 10⁵ CFU/g"],
         ["Formulation type", "Powder"],
         ["Shelf life", "60 months"],
       ],
       id: [
         ["Organisme aktif", "Bacillus subtilis + Enterobacter sacchari + Trichoderma harzianum + Streptomyces sp."],
-        ["Konsentrasi", "≥ 1 × 105 CFU/g"],
+        ["Konsentrasi", "≥ 1 × 10⁵ CFU/g"],
         ["Jenis formulasi", "Tepung"],
         ["Masa simpan", "60 bulan"],
       ],
@@ -804,13 +804,13 @@ export const ALL_PRODUCTS_DATA = [
     formulation: {
       en: [
         ["Active organism", "Endophytic PGPR Consortium"],
-        ["Concentration", "≥ 1 × 105 CFU/g"],
+        ["Concentration", "≥ 1 × 10⁵ CFU/g"],
         ["Formulation type", "Soluble powder"],
         ["Shelf life", "60 months"],
       ],
       id: [
         ["Organisme aktif", "Konsorsium PGPR Endofit"],
-        ["Konsentrasi", "≥ 1 × 105 CFU/g"],
+        ["Konsentrasi", "≥ 1 × 10⁵ CFU/g"],
         ["Jenis formulasi", "Tepung larut"],
         ["Masa simpan", "60 bulan"],
       ],
@@ -855,13 +855,13 @@ export const ALL_PRODUCTS_DATA = [
     formulation: {
       en: [
         ["Active organism", "Rice-specific Endophytic PGPR Consortium"],
-        ["Concentration", "≥ 1 × 107 CFU/g"],
+        ["Concentration", "≥ 1 × 10⁷ CFU/g"],
         ["Formulation type", "Carrier-based powder"],
         ["Shelf life", "60 months"],
       ],
       id: [
         ["Organisme aktif", "Konsorsium PGPR Endofit Spesifik Padi"],
-        ["Konsentrasi", "≥ 1 × 107 CFU/g"],
+        ["Konsentrasi", "≥ 1 × 10⁷ CFU/g"],
         ["Jenis formulasi", "Tepung berbahan pembawa"],
         ["Masa simpan", "60 bulan"],
       ],
@@ -906,13 +906,13 @@ export const ALL_PRODUCTS_DATA = [
     formulation: {
       en: [
         ["Active organism", "Nitrogen-fixing & Phosphate-solubilizing Microbes"],
-        ["Concentration", "≥ 1 × 105 CFU/g"],
+        ["Concentration", "≥ 1 × 10⁵ CFU/g"],
         ["Formulation type", "Carrier-based powder"],
         ["Shelf life", "60 months"],
       ],
       id: [
         ["Organisme aktif", "Mikroba Penambat Nitrogen & Pelarut Fosfat"],
-        ["Konsentrasi", "≥ 1 × 105 CFU/g"],
+        ["Konsentrasi", "≥ 1 × 10⁵ CFU/g"],
         ["Jenis formulasi", "Tepung berbahan pembawa"],
         ["Masa simpan", "60 bulan"],
       ],
