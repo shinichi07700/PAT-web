@@ -934,7 +934,7 @@ export const ALL_PRODUCTS_DATA = [
     name: "HUMATOP",
     type: "Bio Stimulant & Nutrition",
     activeOrganism: "Leonardite Humic Acid Complex (>65%) + K₂O (10.30%)",
-    regNo: "04.03.2022.911 (100g/1kg pupuk organik); 04.03.2023.308 (100g/1kg pembenah tanah senyawa humat); 04.02.2023.738 (1 liter)",
+    regNo: "04.04.2022.911",
     cardCrops: ["Paddy","Shallot","Chilli"],
     crops: ["Paddy","Shallot","Chilli","Tomato","Potato","Corn","Cacao","Avocado","Cabbage","Citrus","Cucumber","Dragon Fruit","Durian","Edamame","Melon","Patchouli","Radish","Watermelon","Oil Palm"],
     image: "/images/products/humatop.jpg",
