@@ -6,6 +6,7 @@ import { useLang } from "../lib/i18n";
 import { Reveal, StaggerGroup, staggerItem } from "../lib/motion";
 import { ALL_PRODUCTS, SOLUTION_TYPES, CROPS } from "../data/content";
 import PageHero from "../components/PageHero";
+import { formatScientificText } from "../components/FormattedScientificText";
 
 const PRIORITY_SLUGS = [
   "decopalma",
@@ -55,7 +56,7 @@ export function ProductCard({ p, lang }) {
                 {p.name.toUpperCase()}
               </h3>
               <p className="mt-2 text-xs sm:text-sm text-[#5C5C5C] leading-relaxed line-clamp-2">
-                {p.keyBenefit?.[currentLang] || p.keyBenefit?.en || ""}
+                {formatScientificText(p.keyBenefit?.[currentLang] || p.keyBenefit?.en || "")}
               </p>
             </div>
 

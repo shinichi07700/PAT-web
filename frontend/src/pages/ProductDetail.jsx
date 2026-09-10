@@ -5,6 +5,7 @@ import { ArrowLeft, MessageCircle, ShieldCheck, Award } from "lucide-react";
 import { useLang } from "../lib/i18n";
 import { Reveal, MicrobeDots } from "../lib/motion";
 import { getProduct, getRelated, WHATSAPP_NUMBER } from "../data/content";
+import { formatScientificText } from "../components/FormattedScientificText";
 
 export default function ProductDetail() {
   const { slug } = useParams();
@@ -38,7 +39,7 @@ export default function ProductDetail() {
               </Reveal>
               <Reveal delay={0.1}>
                 <p className="mt-3 md:mt-4 text-[#5C5C5C] text-base md:text-lg leading-relaxed">
-                  {p.keyBenefit?.[lang] || p.keyBenefit?.en || ""}
+                  {formatScientificText(p.keyBenefit?.[lang] || p.keyBenefit?.en || "")}
                 </p>
               </Reveal>
               <Reveal delay={0.15}>
@@ -89,7 +90,7 @@ export default function ProductDetail() {
                   {benefitsList.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3 text-[#1A1A1A] text-base md:text-lg leading-relaxed">
                       <span className="w-2 h-2 rounded-full bg-[#0E6E19] mt-2.5 shrink-0" />
-                      <span>{item}</span>
+                      <span>{formatScientificText(item)}</span>
                     </li>
                   ))}
                 </ul>
@@ -223,7 +224,7 @@ function SpecTable({ rows }) {
       {rows.map(([k, v], i) => (
         <div key={i} className={`flex flex-col sm:flex-row sm:items-center px-4 sm:px-5 py-3 sm:py-3.5 ${i % 2 ? "bg-white" : "bg-[#F7F6F2]"}`}>
           <span className="text-[#5C5C5C] text-xs sm:text-sm font-medium sm:w-2/5 mb-1 sm:mb-0">{k}</span>
-          <span className="text-[#1A1A1A] text-xs sm:text-sm font-semibold sm:w-3/5 break-words">{v}</span>
+          <span className="text-[#1A1A1A] text-xs sm:text-sm font-semibold sm:w-3/5 break-words">{formatScientificText(v)}</span>
         </div>
       ))}
     </div>
@@ -259,7 +260,7 @@ function DataTable({ head, rows }) {
                     j === 0 ? "font-semibold text-[#1C3A1F]" : "text-[#1A1A1A]"
                   } ${colWidths[j] || ""}`}
                 >
-                  {cell}
+                  {formatScientificText(cell)}
                 </td>
               ))}
             </tr>
