@@ -356,7 +356,7 @@ export const translations = {
     },
     about: {
       eyebrow: "Tentang Kami",
-      title: "Satu dekade komitmen pada pertanian regeneratif",
+      title: "Komitmen satu dekade pada pertanian regeneratif",
       intro: "Spesialis mikroba, lahir di Indonesia, dirancang untuk pertanian tropis — melalui proses internal, dari Bioprospeksi hingga Distribusi.",
       journeyEyebrow: "Perjalanan Kami",
       journeyTitle: "Berkarya untuk pertanian sejak 2008",
