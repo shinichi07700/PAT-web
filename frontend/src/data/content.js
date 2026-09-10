@@ -276,7 +276,7 @@ export const ALL_PRODUCTS_DATA = [
       ],
       id: [
         "Mengandung mikroba aktif penghambat patogen",
-        "Menekan gejala penyakit Phytoptora dan Sigatoka",
+        "Menekan gejala penyakit Phytophthora dan Sigatoka",
         "Ramah lingkungan dan tidak meninggalkan residu",
         "Mendukung kondisi tanaman cabai, kakao, dan pisang tetap sehat dan produktif dengan aplikasi yang tepat dan teratur",
       ],
@@ -284,13 +284,13 @@ export const ALL_PRODUCTS_DATA = [
     formulation: {
       en: [
         ["Active organism", "Trichoderma sp. + Streptomyces sp."],
-        ["Concentration", "≥ 1 × 10⁸ CFU/g"],
+        ["Concentration", "≥ 1 × 10⁶ CFU/g"],
         ["Formulation type", "Wettable powder (WP)"],
         ["Shelf life", "60 months (ANHYDRIOM™)"],
       ],
       id: [
         ["Organisme aktif", "Trichoderma sp. + Streptomyces sp."],
-        ["Konsentrasi", "≥ 1 × 10⁸ CFU/g"],
+        ["Konsentrasi", "≥ 1 × 10⁶ CFU/g"],
         ["Jenis formulasi", "Tepung yang Dapat Disuspensikan (WP)"],
         ["Masa simpan", "60 bulan (ANHYDRIOM™)"],
       ],
