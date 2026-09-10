@@ -11,7 +11,7 @@ export default function Facilities() {
   const [showKanCert, setShowKanCert] = useState(false);
 
   const blocks = [
-    { title: t("facilities.title"), body: t("facilities.intro"), image: IMAGES.facilityComplex, tag: "Location", icon: true },
+    { title: t("facilities.title"), body: t("facilities.overviewBody", t("facilities.intro")), image: IMAGES.facilityComplex, tag: "Location", icon: true },
     { title: t("facilities.labTitle"), body: t("facilities.lab"), image: IMAGES.facilityLab, tag: "R&D Laboratory" },
     { title: t("facilities.prodTitle"), body: t("facilities.prod"), image: IMAGES.facilityWarehouse, tag: "Production & Warehouse" },
   ];

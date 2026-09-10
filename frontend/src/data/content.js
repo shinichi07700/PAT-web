@@ -1325,7 +1325,7 @@ export const SCIENCE_STAGES = [
     title: { en: "Bioprospecting", id: "Bioprospeksi" },
     body: {
       en: "50+ field expeditions across 6 Indonesian islands, collecting microbial material from soil, volcanic hot springs, plant tissue, pest specimens, and active disease outbreak sites.",
-      id: "50+ ekspedisi lapangan di 6 pulau Indonesia, mengumpulkan material mikroba dari tanah, mata air panas vulkanik, jaringan tanaman, spesimen hama, dan lokasi wabah penyakit aktif.",
+      id: "Lebih dari 50 ekspedisi lapangan di 6 pulau Indonesia. Mikroba dikumpulkan melalui tanah, mata air panas vulkanik, jaringan tanaman, spesimen hama, dan lokasi wabah penyakit aktif.",
     },
     image: "/images/science/science-stage-1.jpg",
   },
@@ -1334,7 +1334,7 @@ export const SCIENCE_STAGES = [
     title: { en: "Isolate & Characterization", id: "Isolasi & Karakterisasi" },
     body: {
       en: "Each sample is cultured and molecularly identified (PCR-verified), building a proprietary library of 120+ characterized isolates.",
-      id: "Setiap sampel dikultur dan diidentifikasi secara molekuler (terverifikasi PCR), membangun pustaka proprietary 120+ isolat terkarakterisasi.",
+      id: "Setiap sampel dikultur dan diidentifikasi secara molekuler (diverifikasi melalui PCR). Proses ini membentuk lebih dari 120 isolat yang telah dikarakterisasi.",
     },
     image: "/images/science/science-stage-2.jpg",
   },
@@ -1343,7 +1343,7 @@ export const SCIENCE_STAGES = [
     title: { en: "ANHYDRIOM™ Stabilization", id: "Stabilisasi ANHYDRIOM™" },
     body: {
       en: "Most beneficial microbes are metabolically active, moisture-dependent, and prone to losing potency within weeks unless kept refrigerated. ANHYDRIOM™ takes a different approach: by removing the moisture microbes need to stay active, it induces a dormant, biologically stable state that halts this decline. Many bacteria and fungi can enter a dormant, desiccation-tolerant state when moisture is removed, remaining biologically stable for extended periods before reactivating once rehydrated. ANHYDRIOM™ applies this principle at production scale, stabilizing our strains into a dry, dormant powder that holds its potency for 3+ years at room temperature.",
-      id: "Sebagian besar mikroba bermanfaat memerlukan kelembapan agar tetap aktif secara metabolik. Namun, kondisi aktif ini membuatnya rentan, efikasinya bisa menurun seiring lama masa penyimpanan apabila tidak disimpan dalam suhu dingin. ANHYDRIOM™ menggunakan pendekatan berbeda: dengan menghilangkan kelembapan yang membuat mikroba tetap aktif, teknologi ini menginduksi kondisi dorman yang stabil secara biologis pada mikroba, sehingga penurunan efikasi tersebut terhenti. Banyak bakteri dan jamur memang secara alami mampu memasuki kondisi dorman yang tahan kekeringan saat kelembapan dihilangkan — tetap stabil secara biologis dalam waktu lama, lalu aktif kembali begitu terhidrasi. ANHYDRIOM™ menerapkan prinsip ini dalam skala produksi, menstabilkan mikroba kami dalam bubuk kering yang mempertahankan efikasinya hingga 3+ tahun pada suhu ruang.",
+      id: "Sebagian besar mikroba bermanfaat membutuhkan kelembapan untuk tetap aktif, namun kondisi ini membuatnya lebih rentan terhadap penurunan efektivitas selama penyimpanan. ANHYDRIOM™ menghilangkan kelembapan untuk menginduksi kondisi dorman yang stabil, sehingga mikroba tetap terlindungi dan kembali aktif saat terhidrasi. Dengan menerapkan mekanisme alami ini dalam skala produksi, ANHYDRIOM™ menghasilkan mikroba dalam bentuk bubuk kering yang mempertahankan efektivitasnya hingga 3+ tahun pada suhu ruang.",
     },
     image: "/images/science/science-stage-3.jpg",
   },
@@ -1352,7 +1352,7 @@ export const SCIENCE_STAGES = [
     title: { en: "Product Formulation", id: "Formulasi Produk" },
     body: {
       en: "Strains combined into multi-strain formulations — broader spectrum, resilience built in, wider coverage, synergistic mechanisms.",
-      id: "Strain digabung menjadi formulasi multi-strain — spektrum lebih luas, ketahanan bawaan, cakupan lebih lebar, mekanisme sinergis.",
+      id: "Formulasi multi-strain menggabungkan berbagai strain untuk memperluas cakupan, meningkatkan ketahanan, dan menghasilkan efek sinergis.",
     },
     image: "/images/science/science-stage-4.jpg",
   },
@@ -1361,7 +1361,7 @@ export const SCIENCE_STAGES = [
     title: { en: "Efficacy Validation", id: "Validasi Efikasi" },
     body: {
       en: "Every formulation is field-tested against real pest, disease, and soil conditions before commercialisation.",
-      id: "Setiap formulasi diuji lapangan melawan kondisi hama, penyakit, dan tanah nyata sebelum dikomersialkan.",
+      id: "Setiap formulasi diuji lapangan melawan kondisi tanah, hama, dan penyakit sebelum dikomersialkan.",
     },
     image: "/images/science/science-stage-5.jpg",
   },
@@ -1370,7 +1370,7 @@ export const SCIENCE_STAGES = [
     title: { en: "Deploy & Scale", id: "Penyebaran & Skala" },
     body: {
       en: "Reaches 15,000+ farmer partners across 16+ provinces, with in-house field agent support and exports underway across South East Asia.",
-      id: "Menjangkau 15.000+ mitra petani di 16+ provinsi, dengan dukungan petugas lapangan in-house dan ekspor berjalan di Asia Tenggara.",
+      id: "Menjangkau 15.000+ mitra petani di 16+ provinsi, didukung tim lapangan in-house dan jaringan ekspor yang telah berjalan di Asia Tenggara.",
     },
     image: "/images/science/science-stage-6.jpg",
   },
@@ -1382,9 +1382,9 @@ export const TIMELINE = [
   { year: "2013", en: "Organic certification obtained", id: "Sertifikasi organik diperoleh" },
   { year: "2016", en: "Production scale-up", id: "Peningkatan skala produksi" },
   { year: "2018", en: "ISO 9001:2015 certified", id: "Tersertifikasi ISO 9001:2015" },
-  { year: "2020", en: "Molecular-level strain identification achieved", id: "Identifikasi strain tingkat molekuler tercapai" },
+  { year: "2020", en: "Molecular-level strain identification achieved", id: "Identifikasi Strain Tingkat Molekuler" },
   { year: "2023", en: "Nation-wide distribution", id: "Distribusi ke seluruh Indonesia" },
-  { year: "2026", en: "Entering markets across Southeast Asia", id: "Memasuki pasar di Asia Tenggara" },
+  { year: "2026", en: "Entering markets across Southeast Asia", id: "Memasuki Pasar Asia Tenggara" },
 ];
 
 export const FOOTPRINT_STATS = [
