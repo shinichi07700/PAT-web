@@ -167,8 +167,8 @@ export const translations = {
       iso17025Subtitle: "Testing & Calibration Laboratories Competence",
       iso17025Desc: "Certified laboratory competency for analytical testing and microbiological validation.",
       iso9001Title: "ISO 9001:2015",
-      iso9001Subtitle: "International Standard for Consistent Quality Management",
-      iso9001Desc: "Certified Quality Management System covering manufacturing and quality assurance.",
+      iso9001Subtitle: "TÜV SÜD Certified",
+      iso9001Desc: "International Standard for Consistent Quality Management",
       viewCert: "View Certificate",
     },
     testimonials: {
@@ -394,8 +394,8 @@ export const translations = {
       iso17025Subtitle: "Kompetensi Laboratorium Pengujian & Kalibrasi",
       iso17025Desc: "Kompetensi laboratorium bersertifikat untuk pengujian analitik dan validasi mikrobiologis.",
       iso9001Title: "ISO 9001:2015",
-      iso9001Subtitle: "Standar Internasional untuk Manajemen Kualitas yang Konsisten",
-      iso9001Desc: "Sistem Manajemen Mutu tersertifikasi untuk proses manufaktur dan jaminan kualitas.",
+      iso9001Subtitle: "Tersertifikasi oleh TÜV SÜD",
+      iso9001Desc: "Standar Internasional untuk Manajemen Kualitas yang Konsisten",
       viewCert: "Lihat Sertifikat",
     },
     testimonials: {
