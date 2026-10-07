@@ -1,5 +1,6 @@
+import { useEffect } from "react";
 import "@/App.css";
-import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { Toaster } from "sonner";
 import { LangProvider } from "@/lib/i18n";
 import Layout from "@/components/Layout";
@@ -14,11 +15,29 @@ import Testimonials from "@/pages/Testimonials";
 import Career from "@/pages/Career";
 import Contact from "@/pages/Contact";
 
+function PageTracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (typeof window.gtag === "function") {
+      const pagePath = location.pathname + location.search + (location.hash ? location.hash : "");
+      window.gtag("event", "page_view", {
+        page_title: document.title,
+        page_path: pagePath,
+        page_location: window.location.href,
+      });
+    }
+  }, [location]);
+
+  return null;
+}
+
 function App() {
   return (
     <div className="App">
       <LangProvider>
         <HashRouter>
+          <PageTracker />
           <Toaster position="top-center" richColors />
           <Routes>
             <Route element={<Layout />}>
